@@ -1,3 +1,5 @@
 #Files to ignore
 #config files
 Coding/config.ini
+.DS_Store
+Coding/Datasets/Tweet Data/
