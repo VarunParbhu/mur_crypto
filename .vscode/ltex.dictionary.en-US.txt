@@ -9,3 +9,6 @@ Varun
 BHURUTH
 MUDDUN
 OSK
+eq
+BookTitle
+ConferenceTitle
