@@ -12,3 +12,5 @@ OSK
 eq
 BookTitle
 ConferenceTitle
+MNIST
+componentwise
