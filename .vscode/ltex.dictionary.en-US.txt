@@ -14,3 +14,5 @@ BookTitle
 ConferenceTitle
 MNIST
 componentwise
+minized
+minizing
