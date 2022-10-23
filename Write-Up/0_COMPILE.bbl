@@ -1,0 +1,15 @@
+\begin{thebibliography}{xx}
+
+\harvarditem{AuthorName}{Year{\em a}}{ConferenceRef}
+AuthorName  \harvardyearleft Year{\em a}\harvardyearright , Conferencetitle,
+  {\em in} `BookTitle'.
+
+\harvarditem{AuthorName}{Year{\em b}}{ArticleRef}
+AuthorName  \harvardyearleft Year{\em b}\harvardyearright , `Title of article',
+  {\em Journal} .
+
+\harvarditem{BookAuthors}{Year}{BookRef}
+BookAuthors  \harvardyearleft Year\harvardyearright , {\em BookTitle},
+  Publisher.
+
+\end{thebibliography}
