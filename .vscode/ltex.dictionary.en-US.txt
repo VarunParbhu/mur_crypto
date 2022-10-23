@@ -16,3 +16,4 @@ MNIST
 componentwise
 minized
 minizing
+multiclass
