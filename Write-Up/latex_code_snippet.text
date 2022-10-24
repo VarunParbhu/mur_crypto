@@ -1,0 +1,9 @@
+
+Importing Figures
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_perceptron_example.jpeg}
+  \caption{Caption}
+  \label{}
+\end{figure}\\
