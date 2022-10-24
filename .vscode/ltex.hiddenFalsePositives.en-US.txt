@@ -1,2 +1,3 @@
 {"rule":"THE_SUPERLATIVE","sentence":"^\\QReplacing \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q by \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q where \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q is the identity matrix; we get the method of steepest descent Deep Learning.\\E$"}
 {"rule":"THE_SUPERLATIVE","sentence":"^\\QReplacing \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q by \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q where \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q is the identity matrix; we get the method of steepest descent given by Deep Learning.\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\QHence, the update rule of the weights for gradient descent method is given by \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q Learning Rate .\\E$"}
