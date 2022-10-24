@@ -45,10 +45,11 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3.3}Chain Rule}{8}{subsection.2.3.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3.4}Hessian}{9}{subsection.2.3.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {2.4}Optimization}{9}{section.2.4}\protected@file@percent }
+\newlabel{eq:optimization_problem}{{2.30}{9}{Optimization}{equation.2.4.30}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.4.1}Optimization algorithms}{9}{subsection.2.4.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {2.5}Deep Learning}{11}{section.2.5}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.5.1}Perceptron}{11}{subsection.2.5.1}\protected@file@percent }
-\newlabel{eq:perceptron_def}{{2.35}{11}{Perceptron}{equation.2.5.35}{}}
+\newlabel{eq:perceptron_def}{{2.36}{11}{Perceptron}{equation.2.5.36}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Perceptron graphical representation\relax }}{11}{figure.caption.7}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:perceptron}{{2.1}{11}{Perceptron graphical representation\relax }{figure.caption.7}{}}
@@ -62,33 +63,51 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Caption\relax }}{14}{figure.caption.11}\protected@file@percent }
 \newlabel{fig:perceptron_example_4}{{2.5}{14}{Caption\relax }{figure.caption.11}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.1.2}Perceptron Update Rule}{15}{subsubsection.2.5.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.2}Neural Network}{16}{subsection.2.5.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces Caption\relax }}{17}{figure.caption.12}\protected@file@percent }
-\newlabel{neural_network}{{2.6}{17}{Caption\relax }{figure.caption.12}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.3}Deep Neural Network}{17}{subsection.2.5.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.4}Back propagation}{17}{subsection.2.5.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.5}Overfitting}{17}{subsection.2.5.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.6}Dropout}{17}{subsection.2.5.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.7}Activation Function}{17}{subsection.2.5.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.8}Convolutional Layer}{17}{subsection.2.5.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}PyTorch}{18}{chapter.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.1.3}Limitation of the Perceptron}{16}{subsubsection.2.5.1.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces AND function\relax }}{17}{figure.caption.13}\protected@file@percent }
+\newlabel{AND_function}{{2.6}{17}{AND function\relax }{figure.caption.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces OR function\relax }}{18}{figure.caption.15}\protected@file@percent }
+\newlabel{OR_function}{{2.7}{18}{OR function\relax }{figure.caption.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces OR function\relax }}{18}{figure.caption.17}\protected@file@percent }
+\newlabel{XOR_function}{{2.8}{18}{OR function\relax }{figure.caption.17}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.2}Neural Network}{19}{subsection.2.5.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces Caption\relax }}{19}{figure.caption.18}\protected@file@percent }
+\newlabel{neural_network}{{2.9}{19}{Caption\relax }{figure.caption.18}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.2.1}Feedforward Network}{19}{subsubsection.2.5.2.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces Caption\relax }}{19}{figure.caption.19}\protected@file@percent }
+\newlabel{neural_network_2}{{2.10}{19}{Caption\relax }{figure.caption.19}{}}
+\newlabel{neural_net_def}{{2.55}{20}{Feedforward Network}{equation.2.5.55}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.2.2}Activation Functions}{21}{subsubsection.2.5.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.2.3}Network Error}{22}{subsubsection.2.5.2.3}\protected@file@percent }
+\newlabel{network_error}{{2.64}{22}{Network Error}{equation.2.5.64}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.11}{\ignorespaces Network Error\relax }}{23}{figure.caption.21}\protected@file@percent }
+\newlabel{network_error_graph}{{2.11}{23}{Network Error\relax }{figure.caption.21}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.2.4}Gradient Descent Method}{23}{subsubsection.2.5.2.4}\protected@file@percent }
+\newlabel{derivative_network_error}{{2.65}{23}{Gradient Descent Method}{equation.2.5.65}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.2.5}Learning Rate}{24}{subsubsection.2.5.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.2.6}Back Propagation}{24}{subsubsection.2.5.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.3}Deep Neural Network}{24}{subsection.2.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.4}Overfitting}{24}{subsection.2.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.4.1}Dropout}{24}{subsubsection.2.5.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.5}Convolutional Layer}{24}{subsection.2.5.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}PyTorch}{25}{chapter.3}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Sentiment analysis}{19}{chapter.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Sentiment analysis}{26}{chapter.4}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \bibdata{REFERENCES}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Tweet Data}{20}{chapter.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Tweet Data}{27}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Tweets}{20}{section.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Tweepy}{20}{subsection.5.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.1.1}Scrapping using Tweepy}{20}{subsubsection.5.1.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.1.2}Cleaning using RegEx}{20}{subsubsection.5.1.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Tweet Count}{20}{section.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Tweet Search Volume Index (SVI)}{20}{section.5.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.4}Feature Engineering}{20}{section.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Tweets}{27}{section.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Tweepy}{27}{subsection.5.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.1.1}Scrapping using Tweepy}{27}{subsubsection.5.1.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.1.2}Cleaning using RegEx}{27}{subsubsection.5.1.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Tweet Count}{27}{section.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Tweet Search Volume Index (SVI)}{27}{section.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Feature Engineering}{27}{section.5.4}\protected@file@percent }
 \harvardcite{ConferenceRef}{AuthorName}{AuthorName}{Year{\em a}}
 \harvardcite{ArticleRef}{AuthorName}{AuthorName}{Year{\em b}}
 \harvardcite{BookRef}{BookAuthors}{BookAuthors}{Year}
-\gdef \@abspage@last{29}
+\gdef \@abspage@last{36}

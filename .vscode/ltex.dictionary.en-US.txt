@@ -17,3 +17,6 @@ componentwise
 minized
 minizing
 multiclass
+tanh
+Signum
+ReLU

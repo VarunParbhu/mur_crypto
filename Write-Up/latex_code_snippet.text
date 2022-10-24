@@ -7,3 +7,24 @@ Importing Figures
   \caption{Caption}
   \label{}
 \end{figure}\\
+
+
+\begin{align}
+  \begin{matrix}
+    \textbf{x} = \begin{bmatrix}
+      x_{11} \\
+      x_{21} \\
+      x_{31}
+    \end{bmatrix} & \textbf{W}_1 = \begin{bmatrix}
+      w_{11} & w_{12} \\
+      w_{21} & w_{22} \\
+      w_{31} & w_{32} \\
+    \end{bmatrix} & \textbf{W}_2 = \begin{bmatrix}
+      m_{11} \\
+      m_{21} 
+    \end{bmatrix} &
+    \textbf{y} = \begin{bmatrix}
+      y
+    \end{bmatrix}  
+  \end{matrix}
+\end{align}
