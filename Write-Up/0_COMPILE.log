@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  23 OCT 2022 21:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  24 OCT 2022 05:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -231,13 +231,6 @@ File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen162
 \Gin@req@width=\dimen163
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/float/float.sty
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count286
-\float@exts=\toks22
-\float@box=\box53
-\@float@everytoks=\toks23
-\@floatcapt=\box54
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/subfigure/subfigure.sty
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfigtopskip=\skip57
@@ -246,10 +239,10 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfigbottomskip=\skip59
 \subfigcapmargin=\dimen165
 \subfiglabelskip=\skip60
-\c@subfigure=\count287
-\c@lofdepth=\count288
-\c@subtable=\count289
-\c@lotdepth=\count290
+\c@subfigure=\count286
+\c@lofdepth=\count287
+\c@subtable=\count288
+\c@lotdepth=\count289
 
 ****************************************
 * Local config file subfigure.cfg used *
@@ -266,9 +259,9 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
  (/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count291
-\Gm@cntv=\count292
-\c@Gm@tempcnt=\count293
+\Gm@cnth=\count290
+\Gm@cntv=\count291
+\c@Gm@tempcnt=\count292
 \Gm@bindingoffset=\dimen168
 \Gm@wd@mp=\dimen169
 \Gm@odd@mp=\dimen170
@@ -277,7 +270,7 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutheight=\dimen173
 \Gm@layouthoffset=\dimen174
 \Gm@layoutvoffset=\dimen175
-\Gm@dimlist=\toks24
+\Gm@dimlist=\toks22
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/amsfonts.sty
@@ -301,15 +294,14 @@ Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
 \caption@hangindent=\dimen183
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count294
-\c@continuedfloat=\count295
-Package caption Info: float package is loaded.
+\c@caption@flags=\count293
+\c@continuedfloat=\count294
 Package caption Info: hyperref package is loaded.
 Package caption Info: subfigure package is loaded.
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count296
-\l__pdf_internal_box=\box55
+\l__color_backend_stack_int=\count295
+\l__pdf_internal_box=\box53
 ) (./0_COMPILE.aux)
 \openout1 = `0_COMPILE.aux'.
 
@@ -339,7 +331,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/local/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count297
+\c@section@level=\count296
 )
 LaTeX Info: Redefining \ref on input line 18.
 LaTeX Info: Redefining \pageref on input line 18.
@@ -350,17 +342,17 @@ LaTeX Info: Redefining \nameref on input line 18.
 
  (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count298
+\scratchcounter=\count297
 \scratchdimen=\dimen184
-\scratchbox=\box56
-\nofMPsegments=\count299
-\nofMParguments=\count300
-\everyMPshowfont=\toks25
-\MPscratchCnt=\count301
+\scratchbox=\box54
+\nofMPsegments=\count298
+\nofMParguments=\count299
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count300
 \MPscratchDim=\dimen185
-\MPnumerator=\count302
-\makeMPintoPDFobject=\count303
-\everyMPtoPDFconversion=\toks26
+\MPnumerator=\count301
+\makeMPintoPDFobject=\count302
+\everyMPtoPDFconversion=\toks24
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -485,11 +477,7 @@ File: CHAPTER_2/c2_fig_neural_network_1.jpeg Graphic file (type jpg)
 <use CHAPTER_2/c2_fig_neural_network_1.jpeg>
 Package pdftex.def Info: CHAPTER_2/c2_fig_neural_network_1.jpeg  used on input line 512.
 (pdftex.def)             Requested size: 207.16505pt x 150.556pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[16]) (./CHAPTER_3/CHAPTER 3.tex [17 <./CHAPTER_2/c2_fig_neural_network_1.jpeg>]
+ [16]) (./CHAPTER_3/CHAPTER 3.tex [17 <./CHAPTER_2/c2_fig_neural_network_1.jpeg>]
 Chapter 3.
 ) (./CHAPTER_4/CHAPTER 4.tex [18
 
@@ -514,15 +502,15 @@ Package rerunfilecheck Info: File `0_COMPILE.brf' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 12237 strings out of 478268
- 200962 string characters out of 5846347
- 498863 words of memory out of 5000000
- 30122 multiletter control sequences out of 15000+600000
+ 12173 strings out of 478268
+ 199858 string characters out of 5846347
+ 497650 words of memory out of 5000000
+ 30062 multiletter control sequences out of 15000+600000
  477604 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,20n,91p,667b,422s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 87i,20n,91p,667b,420s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on 0_COMPILE.pdf (29 pages, 2570349 bytes).
+Output written on 0_COMPILE.pdf (29 pages, 2570458 bytes).
 PDF statistics:
  525 PDF objects out of 1000 (max. 8388607)
  449 compressed objects within 5 object streams
