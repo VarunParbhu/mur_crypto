@@ -30,17 +30,17 @@
 \contentsline {subsubsection}{\numberline {2.5.2.4}Gradient Descent Method}{23}{subsubsection.2.5.2.4}%
 \contentsline {subsubsection}{\numberline {2.5.2.5}Learning Rate}{24}{subsubsection.2.5.2.5}%
 \contentsline {subsubsection}{\numberline {2.5.2.6}Back Propagation}{24}{subsubsection.2.5.2.6}%
-\contentsline {subsection}{\numberline {2.5.3}Deep Neural Network}{24}{subsection.2.5.3}%
-\contentsline {subsection}{\numberline {2.5.4}Overfitting}{24}{subsection.2.5.4}%
-\contentsline {subsubsection}{\numberline {2.5.4.1}Dropout}{24}{subsubsection.2.5.4.1}%
-\contentsline {subsection}{\numberline {2.5.5}Convolutional Layer}{24}{subsection.2.5.5}%
-\contentsline {chapter}{\numberline {3}PyTorch}{25}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Sentiment analysis}{26}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Tweet Data}{27}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Tweets}{27}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Tweepy}{27}{subsection.5.1.1}%
-\contentsline {subsubsection}{\numberline {5.1.1.1}Scrapping using Tweepy}{27}{subsubsection.5.1.1.1}%
-\contentsline {subsubsection}{\numberline {5.1.1.2}Cleaning using RegEx}{27}{subsubsection.5.1.1.2}%
-\contentsline {section}{\numberline {5.2}Tweet Count}{27}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Tweet Search Volume Index (SVI)}{27}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Feature Engineering}{27}{section.5.4}%
+\contentsline {subsection}{\numberline {2.5.3}Deep Neural Network}{25}{subsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.5.4}Overfitting}{25}{subsection.2.5.4}%
+\contentsline {subsubsection}{\numberline {2.5.4.1}Dropout}{25}{subsubsection.2.5.4.1}%
+\contentsline {subsection}{\numberline {2.5.5}Convolutional Layer}{25}{subsection.2.5.5}%
+\contentsline {chapter}{\numberline {3}PyTorch}{26}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Sentiment analysis}{27}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Tweet Data}{28}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Tweets}{28}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Tweepy}{28}{subsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.1.1}Scrapping using Tweepy}{28}{subsubsection.5.1.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.1.2}Cleaning using RegEx}{28}{subsubsection.5.1.1.2}%
+\contentsline {section}{\numberline {5.2}Tweet Count}{28}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Tweet Search Volume Index (SVI)}{28}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Feature Engineering}{28}{section.5.4}%

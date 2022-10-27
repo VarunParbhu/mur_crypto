@@ -752,11 +752,23 @@ The learning rate is typically denoted by the Greek letter alpha $\alpha$. It he
 \end{align}
 where $\alpha \in (0,1)$
 \subsubsection{Back Propagation}
-The input data has been fed forward in the network. Then the error function and the gradient descent method we have defined are both executed at the end of neural network we have defined in equation (\refeq{neural_net_def}). We now need a way to back propagate the weight changes that need to happened from the output neuron to the input neuron. This whole process is known as \textbf{back propagation}.
+The input data has been fed forward in the network. Then the error function and the gradient descent method we have defined are both executed at the end of neural network we have defined in equation (\refeq{neural_net_def}). We now need a way to back propagate the weight changes that need to happened from the output neuron to the input neuron in between each layer. This whole process is known as \textbf{back propagation}.\\
+Consider the neural network below.
+\begin{figure}[ht]
+  \centering
+  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_back_prog.jpeg}
+  \caption{Back propagation}
+  \label{}
+\end{figure}\vspace{50mm} \\
+Let the perceptron at output layer have a linear activation function while the perceptron layer have ReLU activation functions. \\
+- Explain what happens at the end of the neural network
+- Explain what happens in between layers
+- Explain how to back propagate to the start of the network
+
 \subsection{Deep Neural Network}
 %- Explain why Deep Neural Network multiple-layer backpropagation
 %- Different types of activation function
 %- Back propagation in deep neural network explanation
 \subsection{Overfitting}
 \subsubsection{Dropout}
-\subsection{Convolutional Layer}
+\subsection{Convolutional Layer} 
