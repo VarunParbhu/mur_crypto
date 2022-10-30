@@ -1,234 +1,770 @@
-\chapter{Methodology}
+\chapter{Deep Learning Networks}
 \section{Introduction}
 Deep learning is a multidisciplinary field ranging from linear algebra, calculus and probability theory. With major advancement made in compute processing power; deep learning is commonly used in the industry now.
-\section{Linear Algebra}
-We introduce briefly the realm of linear algebra to get a better understanding of more complex concepts in neural networks. The focus is set on mainly the properties useful in deep learning. \\
-Linear algebra is the study of linear equations of the form:
-\begin{equation}
-    x_1a_1 + \dots + x_na_n = b
-\end{equation}
-or as a linear map defined by the following:
-\begin{equation}
-    (x_1, \dots, x_n) \mapsto (a_1 x_1 + \dots + a_n x_n) \label{eq:2.11}
-\end{equation}
-and their representation, manipulation and operation using vectors and matrices within a set of predefined axioms. 
-\subsection{Vectors}
-A vector is quantity that has both a magnitude and direction. It can be represented by an ordered set of numbers or graphically using an arrow.
-Consider the vector \textbf{u} in $\mathbb{R}^2$ given by:
+\vspace{5mm}
+\\
+\noindent\textbf{McCullough and Walter Pitts (MCP) Neuron}\\
+In 1943, McCulloch and Walter Pitts demonstrated that simple binary threshold units wired up as logical gates could be used to build a digital computer (add-ref). The McCulloch-Pitts (MCP) neuron is a simple mathematical model of a biological neuron. It was the earliest mathematical model of a neural network and had only three types of weights; excitatory (1), inhibitory (-1) and inactive (0). The model had an activation function which had a value of 1 if the weighted sum was greater or equal to a given threshold, else 0. Using the MCP neuron, one of the first digital computers that contained stored programs was built. However, the MCP neuron was very restrictive.
+\vspace{5mm}
+\\
+\noindent\textbf{Rosenblatt’s Perceptron Algorithm}\\
+In 1958, Frank Rosenblatt proposed the perceptron and an algorithm to adjust weights of the MCP neuron, extending the work done by McCulloch and Pitts. The MCP neuron had some limitations that the Perceptron managed to solve, for example the input was not restricted to boolean values but expanded to real numbers. Rosenblatt proved that if the data used to train the perceptron are linearly separable classes, then the perceptron algorithm convergences and separates the two classes by a hyperplane.
+\vspace{5mm}
+\\
+\noindent\textbf{Perceptron}\\
+\begin{figure}[ht]
+  \centering
+  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_perceptron_2.jpeg}
+  \caption{Rosenblatt perceptron}
+  \label{rosenblatt_perceptron}
+\end{figure}
+\vspace{5mm}
+\\
+\noindent Let $\textbf{x}$ be a vector of inputs where each $x_i \in \mathbb{Z}$ and $\textbf{w}$ be a vector of weights corresponding to the input signals where each $w_i \in \mathbb{Z}$. 
 \begin{align}
-    \textbf{u} &= \begin{bmatrix}
-           u_1 \\
-           u_2 \\
-         \end{bmatrix}
-  \end{align}
-The vector can be expressed graphically as shown below.
-\begin{center}
-    *Image Placeholder vector in $R^2$*    
-\end{center}
-
-\noindent The length of the arrow is an indication of the magnitude of a vector and its orientation given by the direction in which the arrow is pointing. The magnitude of the above vector can be computed as such:
-\begin{align}
-    ||\textbf{u}|| = \sqrt{u_1^2+u_2^2}
+  \begin{matrix}
+    \textbf{x} = \begin{bmatrix}
+      x_{0} \\
+      x_{1} \\
+      \vdots \\
+      x_{n}
+    \end{bmatrix}, & \textbf{w} = \begin{bmatrix}
+      w_{0} \\
+      w_{1} \\
+      \vdots \\
+      w_{n}
+    \end{bmatrix}
+  \end{matrix} \nonumber
 \end{align}
-
-\noindent The direction of the vector with respect to the $x$-axis is given by: 
+\noindent Then, the mathematical definition of the perceptron is given by
 \begin{align}
-    \theta = \tan^{-1}\left(\dfrac{u_2}{u_1}\right)
+  \phi(z) = \begin{cases}
+    1 & \text{if } \sum^{n}_{i=0} w_ix_i \geq  0\\
+    0 & \text{otherwise}
+    \label{eq:mcp_neuron}
+  \end{cases}
 \end{align}
-A vector space is a set of vectors which satisfy the following axioms:
-\begin{center}
-    *Placeholder - Table of Axioms for Vector Space*    
-\end{center}
-\noindent\textbf{Geometry representation of addition and subtraction of vectors in $\mathbb{R}^2$}
-Vector addition and subtraction is performed componentwise along each element of two vectors. Consider the two vectors $\textbf{a}$ and $\textbf{b}$ where:
-\begin{align}
-    \textbf{u} = \begin{bmatrix}
-        u_1 \\
-        u_2 \\
-      \end{bmatrix},
-      \textbf{v} = \begin{bmatrix}
-        v_1 \\
-        v_2 \\
-      \end{bmatrix}
-\end{align}
-\noindent\textbf{Addition} \\
-The addition of vector $\textbf{u}$ and $\textbf{v}$ is given by:
-\begin{align}
-    \textbf{u} + \textbf{v} =
-      \begin{bmatrix}
-        u_1 + v_1 \\
-        u_2 + v_2 \\
-      \end{bmatrix}
-      \label{eq:addition_vectors}
-\end{align}
-The geometrical effect of adding $\textbf{u}$ and $\textbf{v}$ together is shown below.
-\begin{center}
-    *Image Placeholder vector addition in $R^2$*    
-\end{center}
-We can observe from (image ref) above that adding $\textbf{u}$ to $\textbf{v}$ has the effect of rotating $\textbf{u}$ towards $\textbf{v}$.
-
-\noindent\textbf{Subtraction} \\
-The subtraction of vector $\textbf{v}$ from $\textbf{u}$ is given by:
-\begin{align}
-    \textbf{u} - \textbf{v} =
-      \begin{bmatrix}
-        u_1 - v_1 \\
-        u_2 - v_2 \\
-      \end{bmatrix}
-      \label{eq:subtraction_vectors}
-\end{align}
-\begin{center}
-    *Image Placeholder vector subtraction in $R^2$*    
-\end{center}
-We can observe from (image ref) above that subtracting $\textbf{v}$ from $\textbf{u}$ has the effect of rotating $\textbf{u}$ in the opposite direction of $\textbf{v}$.\\
-\vspace{1mm}
-\noindent The effect of rotating two vectors though addition and subtraction are useful properties utilized in deep learning.
-\subsubsection{Inner Product}
-\noindent The inner product or dot product of: 
-\begin{align}
-    \textbf{u} = \begin{bmatrix}
-        u_1 \\
-        u_2 \\
-      \end{bmatrix},
-      \textbf{v} = \begin{bmatrix}
-        v_1 \\
-        v_2 \\
-      \end{bmatrix}
-\end{align}
-is given by $\textbf{u}.\textbf{v}$
-\begin{align}
-  \textbf{u.v} &= u_1 v_1 + u_2 v_2 \\
-  &= ||\textbf{u}|| \, ||\textbf{v}||\cos \theta
-  \label{eq:cosine_rule_dot_product}
-\end{align}
-where $\theta$ is the angle between vectors \textbf{u} and \textbf{v}.
-\begin{center}
-  *Image Placeholder inner product in $R^2$*    
-\end{center}
-The dot product of $\textbf{u.v}$ equals \textbf{v.u}. The order does not make a difference.
-\subsection{Matrices}
-\noindent A matrix is an $m \times n$ array of numbers, where $m$ is the number of rows and $n$ is the number of columns; the matrix is said to be of dimension $(m \times n)$.
-\begin{align}
-  \textbf{A} = 
-  \begin{bmatrix}
-    a_{11} & a_{12} & \dots & a_{1n} \\
-    a_{21} & a_{22} & \dots & a_{2n} \\
-    \vdots & \vdots & \ddots & \vdots \\
-    a_{m1} & a_{m_2} & \dots & a_{mn}
-  \end{bmatrix}
-\end{align}
-Similar to vectors, there are a couple of matrix operations that can be done under certain condition. \\
-\noindent \textbf{Matrix Operations} \\ 
-\noindent \textbf{Matrix Addition} \\
-The sum of two matrices $\textbf{A}$ and $\textbf{B}$ is given by the element wise sum of the elements provided that they both have the same dimension. 
-\\ Consider two matrices \textbf{A} and \textbf{B}:
+\vspace{5mm}
+\\
+where $\phi(z)$ is known as the hard delimiter.
+\vspace{5mm}
+\\
+\noindent Consider the two sets of point \textbf{A} and \textbf{B} 
 \begin{align}
   \textbf{A} =
-  \begin{bmatrix}
-    a_{11} & a_{12} \\
-    a_{21} & a_{22}
-  \end{bmatrix} \, \, \, 
+  \begin{Bmatrix}
+    \begin{bmatrix}
+      1 \\ 
+      2
+    \end{bmatrix}
+  \end{Bmatrix}
+   \, \, \, 
   \textbf{B} =
+\begin{Bmatrix}
   \begin{bmatrix}
-    b_{11} & b_{12} \\
-    b_{21} & b_{22}
+    -1 \\
+    2
+  \end{bmatrix},
+  \begin{bmatrix}
+    0 \\
+    -1
   \end{bmatrix}
+  \end{Bmatrix}
 \end{align}
- the sum \textbf{A + B} is given by
+and fitting the perceptron function (\refeq{eq:mcp_neuron}) to learn how to classify points in each respective set. Let set \textbf{A} and \textbf{B} be class 1 and 0 respectively.
+\begin{figure}[ht]
+  \centering
+  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_perceptron_example_1.jpeg}
+  \caption{Caption}
+  \label{fig:perceptron_example_1}
+\end{figure}\\
+From \ref{fig:perceptron_example_1}, we can separate the two classes by a single line. Consider the random separating line passing through the origin (this will set the value of $x_0$ in (\refeq{eq:mcp_neuron}) to 0).\\
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_perceptron_example_2.jpeg}
+  \caption{Caption}
+  \label{fig:perceptron_example_2}
+\end{figure}\\
+The equation of the random line is given by
 \begin{align}
-  \textbf{A} + \textbf{B} = \begin{bmatrix}
-    a_{11} + b_{11} & a_{12} + b_{12} \\
-    a_{21} + b_{21} & a_{22} + b_{22}
+  x_1 = - x_2
+\end{align}
+Comparing to the equation (\refeq{eq:mcp_neuron}); we can deduce that 
+\begin{align}
+  \begin{matrix}
+    w_1 = 1 & w_2 = 1
+  \end{matrix}
+\end{align}
+Visually, we can already see that the separating line does not split the points properly. The computation of the binary classification using the random line is given by
+\begin{align}
+  \phi(A_1) &= \phi\begin{pmatrix}
+    \begin{bmatrix}
+      1\\
+      1
+    \end{bmatrix}.\begin{bmatrix}
+      1 \\
+      2
+    \end{bmatrix}
+  \end{pmatrix} = \phi(3) = 1 \\
+  \phi(B_1) &= f\begin{pmatrix}
+    \begin{bmatrix}
+      1\\
+      1
+    \end{bmatrix}.\begin{bmatrix}
+      -1 \\
+      2
+    \end{bmatrix}
+  \end{pmatrix} = \phi(1) = 1 \\
+  \phi(B_2) &= f\begin{pmatrix}
+    \begin{bmatrix}
+      1\\
+      1
+    \end{bmatrix}.\begin{bmatrix}
+      -1 \\
+      0
+    \end{bmatrix}
+  \end{pmatrix} = \phi(-1) = 0
+\end{align}
+The computation confirms the visual representation and groups $\textbf{A}_1$ and $\textbf{B}_1$ together and $\textbf{B}_2$ separated which is incorrect. We can either alter the separating line (by moving the weight vector) with respect to $\textbf{A}_1$ and/or $\textbf{B}_1$.
+\begin{figure}[ht]
+  \centering
+  \includegraphics[scale=0.25]{CHAPTER_2/c2_fig_perceptron_example_3.jpeg}
+  \caption{!!!TO BE CHANGED!!!}
+  \label{fig:perceptron_example_3}
+\end{figure}\\
+Since $\textbf{B}_1$ is incorrectly classified, using the property of subtraction of vectors; we move the weight vector ($\textbf{w}$) away from $\textbf{B}_1$ and check the classification again.
+\begin{align}
+  \textbf{w}^{(1)} &= \textbf{w} - \textbf{B}_1 \\
+  &= \begin{bmatrix}
+    1 \\
+    1
+  \end{bmatrix} - \begin{bmatrix}
+    -1 \\
+    2
+  \end{bmatrix} \\
+  & = \begin{bmatrix}
+    2 \\
+    -1
   \end{bmatrix}
 \end{align}\\
-\noindent \textbf{Scalar Matrix Multiplication} \\
-The product $\alpha\textbf{A}$, where $\alpha \in \mathbb{R}$ and $\textbf{A}$ is a matrix, is calculated by multiplying every entry of $\textbf{A}$ by $\alpha$. \\
-Consider  a matrix \textbf{A} and constant $\alpha$:
+\begin{figure}[ht]
+  \centering
+  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_perceptron_example_4.jpeg}
+  \caption{!!!!TO BE CHANGED!!!!}
+  \label{fig:perceptron_example_4}
+\end{figure} \\
+Based on the new separating line, we can observe visually that the points are correctly classified. The computation of the binary classification using the new separating line $\textbf{w}^{(1)}$ is given by
 \begin{align}
-  \begin{bmatrix}
-    a_{11} & a_{12} \\
-    a_{21} & a_{22}
-  \end{bmatrix}
+  \phi(A_1) &= \phi\begin{pmatrix}
+    \begin{bmatrix}
+      2\\
+      -1
+    \end{bmatrix}.\begin{bmatrix}
+      1 \\
+      2
+    \end{bmatrix}
+  \end{pmatrix} = \phi(0) = 1 \\
+  \phi(B_1) &= \phi\begin{pmatrix}
+    \begin{bmatrix}
+      2\\
+      -1
+    \end{bmatrix}.\begin{bmatrix}
+      -1 \\
+      2
+    \end{bmatrix}
+  \end{pmatrix} = \phi(-4) = 0 \\
+  \phi(B_2) &= \phi\begin{pmatrix}
+    \begin{bmatrix}
+      2\\
+      -1
+    \end{bmatrix}.\begin{bmatrix}
+      -1 \\
+      0
+    \end{bmatrix}
+  \end{pmatrix} = \phi(-2) = 0
 \end{align}
-the scalar multiplication $\alpha \textbf{A}$ is given by
+Thus, the perceptron learned how to classify the two sets of points. The function $f(\textbf{x})$ could be re-used to classify new points added to the sets.
+\vspace{5mm}
+\\
+\noindent\textbf{Perceptron Algorithm}\\
+The perceptron algorithm adjusts the weights and as a result, the hard delimiter as well in order to linearly separate a set of binary labelled input.
+
+\begin{algorithm}
+\caption{Perceptron Algorithm}\label{alg:perceptron_algorithm}
+\begin{algorithmic}[1]
+\Require \\
+Let $t=0$ and $\textbf{w} = \begin{bmatrix}
+  0 & 0 & \dots & 0
+\end{bmatrix}^T$ \\
+Consider the training set D $s.t$ $D = C_1 \cup C_2$  \\
+$C_1$ $\leftarrow$ input with label 1 \\
+$C_2$ $\leftarrow$ input with label 0\\
+\textbf{Start}
+\While{!convergence}
+  \State Select a random input $\textbf{x}$
+  \If{$\textbf{x}\in A$ and $\textbf{w}.\textbf{x}<0$}
+  \State $\textbf{w} = \textbf{w} + \textbf{x}$
+  \EndIf
+  \If{$\textbf{x}\in B$ and $\textbf{w}.\textbf{x}\geq0$}
+  \State $\textbf{w} = \textbf{w} - \textbf{x}$
+  \EndIf
+\EndWhile
+\end{algorithmic}
+\end{algorithm}
+\noindent If the input data are binary and linearly separable; then algorithm (\ref{alg:perceptron_algorithm}) converges. The proof of convergence of the algorithm is known as the \textbf{perceptron convergence theorem}. \vspace{5mm} \\
+\noindent\textbf{Perceptron Convergence Theorem }\vspace{5mm}\\
+\textbf{Theorem}\\
+Consider algorithm (\ref{alg:perceptron_algorithm}) and let $D$ be a set of training vectors which are linearly separable. Let $\textbf{w}^{*}$ be the weight vectors which defines the separating line with $||\textbf{w}^{*}|| = 1$. Then the number of mistakes $m$ made by the perceptron algorithm satisfies 
 \begin{align}
-  \alpha \textbf{A} = 
-  \alpha \begin{bmatrix}
-    a_{11} & a_{12} \\
-    a_{21} & a_{22}
-  \end{bmatrix}
-  = \begin{bmatrix}
-    \alpha a_{11} & \alpha a_{12} \\
-    \alpha a_{21} & \alpha a_{22}
-  \end{bmatrix}
-\end{align} \\
-\noindent \textbf{Matrix Transpose} \\
-\noindent The transpose of a $(m \times n)$ matrix $\textbf{A}$ is calculated by swapping the rows into columns or the columns into rows. This operation result in a $(n \times m)$ denoted as $\textbf{A}^T$. \\
-Consider  a matrix \textbf{A}, the transpose is given by $\textbf{A}^T$:
-\begin{align}
-  \textbf{A} = \begin{bmatrix}
-    a_{11} & a_{12} \\
-    a_{21} & a_{22}
-  \end{bmatrix} \, \, \, 
-  \textbf{A}^T = \begin{bmatrix}
-    a_{11} & a_{21} \\
-    a_{12} & a_{22}
-  \end{bmatrix}
+  \begin{matrix}
+    m \leq \dfrac{1}{\gamma^2} & \text{where} & \gamma = \underset{\textbf{x}\in D}{\min} \dfrac{|{\textbf{w}^*}^T\textbf{x}|}{||\textbf{x}||_2}
+  \end{matrix}
 \end{align}
-\noindent \textbf{Matrix Multiplication} \\
-The multiplication operation between two matrices is only defined is the number of columns of the left matrix is the same as the number of rows in the right matrix. If \textbf{A} is a $(m \times n)$ matrix and \textbf{B} is a $(n \times p)$ matrix, then their product \textbf{AB} is the $(m \times n)$ matrix whose entries are given by inner product of the corresponding row of \textbf{A} and the corresponding column of \textbf{B}.\\
-Consider two matrices \textbf{A} and \textbf{B}:
+\textbf{Note}
+\begin{enumerate}
+  \item Since, $||\textbf{w}^{*}|| = 1 \implies \cos (\theta) = \dfrac{{\textbf{w}^*}^T\textbf{x}}{||\textbf{x}||_2}$
+  \item If $||\textbf{x}||_2 = 1$, that is, we scale all the training examples to have unit norm (which has no effect their orientation), then $\gamma = \underset{\textbf{x}\in D}{\min} |{\textbf{w}^*}^T\textbf{x}|$ is the minimum distance from any example $\textbf{x} \in D$ to the separating line.
+\end{enumerate}
+\textbf{Proof}\\
+We first prove the inequality given by 
 \begin{align}
-  \textbf{A} =
-  \begin{bmatrix}
-    a_{11} & a_{12} & a_{13} \\
-    a_{21} & a_{22} & a_{23}
-  \end{bmatrix} \, \, \, 
-  \textbf{B} =
-  \begin{bmatrix}
-    b_{11} & b_{12} \\
-    b_{21} & b_{22} \\
-    b_{31} & b_{32}
-  \end{bmatrix}
+  (\textbf{w}^ {(t+1)})^T\textbf{w}^{*} \geq (\textbf{w}^ {(t)})^T\textbf{w}^{*} + \gamma
+  \label{eq:per_cov_ine_1}
 \end{align}
- the matrix multiplication is given by \textbf{AB}
+\indent \textbf{State 1} \\
+In state 1, let us consider \textbf{x} being positive ($\textbf{x} \in C_1$) and incorrectly classified then
 \begin{align}
-  \textbf{A}\textbf{B} &= \begin{bmatrix}
-    a_{11} & a_{12} & a_{13} \\
-    a_{21} & a_{22} & a_{23}
+  \nonumber
+  (\textbf{w}^ {(t+1)})^T\textbf{w}^{*} = (\textbf{w}^ {(t)} + \textbf{x})^T\textbf{w}^{*} =   (\textbf{w}^ {(t)})^T\textbf{w}^{*} + \textbf{x}^T\textbf{w}^{*}
+\end{align}
+Assuming that all $||\textbf{x}||_2 = 1$ then $\textbf{x}^T\textbf{w}^{*} \geq \gamma$ since $\gamma$ is the minimum. 
+\begin{align}
+  \label{eq:per_cov_ine_2}
+  (\textbf{w}^ {(t+1)})^T\textbf{w}^{*} \geq (\textbf{w}^ {(t)})^T\textbf{w}^{*} + \gamma
+\end{align}
+Thus, we have proved (\ref{eq:per_cov_ine_1})  under \textbf{State 1}.\\
+\indent \textbf{State 2} \\
+In state 2, let us consider \textbf{x} being negative ($\textbf{x} \in C_2$) and incorrectly classified then
+\begin{align}
+  \nonumber
+  (\textbf{w}^ {(t+1)})^T\textbf{w}^{*} = (\textbf{w}^ {(t)} - \textbf{x})^T\textbf{w}^{*} =   (\textbf{w}^ {(t)})^T\textbf{w}^{*} - \textbf{x}^T\textbf{w}^{*}
+\end{align}
+Since $\textbf{x} \in C_2 \implies |{\textbf{w}^*}^T\textbf{x}| = - \textbf{x}^T\textbf{w}^* \geq 0$ and $|\textbf{x}^T\textbf{w}^{*}| \geq \gamma$
+\begin{align}
+  \nonumber
+  (\textbf{w}^ {(t+1)})^T\textbf{w}^{*} &= (\textbf{w}^ {(t)})^T\textbf{w}^{*} + |{\textbf{w}^*}^T\textbf{x}| \\
+  \label{eq:per_cov_ine_3}
+  (\textbf{w}^ {(t+1)})^T\textbf{w}^{*} &\geq (\textbf{w}^ {(t)})^T\textbf{w}^{*} + \gamma
+\end{align}
+Thus, we have proved (\ref{eq:per_cov_ine_1})  under \textbf{State 2}.\\
+From (\ref{eq:per_cov_ine_2}) and (\ref{eq:per_cov_ine_3}), we have shown that $\forall \textbf{x}\in D$ that inequality (\ref{eq:per_cov_ine_1}) holds.\\
+Assume that the inequality (\ref{eq:per_cov_ine_1}) holds for an arbitrary integer value $m$ and $m-1$
+\begin{align}
+  \label{eq:induction_1}
+  (\textbf{w}^ {(m)})^T\textbf{w}^{*} \geq (\textbf{w}^ {(m-1)})^T\textbf{w}^{*} + \gamma \\
+  \label{eq:induction_2}
+  (\textbf{w}^ {(m-1)})^T\textbf{w}^{*} \geq (\textbf{w}^ {(m-2)})^T\textbf{w}^{*} + \gamma 
+\end{align}
+Merging inequality (\ref{eq:induction_1}) and (\ref{eq:induction_2}) gives us
+\begin{align}
+  \label{eq:induction_3}
+  (\textbf{w}^ {(m)})^T\textbf{w}^{*} \geq (\textbf{w}^ {(m-2)})^T\textbf{w}^{*} + 2\gamma
+\end{align}
+Hence, by induction, after $M$ mistakes, inequality (\ref{eq:induction_3}) becomes
+\begin{align}
+  \label{eq:induction_starts}
+  (\textbf{w}^ {(m)})^T\textbf{w}^{*} \geq (\textbf{w}^ {(0)})^T\textbf{w}^{*} + m\gamma
+\end{align}
+Since $\textbf{w}^{(0)} = \mathbf{0}$ (the zero vector), we have
+\begin{align}
+  \label{eq:perp_cov_result1}
+  (\textbf{w}^ {(m)})^T\textbf{w}^{*} \geq m\gamma
+\end{align}
+Next, we show that 
+\begin{align}
+  ||{\textbf{w}^{(t+1)}}||_{2}^{2} \leq ||{\textbf{w}^{(t)}}||_{2}^{2} + 1
+  \label{eq:induction_proof_part2}
+\end{align}
+\indent \textbf{State 1} \\
+Consider the same state 1 as before, thus we have
+\begin{align}
+  \begin{matrix}
+    \label{eq:state1_conditions}
+    (\textbf{w}^ {(t)})^T\textbf{x} \leq 0 & \text{and} & \textbf{w}^ {(t+1)} = \textbf{w}^{(t)} + \textbf{x}
+  \end{matrix}
+\end{align}
+then
+\begin{align}
+  \nonumber
+  ||\textbf{w}^{(t+1)}||_{2}^{2} &= ( \textbf{w}^{(t)} + \textbf{x})^T( \textbf{w}^{(t)} + \textbf{x}) \\
+  \nonumber
+  &=( \textbf{w}^{(t)} + \textbf{x})^T\textbf{w}^{(t)} + ( \textbf{w}^{(t)} + \textbf{x})^T\textbf{x} \\
+  \nonumber
+  &= (\textbf{w}^{(t)})^T\textbf{w}^{(t)} + \textbf{x}^T\textbf{w}^{(t)} + (\textbf{w}^{(t)})^T\textbf{x} + \textbf{x}^T\textbf{x}\\
+  &= (\textbf{w}^{(t)})^T\textbf{w}^{(t)} + 2 (\textbf{w}^{(t)})^T\textbf{x}  + \textbf{x}^T\textbf{x}
+  \label{eq:state_1_proof}
+\end{align}
+Since (\ref{eq:state1_conditions}) and $\textbf{x}^T\textbf{x} = 1$, equation (\ref{eq:state_1_proof}) becomes
+\begin{align}
+  ||{\textbf{w}^{(t+1)}}||_{2}^{2} \leq ||{\textbf{w}^{(t)}}||_{2}^{2} + 1
+\end{align}
+\indent \textbf{State 2} \\
+Consider the same state 2 as before, thus we have
+\begin{align}
+  \begin{matrix}
+    \label{eq:state2_conditions}
+    (\textbf{w}^ {(t)})^T\textbf{x} > 0 & \text{and} & \textbf{w}^ {(t+1)} = \textbf{w}^{(t)} - \textbf{x}
+  \end{matrix}
+\end{align}
+then
+\begin{align}
+  \nonumber
+  ||\textbf{w}^{(t+1)}||_{2}^{2} &= ( \textbf{w}^{(t)} - \textbf{x})^T( \textbf{w}^{(t)} - \textbf{x}) \\
+  \nonumber
+  &=( \textbf{w}^{(t)} - \textbf{x})^T\textbf{w}^{(t)} - ( \textbf{w}^{(t)} - \textbf{x})^T\textbf{x} \\
+  \nonumber
+  &= (\textbf{w}^{(t)})^T\textbf{w}^{(t)} - \textbf{x}^T\textbf{w}^{(t)} - (\textbf{w}^{(t)})^T\textbf{x} + \textbf{x}^T\textbf{x}\\
+  &= (\textbf{w}^{(t)})^T\textbf{w}^{(t)} - 2 (\textbf{w}^{(t)})^T\textbf{x}  + \textbf{x}^T\textbf{x}
+  \label{eq:state_2_proof}
+\end{align}
+Since (\ref{eq:state2_conditions}) and $\textbf{x}^T\textbf{x} = 1$, equation (\ref{eq:state_2_proof}) becomes
+\begin{align}
+  ||{\textbf{w}^{(t+1)}}||_{2}^{2} \leq ||{\textbf{w}^{(t)}}||_{2}^{2} + 1
+\end{align}
+Thus, we have proved (\ref{eq:induction_proof_part2}) under \textbf{State 2}.\\
+By the same induction defined in (\ref{eq:induction_starts}), we have
+\begin{align}
+  \label{eq:perp_cov_result2}
+  ||\textbf{w}^{(m)}||_{2}^{2} \leq m
+\end{align}
+Finally, we merge result (\ref{eq:perp_cov_result1}) and (\ref{eq:perp_cov_result2}) using the Cauchy-Schwarz (CS) inequality \\
+Recall that the CS inequality is given by
+\begin{align}
+  \label{eq:CS_inquality}
+  |{\textbf{w}^*}^T\textbf{x}| \leq ||\textbf{w}^{*}||_2 ||\textbf{x}||_2
+\end{align}
+Hence, using (\ref{eq:CS_inquality}) we get
+\begin{align}
+  \label{eq:after_cs}
+  |(\textbf{w}^{m})^T\textbf{w}^{*}| \leq ||(\textbf{w}^{m})^T||_2  ||\textbf{w}^{*}||_2
+\end{align}
+From the result (\ref{eq:perp_cov_result1}), (\ref{eq:after_cs}) becomes
+\begin{align}
+  m\gamma \leq |(\textbf{w}^{m})^T\textbf{w}^{*}| \leq ||(\textbf{w}^{m})^T||_2  ||\textbf{w}^{*}||_2
+\end{align}
+Using the result (\ref{eq:perp_cov_result2}) and the fact that $||\textbf{w}^{*}||_{2} = 1$, we get
+\begin{align}
+  \nonumber
+  m\gamma &\leq ||(\textbf{w}^{m})^T||_2 \\
+  m^2 {\gamma}^2 &\leq ||(\textbf{w}^{m})^T||_{2}^{2} \\
+  m^2 {\gamma}^2 &\leq m \\
+  m &\leq \dfrac{1}{\gamma^2}
+\end{align}
+This proves the Perceptron Convergence Theorem that the number of mistakes is at most $\dfrac{1}{\gamma^2}$, where $\gamma$ is the margin.\vspace{5mm}\\
+\noindent\textbf{Solving Gate problem using the Perceptron}\\
+The perceptron alone is not always a good model to solve binary classification problem. It has certain limitation by nature of its definition. Consider the logic functions AND, OR and XOR across these 4 points:
+\begin{align}
+  \begin{matrix}
+    \textbf{p}_1 = \begin{bmatrix}
+      0 \\
+      0
+    \end{bmatrix},
+    \textbf{p}_2 = \begin{bmatrix}
+      1 \\
+      0
+    \end{bmatrix},
+    \textbf{p}_3 = \begin{bmatrix}
+      1 \\
+      1
+    \end{bmatrix},
+    \textbf{p}_4 = \begin{bmatrix}
+      0 \\
+      1
+    \end{bmatrix}  
+  \end{matrix}
+\end{align}
+\subsubsection*{AND Function}
+The AND function returns a value of 1 if both of the inputs is 1. Let $f$ be the AND function such that
+\begin{align}
+\begin{matrix}
+  \nonumber
+  f(\textbf{p}_1) = 0 & f(\textbf{p}_2) = 0 & f(\textbf{p}_3) = 1 & f(\textbf{p}_4) = 0
+\end{matrix}  
+\end{align}
+Consider the AND function with the separating line below
+\begin{figure}[ht]
+  \centering
+  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_AND_function.jpeg}
+  \caption{AND Function with separating line}
+  \label{AND_function_2}
+\end{figure}\vspace{50mm}\\
+The equation of the separating line in figure \ref{AND_function_2} is given by
+\begin{align}
+  x_1 + x_2 -1.5 = 0
+\end{align}
+We can transform the separating line in the form of $\textbf{w}^T\textbf{x} = 0$ to fit the perceptron.\\
+Let 
+\begin{align}
+  \begin{matrix}
+    \textbf{w} = \begin{bmatrix}
+      -1.5 \\
+      1 \\
+      1
+    \end{bmatrix} & \text{and} & \textbf{x} = \begin{bmatrix}
+      1 \\
+      x_1 \\
+      x_2
+    \end{bmatrix}
+  \end{matrix}
+\end{align}
+Applying function (\ref{eq:mcp_neuron}) on each point to check whether they are correctly classified.
+\begin{align}
+  \nonumber
+  \begin{matrix}
+    \phi(p_1) = \phi\begin{pmatrix}
+      \begin{bmatrix}
+        -1.5 \\
+        1 \\
+        1 
+      \end{bmatrix}.\begin{bmatrix}
+        1 \\
+        0 \\
+        0
+      \end{bmatrix}
+    \end{pmatrix} = \phi(-1.5) = 0 
+  \end{matrix}
+\end{align}
+\begin{align}
+  \nonumber
+  \begin{matrix}
+    \phi(p_2) = \phi\begin{pmatrix}
+      \begin{bmatrix}
+        -1.5 \\
+        1 \\
+        1 
+      \end{bmatrix}.\begin{bmatrix}
+        1 \\
+        1 \\
+        0
+      \end{bmatrix}
+    \end{pmatrix} = \phi(-0.5) = 0
+  \end{matrix}
+\end{align}
+\begin{align}
+  \nonumber
+  \begin{matrix}
+    \phi(p_3) = \phi\begin{pmatrix}
+      \begin{bmatrix}
+        -1.5 \\
+        1 \\
+        1 
+      \end{bmatrix}.\begin{bmatrix}
+        1 \\
+        1 \\
+        1
+      \end{bmatrix}
+    \end{pmatrix} = \phi(0.5) = 1
+  \end{matrix}
+\end{align}
+\begin{align}
+  \nonumber
+  \begin{matrix}
+    \phi(p_4) = \phi\begin{pmatrix}
+      \begin{bmatrix}
+        -1.5 \\
+        1 \\
+        1 
+      \end{bmatrix}.\begin{bmatrix}
+        1 \\
+        0 \\
+        1
+      \end{bmatrix}
+    \end{pmatrix} = \phi(-0.5) = 0
+  \end{matrix}
+\end{align}
+Thus, the perceptron is able to solve the AND function.
+\subsubsection*{OR Function}
+The OR function returns a value of 1 if either of the inputs is 1. Let $f$ be the OR function such that
+\begin{align}
+\begin{matrix}
+  \nonumber
+  f(\textbf{p}_1) = 0 & f(\textbf{p}_2) = 1 & f(\textbf{p}_3) = 1 & f(\textbf{p}_4) = 1
+\end{matrix}  
+\end{align}
+Consider the OR function with the separating line below
+\begin{figure}[ht]
+  \centering
+  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_OR_function.jpeg}
+  \caption{AND Function with separating line}
+  \label{OR_function}
+\end{figure}\vspace{50mm}\\
+The equation of the separating line in figure \ref{OR_function} is given by
+\begin{align}
+  x_1 + x_2 - 0.5 = 0
+\end{align}
+We can transform the separating line in the form of $\textbf{w}^T\textbf{x} = 0$ to fit the perceptron.\\
+Let 
+\begin{align}
+  \begin{matrix}
+    \textbf{w} = \begin{bmatrix}
+      -0.5 \\
+      1 \\
+      1
+    \end{bmatrix} & \text{and} & \textbf{x} = \begin{bmatrix}
+      1 \\
+      x_1 \\
+      x_2
+    \end{bmatrix}
+  \end{matrix}
+\end{align}
+Applying function (\ref{eq:mcp_neuron}) on each point to check whether they are correctly classified.
+\begin{align}
+  \nonumber
+  \begin{matrix}
+    \phi(p_1) = \phi\begin{pmatrix}
+      \begin{bmatrix}
+        -0.5 \\
+        1 \\
+        1 
+      \end{bmatrix}.\begin{bmatrix}
+        1 \\
+        0 \\
+        0
+      \end{bmatrix}
+    \end{pmatrix} = \phi(-0.5) = 0 
+  \end{matrix}
+\end{align}
+\begin{align}
+  \nonumber
+  \begin{matrix}
+    \phi(p_2) = \phi\begin{pmatrix}
+      \begin{bmatrix}
+        -0.5 \\
+        1 \\
+        1 
+      \end{bmatrix}.\begin{bmatrix}
+        1 \\
+        1 \\
+        0
+      \end{bmatrix}
+    \end{pmatrix} = \phi(0.5) = 1
+  \end{matrix}
+\end{align}
+\begin{align}
+  \nonumber
+  \begin{matrix}
+    \phi(p_3) = \phi\begin{pmatrix}
+      \begin{bmatrix}
+        -0.5 \\
+        1 \\
+        1 
+      \end{bmatrix}.\begin{bmatrix}
+        1 \\
+        1 \\
+        1
+      \end{bmatrix}
+    \end{pmatrix} = \phi(1.5) = 1
+  \end{matrix}
+\end{align}
+\begin{align}
+  \nonumber
+  \begin{matrix}
+    \phi(p_4) = \phi\begin{pmatrix}
+      \begin{bmatrix}
+        -0.5 \\
+        1 \\
+        1 
+      \end{bmatrix}.\begin{bmatrix}
+        1 \\
+        0 \\
+        1
+      \end{bmatrix}
+    \end{pmatrix} = \phi(0.5) = 1
+  \end{matrix}
+\end{align}
+Thus, the perceptron is able to solve the OR function.
+\subsubsection*{XOR Function}
+The XOR function returns a value of 1 if either of the inputs is 1 but not both. Let $f$ be the XOR function such that
+\begin{align}
+  \begin{matrix}
+    f(\textbf{p}_1)=0,&   f(\textbf{p}_2)=1 ,& f(\textbf{p}_3)=0,&   f(\textbf{p}_4)=1    
+  \end{matrix}
+\end{align}
+Consider a plot of the XOR function below 
+\begin{figure}[ht]
+  \centering
+  \includegraphics[scale=0.15]{CHAPTER_2/c2_rig_XOR.jpeg}
+  \caption{OR function}
+  \label{XOR_function}
+\end{figure}\\
+From figure \ref{XOR_function}; we can observe that no separating line alone could group the two different classes together. We attempt to find a combination of weight for the perceptron which reduces the error (margin) as much as possible.\\
+
+\noindent Let $f^{*}$ be the exact function and $f(\textbf{x},\textbf{w}) = \textbf{w}^T\textbf{x} + b$, where $\textbf{w} = [w_1 \, \, w_2]^T$, be the approximate function. Consider the error function (the difference between the exact and approximate value)
+\begin{align}
+  \label{eq:error_XOR_prob}
+  \mathbb{E}(\textbf{w},b) = \dfrac{1}{4} \sum_{x\in D}(f^{*}(\textbf{x})- \textbf{w}^T\textbf{x}-b)^2
+\end{align}
+we minimise the error function $\mathbb{E}$ by setting the partial derivatives to 0. The partial derivative with respect to the bias is given by
+\begin{align}
+  \nonumber
+  \dfrac{\partial \mathbb{E}}{\partial b} &= -\dfrac{1}{2} \sum_{x\in D}(f^{*}(\textbf{x})- \textbf{w}^T\textbf{x}-b)\\
+  \label{eq:bias_derivative}
+  \dfrac{\partial \mathbb{E}}{\partial b} = 0\rightarrow \sum_{x\in D}f^{*}(\textbf{x}) &= \sum_{x\in D}\textbf{w}^T\textbf{x}- \sum_{x\in D}b
+\end{align}
+The partial derivative with respect to the weight vector is given by
+\begin{align}
+  \nonumber
+  \dfrac{\partial \mathbb{E}}{\partial \textbf{x}} &= \dfrac{1}{2} \sum_{x\in D}(f^{*}(\textbf{x})- \textbf{w}^T\textbf{x}-b) \dfrac{\partial (-\textbf{w}^T\textbf{x})}{\partial \textbf{w}}\\
+  \nonumber
+  &=-\dfrac{1}{2} \sum_{x\in D}(f^{*}(\textbf{x})- \textbf{w}^T\textbf{x}-b)\textbf{x}\\
+  \label{eq:weight_derivative}
+  \dfrac{\partial \mathbb{E}}{\partial \textbf{w}} = 0\rightarrow \sum_{x\in D}\textbf{x}f^{*}(\textbf{x}) &= \sum_{x\in D}(\textbf{w}^T\textbf{x})\textbf{x} + b\sum_{x\in D}\textbf{x}
+\end{align}
+Substituting for values in equation (\ref{eq:bias_derivative})
+\begin{align}
+  \sum_{x\in D}f^{*}(\textbf{x}) &= f^{*}(\textbf{p}_1) + f^{*}(\textbf{p}_2) + f^{*}(\textbf{p}_3) + f^{*}(\textbf{p}_4) \nonumber \\
+  &= 0+1+1+0 \nonumber \\
+  & = 2 \\
+  \sum_{x\in D}\textbf{w}^T\textbf{x} &= \textbf{w}^T\begin{bmatrix}
+    0 \\
+    0
+  \end{bmatrix} + \textbf{w}^T\begin{bmatrix}
+    1 \\
+    0
+  \end{bmatrix} + \textbf{w}^T\begin{bmatrix}
+    1 \\
+    1
+  \end{bmatrix}+ \textbf{w}^T\begin{bmatrix}
+    0 \\
+    1
+  \end{bmatrix} \nonumber \\
+  &= 2w_1 + 2w_2 \\
+  \nonumber
+  \sum_{x\in D}b &= b \sum_{x\in D} 1 \\&= 4b
+\end{align}
+Thus, we get
+\begin{align}
+\nonumber 2 &= 2w_1 + 2w_2 + 4b \\
+w_1 + w_2 + 2b &= 1
+\label{eq:first_set_normal_eq}
+\end{align}
+Substituting for values in equation (\ref{eq:weight_derivative})
+\begin{align}
+  \sum_{x\in D}\textbf{x}f^{*}(\textbf{x}) &= \begin{bmatrix}
+    0 \\
+    0
+  \end{bmatrix}(0) + \begin{bmatrix}
+    1 \\
+    0
+  \end{bmatrix}(1) + \begin{bmatrix}
+    1 \\
+    1
+  \end{bmatrix}(0)+ \begin{bmatrix}
+    0 \\
+    1
+  \end{bmatrix}(1) \nonumber \\
+  &= \begin{bmatrix}
+    1 \\
+    1
+  \end{bmatrix}\\
+  \nonumber
+  \sum_{x\in D}(\textbf{w}^T\textbf{x})\textbf{x} &= \begin{bmatrix}
+    w_1 & w_2
   \end{bmatrix} \begin{bmatrix}
-    b_{11} & b_{12} \\
-    b_{21} & b_{22} \\
-    b_{31} & b_{32}
+    0 \\
+    0
+  \end{bmatrix} \begin{bmatrix}
+    0 \\
+    0
+  \end{bmatrix} + \begin{bmatrix}
+    w_1 & w_2
+  \end{bmatrix} \begin{bmatrix}
+    1 \\
+    0
+  \end{bmatrix} \begin{bmatrix}
+    1 \\
+    0
+  \end{bmatrix} \\ \nonumber
+  &+ \begin{bmatrix}
+    w_1 & w_2
+  \end{bmatrix} \begin{bmatrix}
+    1 \\
+    1
+  \end{bmatrix} \begin{bmatrix}
+    1 \\
+    1
+  \end{bmatrix} + \begin{bmatrix}
+    w_1 & w_2
+  \end{bmatrix} \begin{bmatrix}
+    0 \\
+    1
+  \end{bmatrix} \begin{bmatrix}
+    0 \\
+    1
   \end{bmatrix} \\
   &= \begin{bmatrix}
-    a_{11}b_{11} + a_{12}b_{21} + a_{13}b_{31} &  a_{11}b_{12} + a_{12}b_{22} + a_{13}b_{32} \\
-    a_{21}b_{11} + a_{22}b_{21} + a_{23}b_{31} &  a_{21}b_{12} + a_{22}b_{22} + a_{23}b_{32}
+    2w_1 + w_2 \\
+    w_1 + 2w_2
+  \end{bmatrix} \\
+  \nonumber 
+  b\sum_{x\in D}\textbf{x} &= 
+    b\begin{bmatrix}
+      0 \\
+      0
+    \end{bmatrix} + b\begin{bmatrix}
+      1 \\
+      0
+    \end{bmatrix} + b\begin{bmatrix}
+      1 \\
+      1
+    \end{bmatrix} + b\begin{bmatrix}
+      0 \\
+      1
+    \end{bmatrix}\\
+  &= b\begin{bmatrix}
+    2 \\
+    2
   \end{bmatrix}
 \end{align}
-\subsubsection{Outer Product}
-\noindent The outer product of two vectors $\textbf{u}$ and $\textbf{v}$: 
+Thus, we get
 \begin{align}
-    \textbf{u} = \begin{bmatrix}
-        u_1 \\
-        u_2 \\
-      \end{bmatrix} \, \, \, 
-      \textbf{v} = \begin{bmatrix}
-        v_1 \\
-        v_2 \\
-      \end{bmatrix}
+  \label{eq:second_set_normal_eq}
+\begin{bmatrix}
+  1 \\
+  1
+\end{bmatrix}  &= \begin{bmatrix}
+  2w_1 + w_2 \\
+  w_1 + 2w_2
+\end{bmatrix} + b\begin{bmatrix}
+  2 \\
+  2
+\end{bmatrix}
 \end{align}
-is given by $\textbf{u}\otimes\textbf{v}$
+From equations (\ref{eq:first_set_normal_eq}) and (\ref{eq:second_set_normal_eq}), we get the set of equations that forms the approximate function with the minimum error
 \begin{align}
-  \textbf{u}\otimes\textbf{v} = \begin{bmatrix}
-    u_1v_1 & u_1v_2 \\
-    u_2v_1 & u_2v_2
-  \end{bmatrix}
+  w_1 + w_2 + 2b &= 1 \nonumber \\
+  2w_1 + w_2 + 2b &= 1 \nonumber\\
+  w_1 + 2w_2 + 2b &= 1 \nonumber
 \end{align}
-The outer product of $\textbf{u}\otimes\textbf{v}$ is not equal to $\textbf{v}\otimes\textbf{u}$; the order does matter. However, the transpose of latter outer product are the same:
+Solving the system of linear equations we get
 \begin{align}
-  \textbf{u}\otimes\textbf{v} = (\textbf{v}\otimes\textbf{u})^T
+\begin{matrix}
+  w_1 = 0 & w_2 = 0 & b = \dfrac{1}{2}
+\end{matrix}  
 \end{align}
+Hence, the approximate function $f(\textbf{x},\textbf{w})$ is given by
+\begin{align}
+  f(\textbf{x},\textbf{w}) = \dfrac{1}{2}
+\end{align}
+\begin{figure}[ht]
+  \centering
+  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_XOR_soln.jpeg}
+  \caption{XOR approximate solution}
+  \label{fig: approximate_XOR_solution}
+\end{figure}\\
+\noindent  Clearly from figure \ref{fig: approximate_XOR_solution}, the perceptron model cannot solve the XOR logic function. The XOR problem is actually not linearly separable. Thus, we introduce \textbf{feedforward networks} to overcome this problem.
+\subsection{Feedforward Networks}
+
 \section{Differential calculus}
 Differential calculus is the study of the definition, properties, and applications the derivative of a function. The process of finding the derivative is called differentiation. It is the also referred to as the study of rate of change and slopes of curves. In optimization and deep learning, major concepts of differential calculus are used.
 \subsection{Derivatives}
@@ -325,14 +861,14 @@ A perceptron is an analogy to the human neuron. It is a computational model that
     \label{eq:perceptron_def}
   \end{cases}
 \end{align}
-\begin{figure}[h]
+\begin{figure}[ht]
   \centering
   \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_perceptron.jpeg}
   \caption{Perceptron graphical representation}
   \label{fig:perceptron}
 \end{figure}\\
 From the perceptron mathematical definition \refeq{eq:perceptron_def}, we can observe that the dot product is dependent on the angle between the weight vector (\textbf{w}) and the input vector (\textbf{x}). Using dot product (\refeq{eq:cosine_rule_dot_product}), addition (\refeq{eq:addition_vectors}) and subtraction (\refeq{eq:subtraction_vectors}) of vector property; we can define a learning rule for modifying the perceptron to learn how to classify a set of input.
-\subsubsection{Perceptron Learning Rule}
+\subsection{Perceptron Learning Ruelee}
 \noindent Consider the two sets of point \textbf{A} and \textbf{B} 
 \begin{align}
   \textbf{A} =
@@ -356,18 +892,17 @@ From the perceptron mathematical definition \refeq{eq:perceptron_def}, we can ob
   \end{Bmatrix}
 \end{align}
 and fitting the perceptron function (\refeq{eq:perceptron_def}) to learn how to classify points in each respective set. Let set \textbf{A} and \textbf{B} be class 1 and 0 respectively.
-\begin{figure}[h]
+\begin{figure}[ht]
   \centering
   \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_perceptron_example_1.jpeg}
   \caption{Caption}
-  \label{fig:perceptron_example_1}
+  \label{fig:perceptron_example_11}
 \end{figure}\\
 From \ref{fig:perceptron_example_1}, we can separate the two classes by a single line. Consider the random separating line passing through the origin (this will set the value of b in (\refeq{eq:perceptron_def}) to 0).\\
 \begin{figure}[!htbp]
-  \centering
-  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_perceptron_example_2.jpeg}
+  \centering \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_perceptron_example_2.jpeg}
   \caption{Caption}
-  \label{fig:perceptron_example_2}
+  \label{fig:perceptron_example_22}
 \end{figure}\\
 The equation of the random line is given by
 \begin{align}
@@ -410,11 +945,11 @@ Visually, we can already see that the separating line does not split the points 
   \end{pmatrix} = f(-1) = 0
 \end{align}
 The computation confirms the visual representation and groups $\textbf{A}_1$ and $\textbf{B}_1$ together. We can either alter the separating line (by moving the weight vector) with respect to $\textbf{A}_1$ and/or $\textbf{B}_1$.\vspace{50mm}
-\begin{figure}[h]
+\begin{figure}[ht]
   \centering
-  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_perceptron_example_3.jpeg}
+  \includegraphics[scale=0.2]{CHAPTER_2/c2_fig_perceptron_example_3.jpeg}
   \caption{Caption}
-  \label{fig:perceptron_example_3}
+  \label{fig:perceptron_example_33}
 \end{figure}\\
 Using the property of subtraction of vectors; we move the weight vector ($\textbf{w}$) away from $\textbf{B}_1$ and check the classification again. We  also introduce a learning rate $\alpha$ to control how much rotation we want. Let $\alpha = 0.5$
 \begin{align}
@@ -431,11 +966,11 @@ Using the property of subtraction of vectors; we move the weight vector ($\textb
     0
   \end{bmatrix}
 \end{align}\\
-\begin{figure}[h]
+\begin{figure}[ht]
   \centering
   \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_perceptron_example_4.jpeg}
   \caption{Caption}
-  \label{fig:perceptron_example_4}
+  \label{fig:perceptron_example_44}
 \end{figure} \\
 Based on the new separating line, we can observe visually that the points are correctly classified. The computation of the binary classification using the new separating line $\textbf{w}^{(1)}$ is given by
 \begin{align}
@@ -521,19 +1056,7 @@ The perceptron alone is not always a good model to solve binary classification p
   \end{matrix}
 \end{align}
 \subsubsection*{AND Function}
-The AND function returns a value of 1 if both of the input is 1. 
-\begin{align}
-  \begin{matrix}
-    f^{*}(\textbf{x}_1)=0,&   f^{*}(\textbf{x}_2)=0,&  f^{*}(\textbf{x}_3)=1,&   f^{*}(\textbf{x}_4)=0    
-  \end{matrix}
-\end{align}
-\begin{figure}[h]
-  \centering
-  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_AND.jpeg}
-  \caption{AND function}
-  \label{AND_function}
-\end{figure} \\
-\noindent From figure \ref{AND_function}; we can easily define a separating line by the perceptron to separate the two classes.
+*Placeholder*
 \subsubsection*{OR Function}
 The OR function returns a value of 1 if either of the inputs is 1.
 \begin{align}
@@ -545,7 +1068,7 @@ The OR function returns a value of 1 if either of the inputs is 1.
   \centering
   \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_OR.jpeg}
   \caption{OR function}
-  \label{OR_function}
+  \label{OR_function_2}
 \end{figure}
 \vspace{100mm}
 \noindent From figure \ref{OR_function}; we can easily define a separating line by the perceptron to separate the two classes.
@@ -556,11 +1079,11 @@ The XOR function returns a value of 1 if either of the inputs is 1 but not both.
     f^{*}(\textbf{x}_1)=0,&   f^{*}(\textbf{x}_2)=1 ,& f^{*}(\textbf{x}_3)=0,&   f^{*}(\textbf{x}_4)=1    
   \end{matrix}
 \end{align} 
-\begin{figure}[h]
+\begin{figure}[ht]
   \centering
   \includegraphics[scale=0.15]{CHAPTER_2/c2_rig_XOR.jpeg}
   \caption{OR function}
-  \label{XOR_function}
+  \label{XOR_function_2}
 \end{figure} \\
 \noindent From figure \ref{XOR_function}; we can observe that no separating line alone could group the two different classes together. The perceptron model cannot solve the XOR logic function. Thus, we introduce \textbf{neural networks} to overcome this problem.
 \subsection{Neural Network}
@@ -571,7 +1094,7 @@ The XOR function returns a value of 1 if either of the inputs is 1 but not both.
 %- Adjusting the weight using Gradient Descent - done
 %- Back propagation
 A neural network is a set of perceptron connected together which takes an input, manipulate the information to learn from it and outputs a prediction. A neural network attempts to learn a mapping from an input to an output. The goal is to reduce the error between the prediction by the network compared to the true value as much as possible.
-\begin{figure}[h]
+\begin{figure}[ht]
   \centering
   \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_neural_network_1.jpeg}
   \caption{Caption}
@@ -763,7 +1286,7 @@ Consider the neural network below.
 Let the perceptron at output layer have a linear activation function while the perceptron layer have ReLU activation functions. \\
 - Explain what happens at the end of the neural network
 - Explain what happens in between layers
-- Explain how to back propagate to the start of the network
+- Explain how to back propagate to the start of the network.
 
 \subsection{Deep Neural Network}
 %- Explain why Deep Neural Network multiple-layer backpropagation

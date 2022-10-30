@@ -1,3 +1,6 @@
 {"rule":"THE_SUPERLATIVE","sentence":"^\\QReplacing \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q by \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q where \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q is the identity matrix; we get the method of steepest descent Deep Learning.\\E$"}
 {"rule":"THE_SUPERLATIVE","sentence":"^\\QReplacing \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q by \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q where \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q is the identity matrix; we get the method of steepest descent given by Deep Learning.\\E$"}
 {"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\QHence, the update rule of the weights for gradient descent method is given by \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q Learning Rate .\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Q\\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q Then, the mathematical definition of the MCP neuron is given by \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q if \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q otherwise \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q Rosenblatt's Perceptron\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QPerceptron Learning Ruelee.\\E$"}
+{"rule":"ENGLISH_WORD_REPEAT_RULE","sentence":"^\\QPerceptron Convergence Theorem Theorem Consider algorithm (\\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q) and let \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q be a set of training vectors which are linearly separable.\\E$"}

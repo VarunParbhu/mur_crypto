@@ -20,3 +20,6 @@ multiclass
 tanh
 Signum
 ReLU
+Rosenblatt
+mcp
+minimise
