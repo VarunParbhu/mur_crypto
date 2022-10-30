@@ -1,0 +1,230 @@
+\chapter{Placeholder - to be deleted}
+\section{Linear Algebra}
+We introduce briefly the realm of linear algebra to get a better understanding of more complex concepts in neural networks. The focus is set on mainly the properties useful in deep learning. \\
+Linear algebra is the study of linear equations of the form:
+\begin{equation}
+    x_1a_1 + \dots + x_na_n = b
+\end{equation}
+or as a linear map defined by the following:
+\begin{equation}
+    (x_1, \dots, x_n) \mapsto (a_1 x_1 + \dots + a_n x_n) \label{eq:2.11}
+\end{equation}
+and their representation, manipulation and operation using vectors and matrices within a set of predefined axioms. 
+\subsection{Vectors}
+A vector is quantity that has both a magnitude and direction. It can be represented by an ordered set of numbers or graphically using an arrow.
+Consider the vector \textbf{u} in $\mathbb{R}^2$ given by:
+\begin{align}
+    \textbf{u} &= \begin{bmatrix}
+           u_1 \\
+           u_2 \\
+         \end{bmatrix}
+  \end{align}
+The vector can be expressed graphically as shown below.
+\begin{center}
+    *Image Placeholder vector in $R^2$*    
+\end{center}
+
+\noindent The length of the arrow is an indication of the magnitude of a vector and its orientation given by the direction in which the arrow is pointing. The magnitude of the above vector can be computed as such:
+\begin{align}
+    ||\textbf{u}|| = \sqrt{u_1^2+u_2^2}
+\end{align}
+
+\noindent The direction of the vector with respect to the $x$-axis is given by: 
+\begin{align}
+    \theta = \tan^{-1}\left(\dfrac{u_2}{u_1}\right)
+\end{align}
+A vector space is a set of vectors which satisfy the following axioms:
+\begin{center}
+    *Placeholder - Table of Axioms for Vector Space*    
+\end{center}
+\noindent\textbf{Geometry representation of addition and subtraction of vectors in $\mathbb{R}^2$}
+Vector addition and subtraction is performed componentwise along each element of two vectors. Consider the two vectors $\textbf{a}$ and $\textbf{b}$ where:
+\begin{align}
+    \textbf{u} = \begin{bmatrix}
+        u_1 \\
+        u_2 \\
+      \end{bmatrix},
+      \textbf{v} = \begin{bmatrix}
+        v_1 \\
+        v_2 \\
+      \end{bmatrix}
+\end{align}
+\noindent\textbf{Addition} \\
+The addition of vector $\textbf{u}$ and $\textbf{v}$ is given by:
+\begin{align}
+    \textbf{u} + \textbf{v} =
+      \begin{bmatrix}
+        u_1 + v_1 \\
+        u_2 + v_2 \\
+      \end{bmatrix}
+      \label{eq:addition_vectors}
+\end{align}
+The geometrical effect of adding $\textbf{u}$ and $\textbf{v}$ together is shown below.
+\begin{center}
+    *Image Placeholder vector addition in $R^2$*    
+\end{center}
+We can observe from (image ref) above that adding $\textbf{u}$ to $\textbf{v}$ has the effect of rotating $\textbf{u}$ towards $\textbf{v}$.
+
+\noindent\textbf{Subtraction} \\
+The subtraction of vector $\textbf{v}$ from $\textbf{u}$ is given by:
+\begin{align}
+    \textbf{u} - \textbf{v} =
+      \begin{bmatrix}
+        u_1 - v_1 \\
+        u_2 - v_2 \\
+      \end{bmatrix}
+      \label{eq:subtraction_vectors}
+\end{align}
+\begin{center}
+    *Image Placeholder vector subtraction in $R^2$*    
+\end{center}
+We can observe from (image ref) above that subtracting $\textbf{v}$ from $\textbf{u}$ has the effect of rotating $\textbf{u}$ in the opposite direction of $\textbf{v}$.\\
+\vspace{1mm}
+\noindent The effect of rotating two vectors though addition and subtraction are useful properties utilized in deep learning.
+\subsubsection{Inner Product}
+\noindent The inner product or dot product of: 
+\begin{align}
+    \textbf{u} = \begin{bmatrix}
+        u_1 \\
+        u_2 \\
+      \end{bmatrix},
+      \textbf{v} = \begin{bmatrix}
+        v_1 \\
+        v_2 \\
+      \end{bmatrix}
+\end{align}
+is given by $\textbf{u}.\textbf{v}$
+\begin{align}
+  \textbf{u.v} &= u_1 v_1 + u_2 v_2 \\
+  &= ||\textbf{u}|| \, ||\textbf{v}||\cos \theta
+  \label{eq:cosine_rule_dot_product}
+\end{align}
+where $\theta$ is the angle between vectors \textbf{u} and \textbf{v}.
+\begin{center}
+  *Image Placeholder inner product in $R^2$*    
+\end{center}
+The dot product of $\textbf{u.v}$ equals \textbf{v.u}. The order does not make a difference.
+\subsection{Matrices}
+\noindent A matrix is an $m \times n$ array of numbers, where $m$ is the number of rows and $n$ is the number of columns; the matrix is said to be of dimension $(m \times n)$.
+\begin{align}
+  \textbf{A} = 
+  \begin{bmatrix}
+    a_{11} & a_{12} & \dots & a_{1n} \\
+    a_{21} & a_{22} & \dots & a_{2n} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    a_{m1} & a_{m_2} & \dots & a_{mn}
+  \end{bmatrix}
+\end{align}
+Similar to vectors, there are a couple of matrix operations that can be done under certain condition. \\
+\noindent \textbf{Matrix Operations} \\ 
+\noindent \textbf{Matrix Addition} \\
+The sum of two matrices $\textbf{A}$ and $\textbf{B}$ is given by the element wise sum of the elements provided that they both have the same dimension. 
+\\ Consider two matrices \textbf{A} and \textbf{B}:
+\begin{align}
+  \textbf{A} =
+  \begin{bmatrix}
+    a_{11} & a_{12} \\
+    a_{21} & a_{22}
+  \end{bmatrix} \, \, \, 
+  \textbf{B} =
+  \begin{bmatrix}
+    b_{11} & b_{12} \\
+    b_{21} & b_{22}
+  \end{bmatrix}
+\end{align}
+ the sum \textbf{A + B} is given by
+\begin{align}
+  \textbf{A} + \textbf{B} = \begin{bmatrix}
+    a_{11} + b_{11} & a_{12} + b_{12} \\
+    a_{21} + b_{21} & a_{22} + b_{22}
+  \end{bmatrix}
+\end{align}\\
+\noindent \textbf{Scalar Matrix Multiplication} \\
+The product $\alpha\textbf{A}$, where $\alpha \in \mathbb{R}$ and $\textbf{A}$ is a matrix, is calculated by multiplying every entry of $\textbf{A}$ by $\alpha$. \\
+Consider  a matrix \textbf{A} and constant $\alpha$:
+\begin{align}
+  \begin{bmatrix}
+    a_{11} & a_{12} \\
+    a_{21} & a_{22}
+  \end{bmatrix}
+\end{align}
+the scalar multiplication $\alpha \textbf{A}$ is given by
+\begin{align}
+  \alpha \textbf{A} = 
+  \alpha \begin{bmatrix}
+    a_{11} & a_{12} \\
+    a_{21} & a_{22}
+  \end{bmatrix}
+  = \begin{bmatrix}
+    \alpha a_{11} & \alpha a_{12} \\
+    \alpha a_{21} & \alpha a_{22}
+  \end{bmatrix}
+\end{align} \\
+\noindent \textbf{Matrix Transpose} \\
+\noindent The transpose of a $(m \times n)$ matrix $\textbf{A}$ is calculated by swapping the rows into columns or the columns into rows. This operation result in a $(n \times m)$ denoted as $\textbf{A}^T$. \\
+Consider  a matrix \textbf{A}, the transpose is given by $\textbf{A}^T$:
+\begin{align}
+  \textbf{A} = \begin{bmatrix}
+    a_{11} & a_{12} \\
+    a_{21} & a_{22}
+  \end{bmatrix} \, \, \, 
+  \textbf{A}^T = \begin{bmatrix}
+    a_{11} & a_{21} \\
+    a_{12} & a_{22}
+  \end{bmatrix}
+\end{align}
+\noindent \textbf{Matrix Multiplication} \\
+The multiplication operation between two matrices is only defined is the number of columns of the left matrix is the same as the number of rows in the right matrix. If \textbf{A} is a $(m \times n)$ matrix and \textbf{B} is a $(n \times p)$ matrix, then their product \textbf{AB} is the $(m \times n)$ matrix whose entries are given by inner product of the corresponding row of \textbf{A} and the corresponding column of \textbf{B}.\\
+Consider two matrices \textbf{A} and \textbf{B}:
+\begin{align}
+  \textbf{A} =
+  \begin{bmatrix}
+    a_{11} & a_{12} & a_{13} \\
+    a_{21} & a_{22} & a_{23}
+  \end{bmatrix} \, \, \, 
+  \textbf{B} =
+  \begin{bmatrix}
+    b_{11} & b_{12} \\
+    b_{21} & b_{22} \\
+    b_{31} & b_{32}
+  \end{bmatrix}
+\end{align}
+ the matrix multiplication is given by \textbf{AB}
+\begin{align}
+  \textbf{A}\textbf{B} &= \begin{bmatrix}
+    a_{11} & a_{12} & a_{13} \\
+    a_{21} & a_{22} & a_{23}
+  \end{bmatrix} \begin{bmatrix}
+    b_{11} & b_{12} \\
+    b_{21} & b_{22} \\
+    b_{31} & b_{32}
+  \end{bmatrix} \\
+  &= \begin{bmatrix}
+    a_{11}b_{11} + a_{12}b_{21} + a_{13}b_{31} &  a_{11}b_{12} + a_{12}b_{22} + a_{13}b_{32} \\
+    a_{21}b_{11} + a_{22}b_{21} + a_{23}b_{31} &  a_{21}b_{12} + a_{22}b_{22} + a_{23}b_{32}
+  \end{bmatrix}
+\end{align}
+\subsubsection{Outer Product}
+\noindent The outer product of two vectors $\textbf{u}$ and $\textbf{v}$: 
+\begin{align}
+    \textbf{u} = \begin{bmatrix}
+        u_1 \\
+        u_2 \\
+      \end{bmatrix} \, \, \, 
+      \textbf{v} = \begin{bmatrix}
+        v_1 \\
+        v_2 \\
+      \end{bmatrix}
+\end{align}
+is given by $\textbf{u}\otimes\textbf{v}$
+\begin{align}
+  \textbf{u}\otimes\textbf{v} = \begin{bmatrix}
+    u_1v_1 & u_1v_2 \\
+    u_2v_1 & u_2v_2
+  \end{bmatrix}
+\end{align}
+The outer product of $\textbf{u}\otimes\textbf{v}$ is not equal to $\textbf{v}\otimes\textbf{u}$; the order does matter. However, the transpose of latter outer product are the same:
+\begin{align}
+  \textbf{u}\otimes\textbf{v} = (\textbf{v}\otimes\textbf{u})^T 
+\end{align}
+\chapter{test}

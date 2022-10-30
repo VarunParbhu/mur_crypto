@@ -1,13 +1,20 @@
+Level 1: \section
+Level 2: \subsection
+Level 3: \subsubsection
+Level 4: \paragraph
+Level 5: \subparagraph
+
 
 Importing Figures
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \centering
   \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_perceptron_example.jpeg}
   \caption{Caption}
   \label{}
-\end{figure}\\
+\end{figure}
 
+Simple matrix eq
 
 \begin{align}
   \begin{matrix}
@@ -28,3 +35,52 @@ Importing Figures
     \end{bmatrix}  
   \end{matrix}
 \end{align}
+
+
+
+Algorithm Syntax
+
+\begin{algorithm}
+  \caption{Perceptron Algorithm}\label{alg:perceptron}
+  \begin{algorithmic}
+  \Require $n \geq 0$
+  \Ensure $y = x^n$
+  \State $y \gets 1$
+  \State $X \gets x$
+  \State $N \gets n$
+  \While{$N \neq 0$}
+  \If{$N$ is even}
+      \State $X \gets X \times X$
+      \State $N \gets \frac{N}{2}$  \Comment{This is a comment}
+  \ElsIf{$N$ is odd}
+      \State $y \gets y \times X$
+      \State $N \gets N - 1$
+  \EndIf
+  \EndWhile
+  \end{algorithmic}
+  \end{algorithm}
+
+
+  P+ inputs
+with label
+1:
+N+ inputs
+with label
+0:
+Initialize w randomly;
+while !convergence do
+Pick random x € PUN:
+if x € P
+and
+W.X <0 then
+W=w+x:
+end
+if xEN
+and
+W.x > 0 then
+W
+= W
+- X
+end
+end
+/the algorithm converges when all the
