@@ -10,8 +10,7 @@ In 1943, McCulloch and Walter Pitts demonstrated that simple binary threshold un
 \noindent\textbf{Rosenblatt’s Perceptron Algorithm}\\
 In 1958, Frank Rosenblatt proposed the perceptron and an algorithm to adjust weights of the MCP neuron, extending the work done by McCulloch and Pitts. The MCP neuron had some limitations that the Perceptron managed to solve, for example the input was not restricted to boolean values but expanded to real numbers. Rosenblatt proved that if the data used to train the perceptron are linearly separable classes, then the perceptron algorithm convergences and separates the two classes by a hyperplane.
 \vspace{5mm}
-\\
-\noindent\textbf{Perceptron}\\
+\section{Perceptron}
 \begin{figure}[ht]
   \centering
   \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_perceptron_2.jpeg}
@@ -19,7 +18,6 @@ In 1958, Frank Rosenblatt proposed the perceptron and an algorithm to adjust wei
   \label{rosenblatt_perceptron}
 \end{figure}
 \vspace{5mm}
-\\
 \noindent Let $\textbf{x}$ be a vector of inputs where each $x_i \in \mathbb{Z}$ and $\textbf{w}$ be a vector of weights corresponding to the input signals where each $w_i \in \mathbb{Z}$. 
 \begin{align}
   \begin{matrix}
@@ -211,8 +209,8 @@ $C_2$ $\leftarrow$ input with label 0\\
 \EndWhile
 \end{algorithmic}
 \end{algorithm}
-\noindent If the input data are binary and linearly separable; then algorithm (\ref{alg:perceptron_algorithm}) converges. The proof of convergence of the algorithm is known as the \textbf{perceptron convergence theorem}. \vspace{5mm} \\
-\noindent\textbf{Perceptron Convergence Theorem }\vspace{5mm}\\
+\noindent If the input data are binary and linearly separable; then algorithm (\ref{alg:perceptron_algorithm}) converges. The proof of convergence of the algorithm is known as the \textbf{perceptron convergence theorem}. \vspace{5mm}
+\section{Perceptron Convergence Theorem}
 \textbf{Theorem}\\
 Consider algorithm (\ref{alg:perceptron_algorithm}) and let $D$ be a set of training vectors which are linearly separable. Let $\textbf{w}^{*}$ be the weight vectors which defines the separating line with $||\textbf{w}^{*}|| = 1$. Then the number of mistakes $m$ made by the perceptron algorithm satisfies 
 \begin{align}
@@ -360,8 +358,8 @@ Using the result (\ref{eq:perp_cov_result2}) and the fact that $||\textbf{w}^{*}
   m^2 {\gamma}^2 &\leq m \\
   m &\leq \dfrac{1}{\gamma^2}
 \end{align}
-This proves the Perceptron Convergence Theorem that the number of mistakes is at most $\dfrac{1}{\gamma^2}$, where $\gamma$ is the margin.\vspace{5mm}\\
-\noindent\textbf{Solving Gate problem}\\
+This proves the Perceptron Convergence Theorem that the number of mistakes is at most $\dfrac{1}{\gamma^2}$, where $\gamma$ is the margin.\vspace{5mm}
+\section{Solving Gate problem}
 The perceptron alone is not always a good model to solve binary classification problem. It has certain limitation by nature of its definition. Consider the logic functions AND, OR and XOR across these 4 points:
 \begin{align}
   \begin{matrix}
@@ -383,7 +381,7 @@ The perceptron alone is not always a good model to solve binary classification p
     \end{bmatrix}  
   \end{matrix}
 \end{align}
-\subsubsection*{AND Function}
+\subsection{AND Function}
 The AND function returns a value of 1 if both of the inputs is 1. Let $f$ be the AND function such that
 \begin{align}
 \begin{matrix}
@@ -397,7 +395,7 @@ Consider the AND function with the separating line below
   \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_AND_function.jpeg}
   \caption{AND Function with separating line}
   \label{AND_function_2}
-\end{figure}\vspace{50mm}\\
+\end{figure}\\
 The equation of the separating line in figure \ref{AND_function_2} is given by
 \begin{align}
   x_1 + x_2 -1.5 = 0
@@ -483,7 +481,7 @@ Applying function (\ref{eq:mcp_neuron}) on each point to check whether they are 
   \end{matrix}
 \end{align}
 Thus, the perceptron is able to solve the AND function.
-\subsubsection*{OR Function}
+\subsection{OR Function}
 The OR function returns a value of 1 if either of the inputs is 1. Let $f$ be the OR function such that
 \begin{align}
 \begin{matrix}
@@ -497,7 +495,7 @@ Consider the OR function with the separating line below
   \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_OR_function.jpeg}
   \caption{AND Function with separating line}
   \label{OR_function}
-\end{figure}\vspace{50mm}\\
+\end{figure}\\
 The equation of the separating line in figure \ref{OR_function} is given by
 \begin{align}
   x_1 + x_2 - 0.5 = 0
@@ -583,7 +581,7 @@ Applying function (\ref{eq:mcp_neuron}) on each point to check whether they are 
   \end{matrix}
 \end{align}
 Thus, the perceptron is able to solve the OR function.
-\subsubsection*{XOR Function}
+\subsection{XOR Function}
 The XOR function returns a value of 1 if either of the inputs is 1 but not both. Let $f$ be the XOR function such that
 \begin{align}
   \begin{matrix}
@@ -763,7 +761,7 @@ Hence, the approximate function $f(\textbf{x},\textbf{w})$ is given by
   \label{fig: approximate_XOR_solution}
 \end{figure}\\
 \noindent  Clearly from figure \ref{fig: approximate_XOR_solution}, the perceptron model cannot solve the XOR logic function. The XOR problem is actually not linearly separable. Thus, we introduce \textbf{feedforward networks} to overcome this problem.
-\subsection{Feedforward Network}
+\section{Feedforward Network}
 We have seen that the single perceptron cannot solve the XOR problem. In order to solve the problem, we use a set of perceptrons that learns two different functions within a connected network.\vspace{5mm} \\
 First, let's consider two NOT boolean function $f_1^{*} = x_1 \text{ AND } (\text{NOT }x_2)$ and $f_2^{*} = (\text{NOT }x_1) \text{ AND } x_2$. \vspace{5mm}\\
 Consider $f_1^{*}$ which returns 1 if $x_1$ and (not $x_2$) are equal to 1.
@@ -794,6 +792,7 @@ The equation of the separating line in figure \ref{fig:f1_XOR} is given by
 \end{align}
 We can transform the separating line in the form of $\textbf{w}^T\textbf{x} = 0$ to fit the perceptron.
 \begin{align}
+  \label{eq: weight_f_1}
   \begin{matrix}
     \textbf{w} = \begin{bmatrix}
       -0.5 \\
@@ -834,6 +833,7 @@ The equation of the separating line in figure \ref{fig:f2_XOR} is given by
 \end{align}
 We can transform the separating line in the form of $\textbf{w}^T\textbf{x} = 0$ to fit the perceptron.
 \begin{align}
+  \label{eq: weight_f_2}
   \begin{matrix}
     \textbf{w} = \begin{bmatrix}
       -0.5 \\
@@ -851,6 +851,231 @@ Consequently, the XOR function defined in (\ref{eq:XOR_function}) can be express
   \nonumber
   f^*(x_1,x_2) = f_1^*(x_1,x_2) \text{ OR } f_2^*(x_1,x_2)
 \end{align}
+\begin{table}
+  \begin{center}
+    \begin{tabular}{ c c c c c}
+      $x_1$ & $x_2$ & $f_1^*(x_1,x_2)$ & $f_2^*(x_1,x_2)$ &$f_2^*(x_1,x_2)$ \\
+     \hline 
+      0 & 0 & 0 & 0 & 0\\  
+      1 & 0 & 1 & 0 & 1\\  
+      1 & 1 & 0 & 0 & 0\\  
+      0 & 1 & 0 & 1 & 1
+    \end{tabular}
+    \caption{Truth Table for $f^{*}$}
+  \label{table:truth_table_f*}
+  \end{center}  
+\end{table}\vspace{20mm}\\
+Consider a feedforward network with a hidden layer with two units $h_1$ and $h_2$ such that $h_1$ learns $f_1^*(x_1,x_2)$ and $h_2$ learns $f_2^*(x_1,x_2)$.
+\begin{align}
+  h_1 &= f_1^*(x_1,x_2) \nonumber\\
+  &= \phi(z_1) \nonumber
+\end{align}
+where $z_1 = w_{11}x_1 + w_{12}x_2 + b_1$ and $w_{11} = 1$, $w_{12} = -1$ and $b_1=-0.5$ from separating line in (\ref{eq: weight_f_1}).
+\begin{align}
+  h_2 &= f_2^*(x_1,x_2) \nonumber\\
+  &= \phi(z_2) \nonumber
+\end{align}
+where $z_2 = w_{21}x_1 + w_{22}x_2 + b_1$ and $w_{21} = -1$, $w_{22} = 1$ and $b_2 = -0.5$ from separating line in (\ref{eq: weight_f_2}).
+\begin{figure}[ht]
+  \centering
+  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_hidden_layer.jpeg}
+  \caption{FFN hidden layer}
+  \label{fig:hidden_layer_only}
+\end{figure} \\
+Thus we obtain the system below for the hidden layer.
+\begin{align}
+  \begin{bmatrix}
+    z_1 \\
+    z_2
+  \end{bmatrix} = \begin{bmatrix}
+    b_1 & w_{11} & w_{12}   \\
+    b_1 & w_{21} & w_{22}
+  \end{bmatrix} \begin{bmatrix}
+    1\\
+    x_1 \\
+    x_2
+  \end{bmatrix}
+\end{align}
+We then feed forward the information from the hidden layer to another layer.
+\begin{align}
+  \begin{bmatrix}
+    h_1 \\
+    h_2
+  \end{bmatrix} = \phi\begin{pmatrix}
+    \begin{bmatrix}
+      z_1 \\
+      z_2
+    \end{bmatrix}
+  \end{pmatrix}
+\end{align}
+At the hidden layer, we are left with the following truth table.\\
+\begin{table}[ht]
+  \begin{center}
+    \begin{tabular}{ c c c c}
+      $x_1$ & $x_2$ & XOR \\
+     \hline 
+      0 & 0 & 0 & \\  
+      1 & 0 & 1 & \\  
+      0 & 0 & 0 & \text{redundant}\\  
+      0 & 1 & 1 & 
+    \end{tabular}
+    \caption{Truth Table from hidden layer}
+  \label{table:truth_table_hidden_layer}
+  \end{center}  
+\end{table}\\
+The XOR problem can not be separated from using another perceptron after the hidden layer.
+\begin{figure}[ht]
+  \centering
+  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_XOR_sep.jpeg}
+  \caption{XOR layer}
+  \label{fig:XOR layer}
+\end{figure}\\
+The equation of the separation line is in figure (\ref{fig:XOR layer}) is given binary
+\begin{align}
+h_1 + h_2 - \dfrac{1}{2} = 0  
+\end{align}
+We can now transform the separating line in the form of $\textbf{w}^T\textbf{x} = 0$ to fit the perceptron.
+\begin{align}
+  \begin{matrix}
+    \textbf{w} = \begin{bmatrix}
+      -0.5 \\
+      1 \\
+      1
+    \end{bmatrix} & \textbf{h} = \begin{bmatrix}
+      1 \\
+      h_1 \\
+      h_2
+    \end{bmatrix}  
+  \end{matrix}
+\end{align}
+Finally, the XOR function can be represented using the set of transform defined below.
+\begin{align}
+  \begin{matrix}
+    f(x_1,x_2) = \phi^{'} \begin{pmatrix}
+    \textbf{w}_2^T 
+    \begin{pmatrix}
+      \phi \begin{pmatrix}
+        \textbf{w}_1^T\textbf{x}
+    \end{pmatrix}  
+  \end{pmatrix}
+  \end{pmatrix}
+\end{matrix}
+\end{align}
+where
+\begin{align}
+  \begin{matrix}
+  \textbf{x} = \begin{bmatrix}
+    1 \\
+    x_1 \\
+    x_2
+  \end{bmatrix} & \textbf{w}_1 = \begin{bmatrix}
+    -0.5 & -0.5 \\
+    1 & -1  \\
+    -1 & 1 
+  \end{bmatrix} & \textbf{w}_2 = \begin{bmatrix}
+    -0.5 \\
+    1 \\
+    1
+  \end{bmatrix} 
+  \end{matrix}
+\end{align}
+$\phi^{'}$ taken an augmented input from the calculation of $\phi(\textbf{w}_1^T \textbf{x})$ to accommodate for the bias.
+\begin{figure}[ht]
+  \centering
+  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_XOR_final.jpeg}
+  \caption{Feedforward network for XOR problem}
+  \label{fig: ffn_XOR_final}
+\end{figure}\vspace{30mm}\\
+\textbf{Checking for $\textbf{x} = \begin{bmatrix} 1 & 0 & 0 \end{bmatrix}^T$}
+\begin{align*}
+  \textbf{w}_1^T\textbf{x} &= \begin{bmatrix}
+    -0.5 & 1 & -1 \\
+    -0.5 & -1 & 1 
+  \end{bmatrix} \begin{bmatrix}
+    1\\
+    0 \\
+    0
+  \end{bmatrix} = \begin{bmatrix}
+    -0.5 \\
+    -0.5
+  \end{bmatrix} \\
+  \phi(\textbf{w}_1^T\textbf{x}) &= \phi\begin{pmatrix}
+    \begin{bmatrix}
+      -0.5 \\
+      -0.5
+    \end{bmatrix}
+  \end{pmatrix} = \begin{bmatrix}
+    0 \\
+    0
+  \end{bmatrix} \\
+  \phi^{'} \begin{pmatrix}
+    \textbf{w}_2^T 
+    \begin{pmatrix}
+      \phi \begin{pmatrix}
+        \textbf{w}_1^T\textbf{x}
+    \end{pmatrix}  
+  \end{pmatrix}
+  \end{pmatrix} &= \phi^{'}\begin{pmatrix}
+    \begin{bmatrix}
+      -0.5 & 1 & 1
+    \end{bmatrix} \begin{bmatrix}
+      1 \\ 
+      0 \\
+      0
+    \end{bmatrix}
+  \end{pmatrix} = \phi^{'}(-0.5)
+\end{align*}
+Thus, for $\textbf{p}_1 = \begin{bmatrix}
+  0,0
+\end{bmatrix}^T$
+\begin{align*}
+  f(x_1,x_2) = \phi^{'} (-0.5) = 0
+\end{align*}
+\textbf{Checking for $\textbf{x} = \begin{bmatrix} 1 & 0 & 1 \end{bmatrix}^T$}
+\begin{align*}
+  \textbf{w}_1^T\textbf{x} &= \begin{bmatrix}
+    -0.5 & 1 & -1 \\
+    -0.5 & -1 & 1 
+  \end{bmatrix} \begin{bmatrix}
+    1\\
+    0 \\
+    1
+  \end{bmatrix} = \begin{bmatrix}
+    -1.5 \\
+    0.5
+  \end{bmatrix} \\
+  \phi(\textbf{w}_1^T\textbf{x}) &= \phi\begin{pmatrix}
+    \begin{bmatrix}
+      -1.5 \\
+      0.5
+    \end{bmatrix}
+  \end{pmatrix} = \begin{bmatrix}
+    0 \\
+    1
+  \end{bmatrix} \\
+  \phi^{'} \begin{pmatrix}
+    \textbf{w}_2^T 
+    \begin{pmatrix}
+      \phi \begin{pmatrix}
+        \textbf{w}_1^T\textbf{x}
+    \end{pmatrix}  
+  \end{pmatrix}
+  \end{pmatrix} &= \phi^{'}\begin{pmatrix}
+    \begin{bmatrix}
+      -0.5 & 1 & 1
+    \end{bmatrix} \begin{bmatrix}
+      1 \\ 
+      0 \\
+      1
+    \end{bmatrix}
+  \end{pmatrix} = \phi^{'}(0.5)
+\end{align*}
+Thus, for $\textbf{p}_4 = \begin{bmatrix}
+  0,0
+\end{bmatrix}^T$
+\begin{align*}
+  f(x_1,x_2) = \phi^{'} (0.5) = 1
+\end{align*}
 \section{Differential calculus}
 Differential calculus is the study of the definition, properties, and applications the derivative of a function. The process of finding the derivative is called differentiation. It is the also referred to as the study of rate of change and slopes of curves. In optimization and deep learning, major concepts of differential calculus are used.
 \subsection{Derivatives}
@@ -931,368 +1156,7 @@ where\\
 \end{align}
 where $\alpha \in (0,1)$ 
 \section{Deep Learning}
-%\noindent - Short dive into deep learning and its advancement in recent years
-%\noindent - Explanation of OR and XOR functions
-Deep learning is part of Machine Learning which deals mainly with computers that can learn either on their own or supervised. The latter can solve problem in the industry ranging from computer vision (image), natural language processing (text), automatic speech recognition (audio), time-series prediction amongst others. Deep learning primarily uses the concept of artificial neural networks, which derivatives from how the human brain works, to solve complex linear and non-linear problem.\\
-\indent We start by introducing how a simple perceptron works, and gradually increase the complexity of the network until we reach a deep neural network that can solve non-linear problems.
-\subsection{Perceptron}
-%- Explanation on neuron and short numeric exercise \\ 
-%- Solving the XOR OR function using Perceptron
-A perceptron is an analogy to the human neuron. It is a computational model that takes an input (scalar or vector) and learns to classify the latter between two classes (binary classifier). It consists of an input, a weighed sum and an activation function. \\ The mathematical definition a perceptron that maps its input $\textbf{x}$ to an output value $f(\textbf{x})$ using a step function as activation function is given by
-\begin{align}
-  f(\textbf{x}) =
-  \begin{cases}
-    1 & \text{if } \textbf{w.x} + b > 0 \\
-    0 & \text{otherwise}
-    \label{eq:perceptron_def}
-  \end{cases}
-\end{align}
-\begin{figure}[ht]
-  \centering
-  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_perceptron.jpeg}
-  \caption{Perceptron graphical representation}
-  \label{fig:perceptron}
-\end{figure}\\
-From the perceptron mathematical definition \refeq{eq:perceptron_def}, we can observe that the dot product is dependent on the angle between the weight vector (\textbf{w}) and the input vector (\textbf{x}). Using dot product (\refeq{eq:cosine_rule_dot_product}), addition (\refeq{eq:addition_vectors}) and subtraction (\refeq{eq:subtraction_vectors}) of vector property; we can define a learning rule for modifying the perceptron to learn how to classify a set of input.
-\subsection{Perceptron Learning Ruelee}
-\noindent Consider the two sets of point \textbf{A} and \textbf{B} 
-\begin{align}
-  \textbf{A} =
-  \begin{Bmatrix}
-    \begin{bmatrix}
-      1 \\ 
-      2
-    \end{bmatrix}
-  \end{Bmatrix}
-   \, \, \, 
-  \textbf{B} =
-\begin{Bmatrix}
-  \begin{bmatrix}
-    -1 \\
-    2
-  \end{bmatrix},
-  \begin{bmatrix}
-    0 \\
-    -1
-  \end{bmatrix}
-  \end{Bmatrix}
-\end{align}
-and fitting the perceptron function (\refeq{eq:perceptron_def}) to learn how to classify points in each respective set. Let set \textbf{A} and \textbf{B} be class 1 and 0 respectively.
-\begin{figure}[ht]
-  \centering
-  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_perceptron_example_1.jpeg}
-  \caption{Caption}
-  \label{fig:perceptron_example_11}
-\end{figure}\\
-From \ref{fig:perceptron_example_1}, we can separate the two classes by a single line. Consider the random separating line passing through the origin (this will set the value of b in (\refeq{eq:perceptron_def}) to 0).\\
-\begin{figure}[!htbp]
-  \centering \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_perceptron_example_2.jpeg}
-  \caption{Caption}
-  \label{fig:perceptron_example_22}
-\end{figure}\\
-The equation of the random line is given by
-\begin{align}
-  x_1 = - x_2
-\end{align}
-Comparing to the equation (\refeq{eq:perceptron_def}); we can deduce that 
-\begin{align}
-  \begin{matrix}
-    w_1 = 1 & w_2 = 1
-  \end{matrix}
-\end{align}
-Visually, we can already see that the separating line does not split the points properly. The computation of the binary classification using the random line is given by
-\begin{align}
-  f(A_1) &= f\begin{pmatrix}
-    \begin{bmatrix}
-      1\\
-      1
-    \end{bmatrix}.\begin{bmatrix}
-      1 \\
-      2
-    \end{bmatrix}
-  \end{pmatrix} = f(3) = 1 \\
-  f(B_1) &= f\begin{pmatrix}
-    \begin{bmatrix}
-      1\\
-      1
-    \end{bmatrix}.\begin{bmatrix}
-      -1 \\
-      2
-    \end{bmatrix}
-  \end{pmatrix} = f(1) = 1 \\
-  f(B_2) &= f\begin{pmatrix}
-    \begin{bmatrix}
-      1\\
-      1
-    \end{bmatrix}.\begin{bmatrix}
-      -1 \\
-      0
-    \end{bmatrix}
-  \end{pmatrix} = f(-1) = 0
-\end{align}
-The computation confirms the visual representation and groups $\textbf{A}_1$ and $\textbf{B}_1$ together. We can either alter the separating line (by moving the weight vector) with respect to $\textbf{A}_1$ and/or $\textbf{B}_1$.\vspace{50mm}
-\begin{figure}[ht]
-  \centering
-  \includegraphics[scale=0.2]{CHAPTER_2/c2_fig_perceptron_example_3.jpeg}
-  \caption{Caption}
-  \label{fig:perceptron_example_33}
-\end{figure}\\
-Using the property of subtraction of vectors; we move the weight vector ($\textbf{w}$) away from $\textbf{B}_1$ and check the classification again. We  also introduce a learning rate $\alpha$ to control how much rotation we want. Let $\alpha = 0.5$
-\begin{align}
-  \textbf{w}^{(1)} &= \textbf{w} - \alpha\textbf{B}_1 \\
-  &= \begin{bmatrix}
-    1 \\
-    1
-  \end{bmatrix} - 0.5\begin{bmatrix}
-    -1 \\
-    2
-  \end{bmatrix} \\
-  & = \begin{bmatrix}
-    1.5 \\
-    0
-  \end{bmatrix}
-\end{align}\\
-\begin{figure}[ht]
-  \centering
-  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_perceptron_example_4.jpeg}
-  \caption{Caption}
-  \label{fig:perceptron_example_44}
-\end{figure} \\
-Based on the new separating line, we can observe visually that the points are correctly classified. The computation of the binary classification using the new separating line $\textbf{w}^{(1)}$ is given by
-\begin{align}
-  f(A_1) &= f\begin{pmatrix}
-    \begin{bmatrix}
-      1.5\\
-      0
-    \end{bmatrix}.\begin{bmatrix}
-      1 \\
-      2
-    \end{bmatrix}
-  \end{pmatrix} = f(1.5) = 1 \\
-  f(B_1) &= f\begin{pmatrix}
-    \begin{bmatrix}
-      1.5\\
-      0
-    \end{bmatrix}.\begin{bmatrix}
-      -1 \\
-      2
-    \end{bmatrix}
-  \end{pmatrix} = f(-1) = 0 \\
-  f(B_2) &= f\begin{pmatrix}
-    \begin{bmatrix}
-      1.5\\
-      0
-    \end{bmatrix}.\begin{bmatrix}
-      -1 \\
-      0
-    \end{bmatrix}
-  \end{pmatrix} = f(-1.5) = 0
-\end{align}
-Thus, the perceptron learned how to classify the two sets of points. The function $f(\textbf{x})$ could be re-used to classify new points added to the sets.
-\subsubsection{Perceptron Update Rule}
-We can define a set number of rules for the perceptron to find the optimal weight vector to classify the points. Based on the properties of the dot product; the classification of the points are dependent on the inner angle between the normal of the separating line and the vector to be classified. If the inner angle is less than $90^\circ$ then the point belongs to class 1 else to class 0.\vspace{10mm}
-
-\noindent \textbf{Target Classes and Errors} \\
-Let the target(actual) classes be $y=1$ and $y=0$. Then the network error ${\epsilon}$ is given by the difference between the true value and the predicted value.
-\begin{align*}
-  \text{Network Error } \, \, \, \, \, \, \, {\epsilon}(\textbf{x}) &= y - f(\textbf{x})  \\
-  \text{Correct Classification } \, \, \, \, y&=1, f(\textbf{x})=1 \rightarrow {\epsilon}(\textbf{x})=0 \\
-  y&=0, f(\textbf{x})=0 \rightarrow {\epsilon}(\textbf{x})=0 \\
-  \text{Incorrect Classification } \, \, \, \, y&=1, f(\textbf{x})=0 \rightarrow {\epsilon}(\textbf{x})=1 \\
-  y&=0, f(\textbf{x})=1 \rightarrow {\epsilon}(\textbf{x})=-1
-\end{align*}
-We find that updating the weight vector can be written as
-\begin{align}
-  \textbf{w}^{(t+1)} = \textbf{w}^{(t)} + \alpha\epsilon(\textbf{x})\textbf{x}
-\end{align}
-\textbf{Perceptron Learning Algorithm}\\
-The steps for the perceptron to learn how to perform binary classification is given by the steps below. Let $t$ be the $t^{th}$ iteration when learning and $b$ be in an input bias.
-
-\vspace{5mm}
-\noindent Assignment $\rightarrow$ Assign $t=0$, $\textbf{w}^{(0)} = (0,0,\dots,0)$, $b^{(0)}=0$\\
-Start $\rightarrow$ For $t=0,1,2,\dots$ until convergence\\
-\indent Step 1 $\rightarrow$ Randomly choose a vector $\textbf{x}^{(t)}$ with the corresponding $y^{(t)}$ (known)\\
-\indent Step 2 $\rightarrow$ Compute $\textbf{z}=\textbf{w}^{(t)}.\textbf{x}^{(t)} + b^{(t)}$\\
-\indent Step 3 $\rightarrow$ Compute $\epsilon^{(t)}(\textbf{z}) = y^{(t)} - f(\textbf{z}) $\\
-\indent Step 4 $\rightarrow$ Update weight $\textbf{w}^{(t+1)} = \textbf{w}^{(t)} + \alpha\epsilon^{(t)}(\textbf{z})\textbf{x}^{(t)}$ \\
-\indent Step 5 $\rightarrow$ Update bias  $b^{(t+1)} = b^{(t)} + \alpha\epsilon^{(t)}(\textbf{z})$
-\vspace{10mm}
-\\
-The current perceptron we have defined is for a binary classification; we can also define multiclass perceptron and/or use different types of activation functions.
-\subsubsection{Limitation of the Perceptron}
-The perceptron alone is not always a good model to solve binary classification problem. It has certain limitation by nature of its definition. Consider the logic functions AND, OR and XOR across these 4 points:
-\begin{align}
-  \begin{matrix}
-    \textbf{x}_1 = \begin{bmatrix}
-      0 \\
-      0
-    \end{bmatrix},
-    \textbf{x}_2 = \begin{bmatrix}
-      1 \\
-      0
-    \end{bmatrix},
-    \textbf{x}_3 = \begin{bmatrix}
-      1 \\
-      1
-    \end{bmatrix},
-    \textbf{x}_4 = \begin{bmatrix}
-      0 \\
-      1
-    \end{bmatrix}  
-  \end{matrix}
-\end{align}
-\subsubsection*{AND Function}
-*Placeholder*
-\subsubsection*{OR Function}
-The OR function returns a value of 1 if either of the inputs is 1.
-\begin{align}
-  \begin{matrix}
-    f^{*}(\textbf{x}_1)=0,&   f^{*}(\textbf{x}_2)=1,& f^{*}(\textbf{x}_3)=1,&   f^{*}(\textbf{x}_4)=1    
-  \end{matrix}
-\end{align} \\
-\begin{figure}[ht]
-  \centering
-  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_OR.jpeg}
-  \caption{OR function}
-  \label{OR_function_2}
-\end{figure}
-\vspace{100mm}
-\noindent From figure \ref{OR_function}; we can easily define a separating line by the perceptron to separate the two classes.
-\subsubsection*{XOR Function}
-The XOR function returns a value of 1 if either of the inputs is 1 but not both.
-\begin{align}
-  \begin{matrix}
-    f^{*}(\textbf{x}_1)=0,&   f^{*}(\textbf{x}_2)=1 ,& f^{*}(\textbf{x}_3)=0,&   f^{*}(\textbf{x}_4)=1    
-  \end{matrix}
-\end{align} 
-\begin{figure}[ht]
-  \centering
-  \includegraphics[scale=0.15]{CHAPTER_2/c2_rig_XOR.jpeg}
-  \caption{OR function}
-  \label{XOR_function_2}
-\end{figure} \\
-\noindent From figure \ref{XOR_function}; we can observe that no separating line alone could group the two different classes together. The perceptron model cannot solve the XOR logic function. Thus, we introduce \textbf{neural networks} to overcome this problem.
-\subsection{Neural Network}
-%- Combination of Neurons to form a network \refeq{fig:perceptron} - done
-%- Feedfoward network - done
-%- Explanation on how Network are just matrix multiplication - done
-%- Explanation on error function and the generalization in Neural Network; and optimization problem - done
-%- Adjusting the weight using Gradient Descent - done
-%- Back propagation
-A neural network is a set of perceptron connected together which takes an input, manipulate the information to learn from it and outputs a prediction. A neural network attempts to learn a mapping from an input to an output. The goal is to reduce the error between the prediction by the network compared to the true value as much as possible.
-\begin{figure}[ht]
-  \centering
-  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_neural_network_1.jpeg}
-  \caption{Caption}
-  \label{neural_network}
-\end{figure}
-\vspace{10mm} \\
-The neural network model can be represented by a series of matrix multiplication which takes the input and feeds the network. This is also known as a \textbf{feedforward network}.
-\subsubsection{Feedforward Network}
-Consider the simple network below with 2 input neurons, 2 perceptrons and 1 output.\\
-\begin{figure}[!h]
-  \centering
-  \includegraphics[scale=0.1]{CHAPTER_2/c2_fig_neural_network_2.jpeg}
-  \caption{Caption}
-  \label{neural_network_2}
-\end{figure}
-\vspace{20mm} \\
-The feedforward network takes the information at the input and forwards it to the next layer after applying the weight vector for each respective hidden layer. This operation can be expressed as a series of matrix multiplication defined next. The input vector is given by $\textbf{x}$, random weight matrices by $\textbf{W}_i$ and the actual output be ${y}$.
-\begin{align}
-  \begin{matrix}
-    \textbf{x} = \begin{bmatrix}
-      x_{11} \\
-      x_{21} \\
-      b
-    \end{bmatrix} & \textbf{W}_1 = \begin{bmatrix}
-      w_{11} & w_{12} \\
-      w_{21} & w_{22} \\
-      w_{31} & w_{32}
-    \end{bmatrix} & \textbf{W}_2 = \begin{bmatrix}
-      m_{11} \\
-      m_{21} 
-    \end{bmatrix} &
-    \textbf{y} = \begin{bmatrix}
-      y
-    \end{bmatrix}  
-  \end{matrix}
-\end{align}
-The feedforward neural network for a single input vector can then be expressed as a series matrix multiplication to estimate the actual value of \textbf{y}. Let $\widehat{{y}}$ be the estimated value of ${y}$.
-\begin{align}
-  \widehat{{y}} &= f\begin{pmatrix}f(\textbf{x}^T\textbf{W}_1)\textbf{W}_2 \end{pmatrix} \nonumber\\
-  &=f\begin{pmatrix}
-    f\begin{pmatrix}\begin{bmatrix}
-      x_{11} & x_{21} & b
-    \end{bmatrix} \begin{bmatrix}
-      w_{11} & w_{12} \\
-      w_{21} & w_{22} \\
-      w_{31} & w_{32} 
-    \end{bmatrix}
-  \end{pmatrix}\begin{bmatrix}
-    m_{11} \\
-    m_{21} 
-  \end{bmatrix}
-\end{pmatrix}
-\label{neural_net_def}  
-\end{align}
-where $f$ is the function (\refeq{eq:perceptron_def}).
-\subsubsection*{Solution to the XOR function}
-One solution to the XOR function can be obtained using the neural network (\refeq{neural_net_def}) with the set go weights given by
-\begin{align}
-  \begin{matrix}
-    \textbf{x} = \begin{bmatrix}
-      x_{11} \\
-      x_{21} \\
-      -\frac{1}{2}
-    \end{bmatrix} & \textbf{W}_1 = \begin{bmatrix}
-      1 & -1 \\
-      -1 & 1 \\
-      1 & 1
-    \end{bmatrix} & \textbf{W}_2 = \begin{bmatrix}
-      1 \\
-      1
-    \end{bmatrix} &
-    \textbf{y} = \begin{bmatrix}
-      y
-    \end{bmatrix}  
-  \end{matrix}
-\end{align}
-\textbf{Verifying the Solution}
-\begin{align}
-  \begin{matrix}
-    \begin{bmatrix}
-      x_{11} \\
-      x_{12}
-    \end{bmatrix} = \begin{bmatrix}
-      0 \\
-      0
-    \end{bmatrix} \rightarrow & \widehat{y} = 0 & 
-    \begin{bmatrix}
-      x_{11} \\
-      x_{12}
-    \end{bmatrix} = \begin{bmatrix}
-      1 \\
-      0
-    \end{bmatrix} \rightarrow & \widehat{y} = 1 \\
-    \\
-    \begin{bmatrix}
-      x_{11} \\
-      x_{12}
-    \end{bmatrix} = \begin{bmatrix}
-      0 \\
-      1
-    \end{bmatrix} \rightarrow & \widehat{y} = 1 & 
-    \begin{bmatrix}
-      x_{11} \\
-      x_{12}
-    \end{bmatrix} = \begin{bmatrix}
-      1 \\
-      1
-    \end{bmatrix} \rightarrow & \widehat{y} = 0
-  \end{matrix}
-\end{align}
-The neural network correctly classifies all input. While feed-forward network of this form helped us to solve the XOR function it is very limited. The architecture defined can only be used for linearly separable problem. In order to allow for non-linear solution; we need to introduce some non-linearity in the model. This is done by using different kinds of \textbf{activation functions} in the perceptrons.
-\subsubsection{Activation Functions}
+\subsection{Activation Functions}
 Activation functions can be used with a perceptron to introduce non-linearity. The function to be used is subjective to the problem being solved and the form of the desired result we want. Some activation functions are defined below.\\
 \textbf{Linear}
 \begin{align}
@@ -1361,23 +1225,15 @@ The learning rate is typically denoted by the Greek letter alpha $\alpha$. It he
 \end{align}
 where $\alpha \in (0,1)$
 \subsubsection{Back Propagation}
-The input data has been fed forward in the network. Then the error function and the gradient descent method we have defined are both executed at the end of neural network we have defined in equation (\refeq{neural_net_def}). We now need a way to back propagate the weight changes that need to happened from the output neuron to the input neuron in between each layer. This whole process is known as \textbf{back propagation}.\\
+The input data has been fed forward in the network. Then the error function and the gradient descent method we have defined are both executed at the end of a neural network. We now need a way to back propagate the weight changes that need to happened from the output neuron to the input neuron in between each layer. This whole process is known as \textbf{back propagation}.\\
 Consider the neural network below.
 \begin{figure}[ht]
   \centering
   \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_back_prog.jpeg}
   \caption{Back propagation}
   \label{}
-\end{figure}\vspace{50mm} \\
-Let the perceptron at output layer have a linear activation function while the perceptron layer have ReLU activation functions. \\
-- Explain what happens at the end of the neural network
-- Explain what happens in between layers
-- Explain how to back propagate to the start of the network.
-
+\end{figure}\vspace{50mm}
 \subsection{Deep Neural Network}
-%- Explain why Deep Neural Network multiple-layer backpropagation
-%- Different types of activation function
-%- Back propagation in deep neural network explanation
 \subsection{Overfitting}
 \subsubsection{Dropout}
 \subsection{Convolutional Layer} 
