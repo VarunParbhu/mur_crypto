@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  31 OCT 2022 04:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  31 OCT 2022 14:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -471,138 +471,111 @@ l.1 \chapter
 
 ]
 Chapter 2.
-<CHAPTER_2/c2_fig_perceptron_2.jpeg, id=343, 1824.8175pt x 1003.75pt>
-File: CHAPTER_2/c2_fig_perceptron_2.jpeg Graphic file (type jpg)
-<use CHAPTER_2/c2_fig_perceptron_2.jpeg>
-Package pdftex.def Info: CHAPTER_2/c2_fig_perceptron_2.jpeg  used on input line 17.
-(pdftex.def)             Requested size: 273.71082pt x 150.556pt.
 [2
 
-] [3 <./CHAPTER_2/c2_fig_perceptron_2.jpeg>]
-<CHAPTER_2/c2_fig_perceptron_example_1.jpeg, id=360, 1351.0475pt x 1003.75pt>
+]
+<CHAPTER_2/c2_fig_perceptron_2.jpeg, id=308, 1824.8175pt x 1003.75pt>
+File: CHAPTER_2/c2_fig_perceptron_2.jpeg Graphic file (type jpg)
+<use CHAPTER_2/c2_fig_perceptron_2.jpeg>
+Package pdftex.def Info: CHAPTER_2/c2_fig_perceptron_2.jpeg  used on input line 16.
+(pdftex.def)             Requested size: 273.71082pt x 150.556pt.
+ [3 <./CHAPTER_2/c2_fig_perceptron_2.jpeg>]
+<CHAPTER_2/c2_fig_perceptron_example_1.jpeg, id=321, 1351.0475pt x 1003.75pt>
 File: CHAPTER_2/c2_fig_perceptron_example_1.jpeg Graphic file (type jpg)
 <use CHAPTER_2/c2_fig_perceptron_example_1.jpeg>
-Package pdftex.def Info: CHAPTER_2/c2_fig_perceptron_example_1.jpeg  used on input line 77.
+Package pdftex.def Info: CHAPTER_2/c2_fig_perceptron_example_1.jpeg  used on input line 75.
 (pdftex.def)             Requested size: 202.64838pt x 150.556pt.
-<CHAPTER_2/c2_fig_perceptron_example_2.jpeg, id=363, 1661.20625pt x 1003.75pt>
+<CHAPTER_2/c2_fig_perceptron_example_2.jpeg, id=324, 1661.20625pt x 1003.75pt>
 File: CHAPTER_2/c2_fig_perceptron_example_2.jpeg Graphic file (type jpg)
 <use CHAPTER_2/c2_fig_perceptron_example_2.jpeg>
-Package pdftex.def Info: CHAPTER_2/c2_fig_perceptron_example_2.jpeg  used on input line 84.
+Package pdftex.def Info: CHAPTER_2/c2_fig_perceptron_example_2.jpeg  used on input line 82.
 (pdftex.def)             Requested size: 249.17018pt x 150.556pt.
  [4 <./CHAPTER_2/c2_fig_perceptron_example_1.jpeg> <./CHAPTER_2/c2_fig_perceptron_example_2.jpeg>]
-<CHAPTER_2/c2_fig_perceptron_example_3.jpeg, id=371, 1687.30376pt x 1003.75pt>
+<CHAPTER_2/c2_fig_perceptron_example_3.jpeg, id=333, 1687.30376pt x 1003.75pt>
 File: CHAPTER_2/c2_fig_perceptron_example_3.jpeg Graphic file (type jpg)
 <use CHAPTER_2/c2_fig_perceptron_example_3.jpeg>
-Package pdftex.def Info: CHAPTER_2/c2_fig_perceptron_example_3.jpeg  used on input line 131.
+Package pdftex.def Info: CHAPTER_2/c2_fig_perceptron_example_3.jpeg  used on input line 129.
 (pdftex.def)             Requested size: 421.8249pt x 250.93689pt.
  [5 <./CHAPTER_2/c2_fig_perceptron_example_3.jpeg>]
-<CHAPTER_2/c2_fig_perceptron_example_4.jpeg, id=381, 1506.62875pt x 1003.75pt>
+<CHAPTER_2/c2_fig_perceptron_example_4.jpeg, id=343, 1506.62875pt x 1003.75pt>
 File: CHAPTER_2/c2_fig_perceptron_example_4.jpeg Graphic file (type jpg)
 <use CHAPTER_2/c2_fig_perceptron_example_4.jpeg>
-Package pdftex.def Info: CHAPTER_2/c2_fig_perceptron_example_4.jpeg  used on input line 152.
+Package pdftex.def Info: CHAPTER_2/c2_fig_perceptron_example_4.jpeg  used on input line 150.
 (pdftex.def)             Requested size: 225.98456pt x 150.556pt.
  [6 <./CHAPTER_2/c2_fig_perceptron_example_4.jpeg>]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 193.
- [7] [8] [9] [10]
-<CHAPTER_2/c2_fig_AND_function.jpeg, id=453, 2053.6725pt x 1002.74625pt>
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 191.
+ [7] [8] [9] [10] [11]
+<CHAPTER_2/c2_fig_AND_function.jpeg, id=426, 2053.6725pt x 1002.74625pt>
 File: CHAPTER_2/c2_fig_AND_function.jpeg Graphic file (type jpg)
 <use CHAPTER_2/c2_fig_AND_function.jpeg>
-Package pdftex.def Info: CHAPTER_2/c2_fig_AND_function.jpeg  used on input line 397.
+Package pdftex.def Info: CHAPTER_2/c2_fig_AND_function.jpeg  used on input line 395.
 (pdftex.def)             Requested size: 308.03758pt x 150.40544pt.
- [11] [12 <./CHAPTER_2/c2_fig_AND_function.jpeg>]
-<CHAPTER_2/c2_fig_OR_function.jpeg, id=475, 2137.9875pt x 1003.75pt>
+ [12 <./CHAPTER_2/c2_fig_AND_function.jpeg>]
+<CHAPTER_2/c2_fig_OR_function.jpeg, id=435, 2137.9875pt x 1003.75pt>
 File: CHAPTER_2/c2_fig_OR_function.jpeg Graphic file (type jpg)
 <use CHAPTER_2/c2_fig_OR_function.jpeg>
-Package pdftex.def Info: CHAPTER_2/c2_fig_OR_function.jpeg  used on input line 497.
+Package pdftex.def Info: CHAPTER_2/c2_fig_OR_function.jpeg  used on input line 495.
 (pdftex.def)             Requested size: 320.6843pt x 150.556pt.
  [13 <./CHAPTER_2/c2_fig_OR_function.jpeg>] [14]
-<CHAPTER_2/c2_rig_XOR.jpeg, id=489, 2744.2525pt x 1003.75pt>
+<CHAPTER_2/c2_rig_XOR.jpeg, id=449, 2744.2525pt x 1003.75pt>
 File: CHAPTER_2/c2_rig_XOR.jpeg Graphic file (type jpg)
 <use CHAPTER_2/c2_rig_XOR.jpeg>
-Package pdftex.def Info: CHAPTER_2/c2_rig_XOR.jpeg  used on input line 597.
+Package pdftex.def Info: CHAPTER_2/c2_rig_XOR.jpeg  used on input line 595.
 (pdftex.def)             Requested size: 411.62012pt x 150.556pt.
  [15 <./CHAPTER_2/c2_rig_XOR.jpeg>] [16] [17]
-<CHAPTER_2/c2_fig_XOR_soln.jpeg, id=521, 2167.09625pt x 1003.75pt>
+<CHAPTER_2/c2_fig_XOR_soln.jpeg, id=480, 2167.09625pt x 1003.75pt>
 File: CHAPTER_2/c2_fig_XOR_soln.jpeg Graphic file (type jpg)
 <use CHAPTER_2/c2_fig_XOR_soln.jpeg>
-Package pdftex.def Info: CHAPTER_2/c2_fig_XOR_soln.jpeg  used on input line 761.
+Package pdftex.def Info: CHAPTER_2/c2_fig_XOR_soln.jpeg  used on input line 759.
 (pdftex.def)             Requested size: 325.05042pt x 150.556pt.
-<CHAPTER_2/c2_fig_f_1_XOR.jpeg, id=523, 1713.40125pt x 1002.74625pt>
+<CHAPTER_2/c2_fig_f_1_XOR.jpeg, id=482, 1713.40125pt x 1002.74625pt>
 File: CHAPTER_2/c2_fig_f_1_XOR.jpeg Graphic file (type jpg)
 <use CHAPTER_2/c2_fig_f_1_XOR.jpeg>
-Package pdftex.def Info: CHAPTER_2/c2_fig_f_1_XOR.jpeg  used on input line 787.
+Package pdftex.def Info: CHAPTER_2/c2_fig_f_1_XOR.jpeg  used on input line 785.
 (pdftex.def)             Requested size: 256.9991pt x 150.40544pt.
  [18 <./CHAPTER_2/c2_fig_XOR_soln.jpeg>]
-<CHAPTER_2/c2_fig_f_2_XOR.jpeg, id=531, 1833.85126pt x 1002.74625pt>
+<CHAPTER_2/c2_fig_f_2_XOR.jpeg, id=490, 1833.85126pt x 1002.74625pt>
 File: CHAPTER_2/c2_fig_f_2_XOR.jpeg Graphic file (type jpg)
 <use CHAPTER_2/c2_fig_f_2_XOR.jpeg>
-Package pdftex.def Info: CHAPTER_2/c2_fig_f_2_XOR.jpeg  used on input line 827.
+Package pdftex.def Info: CHAPTER_2/c2_fig_f_2_XOR.jpeg  used on input line 826.
 (pdftex.def)             Requested size: 275.06583pt x 150.40544pt.
- [19 <./CHAPTER_2/c2_fig_f_1_XOR.jpeg>] [20 <./CHAPTER_2/c2_fig_f_2_XOR.jpeg>] [21] [22] [23]
-<CHAPTER_2/c2_fig_perceptron.jpeg, id=574, 2150.0325pt x 1003.75pt>
-File: CHAPTER_2/c2_fig_perceptron.jpeg Graphic file (type jpg)
-<use CHAPTER_2/c2_fig_perceptron.jpeg>
-Package pdftex.def Info: CHAPTER_2/c2_fig_perceptron.jpeg  used on input line 952.
-(pdftex.def)             Requested size: 322.49097pt x 150.556pt.
- [24]
-File: CHAPTER_2/c2_fig_perceptron_example_1.jpeg Graphic file (type jpg)
-<use CHAPTER_2/c2_fig_perceptron_example_1.jpeg>
-Package pdftex.def Info: CHAPTER_2/c2_fig_perceptron_example_1.jpeg  used on input line 983.
-(pdftex.def)             Requested size: 202.64838pt x 150.556pt.
-File: CHAPTER_2/c2_fig_perceptron_example_2.jpeg Graphic file (type jpg)
-<use CHAPTER_2/c2_fig_perceptron_example_2.jpeg>
-Package pdftex.def Info: CHAPTER_2/c2_fig_perceptron_example_2.jpeg  used on input line 989.
-(pdftex.def)             Requested size: 249.17018pt x 150.556pt.
- [25 <./CHAPTER_2/c2_fig_perceptron.jpeg>]
-File: CHAPTER_2/c2_fig_perceptron_example_3.jpeg Graphic file (type jpg)
-<use CHAPTER_2/c2_fig_perceptron_example_3.jpeg>
-Package pdftex.def Info: CHAPTER_2/c2_fig_perceptron_example_3.jpeg  used on input line 1036.
-(pdftex.def)             Requested size: 337.45477pt x 200.74644pt.
- [26]
-File: CHAPTER_2/c2_fig_perceptron_example_4.jpeg Graphic file (type jpg)
-<use CHAPTER_2/c2_fig_perceptron_example_4.jpeg>
-Package pdftex.def Info: CHAPTER_2/c2_fig_perceptron_example_4.jpeg  used on input line 1057.
-(pdftex.def)             Requested size: 225.98456pt x 150.556pt.
- [27] [28] [29]
-<CHAPTER_2/c2_fig_OR.jpeg, id=626, 1749.53625pt x 1003.75pt>
-File: CHAPTER_2/c2_fig_OR.jpeg Graphic file (type jpg)
-<use CHAPTER_2/c2_fig_OR.jpeg>
-Package pdftex.def Info: CHAPTER_2/c2_fig_OR.jpeg  used on input line 1155.
-(pdftex.def)             Requested size: 262.41911pt x 150.556pt.
- [30 <./CHAPTER_2/c2_fig_OR.jpeg>]
-File: CHAPTER_2/c2_rig_XOR.jpeg Graphic file (type jpg)
-<use CHAPTER_2/c2_rig_XOR.jpeg>
-Package pdftex.def Info: CHAPTER_2/c2_rig_XOR.jpeg  used on input line 1170.
-(pdftex.def)             Requested size: 411.62012pt x 150.556pt.
-<CHAPTER_2/c2_fig_neural_network_1.jpeg, id=637, 1381.16pt x 1003.75pt>
-File: CHAPTER_2/c2_fig_neural_network_1.jpeg Graphic file (type jpg)
-<use CHAPTER_2/c2_fig_neural_network_1.jpeg>
-Package pdftex.def Info: CHAPTER_2/c2_fig_neural_network_1.jpeg  used on input line 1185.
-(pdftex.def)             Requested size: 207.16505pt x 150.556pt.
-<CHAPTER_2/c2_fig_neural_network_2.jpeg, id=638, 1890.06125pt x 1003.75pt>
-File: CHAPTER_2/c2_fig_neural_network_2.jpeg Graphic file (type jpg)
-<use CHAPTER_2/c2_fig_neural_network_2.jpeg>
-Package pdftex.def Info: CHAPTER_2/c2_fig_neural_network_2.jpeg  used on input line 1195.
-(pdftex.def)             Requested size: 189.0172pt x 100.38087pt.
- [31] [32 <./CHAPTER_2/c2_fig_neural_network_1.jpeg> <./CHAPTER_2/c2_fig_neural_network_2.jpeg>] [33] [34]
-<CHAPTER_2/c2_fig_network_error.jpeg, id=673, 2027.575pt x 1003.75pt>
+ [19 <./CHAPTER_2/c2_fig_f_1_XOR.jpeg>] [20 <./CHAPTER_2/c2_fig_f_2_XOR.jpeg>]
+<CHAPTER_2/c2_fig_hidden_layer.jpeg, id=508, 2107.875pt x 1003.75pt>
+File: CHAPTER_2/c2_fig_hidden_layer.jpeg Graphic file (type jpg)
+<use CHAPTER_2/c2_fig_hidden_layer.jpeg>
+Package pdftex.def Info: CHAPTER_2/c2_fig_hidden_layer.jpeg  used on input line 881.
+(pdftex.def)             Requested size: 316.1676pt x 150.556pt.
+ [21 <./CHAPTER_2/c2_fig_hidden_layer.jpeg>]
+<CHAPTER_2/c2_fig_XOR_sep.jpeg, id=513, 1767.60374pt x 1002.74625pt>
+File: CHAPTER_2/c2_fig_XOR_sep.jpeg Graphic file (type jpg)
+<use CHAPTER_2/c2_fig_XOR_sep.jpeg>
+Package pdftex.def Info: CHAPTER_2/c2_fig_XOR_sep.jpeg  used on input line 929.
+(pdftex.def)             Requested size: 265.12912pt x 150.40544pt.
+ [22 <./CHAPTER_2/c2_fig_XOR_sep.jpeg>]
+<CHAPTER_2/c2_fig_XOR_final.jpeg, id=521, 1911.14pt x 1003.75pt>
+File: CHAPTER_2/c2_fig_XOR_final.jpeg Graphic file (type jpg)
+<use CHAPTER_2/c2_fig_XOR_final.jpeg>
+Package pdftex.def Info: CHAPTER_2/c2_fig_XOR_final.jpeg  used on input line 985.
+(pdftex.def)             Requested size: 286.65863pt x 150.556pt.
+ [23 <./CHAPTER_2/c2_fig_XOR_final.jpeg>] [24] [25] [26] [27] [28]
+<CHAPTER_2/c2_fig_network_error.jpeg, id=572, 2027.575pt x 1003.75pt>
 File: CHAPTER_2/c2_fig_network_error.jpeg Graphic file (type jpg)
 <use CHAPTER_2/c2_fig_network_error.jpeg>
-Package pdftex.def Info: CHAPTER_2/c2_fig_network_error.jpeg  used on input line 1341.
+Package pdftex.def Info: CHAPTER_2/c2_fig_network_error.jpeg  used on input line 1205.
 (pdftex.def)             Requested size: 304.12312pt x 150.556pt.
- [35 <./CHAPTER_2/c2_fig_network_error.jpeg>] [36]
-<CHAPTER_2/c2_fig_back_prog.jpeg, id=690, 2029.5825pt x 1003.75pt>
+ [29 <./CHAPTER_2/c2_fig_network_error.jpeg>] [30]
+<CHAPTER_2/c2_fig_back_prog.jpeg, id=590, 2029.5825pt x 1003.75pt>
 File: CHAPTER_2/c2_fig_back_prog.jpeg Graphic file (type jpg)
 <use CHAPTER_2/c2_fig_back_prog.jpeg>
-Package pdftex.def Info: CHAPTER_2/c2_fig_back_prog.jpeg  used on input line 1368.
+Package pdftex.def Info: CHAPTER_2/c2_fig_back_prog.jpeg  used on input line 1232.
 (pdftex.def)             Requested size: 304.42424pt x 150.556pt.
- [37 <./CHAPTER_2/c2_fig_back_prog.jpeg>]) (./CHAPTER_3/CHAPTER 3.tex [38]
+) (./CHAPTER_3/CHAPTER 3.tex [31 <./CHAPTER_2/c2_fig_back_prog.jpeg>] [32]
 Chapter 3.
-) (./CHAPTER_4/CHAPTER 4.tex [39
+) (./CHAPTER_4/CHAPTER 4.tex [33
 
 ]
 Chapter 4.
-) (./CHAPTER_5/CHAPTER 5.tex [40
+) (./CHAPTER_5/CHAPTER 5.tex [34
 
 ]
 Chapter 5.
@@ -610,37 +583,33 @@ Chapter 5.
 \tf@brf=\write7
 \openout7 = `0_COMPILE.brf'.
 
- [41
+ [35
 
-]) (./PLACEHOLDER_TO_BE_DELETED/TO BE DELETED.tex [42
+]) (./PLACEHOLDER_TO_BE_DELETED/TO BE DELETED.tex [36
 
 ]
 Chapter 6.
-[43
-
-] [44] [45] [46] [47] [48]
-Chapter 7.
-) [49
+) [37
 
 ] (./0_COMPILE.aux)
 Package rerunfilecheck Info: File `0_COMPILE.out' has not changed.
-(rerunfilecheck)             Checksum: 1CB836C166F0807C3B435F23BA6A4AE6;6814.
+(rerunfilecheck)             Checksum: 83849F8BFC4D045AAAC3E27A9DDE207E;5857.
 Package rerunfilecheck Info: File `0_COMPILE.brf' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 13094 strings out of 478268
- 216295 string characters out of 5846347
- 516225 words of memory out of 5000000
- 30812 multiletter control sequences out of 15000+600000
+ 13006 strings out of 478268
+ 214772 string characters out of 5846347
+ 516201 words of memory out of 5000000
+ 30792 multiletter control sequences out of 15000+600000
  478852 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,26n,91p,827b,453s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on 0_COMPILE.pdf (57 pages, 6851067 bytes).
+ 87i,33n,91p,827b,455s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on 0_COMPILE.pdf (45 pages, 6381379 bytes).
 PDF statistics:
- 906 PDF objects out of 1000 (max. 8388607)
- 786 compressed objects within 8 object streams
- 267 named destinations out of 1000 (max. 500000)
- 478 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 741 PDF objects out of 1000 (max. 8388607)
+ 637 compressed objects within 7 object streams
+ 200 named destinations out of 1000 (max. 500000)
+ 425 words of extra memory for PDF output out of 10000 (max. 10000000)
 
