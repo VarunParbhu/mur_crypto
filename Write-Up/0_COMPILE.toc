@@ -6,44 +6,44 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Deep Learning Networks}{2}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Introduction}{2}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Feedforward Networks}{18}{subsection.2.1.1}%
-\contentsline {section}{\numberline {2.2}Differential calculus}{18}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Derivatives}{19}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Directional Derivatives}{19}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Chain Rule}{19}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Hessian}{20}{subsection.2.2.4}%
-\contentsline {section}{\numberline {2.3}Optimization}{20}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Optimization algorithms}{20}{subsection.2.3.1}%
-\contentsline {section}{\numberline {2.4}Deep Learning}{22}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Perceptron}{22}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Perceptron Learning Ruelee}{23}{subsection.2.4.2}%
-\contentsline {subsubsection}{\numberline {2.4.2.1}Perceptron Update Rule}{26}{subsubsection.2.4.2.1}%
-\contentsline {subsubsection}{\numberline {2.4.2.2}Limitation of the Perceptron}{27}{subsubsection.2.4.2.2}%
-\contentsline {subsection}{\numberline {2.4.3}Neural Network}{29}{subsection.2.4.3}%
-\contentsline {subsubsection}{\numberline {2.4.3.1}Feedforward Network}{30}{subsubsection.2.4.3.1}%
-\contentsline {subsubsection}{\numberline {2.4.3.2}Activation Functions}{32}{subsubsection.2.4.3.2}%
-\contentsline {subsubsection}{\numberline {2.4.3.3}Network Error}{33}{subsubsection.2.4.3.3}%
-\contentsline {subsubsection}{\numberline {2.4.3.4}Gradient Descent Method}{34}{subsubsection.2.4.3.4}%
-\contentsline {subsubsection}{\numberline {2.4.3.5}Learning Rate}{34}{subsubsection.2.4.3.5}%
-\contentsline {subsubsection}{\numberline {2.4.3.6}Back Propagation}{35}{subsubsection.2.4.3.6}%
-\contentsline {subsection}{\numberline {2.4.4}Deep Neural Network}{36}{subsection.2.4.4}%
-\contentsline {subsection}{\numberline {2.4.5}Overfitting}{36}{subsection.2.4.5}%
-\contentsline {subsubsection}{\numberline {2.4.5.1}Dropout}{36}{subsubsection.2.4.5.1}%
-\contentsline {subsection}{\numberline {2.4.6}Convolutional Layer}{36}{subsection.2.4.6}%
-\contentsline {chapter}{\numberline {3}Sentiment Analysis}{37}{chapter.3}%
-\contentsline {chapter}{\numberline {4}PyTorch}{38}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Tweet Data}{39}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Tweets}{39}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Tweepy}{39}{subsection.5.1.1}%
-\contentsline {subsubsection}{\numberline {5.1.1.1}Scrapping using Tweepy}{39}{subsubsection.5.1.1.1}%
-\contentsline {subsubsection}{\numberline {5.1.1.2}Cleaning using RegEx}{39}{subsubsection.5.1.1.2}%
-\contentsline {section}{\numberline {5.2}Tweet Count}{39}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Tweet Search Volume Index (SVI)}{39}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Feature Engineering}{39}{section.5.4}%
-\contentsline {chapter}{\numberline {6}Placeholder - to be deleted}{41}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Linear Algebra}{41}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Vectors}{41}{subsection.6.1.1}%
-\contentsline {subsubsection}{\numberline {6.1.1.1}Inner Product}{43}{subsubsection.6.1.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Matrices}{44}{subsection.6.1.2}%
-\contentsline {subsubsection}{\numberline {6.1.2.1}Outer Product}{46}{subsubsection.6.1.2.1}%
-\contentsline {chapter}{\numberline {7}test}{47}{chapter.7}%
+\contentsline {subsection}{\numberline {2.1.1}Feedforward Network}{18}{subsection.2.1.1}%
+\contentsline {section}{\numberline {2.2}Differential calculus}{21}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Derivatives}{21}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Directional Derivatives}{21}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Chain Rule}{21}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Hessian}{22}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3}Optimization}{22}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Optimization algorithms}{23}{subsection.2.3.1}%
+\contentsline {section}{\numberline {2.4}Deep Learning}{24}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Perceptron}{24}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Perceptron Learning Ruelee}{25}{subsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.2.1}Perceptron Update Rule}{28}{subsubsection.2.4.2.1}%
+\contentsline {subsubsection}{\numberline {2.4.2.2}Limitation of the Perceptron}{29}{subsubsection.2.4.2.2}%
+\contentsline {subsection}{\numberline {2.4.3}Neural Network}{31}{subsection.2.4.3}%
+\contentsline {subsubsection}{\numberline {2.4.3.1}Feedforward Network}{32}{subsubsection.2.4.3.1}%
+\contentsline {subsubsection}{\numberline {2.4.3.2}Activation Functions}{34}{subsubsection.2.4.3.2}%
+\contentsline {subsubsection}{\numberline {2.4.3.3}Network Error}{35}{subsubsection.2.4.3.3}%
+\contentsline {subsubsection}{\numberline {2.4.3.4}Gradient Descent Method}{36}{subsubsection.2.4.3.4}%
+\contentsline {subsubsection}{\numberline {2.4.3.5}Learning Rate}{36}{subsubsection.2.4.3.5}%
+\contentsline {subsubsection}{\numberline {2.4.3.6}Back Propagation}{37}{subsubsection.2.4.3.6}%
+\contentsline {subsection}{\numberline {2.4.4}Deep Neural Network}{38}{subsection.2.4.4}%
+\contentsline {subsection}{\numberline {2.4.5}Overfitting}{38}{subsection.2.4.5}%
+\contentsline {subsubsection}{\numberline {2.4.5.1}Dropout}{38}{subsubsection.2.4.5.1}%
+\contentsline {subsection}{\numberline {2.4.6}Convolutional Layer}{38}{subsection.2.4.6}%
+\contentsline {chapter}{\numberline {3}Sentiment Analysis}{39}{chapter.3}%
+\contentsline {chapter}{\numberline {4}PyTorch}{40}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Tweet Data}{41}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Tweets}{41}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Tweepy}{41}{subsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.1.1}Scrapping using Tweepy}{41}{subsubsection.5.1.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.1.2}Cleaning using RegEx}{41}{subsubsection.5.1.1.2}%
+\contentsline {section}{\numberline {5.2}Tweet Count}{41}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Tweet Search Volume Index (SVI)}{41}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Feature Engineering}{41}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Placeholder - to be deleted}{43}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Linear Algebra}{43}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Vectors}{43}{subsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.1.1}Inner Product}{45}{subsubsection.6.1.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Matrices}{46}{subsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.1}Outer Product}{48}{subsubsection.6.1.2.1}%
+\contentsline {chapter}{\numberline {7}test}{49}{chapter.7}%
