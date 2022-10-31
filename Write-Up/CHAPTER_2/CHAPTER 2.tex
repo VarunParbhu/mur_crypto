@@ -361,7 +361,7 @@ Using the result (\ref{eq:perp_cov_result2}) and the fact that $||\textbf{w}^{*}
   m &\leq \dfrac{1}{\gamma^2}
 \end{align}
 This proves the Perceptron Convergence Theorem that the number of mistakes is at most $\dfrac{1}{\gamma^2}$, where $\gamma$ is the margin.\vspace{5mm}\\
-\noindent\textbf{Solving Gate problem using the Perceptron}\\
+\noindent\textbf{Solving Gate problem}\\
 The perceptron alone is not always a good model to solve binary classification problem. It has certain limitation by nature of its definition. Consider the logic functions AND, OR and XOR across these 4 points:
 \begin{align}
   \begin{matrix}
@@ -587,7 +587,8 @@ Thus, the perceptron is able to solve the OR function.
 The XOR function returns a value of 1 if either of the inputs is 1 but not both. Let $f$ be the XOR function such that
 \begin{align}
   \begin{matrix}
-    f(\textbf{p}_1)=0,&   f(\textbf{p}_2)=1 ,& f(\textbf{p}_3)=0,&   f(\textbf{p}_4)=1    
+    f(\textbf{p}_1)=0,&   f(\textbf{p}_2)=1 ,& f(\textbf{p}_3)=0,&   f(\textbf{p}_4)=1
+    \label{eq:XOR_function}    
   \end{matrix}
 \end{align}
 Consider a plot of the XOR function below 
@@ -598,7 +599,6 @@ Consider a plot of the XOR function below
   \label{XOR_function}
 \end{figure}\\
 From figure \ref{XOR_function}; we can observe that no separating line alone could group the two different classes together. We attempt to find a combination of weight for the perceptron which reduces the error (margin) as much as possible.\\
-
 \noindent Let $f^{*}$ be the exact function and $f(\textbf{x},\textbf{w}) = \textbf{w}^T\textbf{x} + b$, where $\textbf{w} = [w_1 \, \, w_2]^T$, be the approximate function. Consider the error function (the difference between the exact and approximate value)
 \begin{align}
   \label{eq:error_XOR_prob}
@@ -763,8 +763,94 @@ Hence, the approximate function $f(\textbf{x},\textbf{w})$ is given by
   \label{fig: approximate_XOR_solution}
 \end{figure}\\
 \noindent  Clearly from figure \ref{fig: approximate_XOR_solution}, the perceptron model cannot solve the XOR logic function. The XOR problem is actually not linearly separable. Thus, we introduce \textbf{feedforward networks} to overcome this problem.
-\subsection{Feedforward Networks}
-
+\subsection{Feedforward Network}
+We have seen that the single perceptron cannot solve the XOR problem. In order to solve the problem, we use a set of perceptrons that learns two different functions within a connected network.\vspace{5mm} \\
+First, let's consider two NOT boolean function $f_1^{*} = x_1 \text{ AND } (\text{NOT }x_2)$ and $f_2^{*} = (\text{NOT }x_1) \text{ AND } x_2$. \vspace{5mm}\\
+Consider $f_1^{*}$ which returns 1 if $x_1$ and (not $x_2$) are equal to 1.
+\begin{table}
+  \begin{center}
+    \begin{tabular}{ c c c c}
+      $x_1$ & $x_2$ & NOT ($x_2$) & $x_1$ AND (NOT $x_2$) \\
+     \hline 
+      0 & 0 & 1 & 0 \\  
+      1 & 0 & 1 & 1 \\  
+      1 & 1 & 0 & 0 \\  
+      0 & 1 & 0 & 0 
+    \end{tabular}
+    \caption{Truth Table for $f_1^{*}$}
+  \label{table:truth_table_f_1}
+  \end{center}  
+\end{table} \vspace{5mm}\\
+The function $f_1^{*}$ can be separated using the perceptron.
+\begin{figure}[ht]
+  \centering
+  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_f_1_XOR.jpeg}
+  \caption{$f_1$}
+  \label{fig:f1_XOR}
+\end{figure} \\
+The equation of the separating line in figure \ref{fig:f1_XOR} is given by
+\begin{align}
+  x_1 - x_2 - \dfrac{1}{2} = 0
+\end{align}
+We can transform the separating line in the form of $\textbf{w}^T\textbf{x} = 0$ to fit the perceptron.
+\begin{align}
+  \begin{matrix}
+    \textbf{w} = \begin{bmatrix}
+      -0.5 \\
+      1 \\
+      -1
+    \end{bmatrix} & \text{and} & \textbf{x} = \begin{bmatrix}
+      1 \\
+      x_1 \\
+      x_2
+    \end{bmatrix}
+  \end{matrix}
+\end{align}
+Similarly, consider $f_2^{*}$ which returns 1 if (not $x_1$) and $x_2$ are equal to 1.
+\begin{table}
+  \begin{center}
+    \begin{tabular}{ c c c c}
+      $x_1$ & $x_2$ & NOT ($x_1$) & (NOT $x_1$) AND $x_2$ \\
+     \hline 
+      0 & 0 & 1 & 0 \\  
+      1 & 0 & 0 & 0 \\  
+      1 & 1 & 0 & 0 \\  
+      0 & 1 & 1 & 1 
+    \end{tabular}
+    \caption{Truth Table for $f_2^{*}$}
+  \label{table:truth_table_f_2}
+  \end{center}  
+\end{table} \vspace{40mm}\\
+The function $f_2^{*}$ can be separated using the perceptron.
+\begin{figure}[ht]
+  \centering
+  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_f_2_XOR.jpeg}
+  \caption{$f_1$}
+  \label{fig:f2_XOR}
+\end{figure} \\
+The equation of the separating line in figure \ref{fig:f2_XOR} is given by
+\begin{align}
+  -x_1 + x_2 - \dfrac{1}{2} = 0
+\end{align}
+We can transform the separating line in the form of $\textbf{w}^T\textbf{x} = 0$ to fit the perceptron.
+\begin{align}
+  \begin{matrix}
+    \textbf{w} = \begin{bmatrix}
+      -0.5 \\
+      -1 \\
+      1
+    \end{bmatrix} & \text{and} & \textbf{x} = \begin{bmatrix}
+      1 \\
+      x_1 \\
+      x_2
+    \end{bmatrix}
+  \end{matrix}
+\end{align}
+Consequently, the XOR function defined in (\ref{eq:XOR_function}) can be expressed as $f^*$ such that
+\begin{align}
+  \nonumber
+  f^*(x_1,x_2) = f_1^*(x_1,x_2) \text{ OR } f_2^*(x_1,x_2)
+\end{align}
 \section{Differential calculus}
 Differential calculus is the study of the definition, properties, and applications the derivative of a function. The process of finding the derivative is called differentiation. It is the also referred to as the study of rate of change and slopes of curves. In optimization and deep learning, major concepts of differential calculus are used.
 \subsection{Derivatives}
@@ -808,7 +894,7 @@ The optimization problem is a computational problem in which the objective is to
   \label{eq:optimization_problem}
 \end{align} 
 \noindent where \\
-\indent $f: \mathbb{R}^n \rightarrow \mathbb{R}$ is the objective/loss function to be minimized,\\
+\indent $f: \mathbb{R}^n \rightarrow \mathbb{R}$ is the objective/loss function to be minimised,\\
 \indent $g_i(x) \leq 0$ are called inequality constraints,\\
 \indent $h_j(x) = 0$ are called equality constraints, and \\
 \indent $m\geq0$ and $p\geq0$
@@ -827,7 +913,7 @@ For minimizing $f(x)$, $x \in \mathbb{R}$, we need to solve $g(x) = f^{'}(x)=0$.
   x_{n+1} &= x_{n} - \dfrac{g(x_{}n)}{g^{'}(x_n)} \\
           &= x_{n} - \dfrac{f^{'}(x_{}n)}{f^{''}(x_n)}
 \end{align}
-For multivariate functions we need to minimize $f(\mathbf{x})$ over $\mathbf{x} \in \mathbb{R}^n$, that it
+For multivariate functions we need to minimise $f(\mathbf{x})$ over $\mathbf{x} \in \mathbb{R}^n$, that it
 \begin{align}
   \begin{matrix}
     \underset{\mathbf{x}\in\mathbb{R}^n}{min} f(\mathbf{x}), & \,\,\, \mathbf{x} =(x_1,x_2,\dots,x_n)^T \in \mathbb{R}^n
