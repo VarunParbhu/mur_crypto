@@ -1,1 +1,128 @@
-\chapter{Sentiment Analysis}
+\chapter{Optimization}
+\section{Introduction}
+The optimization problem is a computational problem in which the objective is to find the best of all possible solutions. Deep neural networks is a form of an optimization problem to find the best possible set of weights in order to reduce the error in a network.
+
+\noindent A generic form of an optimization problem is given by 
+\begin{align}
+  \begin{matrix}
+    \underset{x}{\text{minimize/maximize}} &f(x) & \\
+    \text{subject to} &g_i(x) \leq 0, \, \, & i=1,\dots,m \\
+    &h_j(x) = 0, & j=1,\dots,p
+  \end{matrix}
+  \label{eq:optimization_problem}
+\end{align} 
+\noindent where \\
+\indent $f: \mathbb{R}^n \rightarrow \mathbb{R}$ is the objective/loss function to be minimised,\\
+\indent $g_i(x) \leq 0$ are called inequality constraints,\\
+\indent $h_j(x) = 0$ are called equality constraints, and \\
+\indent $m\geq0$ and $p\geq0$
+\noindent If $m=p=0$, the problem is an unconstrained optimization problem.
+\subsection*{Minimum/Maximum Point}
+Let $x^*$  be points of the function $f(x)$ defined in (\ref{eq:optimization_problem}) and $u \in \mathbb{N}(x^*,\delta)$ where $\mathbb{N}$ is a $\delta$-neighbourhood of $x^*$. Then, $x^*$ is said to be a
+\begin{enumerate}[(i)]
+    \item local minimum if $f(x^*) < f(u)$    $\forall u\in\mathbb{N}$
+    \item local  maximum if $f(x^*) > f(u)$ $\forall u\in\mathbb{N}$
+    \item global minimum if $f(x^*) < f(u)$ $\forall u\in\mathbb{R}$
+    \item global maximum if $f(x^*) > f(u)$ $\forall u\in\mathbb{R}$
+\end{enumerate}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.15]{CHAPTER_3/c3_fig_min_max.jpeg}
+    \caption{!!!TO BE CHANGED!!! Min max }
+    \label{fig:min_max_illustration}
+\end{figure}
+\subsection*{Determining Minimum/Maximum Point}
+For a function $f(\textbf{x})$ where $\textbf{x} = (x_1,x_2. \dots, x_n) \in \mathbb{R}^n$, the condition for the presence of a stationary point (minimum or maximum point) is given by
+\begin{align}
+    \label{eq:grad_f_x}
+    \textbf{G} = \nabla f \begin{pmatrix}
+        \dfrac{\partial f}{\partial x_1} & \dfrac{\partial f}{\partial x_2} & \dots , \dfrac{\partial f}{\partial x_n}
+    \end{pmatrix} = \textbf{0}
+\end{align}
+The second derivative of $f(x)$ is given by the Hessian matrix, $\textbf{H}$
+\begin{align}
+    \label{eq:Hessian_matrix}
+    \textbf{H} = \begin{bmatrix}
+        \dfrac{\partial^2 f}{\partial x_1^2} & \dfrac{\partial^2 f}{\partial x_1 \partial x_2} & \dots & \dfrac{\partial^2 f}{\partial x_1 \partial x_n} \\
+        \dfrac{\partial^2 f}{\partial x_2\partial x_1} & \dfrac{\partial^2 f}{\partial x_2^2} & \dots & \dfrac{\partial^2 f}{\partial x_2 \partial x_n} \\
+        \vdots & \vdots & \ddots & \vdots \\
+        \dfrac{\partial^2 f}{\partial x_n\partial x_1} & \dfrac{\partial^2 f}{\partial x_n \partial x_2} & \dots & \dfrac{\partial^2 f}{\partial x_n^n}
+    \end{bmatrix}
+\end{align}
+The nature of the stationary points of $f(x)$ can be determined by studying the positive definiteness of (\ref{eq:Hessian_matrix}) using its eigenvalues. If all the eigenvalues of $\textbf{H}$ are positive, then $\textbf{H}$ is symmetric positive definite, indicating the presence of a \textbf{local minimum}.
+\section{Optimization algorithms}
+The solutions to the optimization problem are vital in modern machine learning and artificial intelligence algorithms, which includes weight optimization in deep learning. There are a number of popular optimization algorithm currently developed to solve the problem. Hence, choosing the right algorithm can be challenging as well.
+\subsubsection*{Network Error}
+Let the network error function, $e$, be given by the squared difference between the predicted value and the true value. The difference is squared to avoid the sum of errors of multiple input vector to be zero which can mislead the network to have perfect predictive power.
+\begin{align}
+   e = \dfrac{1}{2}\sum^{\text{Total Input}}_i (\widehat{y_i}-y_i)^2
+  \label{network_error}
+\end{align}
+The goal of the network is to adjust the weight to reduce the network error as much as possible. The idea of reducing a function to a value is synonymous to (\refeq{eq:optimization_problem}) an optimization problem. The network error in (\refeq{network_error}) is a quadratic equation in this case.\\
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_network_error.jpeg}
+  \caption{Network Error}
+  \label{network_error_graph}
+\end{figure}\\
+Figure (\ref*{network_error_graph}) is a graphical representation of the network error function. Our goal is to reach the minimum of the function by adjusting the weight value.
+\subsection{Gradient Descent}
+In order to reach the bottom of the function; we need to adjust the weight such that the derivative of the error function is 0. The approach of updating the weight based on the gradient of the error function is known as \textbf{gradient descent}. The derivative with respect to the weights of the network error (\refeq{network_error}) for a single input is given by
+\begin{align}
+  \frac{de}{dw_{ij}} = (\widehat{y_i}-y_i)\frac{d\widehat{y_i}}{dw_{ij}}
+  \label{derivative_network_error}
+\end{align}
+From figure (\refeq{network_error_graph}); we can observe that if the gradient is negative then we have underestimated the predicted value and need to increase the weight to reach the optimal value. On the other hand, if the gradient is positive then we have overestimated the predicted value and need to decrease the weight to reach the optimal value. The equation (\refeq{derivative_network_error}) provides us with the opposite direction and amount to adjust the weight. Hence, the update rule of the weights for gradient descent method is given by
+\begin{align}
+  w_{ij}^{t+1} = w_{ij}^{t} - \dfrac{de}{dw_{ij}}
+\end{align}
+In the gradient descent method, the network learns from the gradient of the error function and adjust the weights accordingly to reduce the error. However, the gradient alone can be quite large, causing oscillations as we go down the error function. This problem by introducing a \textbf{learning rate} $\alpha$ prior to adjusting the weight.
+\subsubsection*{Learning Rate}
+The learning rate is typically denoted by the Greek letter alpha $\alpha$. It helps the network to control the rate at which the weights are changing. Having a system with a high learning rate may lead to an oscillating network when trying to find the optimal weight and having a slow learning rate increases the number of iterations required when optimizing the network. The adjusted update rule of the weight is given by
+\begin{align}
+  w_{ij}^{t+1} = w_{ij}^{t} - \alpha\dfrac{de}{dw_{ij}}
+\end{align}
+where $\alpha \in (0,1)$
+\subsection{Stochastic Gradient Descent}
+Instead of adjusting the weight to the average loss function, we can approximate the gradient by only one random directional derivative of the error. Thus, the number of computation in the gradient descent method can be significantly reduced by a factor of $n$ (where $n$ is the number of direction). The stochastic gradient method (SGM) is given by 
+\begin{align}
+    \label{eq:SGM_def}
+    w^{t+1} = w^{t} - \alpha_t {(\nabla f)}_i
+\end{align}
+where $\alpha_t$ is the learning rate at the $t^{th}$ iteration which may vary with iterations.\\
+As we move closer to the bottom of the minimum of the function; the solution starts to oscillate since we are moving the weight in random directions. Thus, the learning rate should be reduced gradually as we iterate. Some commonly used reduction of learning rate is given by 
+\begin{align}
+    \label{eq: learning_rates}
+        \eta(t) &= \eta_i \,\,\, \,\,\,\, \text{ if } t_i \leq t \leq t_{i+1} &\text{     piecewise constant} \\
+        \eta(t) &= \eta_0e^{-\lambda t} & \text{exponential decay} \\
+        \eta(t) & = \eta_0 (\beta t + 1)^{-\alpha} &\text{polynomial decay}
+\end{align}
+where $\lambda$, $\beta$, and $\alpha$ are known as hyperparameter. \\
+Training dataset can be very large in certain cases which leads to a greater cost of compute at each iteration for the gradient descent, so stochastic gradient descent is preferred in these cases.
+\subsection{Mini-Batch Stochastic Gradient Descent}
+\subsection{Newton's Method}
+For minimizing $f(x)$, $x \in \mathbb{R}$, we need to solve $g(x) = f^{'}(x)=0$. Newton's iteration is given by 
+\begin{align}
+  x_{n+1} &= x_{n} - \dfrac{g(x_{}n)}{g^{'}(x_n)} \\
+          &= x_{n} - \dfrac{f^{'}(x_{}n)}{f^{''}(x_n)}
+\end{align}
+For multivariate functions we need to minimise $f(\mathbf{x})$ over $\mathbf{x} \in \mathbb{R}^n$, that it
+\begin{align}
+  \begin{matrix}
+    \underset{\mathbf{x}\in\mathbb{R}^n}{min} f(\mathbf{x}), & \,\,\, \mathbf{x} =(x_1,x_2,\dots,x_n)^T \in \mathbb{R}^n
+  \end{matrix} 
+\end{align}
+The Newton's iteration for multivariate function is given by
+\begin{align}
+  \mathbf{x_{n+1}} = \mathbf{x_{n}} - H(\mathbf{x_n})^{-1}\nabla f(\mathbf{x_n})
+\end{align}
+where\\
+\indent $H(\mathbf{x_n})$ is the Hessian matrix of $f(\mathbf{x})$\\
+\noindent We can observe from (\refeq{eq:Hessian_matrix}) that calculating the inverse of the Hessian matrix can be computationally very expensive for higher dimensions. Replacing $H(\mathbf{x_n})^{-1}$ by $\alpha \mathcal{I}$ where $\mathcal{I}$ is the identity matrix; we get the \textbf{method of steepest descent} given by
+\begin{align}
+  \mathbf{x_{n+1}} = \mathbf{x_{n}} - \alpha \textbf{I} \nabla f(\mathbf{x_n})
+\end{align}
+where $\alpha \in (0,1)$
+\subsection{Momentum}
+\subsection{Adam} 

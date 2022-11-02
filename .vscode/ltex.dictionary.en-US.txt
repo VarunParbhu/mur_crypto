@@ -23,3 +23,5 @@ ReLU
 Rosenblatt
 mcp
 minimise
+minimised
+piecewise
