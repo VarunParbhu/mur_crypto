@@ -10,7 +10,7 @@ Importing Figures
 \begin{figure}[ht]
   \centering
   \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_perceptron_example.jpeg}
-  \caption{Caption}
+  \caption{!!!TO BE CHANGED!!!}
   \label{}
 \end{figure}
 
