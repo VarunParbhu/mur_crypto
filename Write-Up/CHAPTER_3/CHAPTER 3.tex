@@ -70,7 +70,7 @@ Figure (\ref*{network_error_graph}) is a graphical representation of the network
 \subsection{Gradient Descent}
 In order to reach the bottom of the function; we need to adjust the weight such that the derivative of the error function is 0. The approach of updating the weight based on the gradient of the error function is known as \textbf{gradient descent}. The derivative with respect to the weights of the network error (\refeq{network_error}) for a single input is given by
 \begin{align}
-  \frac{de}{dw_{ij}} = (\widehat{y_i}-y_i)\frac{d\widehat{y_i}}{dw_{ij}}
+  \frac{\partial e}{\partial w_{ij}} = (\widehat{y_i}-y_i)\frac{\partial \widehat{y_i}}{\partial w_{ij}}
   \label{derivative_network_error}
 \end{align}
 From figure (\refeq{network_error_graph}); we can observe that if the gradient is negative then we have underestimated the predicted value and need to increase the weight to reach the optimal value. On the other hand, if the gradient is positive then we have overestimated the predicted value and need to decrease the weight to reach the optimal value. The equation (\refeq{derivative_network_error}) provides us with the opposite direction and amount to adjust the weight. Hence, the update rule of the weights for gradient descent method is given by
@@ -81,28 +81,36 @@ In the gradient descent method, the network learns from the gradient of the erro
 \subsubsection*{Learning Rate}
 The learning rate is typically denoted by the Greek letter alpha $\alpha$. It helps the network to control the rate at which the weights are changing. Having a system with a high learning rate may lead to an oscillating network when trying to find the optimal weight and having a slow learning rate increases the number of iterations required when optimizing the network. The adjusted update rule of the weight is given by
 \begin{align}
-  w_{ij}^{t+1} = w_{ij}^{t} - \alpha\dfrac{de}{dw_{ij}}
+  w_{ij}^{t+1} = w_{ij}^{t} - \alpha\dfrac{\partial e}{\partial w_{ij}}
 \end{align}
 where $\alpha \in (0,1)$
 \subsection{Stochastic Gradient Descent}
 Instead of adjusting the weight to the average loss function, we can approximate the gradient by only one random directional derivative of the error. Thus, the number of computation in the gradient descent method can be significantly reduced by a factor of $n$ (where $n$ is the number of direction). The stochastic gradient method (SGM) is given by 
 \begin{align}
     \label{eq:SGM_def}
-    w^{t+1} = w^{t} - \alpha_t {(\nabla f)}_i
+    w^{t+1} = w^{t} - \alpha_t {(\nabla e)}_i
 \end{align}
 where $\alpha_t$ is the learning rate at the $t^{th}$ iteration which may vary with iterations.\\
 As we move closer to the bottom of the minimum of the function; the solution starts to oscillate since we are moving the weight in random directions. Thus, the learning rate should be reduced gradually as we iterate. Some commonly used reduction of learning rate is given by 
 \begin{align}
     \label{eq: learning_rates}
-        \eta(t) &= \eta_i \,\,\, \,\,\,\, \text{ if } t_i \leq t \leq t_{i+1} &\text{     piecewise constant} \\
-        \eta(t) &= \eta_0e^{-\lambda t} & \text{exponential decay} \\
+        \eta(t) &= \eta_i \,\,\, \,\,\,\, \text{ if } t_i \leq t \leq t_{i+1} &\text{piecewise constant} \\
+        \eta(t) &= \eta_0e^{-\lambda t} &\text{exponential decay} \\
         \eta(t) & = \eta_0 (\beta t + 1)^{-\alpha} &\text{polynomial decay}
 \end{align}
 where $\lambda$, $\beta$, and $\alpha$ are known as hyperparameter. \\
 Training dataset can be very large in certain cases which leads to a greater cost of compute at each iteration for the gradient descent, so stochastic gradient descent is preferred in these cases.
 \subsection{Mini-Batch Stochastic Gradient Descent}
+In order to make use of the features of both gradient descent and stochastic gradient descent; we introduce the mini-batch stochastic gradient descent. In this approach, instead of iterating in the direction of the full gradient or only in one direction of the full gradient, we split the dataset into small batches and compute the gradient of each batch. The formula of the stochastic gradient descent is given by 
+\begin{align}
+    \label{mb-sgd}
+    \textbf{w}^{t+1} &= \textbf{w}^{t} - \eta_t \textbf{g}_t \\
+    \nonumber
+    \textbf{g}_t &= \nabla_{\mathcal{B}_t}e(\textbf{x},\textbf{w}) 
+\end{align}
+where $\mathcal{B}_t$ is a mini-batch of elements drawn uniformly at random from the training set (the expectation of the gradient remains unchanged). \\ Since we are using a mini-batch, the updates are closer to the full gradient but at a reduced cost.
 \subsection{Newton's Method}
-For minimizing $f(x)$, $x \in \mathbb{R}$, we need to solve $g(x) = f^{'}(x)=0$. Newton's iteration is given by 
+For minimizing $f(x)$, $x \in \mathbb{R}$, we need to solve $g(x) = e^{'}(x)=0$. Newton's iteration is given by 
 \begin{align}
   x_{n+1} &= x_{n} - \dfrac{g(x_{}n)}{g^{'}(x_n)} \\
           &= x_{n} - \dfrac{f^{'}(x_{}n)}{f^{''}(x_n)}
@@ -125,4 +133,51 @@ where\\
 \end{align}
 where $\alpha \in (0,1)$
 \subsection{Momentum}
-\subsection{Adam} 
+%https://ui.adsabs.harvard.edu/abs/1986Natur.323..533R/abstract
+%Documention on when momentum first appeared
+\subsubsection*{Exponentially Weighted Moving Average}
+The exponentially weighed moving average (EWMA), also known as exponential moving average (EMA), of a series of data points $S_t$ is given by 
+\begin{align}
+    \label{eq:ewma_def}
+    \mu_t &= \beta \mu_{t-1} + (1-\beta)S_t \\
+    \nonumber
+    \mu_0 &= c
+\end{align}
+where $c \in \mathbb{R}$ and $\beta \in (0,1)$ is known as the smoothing constant. $\beta$ represents the weightage that is going to be assigned to the past values. The average number of previous reading is approximately given by $n={(1-\beta)}^{-1}$. The higher the value of $\beta$ the greater the number of points we average over.
+\subsubsection*{SGD with Momentum}
+From the SGD, we observed that the weight update can be very noisy. In order to smoothen the search direction in the SGD, we implement an exponentially moving average on the gradient. The SGC with momentum can be written in the form
+\begin{align}
+    \label{eq: SGF_with_momentum}
+    \textbf{w}^{t+1} &= \textbf{w}^{t} - \eta \boldsymbol{\mu}^t
+    \intertext{where the exponential moving average of the gradient is given by}
+    \nonumber
+    \boldsymbol{\mu}^{t} &= \beta \boldsymbol{\mu}^{t-1} + (1-\beta)\nabla(e)^t \\
+    \nonumber
+    \boldsymbol{\mu}_0 &= \textbf{c}
+\end{align}
+\subsection{RMSProp}
+The Root Mean Square Propagation (RMSProp) algorithm alleviates undesirable fluctuations when adjusting the weight during optimization. RMSProp is an adaptive learning rate. The idea is to reduce the step size at very large gradient to avoid fluctuations and increase the step size at smaller gradient to move steadily in the correct direction of the optimal solution; hence an adaptive learning rate at each iteration. The equations for the RMSProp is given by 
+\begin{align}
+    \nonumber
+    \label{eq:RMSProp_def}
+    {S}^t_i &= \gamma {S}^{t-1}_i + (1-\gamma)(\nabla e^t)_i^2 \\
+    {w}^{t+1}_i &= {w}^t_i - \dfrac{\eta}{\sqrt{S^t_i} + \epsilon}(\nabla e^t)_i
+\end{align}
+where $\epsilon \approx 10^{-6}$ to ensure that we avoid dividing by zero during iterations.
+\subsection{Adam}
+The Adam algorithm (Adaptive Moment Estimation algorithm) is a robust update rule for the weight optimization. The algorithm combines the benefits of momentum (\refeq{eq: SGF_with_momentum}) and RMSProp (\refeq{eq:RMSProp_def}). Adam is the most popular generalized algorithm performs very well in many cases. It is considered as a state-of-the-art algorithm for deep neural network optimization. The set of equations for the Adam algorithm is given by
+\begin{align}
+    \nonumber
+    \mu^{(t)}_i &= \beta_1 {\mu}^{(t-1)}_i + (1-\beta_1)\nabla(e^{(t)})_i &\text{Momentum} \\
+    \nonumber
+    {S}^{(t)}_i &= \beta_2 {S}^{(t-1)}_i + (1-\beta_2)(\nabla e^{(t)})_i^2 &\text{RMSProp}    
+\end{align}
+To prevent $S^t$ and $\mu^t$ from becoming zero during the initial steps, a bias correction is introduced, such that
+\begin{align*}
+    \hat{\mu^{(t)}} = \dfrac{\mu}{1-\beta_1^t} & & \hat{S^{(t)}} = \dfrac{S^t}{1-\beta_2^t}
+\end{align*}
+Finally, the update rule is given by
+\begin{align}
+    \label{eq:Adam_def}
+    {w}^{t+1}_i &= {w}^t_i - \dfrac{\eta}{\sqrt{S^t_i} + \epsilon}\mu_i
+\end{align} 

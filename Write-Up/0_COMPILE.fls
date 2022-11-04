@@ -760,6 +760,10 @@ INPUT ./0_COMPILE.lot
 INPUT 0_COMPILE.lot
 INPUT 0_COMPILE.lot
 OUTPUT 0_COMPILE.lot
+INPUT ./CHAPTER_1/CHAPTER 1.tex
+INPUT CHAPTER_1/CHAPTER 1.tex
+INPUT ./CHAPTER_1/CHAPTER 1.tex
+INPUT CHAPTER_1/CHAPTER 1.tex
 INPUT ./CHAPTER_3/CHAPTER 3.tex
 INPUT CHAPTER_3/CHAPTER 3.tex
 INPUT ./CHAPTER_3/CHAPTER 3.tex
@@ -780,6 +784,12 @@ INPUT ./CHAPTER_2/c2_fig_network_error.jpeg
 INPUT CHAPTER_2/c2_fig_network_error.jpeg
 INPUT ./CHAPTER_2/c2_fig_network_error.jpeg
 INPUT ./CHAPTER_2/c2_fig_network_error.jpeg
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib8.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib6.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy8.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm
 INPUT ./0_COMPILE.bbl
 INPUT 0_COMPILE.bbl
 INPUT ./0_COMPILE.bbl
@@ -803,6 +813,7 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.p
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb

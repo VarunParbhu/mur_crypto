@@ -3,12 +3,14 @@
 \contentsline {section}{Acknowledgement}{iv}{chapter*.4}%
 \contentsline {section}{Abstract}{v}{chapter*.5}%
 \contentsline {section}{Terms and Definitions}{vi}{chapter*.6}%
-\contentsline {chapter}{\numberline {1}Optimization}{vii}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Introduction}{vii}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Optimization algorithms}{ix}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Gradient Descent}{x}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Stochastic Gradient Descent}{xi}{subsection.1.2.2}%
-\contentsline {subsection}{\numberline {1.2.3}Mini-Batch Stochastic Gradient Descent}{xii}{subsection.1.2.3}%
-\contentsline {subsection}{\numberline {1.2.4}Newton's Method}{xii}{subsection.1.2.4}%
-\contentsline {subsection}{\numberline {1.2.5}Momentum}{xiii}{subsection.1.2.5}%
-\contentsline {subsection}{\numberline {1.2.6}Adam}{xiii}{subsection.1.2.6}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Optimization}{2}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Introduction}{2}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Optimization algorithms}{4}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Gradient Descent}{5}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Stochastic Gradient Descent}{6}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Mini-Batch Stochastic Gradient Descent}{7}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Newton's Method}{8}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}Momentum}{9}{subsection.2.2.5}%
+\contentsline {subsection}{\numberline {2.2.6}RMSProp}{9}{subsection.2.2.6}%
+\contentsline {subsection}{\numberline {2.2.7}Adam}{10}{subsection.2.2.7}%
