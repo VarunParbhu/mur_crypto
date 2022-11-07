@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  7 NOV 2022 21:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  8 NOV 2022 00:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -463,35 +463,44 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ] [6
 
-] (./CHAPTER_4/CHAPTER 4.tex
+] (./CHAPTER_1/CHAPTER 1.tex
 Chapter 1.
-) (./0_COMPILE.bbl (./0_COMPILE.brf)
+) (./CHAPTER_4/CHAPTER 4.tex
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1 \chapter
+            {Sentiment Analysis} [1
+
+]
+Chapter 2.
+[2
+
+]) (./0_COMPILE.bbl (./0_COMPILE.brf)
 \tf@brf=\write7
 \openout7 = `0_COMPILE.brf'.
 
- [7
-
-]) [8
+ [3]) [4
 
 ] (./0_COMPILE.aux)
 Package rerunfilecheck Info: File `0_COMPILE.out' has not changed.
-(rerunfilecheck)             Checksum: 5C8A075E03D421AFA371E591DBD13175;853.
+(rerunfilecheck)             Checksum: 15383488DB7DF82C279FF8FA58D667EF;956.
 Package rerunfilecheck Info: File `0_COMPILE.brf' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 12588 strings out of 478268
- 206030 string characters out of 5846347
- 495870 words of memory out of 5000000
- 30593 multiletter control sequences out of 15000+600000
+ 12597 strings out of 478268
+ 206178 string characters out of 5846347
+ 498872 words of memory out of 5000000
+ 30596 multiletter control sequences out of 15000+600000
  476375 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,7n,91p,384b,342s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 87i,7n,91p,1833b,342s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on 0_COMPILE.pdf (9 pages, 70119 bytes).
+Output written on 0_COMPILE.pdf (11 pages, 74951 bytes).
 PDF statistics:
- 114 PDF objects out of 1000 (max. 8388607)
- 92 compressed objects within 1 object stream
- 19 named destinations out of 1000 (max. 500000)
- 57 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 127 PDF objects out of 1000 (max. 8388607)
+ 102 compressed objects within 2 object streams
+ 21 named destinations out of 1000 (max. 500000)
+ 65 words of extra memory for PDF output out of 10000 (max. 10000000)
 
