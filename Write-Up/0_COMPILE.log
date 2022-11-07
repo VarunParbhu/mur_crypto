@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  5 NOV 2022 03:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  7 NOV 2022 21:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -463,56 +463,35 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ] [6
 
-] (./CHAPTER_1/CHAPTER 1.tex
+] (./CHAPTER_4/CHAPTER 4.tex
 Chapter 1.
-) (./CHAPTER_3/CHAPTER 3.tex
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1 \chapter
-            {Optimization} [1
-
-]
-Chapter 2.
-[2
-
-]
-<CHAPTER_3/c3_fig_min_max.jpeg, id=135, 1899.095pt x 1003.75pt>
-File: CHAPTER_3/c3_fig_min_max.jpeg Graphic file (type jpg)
-<use CHAPTER_3/c3_fig_min_max.jpeg>
-Package pdftex.def Info: CHAPTER_3/c3_fig_min_max.jpeg  used on input line 31.
-(pdftex.def)             Requested size: 284.85196pt x 150.556pt.
- [3 <./CHAPTER_3/c3_fig_min_max.jpeg>]
-<CHAPTER_2/c2_fig_network_error.jpeg, id=155, 2027.575pt x 1003.75pt>
-File: CHAPTER_2/c2_fig_network_error.jpeg Graphic file (type jpg)
-<use CHAPTER_2/c2_fig_network_error.jpeg>
-Package pdftex.def Info: CHAPTER_2/c2_fig_network_error.jpeg  used on input line 65.
-(pdftex.def)             Requested size: 304.12312pt x 150.556pt.
- [4] [5 <./CHAPTER_2/c2_fig_network_error.jpeg>] [6] [7] [8] [9]) (./0_COMPILE.bbl (./0_COMPILE.brf)
+) (./0_COMPILE.bbl (./0_COMPILE.brf)
 \tf@brf=\write7
 \openout7 = `0_COMPILE.brf'.
 
- [10]) [11
+ [7
+
+]) [8
 
 ] (./0_COMPILE.aux)
 Package rerunfilecheck Info: File `0_COMPILE.out' has not changed.
-(rerunfilecheck)             Checksum: E31C4D1C683B5F053134FB29D456358A;2125.
+(rerunfilecheck)             Checksum: 5C8A075E03D421AFA371E591DBD13175;853.
 Package rerunfilecheck Info: File `0_COMPILE.brf' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 12708 strings out of 478268
- 207978 string characters out of 5846347
- 505620 words of memory out of 5000000
- 30646 multiletter control sequences out of 15000+600000
- 479445 words of font info for 64 fonts, out of 8000000 for 9000
+ 12588 strings out of 478268
+ 206030 string characters out of 5846347
+ 495870 words of memory out of 5000000
+ 30593 multiletter control sequences out of 15000+600000
+ 476375 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,18n,91p,733b,420s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on 0_COMPILE.pdf (18 pages, 1030398 bytes).
+ 87i,7n,91p,384b,342s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on 0_COMPILE.pdf (9 pages, 70119 bytes).
 PDF statistics:
- 314 PDF objects out of 1000 (max. 8388607)
- 255 compressed objects within 3 object streams
- 69 named destinations out of 1000 (max. 500000)
- 139 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 114 PDF objects out of 1000 (max. 8388607)
+ 92 compressed objects within 1 object stream
+ 19 named destinations out of 1000 (max. 500000)
+ 57 words of extra memory for PDF output out of 10000 (max. 10000000)
 

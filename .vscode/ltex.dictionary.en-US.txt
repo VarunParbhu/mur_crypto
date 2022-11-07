@@ -28,3 +28,7 @@ piecewise
 EWMA
 RMSProp
 RMSprop
+Robbins-Monro
+Rumelhart
+Kingma
+Backpropagation
