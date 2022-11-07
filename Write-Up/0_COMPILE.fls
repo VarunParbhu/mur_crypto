@@ -760,36 +760,12 @@ INPUT ./0_COMPILE.lot
 INPUT 0_COMPILE.lot
 INPUT 0_COMPILE.lot
 OUTPUT 0_COMPILE.lot
-INPUT ./CHAPTER_1/CHAPTER 1.tex
-INPUT CHAPTER_1/CHAPTER 1.tex
-INPUT ./CHAPTER_1/CHAPTER 1.tex
-INPUT CHAPTER_1/CHAPTER 1.tex
-INPUT ./CHAPTER_3/CHAPTER 3.tex
-INPUT CHAPTER_3/CHAPTER 3.tex
-INPUT ./CHAPTER_3/CHAPTER 3.tex
-INPUT CHAPTER_3/CHAPTER 3.tex
+INPUT ./CHAPTER_4/CHAPTER 4.tex
+INPUT CHAPTER_4/CHAPTER 4.tex
+INPUT ./CHAPTER_4/CHAPTER 4.tex
+INPUT CHAPTER_4/CHAPTER 4.tex
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT ./CHAPTER_3/c3_fig_min_max.jpeg
-INPUT ./CHAPTER_3/c3_fig_min_max.jpeg
-INPUT CHAPTER_3/c3_fig_min_max.jpeg
-INPUT ./CHAPTER_3/c3_fig_min_max.jpeg
-INPUT ./CHAPTER_3/c3_fig_min_max.jpeg
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm
-INPUT ./CHAPTER_2/c2_fig_network_error.jpeg
-INPUT ./CHAPTER_2/c2_fig_network_error.jpeg
-INPUT CHAPTER_2/c2_fig_network_error.jpeg
-INPUT ./CHAPTER_2/c2_fig_network_error.jpeg
-INPUT ./CHAPTER_2/c2_fig_network_error.jpeg
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib8.tfm
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib6.tfm
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy8.tfm
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm
 INPUT ./0_COMPILE.bbl
 INPUT 0_COMPILE.bbl
 INPUT ./0_COMPILE.bbl
@@ -806,20 +782,8 @@ INPUT ./0_COMPILE.out
 INPUT ./0_COMPILE.out
 INPUT ./0_COMPILE.brf
 INPUT ./0_COMPILE.brf
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
