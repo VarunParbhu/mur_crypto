@@ -32,3 +32,4 @@ Robbins-Monro
 Rumelhart
 Kingma
 Backpropagation
+popularised

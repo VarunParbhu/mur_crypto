@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex 0_COMPILE"] 1667842121 "0_COMPILE.aux" "0_COMPILE.bbl" "0_COMPILE" 1667842122
+["bibtex 0_COMPILE"] 1667851677 "0_COMPILE.aux" "0_COMPILE.bbl" "0_COMPILE" 1667851678
   "/usr/local/texlive/2022/texmf-dist/bibtex/bst/harvard/agsm.bst" 1136766823 25549 e3d0f1ab4ae55e777f7352db30e2c6f7 ""
-  "0_COMPILE.aux" 1667842122 1718 b394136d893d0efdef43cb110feb5ea2 "pdflatex"
+  "0_COMPILE.aux" 1667851678 1900 6d1db7bc3f04ad4b5eff7bfa804d0a4e "pdflatex"
   "REFERENCES.bib" 1665913208 477 da80cd36c25c27ba2ecbf4f227c2737f ""
   (generated)
   "0_COMPILE.bbl"
   "0_COMPILE.blg"
-["pdflatex"] 1667842122 "/Users/varunparbhu/Documents/Notes/MSc/University of Mauritius/Dissertation/Git-Repo/mur-crypto/Write-Up/0_COMPILE.tex" "0_COMPILE.pdf" "0_COMPILE" 1667842122
-  "/Users/varunparbhu/Documents/Notes/MSc/University of Mauritius/Dissertation/Git-Repo/mur-crypto/Write-Up/0_COMPILE.tex" 1667641943 2181 70f55fac9e56dbc454e0efd97464db75 ""
+["pdflatex"] 1667851677 "/Users/varunparbhu/Documents/Notes/MSc/University of Mauritius/Dissertation/Git-Repo/mur-crypto/Write-Up/0_COMPILE.tex" "0_COMPILE.pdf" "0_COMPILE" 1667851678
+  "/Users/varunparbhu/Documents/Notes/MSc/University of Mauritius/Dissertation/Git-Repo/mur-crypto/Write-Up/0_COMPILE.tex" 1667851677 2180 25e0b74dc098664dd44dcd64174d9b20 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -105,15 +105,16 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1661699099 2826440 c4ab3c4b0c4b4063ce864d11c479a94c ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "0_COMPILE.aux" 1667842122 1718 b394136d893d0efdef43cb110feb5ea2 "pdflatex"
-  "0_COMPILE.bbl" 1667842121 481 8bc455965b5aba2193d05ed83e103045 "bibtex 0_COMPILE"
+  "0_COMPILE.aux" 1667851678 1900 6d1db7bc3f04ad4b5eff7bfa804d0a4e "pdflatex"
+  "0_COMPILE.bbl" 1667851677 481 8bc455965b5aba2193d05ed83e103045 "bibtex 0_COMPILE"
   "0_COMPILE.brf" 0 -1 0 "pdflatex"
-  "0_COMPILE.lof" 1667842122 20 f06013b926d20d994f242e1f23baff30 "pdflatex"
-  "0_COMPILE.lot" 1667842122 20 f06013b926d20d994f242e1f23baff30 "pdflatex"
-  "0_COMPILE.out" 1667842122 853 5c8a075e03d421afa371e591dbd13175 "pdflatex"
-  "0_COMPILE.tex" 1667641943 2181 70f55fac9e56dbc454e0efd97464db75 ""
-  "0_COMPILE.toc" 1667842122 438 e58c41caad09046123df866170819ad9 "pdflatex"
-  "CHAPTER_4/CHAPTER 4.tex" 1667842122 52 ec0eb95712653bc5520a0d7154c79426 ""
+  "0_COMPILE.lof" 1667851678 40 b4a64fdfb29ace579b6af2a2fa1bd5bf "pdflatex"
+  "0_COMPILE.lot" 1667851678 40 b4a64fdfb29ace579b6af2a2fa1bd5bf "pdflatex"
+  "0_COMPILE.out" 1667851678 956 15383488db7df82c279ff8fa58d667ef "pdflatex"
+  "0_COMPILE.tex" 1667851677 2180 25e0b74dc098664dd44dcd64174d9b20 ""
+  "0_COMPILE.toc" 1667851678 502 d6b18eeaeeffbc825875f1c07d5bb3e7 "pdflatex"
+  "CHAPTER_1/CHAPTER 1.tex" 1666573443 258 2bdd1e729a935368457d38f9cc98a6e5 ""
+  "CHAPTER_4/CHAPTER 4.tex" 1667851639 2358 7b729cedb19531043fc4c1bff5d548a4 ""
   (generated)
   "0_COMPILE.aux"
   "0_COMPILE.brf"

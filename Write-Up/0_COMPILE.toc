@@ -3,5 +3,6 @@
 \contentsline {section}{Acknowledgement}{iv}{chapter*.4}%
 \contentsline {section}{Abstract}{v}{chapter*.5}%
 \contentsline {section}{Terms and Definitions}{vi}{chapter*.6}%
-\contentsline {chapter}{\numberline {1}Sentiment Analysis}{vii}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Introduction}{vii}{section.1.1}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Sentiment Analysis}{2}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Introduction}{2}{section.2.1}%
