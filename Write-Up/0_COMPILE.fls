@@ -849,6 +849,16 @@ INPUT ./CHAPTER_2/c2_fig_XOR_final.jpeg
 INPUT CHAPTER_2/c2_fig_XOR_final.jpeg
 INPUT ./CHAPTER_2/c2_fig_XOR_final.jpeg
 INPUT ./CHAPTER_2/c2_fig_XOR_final.jpeg
+INPUT ./CHAPTER_2/c2_bp_nn.jpeg
+INPUT ./CHAPTER_2/c2_bp_nn.jpeg
+INPUT CHAPTER_2/c2_bp_nn.jpeg
+INPUT ./CHAPTER_2/c2_bp_nn.jpeg
+INPUT ./CHAPTER_2/c2_bp_nn.jpeg
+INPUT ./CHAPTER_2/c2_bb_nn_cons.jpeg
+INPUT ./CHAPTER_2/c2_bb_nn_cons.jpeg
+INPUT CHAPTER_2/c2_bb_nn_cons.jpeg
+INPUT ./CHAPTER_2/c2_bb_nn_cons.jpeg
+INPUT ./CHAPTER_2/c2_bb_nn_cons.jpeg
 INPUT ./CHAPTER_3/CHAPTER 3.tex
 INPUT CHAPTER_3/CHAPTER 3.tex
 INPUT ./CHAPTER_3/CHAPTER 3.tex
@@ -901,6 +911,7 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb

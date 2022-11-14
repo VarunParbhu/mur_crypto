@@ -33,3 +33,4 @@ Rumelhart
 Kingma
 Backpropagation
 popularised
+Hadamard
