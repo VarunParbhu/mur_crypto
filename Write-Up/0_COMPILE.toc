@@ -14,15 +14,15 @@
 \contentsline {subsection}{\numberline {2.4.3}XOR Function}{15}{subsection.2.4.3}%
 \contentsline {section}{\numberline {2.5}Feedforward Network}{18}{section.2.5}%
 \contentsline {section}{\numberline {2.6}Backpropagation}{25}{section.2.6}%
-\contentsline {chapter}{\numberline {3}Optimization}{26}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Introduction}{26}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Optimization algorithms}{28}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Gradient Descent}{29}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Stochastic Gradient Descent}{30}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Mini-Batch Stochastic Gradient Descent}{31}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Newton's Method}{32}{subsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.2.5}Momentum}{33}{subsection.3.2.5}%
-\contentsline {subsection}{\numberline {3.2.6}RMSProp}{33}{subsection.3.2.6}%
-\contentsline {subsection}{\numberline {3.2.7}Adam}{34}{subsection.3.2.7}%
-\contentsline {chapter}{\numberline {4}Sentiment Analysis}{36}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Introduction}{36}{section.4.1}%
+\contentsline {chapter}{\numberline {3}Optimization}{32}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introduction}{32}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Optimization algorithms}{34}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Gradient Descent}{35}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Stochastic Gradient Descent}{36}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Mini-Batch Stochastic Gradient Descent}{37}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Newton's Method}{38}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Momentum}{39}{subsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.2.6}RMSProp}{39}{subsection.3.2.6}%
+\contentsline {subsection}{\numberline {3.2.7}Adam}{40}{subsection.3.2.7}%
+\contentsline {chapter}{\numberline {4}Sentiment Analysis}{42}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introduction}{42}{section.4.1}%

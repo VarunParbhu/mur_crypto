@@ -1077,3 +1077,155 @@ Thus, for $\textbf{p}_4 = \begin{bmatrix}
   f(x_1,x_2) = \phi^{'} (0.5) = 1
 \end{align*}
 \section{Backpropagation}
+We have seen how information flows in a feedforward neural network. Backpropagation algorithm is the process of spreading the error at the output layer throughout the other layers in the network. The goal is to understand how does the error changes with respect to the weight and biases. Consider the neural network below with $N$ number of layers (including the input and output layer).\vspace{5mm}
+\begin{figure}[ht]
+  \centering
+  \includegraphics[scale=0.36]{CHAPTER_2/c2_bp_nn.jpeg}
+  \caption{!!!TO BE CHANGED!!!}
+  \label{fig:bp_nn_complete}
+\end{figure}\\
+The annotation between two consecutive layers, $l$ and $l+1$, in the network is given by the following set of indexed values.
+\begin{center}
+  \begin{tabular}{p{0.03\linewidth} p{0.03\linewidth} p{0.87\linewidth}}
+    $b_j^{l+1}$ & $\rightarrow$ & Bias input at the $j^{th}$ neuron in the ${l+1}^{th}$ layer \\ 
+    $w_{jk}^{l+1}$ & $\rightarrow$ & Weight between the $k^{th}$ and $j^{th}$ neuron in the $l^{th}$ and ${(l+1)}^{th}$ layer respectively \\  
+    $z_j^{l+1}$ &$\rightarrow$& Input of the activation function at the $j^{th}$ neuron in the $(l+1)^{th}$ layer \\
+    $a_j^l$ & $\rightarrow$ & Output from the activation function at the $j^{th}$ neuron in the $l^{th}$ layer
+  \end{tabular}
+\end{center}
+\begin{figure}[ht]
+  \centering
+  \includegraphics[scale=0.36]{CHAPTER_2/c2_bb_nn_cons.jpeg}
+  \caption{!!!TO BE CHANGED!!!}
+  \label{fig:bp_nn_complete_cons_layer}
+\end{figure}
+Let the activation function be denoted as $\sigma$ such that
+\begin{align}
+  \label{eq:activation_function_at_l+1 layer}
+  a_j^{(l+1)} &= \sigma\begin{pmatrix}
+    z_j^{(l+1)}
+  \end{pmatrix} \\
+  \label{eq:input of activation_function_at_l+1 layer}
+  z_j^{(l+1)} &= \sum_kw_{jk}^{(l+1)}a_k^{(l)} + b_j^{(l+1)}
+\end{align}
+We start at the end of the network by calculating the value of the cost/error function. Let $C$ be the cost function which takes as input the output layer
+\begin{align}
+  \label{eq:cost_function_definition}
+  C &= C\begin{pmatrix}
+    a_j^L
+  \end{pmatrix} \\
+    &=\dfrac{1}{2} \sum_j (y_j - a_j^{L})^2  
+    \nonumber
+\end{align}
+where $y_j$ is the desired exact value that we want the network to predict. Also, let the change in the cost function with respect to the input of the activation function be given by $\delta_j^L$ where 
+\begin{align*}
+  \delta_j^L &= \dfrac{\partial C}{\partial z_j^L}
+\intertext{Using result (\refeq{eq:activation_function_at_l+1 layer}) and the definition (\refeq{eq:cost_function_definition})}
+  \delta_j^L &= \dfrac{\partial C(a_j^L)}{\partial z_j^L} \\
+  &= \dfrac{\partial C(\sigma(z_j^L))}{\partial z_j^L}
+\intertext{Applying the chain rule}
+  \delta_j^L &= \dfrac{\partial C(\sigma(z_j^L))}{\partial z_j^L} \\
+  &= \dfrac{\partial C }{\partial a_j^L}  \dfrac{\partial a_j^L}{\partial z_j^L}
+\end{align*}
+From equation (\refeq{eq:activation_function_at_l+1 layer})
+\begin{align*}
+  a_j^{(L)} &= \sigma(
+    z_j^{(L)} ) \\
+  \dfrac{\partial a_j^{(L)}}{\partial z_j^{(L)}} &= \sigma^{'}(
+    z_j^{(L)})
+\end{align*}
+Thus, the change in the cost function with respect to the input of the activation function in the last layer is given by 
+\begin{align}
+  \label{eq:BP_EQ_VEC_1}
+  \delta_j^{(L)} = \dfrac{\partial C }{\partial a_j^{(L)}} \sigma^{'}(z_j^{(L)})
+\end{align}
+Next, we find how to back-propagate the changes from an upper layer $l+1$ to the previous layer $l$. Consider the change in the cost function based at the $l^{th}$ layer 
+\begin{align}
+  \label{eq: change_at_layer_l}
+  \delta_j^{(l)} = \dfrac{\partial C}{\partial z_j^{(l)}}
+\end{align}
+From figure (\ref{fig:bp_nn_complete_cons_layer}); an element in the $l^{th}$ layer influences all the neurons in the $(l+1)^{th}$ layer. Thus, when applying the chain rule we sum over all the neurons which gives
+\begin{align}
+  \label{eq: delta_of_cost_bet_layers}
+  \delta_j^l &= \sum_k \frac{\partial C}{\partial z_k^{(l+1)}} \dfrac{\partial z_k^{(l+1)}}{\partial z_j^{(l)}}
+\intertext{From equations (\refeq{eq:activation_function_at_l+1 layer}) and (\refeq{eq:input of activation_function_at_l+1 layer})}
+\nonumber
+\dfrac{\partial z_k^{(l+1)}}{\partial z_j^{(l)}} &= \dfrac{\partial}{\partial z_j^{(l)}} \Big(\sum_sw_{ks}^{(l+1)}\sigma(z_s^{(l)}) + b_k^{(l+1)}\Big) \\
+\nonumber
+&=\sum_sw_{ks}^{(l+1)}\dfrac{\partial \sigma(z_s^{(l)})}{\partial z_j^{(l)}} \\
+\nonumber
+&= \sum_sw_{ks}^{(l+1)}\sigma^{'}(z_s^{(l)}) \dfrac{\partial z_s^{(l)}}{\partial z_j^{(l)}} \\
+\intertext{The partial derivative only exist and is 1 when $s=j$; else the value is 0.}
+\label{eq: z_j partials}
+\dfrac{\partial z_k^{(l+1)}}{\partial z_j^{(l)}}  &= w_{kj}^{(l+1)} \sigma^{'}(z_j^{(l)})
+\end{align}
+Substituting (\refeq{eq: z_j partials}) and (\refeq{eq: change_at_layer_l}) into (\refeq{eq: delta_of_cost_bet_layers})
+\begin{align}
+  \label{eq:BP_EQ_VEC_2}
+  \delta_j^l = \sum_k \delta_k^{(l+1)} w_{kj}^{(l+1)} \sigma^{'}(z_j^{(l)})
+\end{align}
+Equation (\ref{eq:BP_EQ_VEC_2}) are the changes in $l^{th}$ layer from the changes that happened in the $(l+1)^{th}$ layer. Since we do not explicitly adjust the output and input of the activation functions, we derive the changes of the cost function with respect to the bias and weight. Consider the effect of the bias at each layer given by 
+\begin{align*}
+  \dfrac{\partial C}{\partial b_j^{(l)}} &= \dfrac{\partial C}{\partial z_j^{(l)}} \dfrac{\partial z_j^{(l)}}{\partial b_j^{(l)}} \\
+\end{align*}
+Using equation (\refeq{eq:input of activation_function_at_l+1 layer})
+\begin{align*}
+  \dfrac{\partial z_j^{(l)}}{\partial b_j^{(l)}} &= \dfrac{\partial}{\partial b_j^{(l)}} \Big(  \sum_kw_{jk}^{(l+1)}a_k^{(l)} + b_j^{(l+1)}  \Big) \\
+  &= 1
+\end{align*}
+Thus, the change of in the cost function with respect to the bias at any layer is given by 
+\begin{align}
+  \label{eq:BP_EQ_VEC_3}
+  \dfrac{\partial C}{\partial b_j^{(l)}} = \delta_i^{(j)}
+\end{align}
+Finally, consider the rate of change of the cost function with respect to any weight in the network given by 
+\begin{align}
+  \label{eq: partial_C_with_weight}
+  \dfrac{\partial C}{\partial w_{jk}^{(l)}} = \dfrac{\partial C}{\partial z_m^{(l)}} \dfrac{\partial z_m^{(l)}}{\partial w_{jk}^{(l)}}
+\end{align}
+Using equation (\refeq{eq:input of activation_function_at_l+1 layer})
+\begin{align}
+  \nonumber
+  \dfrac{\partial z_m^{(l)}}{\partial w_{jk}^{(l)}} &= \dfrac{\partial}{\partial w_{jk}^{(l)}} \Big(  \sum_sw_{ms}^{(l)}a_s^{(l-1)} + b_m^{(l)}  \Big) \\
+  \nonumber
+  &= \sum_s a_s^{(l-1)} \dfrac{\partial w_{ms}^{(l)}}{\partial w_{jk}^{(l)}}
+\end{align}
+The partial derivative only exist and is 1 when $s=k$ and $m=j$; else the value is 0.
+\begin{align}
+  \label{eq: partial_act_weight}
+  \dfrac{\partial z_j^{(l)}}{\partial w_{jk}^{(l)}} &= a_k^{(l-1)}
+\end{align}
+Substituting (\refeq{eq: z_j partials}) and (\refeq{eq: partial_act_weight}) into (\refeq{eq: partial_C_with_weight})
+\begin{align}
+  \label{eq:BP_EQ_VEC_4}
+  \dfrac{\partial C}{\partial w_{jk}^{(l)}} = \delta_j^{(l)}a_k^{(l-1)}
+\end{align}
+The four main back-propagation equations are given by 
+\begin{align}
+  \delta_j^{(L)} &= \dfrac{\partial C }{\partial a_j^{(L)}} \sigma^{'}(z_j^{(L)}) \\
+  \delta_j^l &= \sum_k \delta_k^{(l+1)} w_{kj}^{(l+1)} \sigma^{'}(z_j^{(l)})\\
+  \dfrac{\partial C}{\partial b_j^{(l)}} &= \delta_i^{(j)} \\
+  \dfrac{\partial C}{\partial w_{jk}^{(l)}} &= \delta_j^{(l)}a_k^{(l-1)}
+\end{align}
+We vectorize the above set of equations by using the Hadamard product. Given two matrices of the $A$ and $B$ of the same dimension, $m \times n$, the Hadamard product is given as
+\begin{align*}
+  (A \odot B)_{mn} = (A)_{mn} (B)_{mn} 
+\end{align*}
+The vectorized form of the back-propagation equations are given by 
+\begin{align*}
+  \delta^{(L)} &= \nabla_{a^{(L)}}C \odot \sigma^{'}(z^{(L)}) \\
+  \delta^{(l)} &= (w^{(l+1)})^T\sigma^{(l+1)} \odot \sigma^{'}(z^{(l)}) \\
+  \nabla_{b^{(l)}} C &= \delta^{(l)} \\
+  \nabla_{w^{(l)}} C &= \delta^{(l)}a^{(l-1)}
+\end{align*}
+writing a few lines\\
+\enlargethispage{-0.3in}
+\begin{algorithm}[ht!]
+  \caption{Back-Propagation Algorithm}\label{alg:backpropagation algorithm}
+  \begin{algorithmic}[1]
+  \Require \\
+  Let $t=0$ and $\textbf{w} = \begin{bmatrix}
+    0 & 0 & \dots & 0
+  \end{bmatrix}^T$ \\
+  \end{algorithmic}
+\end{algorithm}
