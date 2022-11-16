@@ -1,10 +1,9 @@
 \chapter{Deep Learning Networks}
-\section{Introduction}
 Deep learning is a multidisciplinary field ranging from linear algebra, calculus and probability theory. With major advancement made in compute processing power; deep learning is commonly used in the industry now.
 \vspace{5mm}
 \\
 \noindent\textbf{McCullough and Walter Pitts (MCP) Neuron}\\
-In 1943, McCulloch and Walter Pitts demonstrated that simple binary threshold units wired up as logical gates could be used to build a digital computer (add-ref). The McCulloch-Pitts (MCP) neuron is a simple mathematical model of a biological neuron. It was the earliest mathematical model of a neural network and had only three types of weights; excitatory (1), inhibitory (-1) and inactive (0). The model had an activation function which had a value of 1 if the weighted sum was greater or equal to a given threshold, else 0. Using the MCP neuron, one of the first digital computers that contained stored programs was built. However, the MCP neuron was very restrictive.
+In 1943, McCulloch and Walter Pitts \cite{McCulloch:1943aa} demonstrated that simple binary threshold units wired up as logical gates could be used to build a digital computer (add-ref). The McCulloch-Pitts (MCP) neuron is a simple mathematical model of a biological neuron. It was the earliest mathematical model of a neural network and had only three types of weights; excitatory (1), inhibitory (-1) and inactive (0). The model had an activation function which had a value of 1 if the weighted sum was greater or equal to a given threshold, else 0. Using the MCP neuron, one of the first digital computers that contained stored programs was built. However, the MCP neuron was very restrictive.
 \vspace{5mm}
 \\
 \noindent\textbf{Rosenblatt’s Perceptron Algorithm}\\
@@ -18,26 +17,20 @@ In 1958, Frank Rosenblatt proposed the perceptron and an algorithm to adjust wei
   \label{rosenblatt_perceptron}
 \end{figure}
 \vspace{5mm}
-\noindent Let $\textbf{x}$ be a vector of inputs where each $x_i \in \mathbb{Z}$ and $\textbf{w}$ be a vector of weights corresponding to the input signals where each $w_i \in \mathbb{Z}$. 
+\noindent Let $\mathbf{x} .... \textbf{x}$ be a vector of inputs where each $x_i \in \mathbb{Z}$ and $\textbf{w}$ be a vector of weights corresponding to the input signals where each $w_i \in \mathbb{Z}$. 
 \begin{align}
   \begin{matrix}
     \textbf{x} = \begin{bmatrix}
-      x_{0} \\
-      x_{1} \\
-      \vdots \\
-      x_{n}
-    \end{bmatrix}, & \textbf{w} = \begin{bmatrix}
-      w_{0} \\
-      w_{1} \\
-      \vdots \\
-      w_{n}
-    \end{bmatrix}
+      x_{0}, x_{1}, \dots, x_{n}
+    \end{bmatrix}^T&\text{and} & \textbf{w} = \begin{bmatrix}
+      w_{0}, w_{1}, \dots, w_{n}
+    \end{bmatrix}^T
   \end{matrix} \nonumber
 \end{align}
 \noindent Then, the mathematical definition of the perceptron is given by
 \begin{align}
   \phi(z) = \begin{cases}
-    1 & \text{if } \sum^{n}_{i=0} w_ix_i \geq  0\\
+    1 & \text{if } \mathbf{w^Tx + b}\geq  0\\
     0 & \text{otherwise}
     \label{eq:mcp_neuron}
   \end{cases}
@@ -94,7 +87,7 @@ Comparing to the equation (\refeq{eq:mcp_neuron}); we can deduce that
   \end{matrix}
 \end{align}
 Visually, we can already see that the separating line does not split the points properly. The computation of the binary classification using the random line is given by
-\begin{align}
+\begin{align*}
   \phi(A_1) &= \phi\begin{pmatrix}
     \begin{bmatrix}
       1\\
@@ -122,7 +115,7 @@ Visually, we can already see that the separating line does not split the points 
       0
     \end{bmatrix}
   \end{pmatrix} = \phi(-1) = 0
-\end{align}
+\end{align*}
 The computation confirms the visual representation and groups $\textbf{A}_1$ and $\textbf{B}_1$ together and $\textbf{B}_2$ separated which is incorrect. We can either alter the separating line (by moving the weight vector) with respect to $\textbf{A}_1$ and/or $\textbf{B}_1$.
 \begin{figure}[ht]
   \centering
@@ -152,7 +145,7 @@ Since $\textbf{B}_1$ is incorrectly classified, using the property of subtractio
   \label{fig:perceptron_example_4}
 \end{figure} \\
 Based on the new separating line, we can observe visually that the points are correctly classified. The computation of the binary classification using the new separating line $\textbf{w}^{(1)}$ is given by
-\begin{align}
+\begin{align*}
   \phi(A_1) &= \phi\begin{pmatrix}
     \begin{bmatrix}
       2\\
@@ -180,14 +173,14 @@ Based on the new separating line, we can observe visually that the points are co
       0
     \end{bmatrix}
   \end{pmatrix} = \phi(-2) = 0
-\end{align}
+\end{align*}
 Thus, the perceptron learned how to classify the two sets of points. The function $f(\textbf{x})$ could be re-used to classify new points added to the sets.
 \vspace{5mm}
 \\
 \noindent\textbf{Perceptron Algorithm}\\
 The perceptron algorithm adjusts the weights and as a result, the hard delimiter as well in order to linearly separate a set of binary labelled input.
 
-\begin{algorithm}
+\begin{algorithm}[H]
 \caption{Perceptron Algorithm}\label{alg:perceptron_algorithm}
 \begin{algorithmic}[1]
 \Require \\
@@ -1212,20 +1205,34 @@ We vectorize the above set of equations by using the Hadamard product. Given two
   (A \odot B)_{mn} = (A)_{mn} (B)_{mn} 
 \end{align*}
 The vectorized form of the back-propagation equations are given by 
-\begin{align*}
+\begin{align}
   \delta^{(L)} &= \nabla_{a^{(L)}}C \odot \sigma^{'}(z^{(L)}) \\
   \delta^{(l)} &= (w^{(l+1)})^T\sigma^{(l+1)} \odot \sigma^{'}(z^{(l)}) \\
   \nabla_{b^{(l)}} C &= \delta^{(l)} \\
   \nabla_{w^{(l)}} C &= \delta^{(l)}a^{(l-1)}
-\end{align*}
-writing a few lines\\
-\enlargethispage{-0.3in}
-\begin{algorithm}[ht!]
-  \caption{Back-Propagation Algorithm}\label{alg:backpropagation algorithm}
+\end{align}
+\begin{algorithm}[H]
+  \caption{Back-Propagation Algorithm}\label{alg:back_propagation_algo}
   \begin{algorithmic}[1]
-  \Require \\
-  Let $t=0$ and $\textbf{w} = \begin{bmatrix}
-    0 & 0 & \dots & 0
-  \end{bmatrix}^T$ \\
+  \State{\textbf{Start}}
+  \State{\textbf{Step 1} (Input)}
+  Compute the first activation layer $a^{(1)}$ using input values $x$ \\
+  \, \, \, $a^{(1)} = \sigma(w^{(1)}x + b^{(1)} )$
+  \State {\textbf{Step 2} (Feed-Forward)}\\
+  \, \, \, Feed forward the input to the next layers
+  \For{$l = 2,3,\dots,L$}
+    \State{$z^{(l)} = w^{(l)}a^{(l-1)}+b^{(l)}$}
+    \State $a^{(l)} = \sigma(z^{(l)})$
+  \EndFor  
+  \State \textbf{Step 3} (Cost/Error Calculation)\\
+  \, \, \, Compute the cost function, $C$, at the output layer $L$
+  \State \textbf{Step 4} (Back-Propagate) \\
+  \, \, \, Compute the rate of change of the cost function $w.r.t$ to $z^{(L)}$\\
+  \, \, \,  $\delta^{(L)} = \nabla_{a^{(L)}}C \odot \sigma^{'}(z^{(L)})$
+  \For{$l = L-1, L-2, \dots, 2$}
+    \State $\delta^{(l)} = (w^{(l+1)})^T\sigma^{(l+1)} \odot \sigma^{'}(z^{(l)})$
+    \State $\nabla_{b^{(l)}} C = \delta^{(l)}$
+    \State $\nabla_{w^{(l)}} C = \delta^{(l)}a^{(l-1)}$
+  \EndFor
   \end{algorithmic}
-\end{algorithm}
+  \end{algorithm}
