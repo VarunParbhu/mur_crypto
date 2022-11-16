@@ -1,15 +1,23 @@
 \begin{thebibliography}{xx}
 
-\harvarditem{AuthorName}{Year{\em a}}{ConferenceRef}
-AuthorName  \harvardyearleft Year{\em a}\harvardyearright , Conferencetitle,
-  {\em in} `BookTitle'.
+\harvarditem[LeCun et~al.]{LeCun, Bengio \harvardand\
+  Hinton}{2015}{LeCun:2015aa}
+LeCun, Y., Bengio, Y. \harvardand\ Hinton, G.  \harvardyearleft
+  2015\harvardyearright , `Deep learning', {\em Nature} {\bf
+  521}(7553),~436--444.
+\newline\harvardurl{https://doi.org/10.1038/nature14539}
 
-\harvarditem{AuthorName}{Year{\em b}}{ArticleRef}
-AuthorName  \harvardyearleft Year{\em b}\harvardyearright , `Title of article',
-  {\em Journal} .
+\harvarditem{McCulloch \harvardand\ Pitts}{1943}{McCulloch:1943aa}
+McCulloch, W.~S. \harvardand\ Pitts, W.  \harvardyearleft 1943\harvardyearright
+  , `A logical calculus of the ideas immanent in nervous activity', {\em The
+  bulletin of mathematical biophysics} {\bf 5}(4),~115--133.
+\newline\harvardurl{https://doi.org/10.1007/BF02478259}
 
-\harvarditem{BookAuthors}{Year}{BookRef}
-BookAuthors  \harvardyearleft Year\harvardyearright , {\em BookTitle},
-  Publisher.
+\harvarditem[Rumelhart et~al.]{Rumelhart, Hinton \harvardand\
+  Williams}{1986}{Rumelhart:1986aa}
+Rumelhart, D.~E., Hinton, G.~E. \harvardand\ Williams, R.~J.  \harvardyearleft
+  1986\harvardyearright , `Learning representations by back-propagating
+  errors', {\em Nature} {\bf 323}(6088),~533--536.
+\newline\harvardurl{https://doi.org/10.1038/323533a0}
 
 \end{thebibliography}
