@@ -5,19 +5,21 @@
 LeCun, Y., Bengio, Y. \harvardand\ Hinton, G.  \harvardyearleft
   2015\harvardyearright , `Deep learning', {\em Nature} {\bf
   521}(7553),~436--444.
-\newline\harvardurl{https://doi.org/10.1038/nature14539}
 
 \harvarditem{McCulloch \harvardand\ Pitts}{1943}{McCulloch:1943aa}
 McCulloch, W.~S. \harvardand\ Pitts, W.  \harvardyearleft 1943\harvardyearright
   , `A logical calculus of the ideas immanent in nervous activity', {\em The
   bulletin of mathematical biophysics} {\bf 5}(4),~115--133.
-\newline\harvardurl{https://doi.org/10.1007/BF02478259}
+
+\harvarditem{Rosenblatt}{1958}{Rosenblatt:1958aa}
+Rosenblatt, F.  \harvardyearleft 1958\harvardyearright , `The perceptron: a
+  probabilistic model for information storage and organization in the brain.',
+  {\em Psychol Rev} {\bf 65}(6),~386--408.
 
 \harvarditem[Rumelhart et~al.]{Rumelhart, Hinton \harvardand\
   Williams}{1986}{Rumelhart:1986aa}
 Rumelhart, D.~E., Hinton, G.~E. \harvardand\ Williams, R.~J.  \harvardyearleft
   1986\harvardyearright , `Learning representations by back-propagating
   errors', {\em Nature} {\bf 323}(6088),~533--536.
-\newline\harvardurl{https://doi.org/10.1038/323533a0}
 
 \end{thebibliography}
