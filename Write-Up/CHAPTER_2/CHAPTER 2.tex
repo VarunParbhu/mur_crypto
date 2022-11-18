@@ -1,23 +1,21 @@
 \chapter{Deep Learning Networks}
-Deep learning is a multidisciplinary field ranging from linear algebra, calculus and probability theory. With major advancement made in compute processing power; deep learning is commonly used in the industry now.
-\vspace{5mm}
-\\
-\noindent\textbf{McCullough and Walter Pitts (MCP) Neuron}\\
-In 1943, McCulloch and Walter Pitts \cite{McCulloch:1943aa} demonstrated that simple binary threshold units wired up as logical gates could be used to build a digital computer (add-ref). The McCulloch-Pitts (MCP) neuron is a simple mathematical model of a biological neuron. It was the earliest mathematical model of a neural network and had only three types of weights; excitatory (1), inhibitory (-1) and inactive (0). The model had an activation function which had a value of 1 if the weighted sum was greater or equal to a given threshold, else 0. Using the MCP neuron, one of the first digital computers that contained stored programs was built. However, the MCP neuron was very restrictive.
-\vspace{5mm}
-\\
-\noindent\textbf{Rosenblatt’s Perceptron Algorithm}\\
-In 1958, Frank Rosenblatt proposed the perceptron and an algorithm to adjust weights of the MCP neuron, extending the work done by McCulloch and Pitts. The MCP neuron had some limitations that the Perceptron managed to solve, for example the input was not restricted to boolean values but expanded to real numbers. Rosenblatt proved that if the data used to train the perceptron are linearly separable classes, then the perceptron algorithm convergences and separates the two classes by a hyperplane.
-\vspace{5mm}
-\section{Perceptron}
-\begin{figure}[ht]
+Deep learning networks use many hidden layers to learn structure in large datasets and the key aspect is that the learning process is not human engineered. Starting from a simple mathematical model of a neuron \cite{McCulloch:1943aa} and the development of the perceptron \cite{Rosenblatt:1958aa}, deep learning networks were particularly difficult to train. The introduction of the backpropagation algorithm by David Rumelhart overcome the training problem of deep neural networks. Thus, allowing networks to tune their internal parameters iteratively over training datasets. The procedure repeatedly adjusts the weights of the connections in the network to minimise a measure of the difference between the actual output vector of the net and the desired output vector \cite{Rumelhart:1986aa}. Using a general-purpose learning procedures, deep learning networks are able to find non-linear relationship within high-dimensional data. Kunihiko Fukushima, Yann LeCun, Geoffrey Hinton and Yoshua Bengio contributed to the creation of richer and more complex multilayered neural networks to tackle different tasks in the processing of images, video, speech, audio and text. With such features surpassing conventional machine-learning techniques and the access to high-end graphic processors and computing power along the rise of Big Data, deep learning networks are being applied to many domains of science, business and government \cite{LeCun:2015aa}. Hence, allowing tasks such as image recognition, speech recognition, natural language processing, sentiment analysis, fraud detection, etc. to be tackled with promising results.
+
+We start by introducing the perceptron to classify linearly separable datasets and a proof of the perceptron convergence theorem. The solution and limitations of the perceptron for logic functions are explored before introducing feedforward networks. We also explore some common activation function used in feedforward networks. Finally, we introduce and derive the backpropagation algorithm of feedforward networks with multiple hidden layers.
+\section{The Perceptron}
+%\noindent\textbf{McCullough and Walter Pitts (MCP) Neuron}\\
+In 1943, McCulloch and Walter Pitts demonstrated that simple binary threshold units wired up as logical gates could be used to build a digital computer \cite{McCulloch:1943aa}. The McCulloch-Pitts (MCP) neuron is a simple mathematical model of a biological neuron. It was the earliest mathematical model of a neural network and had only three types of weights; excitatory (1), inhibitory (-1) and inactive (0). The model had an activation function which had a value of 1 if the weighted sum was greater or equal to a given threshold, else 0. Using the MCP neuron, one of the first digital computers that contained stored programs was built. However, the MCP neuron was very restrictive.
+%\noindent\textbf{The perceptron model of Rosenblatt}\\
+\par The perceptron algorithm proposed by Rosenblatt~\cite{Rosenblatt:1958aa} is motivated by and overcomes some limitations of the MCP Neuron. For example, the input was not restricted to boolean values but expanded to real numbers. Rosenblatt proved that if the data used to train the perceptron are linearly separable classes, then the perceptron algorithm convergences and separates the two classes by a hyperplane.
+
+\begin{figure}[H]
   \centering
   \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_perceptron_2.jpeg}
-  \caption{Rosenblatt perceptron}
+  \caption{Rosenblatt perceptron - TBC}
   \label{rosenblatt_perceptron}
 \end{figure}
-\vspace{5mm}
-\noindent Let $\mathbf{x} .... \textbf{x}$ be a vector of inputs where each $x_i \in \mathbb{Z}$ and $\textbf{w}$ be a vector of weights corresponding to the input signals where each $w_i \in \mathbb{Z}$. 
+
+\noindent Let $\textbf{x}$ be a vector of inputs where each $x_i \in \mathbb{Z}$ and $\textbf{w}$ be a vector of weights corresponding to the input signals where each $w_i \in \mathbb{Z}$. 
 \begin{align}
   \begin{matrix}
     \textbf{x} = \begin{bmatrix}
@@ -40,7 +38,8 @@ In 1958, Frank Rosenblatt proposed the perceptron and an algorithm to adjust wei
 where $\phi(z)$ is known as the hard delimiter.
 \vspace{5mm}
 \\
-\noindent Consider the two sets of point \textbf{A} and \textbf{B} 
+%\noindent Consider the two sets of point \textbf{A} and \textbf{B}
+\noindent Consider sets in $\mathbb{R}^2$ given by $\textbf{A}=\{a_1\}$ and $\textbf{B}=\{b_1,\,b_2\}$ where $a_1=(1,\,2)^T$, $b_1=(-1,\,2)^T$ and $b_2=(0,\,-1)^T$. The two sets are linearly separable in $\mathbb{R}^2$ as shown in Figure~\ref{fig:perceptron_example_2}. There are an infinite number of separating hyperplanes. One separating hyperplane through the origin is the line $x_1+x_2=0$. The normal vector to this line is given by $w=\left(1,\,1\right)$ and this line points in the direction of $A$. 
 \begin{align}
   \textbf{A} =
   \begin{Bmatrix}
@@ -62,24 +61,24 @@ where $\phi(z)$ is known as the hard delimiter.
   \end{bmatrix}
   \end{Bmatrix}
 \end{align}
-and fitting the perceptron function (\refeq{eq:mcp_neuron}) to learn how to classify points in each respective set. Let set \textbf{A} and \textbf{B} be class 1 and 0 respectively.
-\begin{figure}[ht]
-  \centering
-  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_perceptron_example_1.jpeg}
-  \caption{Caption}
-  \label{fig:perceptron_example_1}
-\end{figure}\\
-From \ref{fig:perceptron_example_1}, we can separate the two classes by a single line. Consider the random separating line passing through the origin (this will set the value of $x_0$ in (\refeq{eq:mcp_neuron}) to 0).\\
+%and fitting the perceptron function (\refeq{eq:mcp_neuron}) to learn how to classify points in each respective set. Let set \textbf{A} and \textbf{B} be class 1 and 0 respectively.
+%\begin{figure}[ht]
+%  \centering
+%  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_perceptron_example_1.jpeg}
+%  \caption{Caption}
+%  \label{fig:perceptron_example_1}
+%\end{figure}\\
+%From \ref{fig:perceptron_example_1}, we can separate the two classes by a single line. Consider the random separating line passing through the origin (this will set the value of $x_0$ in (\refeq{eq:mcp_neuron}) to 0).\\
 \begin{figure}[!htbp]
   \centering
   \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_perceptron_example_2.jpeg}
   \caption{Caption}
   \label{fig:perceptron_example_2}
 \end{figure}\\
-The equation of the random line is given by
-\begin{align}
-  x_1 = - x_2
-\end{align}
+%The equation of the random line is given by
+%\begin{align}
+%  x_1 = - x_2
+%\end{align}
 Comparing to the equation (\refeq{eq:mcp_neuron}); we can deduce that 
 \begin{align}
   \begin{matrix}
@@ -117,13 +116,13 @@ Visually, we can already see that the separating line does not split the points 
   \end{pmatrix} = \phi(-1) = 0
 \end{align*}
 The computation confirms the visual representation and groups $\textbf{A}_1$ and $\textbf{B}_1$ together and $\textbf{B}_2$ separated which is incorrect. We can either alter the separating line (by moving the weight vector) with respect to $\textbf{A}_1$ and/or $\textbf{B}_1$.
-\begin{figure}[ht]
+\begin{figure}[H]
   \centering
-  \includegraphics[scale=0.25]{CHAPTER_2/c2_fig_perceptron_example_3.jpeg}
+  \includegraphics[scale=0.20]{CHAPTER_2/c2_fig_perceptron_example_3.jpeg}
   \caption{!!!TO BE CHANGED!!!}
   \label{fig:perceptron_example_3}
-\end{figure}\\
-Since $\textbf{B}_1$ is incorrectly classified, using the property of subtraction of vectors; we move the weight vector ($\textbf{w}$) away from $\textbf{B}_1$ and check the classification again.
+\end{figure}
+\noindent Since $\textbf{B}_1$ is incorrectly classified, using the property of subtraction of vectors; we move the weight vector ($\textbf{w}$) away from $\textbf{B}_1$ and check the classification again.
 \begin{align}
   \textbf{w}^{(1)} &= \textbf{w} - \textbf{B}_1 \\
   &= \begin{bmatrix}
@@ -137,14 +136,14 @@ Since $\textbf{B}_1$ is incorrectly classified, using the property of subtractio
     2 \\
     -1
   \end{bmatrix}
-\end{align}\\
-\begin{figure}[ht]
+\end{align}
+\begin{figure}[H]
   \centering
-  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_perceptron_example_4.jpeg}
+  \includegraphics[scale=0.20]{CHAPTER_2/c2_fig_perceptron_example_4.jpeg}
   \caption{!!!!TO BE CHANGED!!!!}
   \label{fig:perceptron_example_4}
-\end{figure} \\
-Based on the new separating line, we can observe visually that the points are correctly classified. The computation of the binary classification using the new separating line $\textbf{w}^{(1)}$ is given by
+\end{figure}
+\noindent Based on the new separating line, we can observe visually that the points are correctly classified. The computation of the binary classification using the new separating line $\textbf{w}^{(1)}$ is given by
 \begin{align*}
   \phi(A_1) &= \phi\begin{pmatrix}
     \begin{bmatrix}
@@ -202,10 +201,10 @@ $C_2$ $\leftarrow$ input with label 0\\
 \EndWhile
 \end{algorithmic}
 \end{algorithm}
-\noindent If the input data are binary and linearly separable; then algorithm (\ref{alg:perceptron_algorithm}) converges. The proof of convergence of the algorithm is known as the \textbf{perceptron convergence theorem}. \vspace{5mm}
-\section{Perceptron Convergence Theorem}
+\noindent If the input data are binary and linearly separable; then algorithm (\ref{alg:perceptron_algorithm}) converges. The proof of convergence of the algorithm is known as the \textbf{perceptron convergence theorem}.\\
+%\section{Perceptron Convergence Theorem}
 \textbf{Theorem}\\
-Consider algorithm (\ref{alg:perceptron_algorithm}) and let $D$ be a set of training vectors which are linearly separable. Let $\textbf{w}^{*}$ be the weight vectors which defines the separating line with $||\textbf{w}^{*}|| = 1$. Then the number of mistakes $m$ made by the perceptron algorithm satisfies 
+Consider algorithm (\ref{alg:perceptron_algorithm}) and let $D$ be a set of training vectors which are linearly separable. Let $\textbf{w}^{*}$ be the weight vectors which defines the separating line with $||\textbf{w}^{*}|| = 1$. Then the perceptron convergence theorem states that the number of mistakes $m$ made by the perceptron algorithm satisfies 
 \begin{align}
   \begin{matrix}
     m \leq \dfrac{1}{\gamma^2} & \text{where} & \gamma = \underset{\textbf{x}\in D}{\min} \dfrac{|{\textbf{w}^*}^T\textbf{x}|}{||\textbf{x}||_2}
@@ -351,9 +350,9 @@ Using the result (\ref{eq:perp_cov_result2}) and the fact that $||\textbf{w}^{*}
   m^2 {\gamma}^2 &\leq m \\
   m &\leq \dfrac{1}{\gamma^2}
 \end{align}
-This proves the Perceptron Convergence Theorem that the number of mistakes is at most $\dfrac{1}{\gamma^2}$, where $\gamma$ is the margin.\vspace{5mm}
-\section{Solving Gate problem}
-The perceptron alone is not always a good model to solve binary classification problem. It has certain limitation by nature of its definition. Consider the logic functions AND, OR and XOR across these 4 points:
+This proves the Perceptron Convergence Theorem that the number of mistakes is at most $\dfrac{1}{\gamma^2}$, where $\gamma$ is the margin.\vspace*{5mm}\\
+%\section{Solving Gate Problems}
+Even though the perceptron converges, alone it is not always a good model to solve binary classification problem. It has certain limitation by nature of its definition. Consider the logic functions AND, OR and XOR across these 4 points:
 \begin{align}
   \begin{matrix}
     \textbf{p}_1 = \begin{bmatrix}
@@ -374,7 +373,7 @@ The perceptron alone is not always a good model to solve binary classification p
     \end{bmatrix}  
   \end{matrix}
 \end{align}
-\subsection{AND Function}
+\subsubsection*{AND Function}
 The AND function returns a value of 1 if both of the inputs is 1. Let $f$ be the AND function such that
 \begin{align}
 \begin{matrix}
@@ -474,7 +473,7 @@ Applying function (\ref{eq:mcp_neuron}) on each point to check whether they are 
   \end{matrix}
 \end{align}
 Thus, the perceptron is able to solve the AND function.
-\subsection{OR Function}
+\subsubsection*{OR Function}
 The OR function returns a value of 1 if either of the inputs is 1. Let $f$ be the OR function such that
 \begin{align}
 \begin{matrix}
@@ -574,7 +573,7 @@ Applying function (\ref{eq:mcp_neuron}) on each point to check whether they are 
   \end{matrix}
 \end{align}
 Thus, the perceptron is able to solve the OR function.
-\subsection{XOR Function}
+\subsubsection*{XOR Function}
 The XOR function returns a value of 1 if either of the inputs is 1 but not both. Let $f$ be the XOR function such that
 \begin{align}
   \begin{matrix}
@@ -589,8 +588,7 @@ Consider a plot of the XOR function below
   \caption{OR function}
   \label{XOR_function}
 \end{figure}\\
-From figure \ref{XOR_function}; we can observe that no separating line alone could group the two different classes together. We attempt to find a combination of weight for the perceptron which reduces the error (margin) as much as possible.\\
-\noindent Let $f^{*}$ be the exact function and $f(\textbf{x},\textbf{w}) = \textbf{w}^T\textbf{x} + b$, where $\textbf{w} = [w_1 \, \, w_2]^T$, be the approximate function. Consider the error function (the difference between the exact and approximate value)
+From figure \ref{XOR_function}; we can observe that no separating line alone could group the two different classes together. We attempt to find a combination of weight for the perceptron which reduces the error (margin) as much as possible. Let $f^{*}$ be the exact function and $f(\textbf{x},\textbf{w}) = \textbf{w}^T\textbf{x} + b$, where $\textbf{w} = [w_1 \, \, w_2]^T$, be the approximate function. Consider the error function (the difference between the exact and approximate value)
 \begin{align}
   \label{eq:error_XOR_prob}
   \mathbb{E}(\textbf{w},b) = \dfrac{1}{4} \sum_{x\in D}(f^{*}(\textbf{x})- \textbf{w}^T\textbf{x}-b)^2
@@ -972,7 +970,7 @@ where
   \end{bmatrix} 
   \end{matrix}
 \end{align}
-$\phi^{'}$ taken an augmented input from the calculation of $\phi(\textbf{w}_1^T \textbf{x})$ to accommodate for the bias.
+$\phi^{*}$ takes an augmented input from the calculation of $\phi(\textbf{w}_1^T \textbf{x})$ to accommodate for the bias.
 \begin{figure}[ht]
   \centering
   \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_XOR_final.jpeg}
@@ -1001,14 +999,14 @@ $\phi^{'}$ taken an augmented input from the calculation of $\phi(\textbf{w}_1^T
     0 \\
     0
   \end{bmatrix} \\
-  \phi^{'} \begin{pmatrix}
+  \phi^{*} \begin{pmatrix}
     \textbf{w}_2^T 
     \begin{pmatrix}
       \phi \begin{pmatrix}
         \textbf{w}_1^T\textbf{x}
     \end{pmatrix}  
   \end{pmatrix}
-  \end{pmatrix} &= \phi^{'}\begin{pmatrix}
+  \end{pmatrix} &= \phi^{*}\begin{pmatrix}
     \begin{bmatrix}
       -0.5 & 1 & 1
     \end{bmatrix} \begin{bmatrix}
@@ -1016,13 +1014,13 @@ $\phi^{'}$ taken an augmented input from the calculation of $\phi(\textbf{w}_1^T
       0 \\
       0
     \end{bmatrix}
-  \end{pmatrix} = \phi^{'}(-0.5)
+  \end{pmatrix} = \phi^{*}(-0.5)
 \end{align*}
 Thus, for $\textbf{p}_1 = \begin{bmatrix}
   0,0
 \end{bmatrix}^T$
 \begin{align*}
-  f(x_1,x_2) = \phi^{'} (-0.5) = 0
+  f(x_1,x_2) = \phi^{*} (-0.5) = 0
 \end{align*}
 \textbf{Checking for $\textbf{x} = \begin{bmatrix} 1 & 0 & 1 \end{bmatrix}^T$}
 \begin{align*}
@@ -1046,14 +1044,14 @@ Thus, for $\textbf{p}_1 = \begin{bmatrix}
     0 \\
     1
   \end{bmatrix} \\
-  \phi^{'} \begin{pmatrix}
+  \phi^{*} \begin{pmatrix}
     \textbf{w}_2^T 
     \begin{pmatrix}
       \phi \begin{pmatrix}
         \textbf{w}_1^T\textbf{x}
     \end{pmatrix}  
   \end{pmatrix}
-  \end{pmatrix} &= \phi^{'}\begin{pmatrix}
+  \end{pmatrix} &= \phi^{*}\begin{pmatrix}
     \begin{bmatrix}
       -0.5 & 1 & 1
     \end{bmatrix} \begin{bmatrix}
@@ -1061,23 +1059,61 @@ Thus, for $\textbf{p}_1 = \begin{bmatrix}
       0 \\
       1
     \end{bmatrix}
-  \end{pmatrix} = \phi^{'}(0.5)
+  \end{pmatrix} = \phi^{*}(0.5)
 \end{align*}
 Thus, for $\textbf{p}_4 = \begin{bmatrix}
   0,0
 \end{bmatrix}^T$
 \begin{align*}
-  f(x_1,x_2) = \phi^{'} (0.5) = 1
+  f(x_1,x_2) = \phi^{*} (0.5) = 1
 \end{align*}
+\section{Activation Function}
+The hard-delimiters used in our previous feedforward network are linear. However, different activation functions can use with a perceptron to introduce non-linearity in our network. The non-linearity enables a wider range of problems to be tackled. The function to be used is subjective to the problem being solved and the form of the desired result we want. Some common activation functions are defined below.
+\begin{align}
+\intertext{Linear}
+  \phi(z) = z
+\end{align}
+\begin{align}
+\intertext{Unit Step (Heaviside Function)}
+  \phi(z) = \begin{cases}
+    0 & z<0 \\
+    0.5 & z=0 \\
+    1 & z>0
+  \end{cases}
+\end{align}
+\begin{align}
+  \intertext{Signum}
+  \phi(z) = \begin{cases}
+    -1 & z<0 \\
+    0 & z=0 \\
+    1 & z>0
+  \end{cases}
+\end{align}
+\begin{align}
+  \intertext{Sigmoid}
+  \phi(z) = \frac{1}{1+ e^{-z}}
+\end{align}
+\begin{align}
+  \intertext{Hyperbolic Tangent(tanh)}
+  \phi(z) = \frac{e^z - e^{-z}}{e^z + e^{-z}}
+\end{align}
+\begin{align}
+  \intertext{ReLU}
+  \phi(z) = \begin{cases}
+    0 & z<0 \\
+    z & z>0
+  \end{cases}
+\end{align}
+\newpage
 \section{Backpropagation}
-We have seen how information flows in a feedforward neural network. Backpropagation algorithm is the process of spreading the error at the output layer throughout the other layers in the network. The goal is to understand how does the error changes with respect to the weight and biases. Consider the neural network below with $N$ number of layers (including the input and output layer).\vspace{5mm}
-\begin{figure}[ht]
+We have seen how information flows in a feedforward neural network. Backpropagation algorithm is the process of spreading the error at the output layer throughout the other layers in the network. The goal is to understand how does the error changes with respect to the weights and biases. Consider the neural network below with $N$ number of layers (including the input and output layer).\vspace{5mm}
+\begin{figure}[H]
   \centering
   \includegraphics[scale=0.36]{CHAPTER_2/c2_bp_nn.jpeg}
   \caption{!!!TO BE CHANGED!!!}
   \label{fig:bp_nn_complete}
-\end{figure}\\
-The annotation between two consecutive layers, $l$ and $l+1$, in the network is given by the following set of indexed values.
+\end{figure}
+\noindent The annotation between two consecutive layers, $l$ and $l+1$, in the network is given by the following set of indexed values.
 \begin{center}
   \begin{tabular}{p{0.03\linewidth} p{0.03\linewidth} p{0.87\linewidth}}
     $b_j^{l+1}$ & $\rightarrow$ & Bias input at the $j^{th}$ neuron in the ${l+1}^{th}$ layer \\ 

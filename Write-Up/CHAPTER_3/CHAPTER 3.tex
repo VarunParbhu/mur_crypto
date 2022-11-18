@@ -1,5 +1,4 @@
 \chapter{Optimization}
-\section{Introduction}
 The optimization problem is a computational problem in which the objective is to find the best of all possible solutions. Deep neural networks is a form of an optimization problem to find the best possible set of weights in order to reduce the error in a network.
 
 \noindent A generic form of an optimization problem is given by 
@@ -17,7 +16,7 @@ The optimization problem is a computational problem in which the objective is to
 \indent $h_j(x) = 0$ are called equality constraints, and \\
 \indent $m\geq0$ and $p\geq0$
 \noindent If $m=p=0$, the problem is an unconstrained optimization problem.
-\subsection*{Minimum/Maximum Point}
+\subsubsection*{Minimum/Maximum Point}
 Let $x^*$  be points of the function $f(x)$ defined in (\ref{eq:optimization_problem}) and $u \in \mathbb{N}(x^*,\delta)$ where $\mathbb{N}$ is a $\delta$-neighbourhood of $x^*$. Then, $x^*$ is said to be a
 \begin{enumerate}[(i)]
     \item local minimum if $f(x^*) < f(u)$    $\forall u\in\mathbb{N}$
@@ -32,7 +31,7 @@ Let $x^*$  be points of the function $f(x)$ defined in (\ref{eq:optimization_pro
     \caption{!!!TO BE CHANGED!!! Min max }
     \label{fig:min_max_illustration}
 \end{figure}
-\subsection*{Determining Minimum/Maximum Point}
+\subsubsection*{Determining Minimum/Maximum Point}
 For a function $f(\textbf{x})$ where $\textbf{x} = (x_1,x_2. \dots, x_n) \in \mathbb{R}^n$, the condition for the presence of a stationary point (minimum or maximum point) is given by
 \begin{align}
     \label{eq:grad_f_x}
@@ -53,21 +52,22 @@ The second derivative of $f(x)$ is given by the Hessian matrix, $\textbf{H}$
 The nature of the stationary points of $f(x)$ can be determined by studying the positive definiteness of (\ref{eq:Hessian_matrix}) using its eigenvalues. If all the eigenvalues of $\textbf{H}$ are positive, then $\textbf{H}$ is symmetric positive definite, indicating the presence of a \textbf{local minimum}.
 \section{Optimization algorithms}
 The solutions to the optimization problem are vital in modern machine learning and artificial intelligence algorithms, which includes weight optimization in deep learning. There are a number of popular optimization algorithm currently developed to solve the problem. Hence, choosing the right algorithm can be challenging as well.
-\subsubsection*{Network Error}
-Let the network error function, $e$, be given by the squared difference between the predicted value and the true value. The difference is squared to avoid the sum of errors of multiple input vector to be zero which can mislead the network to have perfect predictive power.
+%\subsubsection*{Network Error}
+Let the network error function, $e$, be given by the squared difference between the predicted value and the true value. 
 \begin{align}
-   e = \dfrac{1}{2}\sum^{\text{Total Input}}_i (\widehat{y_i}-y_i)^2
+   e = \dfrac{1}{2n}\sum^{n}_i (\widehat{y_i}-y_i)^2
   \label{network_error}
 \end{align}
-The goal of the network is to adjust the weight to reduce the network error as much as possible. The idea of reducing a function to a value is synonymous to (\refeq{eq:optimization_problem}) an optimization problem. The network error in (\refeq{network_error}) is a quadratic equation in this case.\\
-\begin{figure}[ht!]
+where $n$ is the total number of input\\
+\indent The difference is squared to avoid the sum of errors of multiple input vector to be zero which can mislead the network to have perfect predictive power. The goal of the network is to adjust the weight to reduce the network error as much as possible. The idea of reducing a function to a value is synonymous to (\refeq{eq:optimization_problem}) an optimization problem. The network error in (\refeq{network_error}) is a quadratic equation in this case.
+\begin{figure}[H]
   \centering
   \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_network_error.jpeg}
   \caption{Network Error}
   \label{network_error_graph}
-\end{figure}\\
-Figure (\ref*{network_error_graph}) is a graphical representation of the network error function. Our goal is to reach the minimum of the function by adjusting the weight value.
-\subsection{Gradient Descent}
+\end{figure}
+\noindent Figure (\ref*{network_error_graph}) is a graphical representation of the network error function. Our goal is to reach the minimum of the function by adjusting the weight value.
+\subsection*{Gradient Descent}
 In order to reach the bottom of the function; we need to adjust the weight such that the derivative of the error function is 0. The approach of updating the weight based on the gradient of the error function is known as \textbf{gradient descent}. The derivative with respect to the weights of the network error (\refeq{network_error}) for a single input is given by
 \begin{align}
   \frac{\partial e}{\partial w_{ij}} = (\widehat{y_i}-y_i)\frac{\partial \widehat{y_i}}{\partial w_{ij}}
@@ -84,7 +84,7 @@ The learning rate is typically denoted by the Greek letter alpha $\alpha$. It he
   w_{ij}^{t+1} = w_{ij}^{t} - \alpha\dfrac{\partial e}{\partial w_{ij}}
 \end{align}
 where $\alpha \in (0,1)$
-\subsection{Stochastic Gradient Descent}
+\subsection*{Stochastic Gradient Descent}
 The Stochastic Gradient Descent dates back to the Robbins-Monro(ADD REF) algorithm from the 1950s and is still an important optimization algorithm. Instead of adjusting the weight to the average loss function, we can approximate the gradient by only one random directional derivative of the error. Thus, the number of computation in the gradient descent method can be significantly reduced by a factor of $n$ (where $n$ is the number of direction). The stochastic gradient method (SGM) is given by 
 \begin{align}
     \label{eq:SGM_def}
@@ -100,7 +100,7 @@ As we move closer to the bottom of the minimum of the function; the solution sta
 \end{align}
 where $\lambda$, $\beta$, and $\alpha$ are known as hyperparameter. \\
 Training dataset can be very large in certain cases which leads to a greater cost of compute at each iteration for the gradient descent, so stochastic gradient descent is preferred in these cases.
-\subsection{Mini-Batch Stochastic Gradient Descent}
+\subsection*{Mini-Batch Stochastic Gradient Descent}
 In order to make use of the features of both gradient descent and stochastic gradient descent; we introduce the mini-batch stochastic gradient descent. In this approach, instead of iterating in the direction of the full gradient or only in one direction of the full gradient, we split the dataset into small batches and compute the gradient of each batch. The formula of the stochastic gradient descent is given by 
 \begin{align}
     \label{mb-sgd}
@@ -109,7 +109,7 @@ In order to make use of the features of both gradient descent and stochastic gra
     \textbf{g}_t &= \nabla_{\mathcal{B}_t}e(\textbf{x},\textbf{w}) 
 \end{align}
 where $\mathcal{B}_t$ is a mini-batch of elements drawn uniformly at random from the training set (the expectation of the gradient remains unchanged). \\ Since we are using a mini-batch, the updates are closer to the full gradient but at a reduced cost.
-\subsection{Newton's Method}
+\subsection*{Newton's Method}
 For minimizing $f(x)$, $x \in \mathbb{R}$, we need to solve $g(x) = e^{'}(x)=0$. Newton's iteration is given by 
 \begin{align}
   x_{n+1} &= x_{n} - \dfrac{g(x_{}n)}{g^{'}(x_n)} \\
@@ -132,7 +132,7 @@ where\\
   \mathbf{x_{n+1}} = \mathbf{x_{n}} - \alpha \textbf{I} \nabla f(\mathbf{x_n})
 \end{align}
 where $\alpha \in (0,1)$
-\subsection{Momentum}
+\subsection*{Momentum}
 %https://ui.adsabs.harvard.edu/abs/1986Natur.323..533R/abstract
 %Documention on when momentum first appeared
 \subsubsection*{Exponentially Weighted Moving Average}
@@ -155,7 +155,7 @@ The momentum method was mentioned in Rumelhart, Hinton and Williams' paper on ba
     \nonumber
     \boldsymbol{\mu}_0 &= \textbf{c}
 \end{align}
-\subsection{RMSProp}
+\subsection*{RMSProp}
 %https://www.scirp.org/(S(czeh2tfqyw2orz553k1w0r45))/reference/ReferencesPapers.aspx?ReferenceID=1911091
 Proposed by Geoff Hilton (ADD REF) in lecture 6 of the online course "Neural Network for Machine Learning",  he Root Mean Square Propagation (RMSProp) algorithm alleviates undesirable fluctuations when adjusting the weight during optimization. RMSProp is an adaptive learning rate. The idea is to reduce the step size at very large gradient to avoid fluctuations and increase the step size at smaller gradient to move steadily in the correct direction of the optimal solution; hence an adaptive learning rate at each iteration. The equations for the RMSProp is given by 
 \begin{align}
@@ -165,7 +165,7 @@ Proposed by Geoff Hilton (ADD REF) in lecture 6 of the online course "Neural Net
     {w}^{t+1}_i &= {w}^t_i - \dfrac{\eta}{\sqrt{S^t_i} + \epsilon}(\nabla e^t)_i
 \end{align}
 where $\epsilon \approx 10^{-6}$ to ensure that we avoid dividing by zero during iterations.
-\subsection{Adam}
+\subsection*{Adam}
 %https://arxiv.org/abs/1412.6980
 The Adam algorithm (Adaptive Moment Estimation algorithm) is a robust update rule for the weight optimization, it was proposed by Kingma and BA in 2014 (ADD REF). The algorithm combines the benefits of momentum (\refeq{eq: SGF_with_momentum}) and RMSProp (\refeq{eq:RMSProp_def}). Adam is the most popular generalized algorithm performs very well in many cases. It is considered as a state-of-the-art algorithm for deep neural network optimization. The set of equations for the Adam algorithm is given by
 \begin{align}
@@ -183,4 +183,6 @@ Finally, the update rule is given by
     \label{eq:Adam_def}
     {w}^{t+1}_i &= {w}^t_i - \dfrac{\eta}{\sqrt{S^t_i} + \epsilon}\mu_i
 \end{align}
-The parameters $\beta_1$, $\beta_2$ and $\epsilon$ are knows are the hyperparameters of the Adam algorithm. A common set of values that works well in literature are $\beta_1 = 0.9$, $\beta_2 = 0.9999$ and $\epsilon = 10^{-8}$. 
+The parameters $\beta_1$, $\beta_2$ and $\epsilon$ are knows are the hyperparameters of the Adam algorithm. A common set of values that works well in literature are $\beta_1 = 0.9$, $\beta_2 = 0.9999$ and $\epsilon = 10^{-8}$.
+\section{Backpropagation using Adam}
+*Placeholder*

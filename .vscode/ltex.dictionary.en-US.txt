@@ -35,3 +35,8 @@ Backpropagation
 popularised
 Hadamard
 backpropagation
+neurone-like
+Kunihiko
+LeCun
+Yoshua
+Bengio
