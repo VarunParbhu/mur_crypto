@@ -53,9 +53,9 @@ The nature of the stationary points of $f(x)$ can be determined by studying the 
 \section{Optimization algorithms}
 The solutions to the optimization problem are vital in modern machine learning and artificial intelligence algorithms, which includes weight optimization in deep learning. There are a number of popular optimization algorithm currently developed to solve the problem. Hence, choosing the right algorithm can be challenging as well.
 %\subsubsection*{Network Error}
-Let the network error function, $e$, be given by the squared difference between the predicted value and the true value. 
+Let the network cost function, $c$, be given by the squared difference between the predicted value and the true value. 
 \begin{align}
-   e = \dfrac{1}{2n}\sum^{n}_i (\widehat{y_i}-y_i)^2
+   c = \dfrac{1}{2n}\sum^{n}_i (\widehat{y_i}-y_i)^2
   \label{network_error}
 \end{align}
 where $n$ is the total number of input\\
@@ -176,13 +176,53 @@ The Adam algorithm (Adaptive Moment Estimation algorithm) is a robust update rul
 \end{align}
 To prevent $S^t$ and $\mu^t$ from becoming zero during the initial steps, a bias correction is introduced, such that
 \begin{align*}
-    \hat{\mu^{(t)}} = \dfrac{\mu}{1-\beta_1^t} & & \hat{S^{(t)}} = \dfrac{S^t}{1-\beta_2^t}
+    \hat{\mu^{(t)}} = \dfrac{\mu^{t}}{1-\beta_1^t} & & \hat{S^{(t)}} = \dfrac{S^t}{1-\beta_2^t}
 \end{align*}
 Finally, the update rule is given by
 \begin{align}
     \label{eq:Adam_def}
-    {w}^{t+1}_i &= {w}^t_i - \dfrac{\eta}{\sqrt{S^t_i} + \epsilon}\mu_i
+    {w}^{(t+1)}_i &= {w}^{(t)}_i - \dfrac{\eta}{\sqrt{S^t_i} + \epsilon}\mu_i
 \end{align}
-The parameters $\beta_1$, $\beta_2$ and $\epsilon$ are knows are the hyperparameters of the Adam algorithm. A common set of values that works well in literature are $\beta_1 = 0.9$, $\beta_2 = 0.9999$ and $\epsilon = 10^{-8}$.
+The parameters $\beta_1$, $\beta_2$ and $\epsilon$ are knows are the hyperparameters of the Adam algorithm. A common set of values that works well in literature are $\beta_1 = 0.9$, $\beta_2 = 0.9999$ and $\epsilon = 10^{-8}$ (ADD REF).
+%https://arxiv.org/pdf/1412.6980.pdf
 \section{Backpropagation using Adam}
-*Placeholder*
+The Adam algorithm for optimization can be introduced in the weight update when training deep neural network. The problem of finding the right set of weights and biases for a deep neural network can be reduced to an optimization problem same as we defined in (\refeq{network_error}). After finding the gradients through the backpropagation algorithm, the set of updates proposed in the Adam algorithm are used to update the weights and biases in the neural network.
+\begin{algorithm}[H]
+  \caption{Backpropagation using Adam optimization with $n$ total number of inputs for $N$ epochs}\label{alg:back_propagation_adam_algo}
+  \begin{algorithmic}[1]
+  \State{\textbf{Start}}
+  \For{$t = 1,2, \dots, N$}
+  \For{$s = 1,2, \dots, n$}
+  \State Compute the activation layer $a^{(1)}$ using $n$ input values in a batch
+  \State $a^{(1)} = \sigma(w^{(1)}x + b^{(1)} )$
+  \State Feed forward the $n$ input to the next layers
+  \For{$l = 2,3,\dots,L$}
+    \State{$z^{(l)} = w^{(l)}a^{(l-1)}+b^{(l)}$}
+    \State $a^{(l)} = \sigma(z^{(l)})$
+  \EndFor  
+\EndFor
+  \State Compute the average cost function, $C$, at the output layer $L$
+  \State $c^{(t)} = \dfrac{1}{2n}\sum^{n}_s (\widehat{y_s}-y_s)^2$
+  \State Compute the rate of change of the cost function $w.r.t$ to $z^{(L)}$
+  \State $\delta^{(L)} = \nabla_{a^{(L)}}C \odot \sigma^{'}(z^{(L)})$
+  \For{$l = L-1, L-2, \dots, 2$} 
+    \State Computing the gradients
+    \State $\delta^{(l)} = (w^{(l+1)})^T\sigma^{(l+1)} \odot \sigma^{'}(z^{(l)})$
+    \State $\nabla_{b^{(l)}} C = \delta^{(l)}$
+    \State $\nabla_{w^{(l)}} C = \delta^{(l)}a^{(l-1)}$\\
+    \State Bias update
+    \State $\mu^{(t)}_i = \beta_1 {\mu}^{(t-1)}_i + (1-\beta_1)\delta^{(l)}_i$
+    \State ${S}^{(t)}_i = \beta_2 {S}^{(t-1)}_i + (1-\beta_2)(\delta^{(l)}_i)^2$
+    \State $\hat{\mu^{(t)}} = \dfrac{\mu^{t}}{1-\beta_1^t}$
+    \State $ \hat{S^{(t)}} = \dfrac{S^t}{1-\beta_2^t}$
+    \State ${b}^{(t+1)}_i = {b}^{(t)}_i - \dfrac{\eta}{\sqrt{S^t_i} + \epsilon}\mu_i$\\
+    \State Weight update
+    \State $\mu^{(t)}_i = \beta_1 {\mu}^{(t-1)}_i + (1-\beta_1)\delta^{(l)}a^{(l-1)}_i$
+    \State ${S}^{(t)}_i = \beta_2 {S}^{(t-1)}_i + (1-\beta_2)(\delta^{(l)}a^{(l-1)}_i)^2$
+    \State $\hat{\mu^{(t)}} = \dfrac{\mu^{t}}{1-\beta_1^t}$
+    \State $\hat{S^{(t)}} = \dfrac{S^t}{1-\beta_2^t}$
+    \State ${w}^{(t+1)}_{ij} = {w}^{(t)}_{ij} - \dfrac{\eta}{\sqrt{S^t_i} + \epsilon}\mu_i$
+  \EndFor
+\EndFor
+\end{algorithmic}
+\end{algorithm}
