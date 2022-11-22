@@ -1262,7 +1262,7 @@ The vectorized form of the back-propagation equations are given by
   \EndFor  
   \State \textbf{Step 3} (Cost/Error Calculation)\\
   \, \, \, Compute the cost function, $C$, at the output layer $L$
-  \State \textbf{Step 4} (Back-Propagate) \\
+  \State \textbf{Step 4} (Backpropagate) \\
   \, \, \, Compute the rate of change of the cost function $w.r.t$ to $z^{(L)}$\\
   \, \, \,  $\delta^{(L)} = \nabla_{a^{(L)}}C \odot \sigma^{'}(z^{(L)})$
   \For{$l = L-1, L-2, \dots, 2$}
