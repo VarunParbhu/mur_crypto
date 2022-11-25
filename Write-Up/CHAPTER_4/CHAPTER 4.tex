@@ -5,6 +5,33 @@ Social media have been providing large platforms for people to share their opini
 
 Asur and Huberman (2010) (ADD REF) attempted to solve the revenue prediction problem using both the tweet volume and the tweet sentiment. Same kind of data along with polling results were also used, in Bermingham and Smeaton (2011) (ADD REF), to train a linear regression model to predict election results. Zhang et al. (2010) (ADD REF) leveraged sentiments on Twitter to help predict the movement of stock market indices such as Dow Jones, S\&P500 and NASDAQ. It was shown that large negative emotions and opinions caused Dow to go down the next day and lower negative emotions cause Dow to go up on the next day. Bar-Haim et al. (2011) (ADD REF) on one hand leverage sentiments on Twitter but on the other did not treat all Twitter authors equally. Only expert investors were used as features in training stock price movement predictors. Undeniably, modern social media (started early 2000s) have grown into a major influencer of human opinion and sentiments.
 
+\par 
+
+\section{Rule-Based Models}
+Conventional NLP techniques relied on a set of rules to process textual data to extract opinion, polarity, topic, and other information within the data. Tokenization, part-of-speech tagging, lemmatization and removal of stop words are some rules and technique used to processed data prior to analysis. Tokenization is the separation/breaking down of text data into words. The space between words in a document is commonly used as the delimiter of separation. Consider the example below:
+\begin{align*}
+\intertext{“The price of Cryptocurrency wasn’t great today! See y’all tomorrow.”}    
+\end{align*}
+Tokenizing the result above results in the list:
+\begin{align*}
+    \intertext{“[”The”, “price”, “of”, “Bitcoin”, “was”,  “n’t”, “great”, “today”, “!”, “See”,  “y’", “all', “tomorrow”, “.”]”}    
+\end{align*}
+In sentiment analysis, the tokenized sentence would be compared to predefined list polarised words (positive and negative). A naive way to get the polarity of the sentence would be to count the number of positive and negative words in the predefined polarised lists. The limitations are quite obvious, we are not taking into account the context in which the words are used, nor the preceding words. Part-of-speech tagging refers to the classification of the token in a document based on predefined assignment. Tokens are classified as adjective,  adverb, noun, verb, etc. (the full list can be obtained through the universal POS tags - (ADD REF)). POS tagging is used to describe the syntactic structuring of a sentence. The part-of-speech tagging of our example in () is given by:
+\begin{align*}
+\intertext{*Placeholder*}   
+\end{align*}
+Lemmatization refers to the process of reducing words  to their base form, also known as lemma. For example, the words below can be reduced as follows:
+\begin{align*}
+\begin{matrix*}
+    \intertext{great → good} \\
+    \intertext{happiness → happy} \\
+    \intertext{stemming → stem}
+\end{matrix*}
+\end{align*}
+It allows to map the meaning of multiple words at one time by reducing the former to its base. The assumption is that both form retain the same meaning syntactically. Moreover, the removal of stop words is also often perform to eliminate words that are neutral or bring no additional value within a sentence. Examples of such word would be “the”, “a”, “is”, etc. Since rule-based models is performed individually over each word; the simple removal stop words reduced computation time of such models. However, such models are highly limited, computationally demanding and often inaccurate. Thus, with the rise of computation power available and machine learning, statistical and embedding based models were developed to tackle those limitations.
+\section{Embedding Based Models}
+
+\section{Deep Learning Models}
 %VADER?
 %LSTM
 %BERT
