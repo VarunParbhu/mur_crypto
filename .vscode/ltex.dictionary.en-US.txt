@@ -40,3 +40,4 @@ Kunihiko
 LeCun
 Yoshua
 Bengio
+CBOW
