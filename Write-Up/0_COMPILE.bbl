@@ -1,5 +1,23 @@
 \begin{thebibliography}{xx}
 
+\harvarditem[Bengio et~al.]{Bengio, Simard \harvardand\
+  Frasconi}{1994}{Bengio1994}
+Bengio, Y., Simard, P. \harvardand\ Frasconi, P.  \harvardyearleft
+  1994\harvardyearright , `Learning long-term dependencies with gradient
+  descent is difficult', {\em IEEE Transactions on Neural Networks} {\bf
+  5}(2),~157--166.
+
+\harvarditem{Hochreiter \harvardand\ Schmidhuber}{1997}{Hochreiter1997}
+Hochreiter, S. \harvardand\ Schmidhuber, J.  \harvardyearleft
+  1997\harvardyearright , `{Long Short-Term Memory}', {\em Neural Computation}
+  {\bf 9}(8),~1735--1780.
+\newline\harvardurl{https://doi.org/10.1162/neco.1997.9.8.1735}
+
+\harvarditem{Kolen \harvardand\ Kremer}{2001}{Kolen2001}
+Kolen, J.~F. \harvardand\ Kremer, S.~C.  \harvardyearleft 2001\harvardyearright
+  , {\em Gradient Flow in Recurrent Nets: The Difficulty of Learning LongTerm
+  Dependencies}, pp.~237--243.
+
 \harvarditem[LeCun et~al.]{LeCun, Bengio \harvardand\
   Hinton}{2015}{LeCun:2015aa}
 LeCun, Y., Bengio, Y. \harvardand\ Hinton, G.  \harvardyearleft

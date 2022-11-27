@@ -1,7 +1,7 @@
 \chapter{Deep Learning Networks}
 Deep learning networks use many hidden layers to learn structure in large datasets and the key aspect is that the learning process is not human engineered. Starting from a simple mathematical model of a neuron \cite{McCulloch:1943aa} and the development of the perceptron \cite{Rosenblatt:1958aa}, deep learning networks were particularly difficult to train. The introduction of the backpropagation algorithm by David Rumelhart overcome the training problem of deep neural networks. Thus, allowing networks to tune their internal parameters iteratively over training datasets. The procedure repeatedly adjusts the weights of the connections in the network to minimise a measure of the difference between the actual output vector of the net and the desired output vector \cite{Rumelhart:1986aa}. Using a general-purpose learning procedures, deep learning networks are able to find non-linear relationship within high-dimensional data. Kunihiko Fukushima, Yann LeCun, Geoffrey Hinton and Yoshua Bengio contributed to the creation of richer and more complex multilayered neural networks to tackle different tasks in the processing of images, video, speech, audio and text. With such features surpassing conventional machine-learning techniques and the access to high-end graphic processors and computing power along the rise of Big Data, deep learning networks are being applied to many domains of science, business and government \cite{LeCun:2015aa}. Hence, allowing tasks such as image recognition, speech recognition, natural language processing, sentiment analysis, fraud detection, etc. to be tackled with promising results.
 
-We start by introducing the perceptron to classify linearly separable datasets and a proof of the perceptron convergence theorem. The solution and limitations of the perceptron for logic functions are explored before introducing feedforward networks. We also explore some common activation function used in feedforward networks. Finally, we introduce and derive the backpropagation algorithm of feedforward networks with multiple hidden layers.
+We start by introducing the perceptron to classify linearly separable datasets and a proof of the perceptron convergence theorem. The solution and limitations of the perceptron for logic functions are explored before introducing feedforward networks. We also explore some common activation function used in feedforward networks. We then introduce and derive the backpropagation algorithm of feedforward networks with multiple hidden layers and introduce different activation function. Finally, we define the RNN, LSTM and BRNN neural network architecture.
 \section{The Perceptron}
 %\noindent\textbf{McCullough and Walter Pitts (MCP) Neuron}\\
 In 1943, McCulloch and Walter Pitts demonstrated that simple binary threshold units wired up as logical gates could be used to build a digital computer \cite{McCulloch:1943aa}. The McCulloch-Pitts (MCP) neuron is a simple mathematical model of a biological neuron. It was the earliest mathematical model of a neural network and had only three types of weights; excitatory (1), inhibitory (-1) and inactive (0). The model had an activation function which had a value of 1 if the weighted sum was greater or equal to a given threshold, else 0. Using the MCP neuron, one of the first digital computers that contained stored programs was built. However, the MCP neuron was very restrictive.
@@ -1270,5 +1270,37 @@ The vectorized form of the back-propagation equations are given by
     \State $\nabla_{b^{(l)}} C = \delta^{(l)}$
     \State $\nabla_{w^{(l)}} C = \delta^{(l)}a^{(l-1)}$
   \EndFor
-  \end{algorithmic}
-  \end{algorithm}
+\end{algorithmic}
+\end{algorithm}
+\section{Sequential Neural Networks}
+\subsubsection*{Recurrent Neural Network(RNN)}
+Developed through the work of \cite{Rumelhart:1986aa}, recurrent neural network is a type of neural network which is capable of modelling sequential data for predictions. Similar to the feedforward network; the RNN consist of an input layer and  an output layer with a hidden state instead of a hidden layer. The hidden state act as a feedback loop. That is, the output at a particular step in the sequence is fed to the input of the next step to compute the output of the next step. Hence, recurrent neural networks are neural networks with hidden states. Consider the sequential input data $\mathbf{X}_t \in \mathbb{R}^{n \times d}$, with batch size $n$ and $d$ inputs, at a particular time step $t$, $\mathbf{H}_t \in \mathbb{R}^{n \times h}$ be the hidden layer, $\mathbf{W}_{xh}\in \mathbb{R}^{d \times h}$  be the weight applied on the input data, $\mathbf{W}_{hh}\in \mathbb{R}^{h \times h}$ be the weight applied to the output hidden state, $\mathbf{b}_h \in \mathbb{R}^{1 \times h}$ and $\phi$ be the activation function; thus the calculation at the hidden layer is given by:
+\begin{align}
+  \label{eq:RNN_HL}
+  \mathbf{H}_t = \phi(\mathbf{X}_t \mathbf{W}_{xh} + \mathbf{H}_{t-1}\mathbf{W}_{hh} + \mathbf{b}_h)
+\end{align}
+Consider the weights $\mathbf{W}_{hq} \in \mathbb{R}^{d \times h}$ and the bias $\mathbf{b}_h \in \mathbb{R}^{1 \times q}$, thus the computation at the output layer is given by:
+\begin{align}
+  \label{eq:RNN_OL}
+  \mathbf{O}_t = \mathbf{H}_t \mathbf{W}_{hq} + \mathbf{b}_q
+\end{align}
+\begin{figure}[ht]
+  \centering
+  \includegraphics[scale=0.4]{CHAPTER_2/c2_fig_RNN.png}
+  \caption{!!!TO BE CHANGED!!!}
+  \label{}
+\end{figure}
+As we unfold a recurrent neural network for more time steps; the number of parameters does not increase. The input of the activation function gets recursively very large or very small. Consequently, we are limited by the problem of vanishing or exploding gradients when optimizing recurrent neural network \cite{Bengio1994} \cite{Kolen2001}. A preventive measure would be to truncate the recursive gradient term during backpropagation. RNN also suffer from short-term memory, important information in very long sequence from the beginning are left out.
+\subsubsection*{Long Short Term Memory(LSTM)}
+Introduced in 1997 by \cite{Hochreiter1997}, the long short-term memory model was introduced to solve the vanishing and exploding problem in the RNN. While the architecture is similar to the RNN, the LSTM replaces the hidden state by a memory cell. The memory cell comprises three main “gates” namely and an input node: the forget gate, the input gate, the output gate  and the input node respectively. The forget gate controls whether we keep the input from the previous hidden state or not.  The input gate determines how much of the input should contribute to the internal cell memory and passed to the input node. At the input node, the memory cell is calculated using the input value and the value from the input gate. Finally, the output gate determines how much of the memory cell of the current time step impacts the next time step in the next memory cell. Consider the input $\mathbf{X}_t \in \mathbb{R}^{n \times d}$, the hidden state of the previous time step be  $\mathbf{H}_t \in \mathbb{R}^{n \times h}$, the input gate be given by $\mathbf{I}_t \in \mathbb{R}^{n \times h}$, the forget gate given by $\mathbf{F}_t \in \mathbb{R}^{n \times h}$, the input node given by $\tilde{\mathbf{C}_t} \in \mathbb{R}^{n \times h}$,  the output gate be $\mathbf{O}_t \in \mathbb{R}^{n \times h}$ and the memory cell state be given by $\mathbf{C}_t \in \mathbb{R}^{n \times h}$ then the computations at the gates are given by:
+\begin{align}
+  \label{eq:LSTM_HS}
+  \mathbf{I}_t &= \sigma(\mathbf{X}_t \mathbf{W}_{xi} + \mathbf{H}_{t-1}\mathbf{W}_{hi} + \mathbf{b}_i) \\
+  \mathbf{F}_t &= \sigma(\mathbf{X}_t \mathbf{W}_{xf} + \mathbf{H}_{t-1}\mathbf{W}_{hf} + \mathbf{b}_f) \\
+  \mathbf{O}_t &= \sigma(\mathbf{X}_t \mathbf{W}_{xo} + \mathbf{H}_{t-1}\mathbf{W}_{ho} + \mathbf{b}_o) \\
+  \tilde{\mathbf{C}_t} &= \tanh(\mathbf{X}_t \mathbf{W}_{xc} + \mathbf{H}_{t-1}\mathbf{W}_{hc} + \mathbf{b}_c)\\
+  \mathbf{C}_t &= \mathbf{F}_t \odot \mathbf{C}_{t-1} + \mathbf{I}_t \odot \tilde{\mathbf{C}_t}
+\end{align}
+
+
+\subsubsection*{Bidirectional RNN(BRNN)}

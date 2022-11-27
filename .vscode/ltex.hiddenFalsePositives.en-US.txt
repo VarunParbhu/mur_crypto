@@ -16,3 +16,7 @@
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QDeveloped by Mikolov et al in 2013 (ADD 2 REF), the word2vec was introduced.\\E$"}
 {"rule":"ET_AL","sentence":"^\\QDeveloped by Mikolov et al in 2013 (ADD 2 REF), the word2vec was introduced.\\E$"}
 {"rule":"NO_SPACE_CLOSING_QUOTE","sentence":"^\\QTokenizing the result above results in the list: “[”The”, “price”, “of”, “Bitcoin”, “was”, “n't”, “great”, “today”, “!”, “See”, “y’\", “all', “tomorrow”, “.”]”\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QBidirectional RNN(BRNN).\\E$"}
+{"rule":"A_INFINITIVE","sentence":"^\\QThe memory cell comprises three main “gates” namely and an input node: the forget gate, the input gate, the output gate and the input node respectively.\\E$"}
+{"rule":"A_INFINITIVE","sentence":"^\\QThe forget gate controls whether we keep the input from the previous hidden state or not.\\E$"}
+{"rule":"A_INFINITIVE","sentence":"^\\QConsider the input \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q, the hidden state of the previous time step be \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q, the input gate be given by \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q, the forget gate given by \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q, the input node given by \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q, the output gate be \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q and the memory cell state be given by \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q then the computations at the gates are given by:\\E$"}
