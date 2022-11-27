@@ -12,3 +12,7 @@
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QIt is shown that many particular choices among possible neurophysiological assumptions are equivalent, in the sense that for every net behaving under one assumption, there exists another net which behaves under the other and gives the same results, although perhaps not in the same time.\\E$"}
 {"rule":"SO_AS_TO","sentence":"^\\QThe procedure repeatedly adjusts the weights of the connections in the network so as to minimize a measure of the difference between the actual output vector of the net and the desired output vector.\\E$"}
 {"rule":"Y_ALL","sentence":"^\\QSee y’all tomorrow.”\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QThe three types of frequency based embedding are: Count Vector, TF-IDF (Term Frequency-Inverse Term Frequency) Vector and Co-Occurence Matrix with a fixed context window.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QDeveloped by Mikolov et al in 2013 (ADD 2 REF), the word2vec was introduced.\\E$"}
+{"rule":"ET_AL","sentence":"^\\QDeveloped by Mikolov et al in 2013 (ADD 2 REF), the word2vec was introduced.\\E$"}
+{"rule":"NO_SPACE_CLOSING_QUOTE","sentence":"^\\QTokenizing the result above results in the list: “[”The”, “price”, “of”, “Bitcoin”, “was”, “n't”, “great”, “today”, “!”, “See”, “y’\", “all', “tomorrow”, “.”]”\\E$"}
