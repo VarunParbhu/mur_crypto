@@ -7,6 +7,19 @@ Bengio, Y., Simard, P. \harvardand\ Frasconi, P.  \harvardyearleft
   descent is difficult', {\em IEEE Transactions on Neural Networks} {\bf
   5}(2),~157--166.
 
+\harvarditem[Chiorrini et~al.]{Chiorrini, Diamantini, Mircoli \harvardand\
+  Potena}{2021}{Chiorrini2021}
+Chiorrini, A., Diamantini, C., Mircoli, A. \harvardand\ Potena, D.
+  \harvardyearleft 2021\harvardyearright , Emotion and sentiment analysis of
+  tweets using bert.
+
+\harvarditem[Devlin et~al.]{Devlin, Chang, Lee \harvardand\
+  Toutanova}{2018}{Jacob2018}
+Devlin, J., Chang, M., Lee, K. \harvardand\ Toutanova, K.  \harvardyearleft
+  2018\harvardyearright , `{BERT:} pre-training of deep bidirectional
+  transformers for language understanding', {\em CoRR} {\bf abs/1810.04805}.
+\newline\harvardurl{http://arxiv.org/abs/1810.04805}
+
 \harvarditem{Hochreiter \harvardand\ Schmidhuber}{1997}{Hochreiter1997}
 Hochreiter, S. \harvardand\ Schmidhuber, J.  \harvardyearleft
   1997\harvardyearright , `{Long Short-Term Memory}', {\em Neural Computation}
@@ -24,6 +37,14 @@ LeCun, Y., Bengio, Y. \harvardand\ Hinton, G.  \harvardyearleft
   2015\harvardyearright , `Deep learning', {\em Nature} {\bf
   521}(7553),~436--444.
 
+\harvarditem[Liu et~al.]{Liu, Ott, Goyal, Du, Joshi, Chen, Levy, Lewis,
+  Zettlemoyer \harvardand\ Stoyanov}{2019}{Yinhan2019}
+Liu, Y., Ott, M., Goyal, N., Du, J., Joshi, M., Chen, D., Levy, O., Lewis, M.,
+  Zettlemoyer, L. \harvardand\ Stoyanov, V.  \harvardyearleft
+  2019\harvardyearright , `Roberta: {A} robustly optimized {BERT} pretraining
+  approach', {\em CoRR} {\bf abs/1907.11692}.
+\newline\harvardurl{http://arxiv.org/abs/1907.11692}
+
 \harvarditem{McCulloch \harvardand\ Pitts}{1943}{McCulloch:1943aa}
 McCulloch, W.~S. \harvardand\ Pitts, W.  \harvardyearleft 1943\harvardyearright
   , `A logical calculus of the ideas immanent in nervous activity', {\em The
@@ -39,5 +60,17 @@ Rosenblatt, F.  \harvardyearleft 1958\harvardyearright , `The perceptron: a
 Rumelhart, D.~E., Hinton, G.~E. \harvardand\ Williams, R.~J.  \harvardyearleft
   1986\harvardyearright , `Learning representations by back-propagating
   errors', {\em Nature} {\bf 323}(6088),~533--536.
+
+\harvarditem{Schuster \harvardand\ Paliwal}{1997}{Schurster1997}
+Schuster, M. \harvardand\ Paliwal, K.  \harvardyearleft 1997\harvardyearright ,
+  `Bidirectional recurrent neural networks', {\em IEEE Transactions on Signal
+  Processing} {\bf 45}(11),~2673--2681.
+
+\harvarditem[Vaswani et~al.]{Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez,
+  Kaiser \harvardand\ Polosukhin}{2017}{Vaswani2017}
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.~N.,
+  Kaiser, L. \harvardand\ Polosukhin, I.  \harvardyearleft
+  2017\harvardyearright , `Attention is all you need'.
+\newline\harvardurl{https://arxiv.org/abs/1706.03762}
 
 \end{thebibliography}

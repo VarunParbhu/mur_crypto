@@ -10,10 +10,10 @@
 \contentsline {section}{\numberline {2.3}Activation Function}{25}{section.2.3}%
 \contentsline {section}{\numberline {2.4}Backpropagation}{27}{section.2.4}%
 \contentsline {section}{\numberline {2.5}Sequential Neural Networks}{33}{section.2.5}%
-\contentsline {chapter}{\numberline {3}Optimization}{36}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Optimization algorithms}{38}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Backpropagation using Adam}{44}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Sentiment Analysis}{46}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Rule-Based Methods}{47}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Word Embedding}{49}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Transformer Model (Attention Mechanism)}{50}{section.4.3}%
+\contentsline {chapter}{\numberline {3}Optimization}{38}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Optimization algorithms}{40}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Backpropagation using Adam}{46}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Sentiment Analysis}{48}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Rule-Based Methods}{49}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Word Embedding}{51}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Transformer Model (Attention Mechanism)}{52}{section.4.3}%
