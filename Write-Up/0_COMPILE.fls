@@ -860,6 +860,16 @@ INPUT ./CHAPTER_2/c2_fig_RNN.png
 INPUT CHAPTER_2/c2_fig_RNN.png
 INPUT ./CHAPTER_2/c2_fig_RNN.png
 INPUT ./CHAPTER_2/c2_fig_RNN.png
+INPUT ./CHAPTER_2/c2_fig_LSTM.png
+INPUT ./CHAPTER_2/c2_fig_LSTM.png
+INPUT CHAPTER_2/c2_fig_LSTM.png
+INPUT ./CHAPTER_2/c2_fig_LSTM.png
+INPUT ./CHAPTER_2/c2_fig_LSTM.png
+INPUT ./CHAPTER_2/c2_fig_BRNN.png
+INPUT ./CHAPTER_2/c2_fig_BRNN.png
+INPUT CHAPTER_2/c2_fig_BRNN.png
+INPUT ./CHAPTER_2/c2_fig_BRNN.png
+INPUT ./CHAPTER_2/c2_fig_BRNN.png
 INPUT ./CHAPTER_3/CHAPTER 3.tex
 INPUT CHAPTER_3/CHAPTER 3.tex
 INPUT ./CHAPTER_3/CHAPTER 3.tex
@@ -885,6 +895,11 @@ INPUT CHAPTER_4/CHAPTER 4.tex
 INPUT ./CHAPTER_4/CHAPTER 4.tex
 INPUT CHAPTER_4/CHAPTER 4.tex
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm
+INPUT ./CHAPTER_2/c2_fig_transformer_layer.png
+INPUT ./CHAPTER_2/c2_fig_transformer_layer.png
+INPUT CHAPTER_2/c2_fig_transformer_layer.png
+INPUT ./CHAPTER_2/c2_fig_transformer_layer.png
+INPUT ./CHAPTER_2/c2_fig_transformer_layer.png
 INPUT ./0_COMPILE.bbl
 INPUT 0_COMPILE.bbl
 INPUT ./0_COMPILE.bbl

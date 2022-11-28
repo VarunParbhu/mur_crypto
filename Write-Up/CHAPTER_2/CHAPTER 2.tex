@@ -1292,7 +1292,7 @@ Consider the weights $\mathbf{W}_{hq} \in \mathbb{R}^{d \times h}$ and the bias 
 \end{figure}
 As we unfold a recurrent neural network for more time steps; the number of parameters does not increase. The input of the activation function gets recursively very large or very small. Consequently, we are limited by the problem of vanishing or exploding gradients when optimizing recurrent neural network \cite{Bengio1994} \cite{Kolen2001}. A preventive measure would be to truncate the recursive gradient term during backpropagation. RNN also suffer from short-term memory, important information in very long sequence from the beginning are left out.
 \subsubsection*{Long Short Term Memory(LSTM)}
-Introduced in 1997 by \cite{Hochreiter1997}, the long short-term memory model was introduced to solve the vanishing and exploding problem in the RNN. While the architecture is similar to the RNN, the LSTM replaces the hidden state by a memory cell. The memory cell comprises three main “gates” namely and an input node: the forget gate, the input gate, the output gate  and the input node respectively. The forget gate controls whether we keep the input from the previous hidden state or not.  The input gate determines how much of the input should contribute to the internal cell memory and passed to the input node. At the input node, the memory cell is calculated using the input value and the value from the input gate. Finally, the output gate determines how much of the memory cell of the current time step impacts the next time step in the next memory cell. Consider the input $\mathbf{X}_t \in \mathbb{R}^{n \times d}$, the hidden state of the previous time step be  $\mathbf{H}_t \in \mathbb{R}^{n \times h}$, the input gate be given by $\mathbf{I}_t \in \mathbb{R}^{n \times h}$, the forget gate given by $\mathbf{F}_t \in \mathbb{R}^{n \times h}$, the input node given by $\tilde{\mathbf{C}_t} \in \mathbb{R}^{n \times h}$,  the output gate be $\mathbf{O}_t \in \mathbb{R}^{n \times h}$ and the memory cell state be given by $\mathbf{C}_t \in \mathbb{R}^{n \times h}$ then the computations at the gates are given by:
+Introduced in 1997 by \cite{Hochreiter1997}, the long short-term memory model was introduced to solve the vanishing and exploding problem in the RNN. While the architecture is similar to the RNN, the LSTM replaces the hidden state by a memory cell. The memory cell comprises three main “gates” namely and an input node: the forget gate, the input gate, the output gate  and the input node respectively. The forget gate controls whether we keep the input from the previous hidden state or not.  The input gate determines how much of the input should contribute to the internal cell memory and passed to the input node. At the input node, the memory cell is calculated using the input value and the value from the input gate. Finally, the output gate determines how much of the memory cell of the current time step impacts the next time step in the next memory cell. Consider the input $\mathbf{X}_t \in \mathbb{R}^{n \times d}$, the hidden state of the previous time step be  $\mathbf{H}_t \in \mathbb{R}^{n \times h}$, the input gate be given by $\mathbf{I}_t \in \mathbb{R}^{n \times h}$, the forget gate given by $\mathbf{F}_t \in \mathbb{R}^{n \times h}$, the input node given by $\tilde{\mathbf{C}_t} \in \mathbb{R}^{n \times h}$,  the output gate be $\mathbf{O}_t \in \mathbb{R}^{n \times h}$ and the memory cell state be given by $\mathbf{C}_t \in \mathbb{R}^{n \times h}$ then the computations of the LSTM are given by:
 \begin{align}
   \label{eq:LSTM_HS}
   \mathbf{I}_t &= \sigma(\mathbf{X}_t \mathbf{W}_{xi} + \mathbf{H}_{t-1}\mathbf{W}_{hi} + \mathbf{b}_i) \\
@@ -1300,7 +1300,31 @@ Introduced in 1997 by \cite{Hochreiter1997}, the long short-term memory model wa
   \mathbf{O}_t &= \sigma(\mathbf{X}_t \mathbf{W}_{xo} + \mathbf{H}_{t-1}\mathbf{W}_{ho} + \mathbf{b}_o) \\
   \tilde{\mathbf{C}_t} &= \tanh(\mathbf{X}_t \mathbf{W}_{xc} + \mathbf{H}_{t-1}\mathbf{W}_{hc} + \mathbf{b}_c)\\
   \mathbf{C}_t &= \mathbf{F}_t \odot \mathbf{C}_{t-1} + \mathbf{I}_t \odot \tilde{\mathbf{C}_t}
+  \nonumber
+  \intertext{where $ \mathbf{W}_{xi}$, $ \mathbf{W}_{xf}$, $ \mathbf{W}_{xo}$,  $\mathbf{W}_{xc}$ $\in \mathbb{R}^{d \times h}$ and $ \mathbf{W}_{hi}$, $ \mathbf{W}_{hf}$, $ \mathbf{W}_{ho}$,  $\mathbf{W}_{hc}$ $\in \mathbb{R}^{h \times h}$ are weight parameters and $\mathbf{b}_i$, $\mathbf{b}_f$, $\mathbf{b}_o$, $\mathbf{b}_c$ $\in \mathbb{R}^{1 \times h}$ are the bias parameters.}
+  \nonumber
 \end{align}
-
-
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.42]{CHAPTER_2/c2_fig_LSTM.png}
+  \caption{!!!TO BE CHANGED!!!}
+  \label{LSTM_LAYER}
+\end{figure}
+LSTM addresses the vanishing and exploding gradient problem of the RNN by controlling the amount of information being carried to the memory and by providing a continuous gradient flow to facilitate backpropagation. Many variants of LSTM have been developed over the years due to their dominance for sequence learning. Some LTSM variants are namely: The Peephole Variant, the Coupled Gate Variation, Gated Recurrent Units (GRU). However, they are quite costly to compute due to their long range dependencies of the sequence.
 \subsubsection*{Bidirectional RNN(BRNN)}
+In order to overcome the uni-direction learning of RNN and LSTM,\cite{Schurster1997} introduced the bidirectional recurrent neural network. The implementation consists of two unidirectional layers chained together in opposite directions but taking the same inputs. The output is obtained by concatenating the two directional outputs from the hidden layers. The obtain layers is then computed to get the prediction. Consider the input $X_t \in \mathbf{R}^n$ for time step $t$, the forward and backward hidden unidirectional layers for time step $t$ be given by $\overrightarrow{H_t} \in \mathbb{R}^{n \times h}$ and $\overleftarrow{H_t} \in \mathbb{R}^{n \times h}$ respectively and the output layer be given by $\mathbf{O}_t$, then the computations of the BRNN is given by:
+\begin{align}
+  \label{eq:BRNN_LAYER}
+  \overrightarrow{H_t} &= \phi(\mathbf{X}_{t} \mathbf{W}_{xh}^{(f)} + \overrightarrow{\mathbf{H}}_{t-1}\mathbf{W}_{hh}^{(f)} + \mathbf{b}_h^{(f)}) \\
+  \overleftarrow{H_t}&= \phi(\mathbf{X}_t \mathbf{W}_{xh}^{(b)} + \overleftarrow{\mathbf{H}}_{t+1}\mathbf{W}_{hh}^{(b)} + \mathbf{b}_h^{(b)})\\
+  \mathbf{O}_t &= \mathbf{H}_t \mathbf{W}_{tq} + \mathbf{b}_q
+  \nonumber
+  \intertext{where $\mathbf{W}_{xh}^{(f)}$ and $\mathbf{W}_{xh}^{(b)}$ $\in \mathbb{R}^{d \times h}$, $\mathbf{W}_{hh}^{(f)}$ and $\mathbf{W}_{hh}^{(b)}$ $\in \mathbb{R}^{h\times h}$, $\mathbf{W}_{hq}\in\mathbb{R}^{2h \times q}$ are the weight parameters and  $\mathbf{b}_h^{(f)}$ and $\mathbf{b}_h^{(b)}$ $\in \mathbb{R}^{1 \times h}$ and $\mathbf{b_q} \in \mathbb{R}^{1 \times q}$ are the bias parameters.} \nonumber
+\end{align}
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.40]{CHAPTER_2/c2_fig_BRNN.png}
+  \caption{!!!TO BE CHANGED!!!}
+  \label{BRNN_LAYER}
+\end{figure}
+\noindent Bidirectional recurrent neural network are very efficient in sequential modelling in cases where context is a priority. Natural language processing, speech recognition, handwriting recognition, part-of-speech tagging; leverages BRNN as context input is required.
