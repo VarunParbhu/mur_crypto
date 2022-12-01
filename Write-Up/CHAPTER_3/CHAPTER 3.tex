@@ -53,17 +53,17 @@ The nature of the stationary points of $f(x)$ can be determined by studying the 
 \section{Optimization algorithms}
 The solutions to the optimization problem are vital in modern machine learning and artificial intelligence algorithms, which includes weight optimization in deep learning. There are a number of popular optimization algorithm currently developed to solve the problem. Hence, choosing the right algorithm can be challenging as well.
 %\subsubsection*{Network Error}
-Let the network cost function, $c$, be given by the squared difference between the predicted value and the true value. 
+Let the network cost function, $c$, be given by the squared difference between the predicted value and the true value:
 \begin{align}
    c = \dfrac{1}{2n}\sum^{n}_i (\widehat{y_i}-y_i)^2
   \label{network_error}
 \end{align}
-where $n$ is the total number of input\\
-\indent The difference is squared to avoid the sum of errors of multiple input vector to be zero which can mislead the network to have perfect predictive power. The goal of the network is to adjust the weight to reduce the network error as much as possible. The idea of reducing a function to a value is synonymous to (\refeq{eq:optimization_problem}) an optimization problem. The network error in (\refeq{network_error}) is a quadratic equation in this case.
+where $n$ is the total number of input.\\
+\noindent The difference is squared to avoid the sum of errors of multiple input vector to be zero which can mislead the network to have perfect predictive power. The goal of the network is to adjust the weight to reduce the network error as much as possible. The idea of reducing a function to a value is synonymous to (\refeq{eq:optimization_problem}) an optimization problem. The network error in (\refeq{network_error}) is a quadratic equation in this case.
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_network_error.jpeg}
-  \caption{Network Error}
+  \includegraphics[scale=0.75]{CHAPTER_2/c2_fig_network_error_python.eps}
+  \caption{Network Error over different weight}
   \label{network_error_graph}
 \end{figure}
 \noindent Figure (\ref*{network_error_graph}) is a graphical representation of the network error function. Our goal is to reach the minimum of the function by adjusting the weight value.
@@ -125,8 +125,7 @@ The Newton's iteration for multivariate function is given by
 \begin{align}
   \mathbf{x_{n+1}} = \mathbf{x_{n}} - H(\mathbf{x_n})^{-1}\nabla f(\mathbf{x_n})
 \end{align}
-where\\
-\indent $H(\mathbf{x_n})$ is the Hessian matrix of $f(\mathbf{x})$\\
+where $H(\mathbf{x_n})$ is the Hessian matrix of $f(\mathbf{x})$.\\
 \noindent We can observe from (\refeq{eq:Hessian_matrix}) that calculating the inverse of the Hessian matrix can be computationally very expensive for higher dimensions. Replacing $H(\mathbf{x_n})^{-1}$ by $\alpha \mathcal{I}$ where $\mathcal{I}$ is the identity matrix; we get the \textbf{method of steepest descent} given by
 \begin{align}
   \mathbf{x_{n+1}} = \mathbf{x_{n}} - \alpha \textbf{I} \nabla f(\mathbf{x_n})

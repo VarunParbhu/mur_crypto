@@ -71,8 +71,8 @@ where $\phi(z)$ is known as the hard delimiter.
 %From \ref{fig:perceptron_example_1}, we can separate the two classes by a single line. Consider the random separating line passing through the origin (this will set the value of $x_0$ in (\refeq{eq:mcp_neuron}) to 0).\\
 \begin{figure}[!htbp]
   \centering
-  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_perceptron_example_2.jpeg}
-  \caption{Set $\mathbf{A}$ and $\mathbf{B}$ with a random separating line - TBC}
+  \includegraphics[scale=0.75]{CHAPTER_2/c2_fig_perceptron_example_2_python.eps}
+  \caption{Set $\mathbf{A}$ and $\mathbf{B}$ with a random separating line}
   \label{fig:perceptron_example_2}
 \end{figure}\\
 %The equation of the random line is given by
@@ -384,7 +384,7 @@ The AND function returns a value of 1 if both of the inputs is 1. Let $f$ be the
 Consider the AND function with the separating line below
 \begin{figure}[ht]
   \centering
-  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_AND_function.jpeg}
+  \includegraphics[scale=0.75]{CHAPTER_2/c2_fig_AND_function_python.eps}
   \caption{AND Function with separating line}
   \label{AND_function_2}
 \end{figure}\\
@@ -484,8 +484,8 @@ The OR function returns a value of 1 if either of the inputs is 1. Let $f$ be th
 Consider the OR function with the separating line below
 \begin{figure}[ht]
   \centering
-  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_OR_function.jpeg}
-  \caption{AND Function with separating line}
+  \includegraphics[scale=0.75]{CHAPTER_2/c2_fig_OR_function_python.eps}
+  \caption{OR Function with separating line}
   \label{OR_function}
 \end{figure}\\
 The equation of the separating line in figure \ref{OR_function} is given by
@@ -584,8 +584,8 @@ The XOR function returns a value of 1 if either of the inputs is 1 but not both.
 Consider a plot of the XOR function below 
 \begin{figure}[ht]
   \centering
-  \includegraphics[scale=0.15]{CHAPTER_2/c2_rig_XOR.jpeg}
-  \caption{OR function}
+  \includegraphics[scale=0.75]{CHAPTER_2/c2_rig_XOR_python.eps}
+  \caption{XOR function}
   \label{XOR_function}
 \end{figure}\\
 From figure \ref{XOR_function}; we can observe that no separating line alone could group the two different classes together. We attempt to find a combination of weight for the perceptron which reduces the error (margin) as much as possible. Let $f^{*}$ be the exact function and $f(\textbf{x},\textbf{w}) = \textbf{w}^T\textbf{x} + b$, where $\textbf{w} = [w_1 \, \, w_2]^T$, be the approximate function. Consider the error function (the difference between the exact and approximate value)
@@ -695,7 +695,9 @@ Substituting for values in equation (\ref{eq:weight_derivative})
     2w_1 + w_2 \\
     w_1 + 2w_2
   \end{bmatrix} \\
-  \nonumber 
+  \nonumber
+\end{align}
+\begin{align}
   b\sum_{x\in D}\textbf{x} &= 
     b\begin{bmatrix}
       0 \\
@@ -745,18 +747,18 @@ Hence, the approximate function $f(\textbf{x},\textbf{w})$ is given by
 \begin{align}
   f(\textbf{x},\textbf{w}) = \dfrac{1}{2}
 \end{align}
-\begin{figure}[ht]
+\begin{figure}[H]
   \centering
-  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_XOR_soln.jpeg}
+  \includegraphics[scale=0.75]{CHAPTER_2/c2_fig_XOR_soln_python.eps}
   \caption{XOR approximate solution}
   \label{fig: approximate_XOR_solution}
-\end{figure}\\
+\end{figure}
 \noindent  Clearly from figure \ref{fig: approximate_XOR_solution}, the perceptron model cannot solve the XOR logic function. The XOR problem is actually not linearly separable. Thus, we introduce \textbf{feedforward networks} to overcome this problem.
 \section{Feedforward Network}
 We have seen that the single perceptron cannot solve the XOR problem. In order to solve the problem, we use a set of perceptrons that learns two different functions within a connected network.\vspace{5mm} \\
 First, let's consider two NOT boolean function $f_1^{*} = x_1 \text{ AND } (\text{NOT }x_2)$ and $f_2^{*} = (\text{NOT }x_1) \text{ AND } x_2$. \vspace{5mm}\\
 Consider $f_1^{*}$ which returns 1 if $x_1$ and (not $x_2$) are equal to 1.
-\begin{table}
+\begin{table}[H]
   \begin{center}
     \begin{tabular}{ c c c c}
       $x_1$ & $x_2$ & NOT ($x_2$) & $x_1$ AND (NOT $x_2$) \\
@@ -769,15 +771,15 @@ Consider $f_1^{*}$ which returns 1 if $x_1$ and (not $x_2$) are equal to 1.
     \caption{Truth Table for $f_1^{*}$}
   \label{table:truth_table_f_1}
   \end{center}  
-\end{table} \vspace{5mm}\\
-The function $f_1^{*}$ can be separated using the perceptron.
-\begin{figure}[ht]
+\end{table} \vspace{5mm}
+\noindent The function $f_1^{*}$ can be separated using the perceptron.
+\begin{figure}[H]
   \centering
-  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_f_1_XOR.jpeg}
-  \caption{$f_1$}
+  \includegraphics[scale=0.75]{CHAPTER_2/c2_fig_f_1_XOR_python.eps}
+  \caption{Representation of Truth Table for function $f_1^{*}$}
   \label{fig:f1_XOR}
-\end{figure} \\
-The equation of the separating line in figure \ref{fig:f1_XOR} is given by
+\end{figure}
+\noindent The equation of the separating line in figure \ref{fig:f1_XOR} is given by
 \begin{align}
   x_1 - x_2 - \dfrac{1}{2} = 0
 \end{align}
@@ -797,7 +799,7 @@ We can transform the separating line in the form of $\textbf{w}^T\textbf{x} = 0$
   \end{matrix}
 \end{align}
 Similarly, consider $f_2^{*}$ which returns 1 if (not $x_1$) and $x_2$ are equal to 1.
-\begin{table}
+\begin{table}[H]
   \begin{center}
     \begin{tabular}{ c c c c}
       $x_1$ & $x_2$ & NOT ($x_1$) & (NOT $x_1$) AND $x_2$ \\
@@ -810,15 +812,15 @@ Similarly, consider $f_2^{*}$ which returns 1 if (not $x_1$) and $x_2$ are equal
     \caption{Truth Table for $f_2^{*}$}
   \label{table:truth_table_f_2}
   \end{center}  
-\end{table} \vspace{40mm}\\
-The function $f_2^{*}$ can be separated using the perceptron.
-\begin{figure}[ht]
+\end{table}
+\noindent The function $f_2^{*}$ can be separated using the perceptron.
+\begin{figure}[H]
   \centering
-  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_f_2_XOR.jpeg}
-  \caption{$f_1$}
+  \includegraphics[scale=0.75]{CHAPTER_2/c2_fig_f_2_XOR_python.eps}
+  \caption{Representation of Truth Table for function $f_2^{*}$}
   \label{fig:f2_XOR}
-\end{figure} \\
-The equation of the separating line in figure \ref{fig:f2_XOR} is given by
+\end{figure}
+\noindent The equation of the separating line in figure \ref{fig:f2_XOR} is given by
 \begin{align}
   -x_1 + x_2 - \dfrac{1}{2} = 0
 \end{align}
@@ -842,7 +844,7 @@ Consequently, the XOR function defined in (\ref{eq:XOR_function}) can be express
   \nonumber
   f^*(x_1,x_2) = f_1^*(x_1,x_2) \text{ OR } f_2^*(x_1,x_2)
 \end{align}
-\begin{table}
+\begin{table}[H]
   \begin{center}
     \begin{tabular}{ c c c c c}
       $x_1$ & $x_2$ & $f_1^*(x_1,x_2)$ & $f_2^*(x_1,x_2)$ &$f_2^*(x_1,x_2)$ \\
@@ -855,8 +857,8 @@ Consequently, the XOR function defined in (\ref{eq:XOR_function}) can be express
     \caption{Truth Table for $f^{*}$}
   \label{table:truth_table_f*}
   \end{center}  
-\end{table}\vspace{20mm}\\
-Consider a feedforward network with a hidden layer with two units $h_1$ and $h_2$ such that $h_1$ learns $f_1^*(x_1,x_2)$ and $h_2$ learns $f_2^*(x_1,x_2)$.
+\end{table}
+\noindent Consider a feedforward network with a hidden layer with two units $h_1$ and $h_2$ such that $h_1$ learns $f_1^*(x_1,x_2)$ and $h_2$ learns $f_2^*(x_1,x_2)$.
 \begin{align}
   h_1 &= f_1^*(x_1,x_2) \nonumber\\
   &= \phi(z_1) \nonumber
@@ -899,8 +901,8 @@ We then feed forward the information from the hidden layer to another layer.
     \end{bmatrix}
   \end{pmatrix}
 \end{align}
-At the hidden layer, we are left with the following truth table.\\
-\begin{table}[ht]
+At the hidden layer, we are left with the following truth table.
+\begin{table}[H]
   \begin{center}
     \begin{tabular}{ c c c c}
       $x_1$ & $x_2$ & XOR \\
@@ -913,15 +915,15 @@ At the hidden layer, we are left with the following truth table.\\
     \caption{Truth Table from hidden layer}
   \label{table:truth_table_hidden_layer}
   \end{center}  
-\end{table}\\
-The XOR problem can not be separated from using another perceptron after the hidden layer.
-\begin{figure}[ht]
+\end{table}
+\noindent The XOR problem can not be separated from using another perceptron after the hidden layer.
+\begin{figure}[H]
   \centering
-  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_XOR_sep.jpeg}
-  \caption{XOR layer}
+  \includegraphics[scale=0.75]{CHAPTER_2/c2_fig_XOR_sep_python.eps}
+  \caption{Representation of the hidden layer}
   \label{fig:XOR layer}
-\end{figure}\\
-The equation of the separation line is in figure (\ref{fig:XOR layer}) is given binary
+\end{figure}
+\noindent The equation of the separation line is in figure (\ref{fig:XOR layer}) is given binary
 \begin{align}
 h_1 + h_2 - \dfrac{1}{2} = 0  
 \end{align}
@@ -971,13 +973,13 @@ where
   \end{matrix}
 \end{align}
 $\phi^{*}$ takes an augmented input from the calculation of $\phi(\textbf{w}_1^T \textbf{x})$ to accommodate for the bias.
-\begin{figure}[ht]
+\begin{figure}[H]
   \centering
   \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_XOR_final.jpeg}
   \caption{Feedforward network for XOR problem}
   \label{fig: ffn_XOR_final}
-\end{figure}\vspace{30mm}\\
-\textbf{Checking for $\textbf{x} = \begin{bmatrix} 1 & 0 & 0 \end{bmatrix}^T$}
+\end{figure}
+\noindent \textbf{Checking for $\textbf{x} = \begin{bmatrix} 1 & 0 & 0 \end{bmatrix}^T$}
 \begin{align*}
   \textbf{w}_1^T\textbf{x} &= \begin{bmatrix}
     -0.5 & 1 & -1 \\
