@@ -10,8 +10,8 @@ In 1943, McCulloch and Walter Pitts demonstrated that simple binary threshold un
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_perceptron_2.jpeg}
-  \caption{Rosenblatt perceptron - TBC}
+  \includegraphics[scale=0.95]{CHAPTER_2/c2_fig_perceptron_2_draw.png}
+  \caption{Rosenblatt perceptron}
   \label{rosenblatt_perceptron}
 \end{figure}
 
@@ -69,17 +69,17 @@ where $\phi(z)$ is known as the hard delimiter.
 %  \label{fig:perceptron_example_1}
 %\end{figure}\\
 %From \ref{fig:perceptron_example_1}, we can separate the two classes by a single line. Consider the random separating line passing through the origin (this will set the value of $x_0$ in (\refeq{eq:mcp_neuron}) to 0).\\
-\begin{figure}[!htbp]
+\begin{figure}[H]
   \centering
   \includegraphics[scale=0.75]{CHAPTER_2/c2_fig_perceptron_example_2_python.eps}
   \caption{Set $\mathbf{A}$ and $\mathbf{B}$ with a random separating line}
   \label{fig:perceptron_example_2}
-\end{figure}\\
+\end{figure}
 %The equation of the random line is given by
 %\begin{align}
 %  x_1 = - x_2
 %\end{align}
-Comparing to the equation (\refeq{eq:mcp_neuron}); we can deduce that 
+\noindent Comparing to the equation (\refeq{eq:mcp_neuron}); we can deduce that 
 \begin{align}
   \begin{matrix}
     w_1 = 1 & w_2 = 1
@@ -118,8 +118,8 @@ Visually, we can already see that the separating line does not split the points 
 The computation confirms the visual representation and groups $\textbf{A}_1$ and $\textbf{B}_1$ together and $\textbf{B}_2$ separated which is incorrect. We can either alter the separating line (by moving the weight vector) with respect to $\textbf{A}_1$ and/or $\textbf{B}_1$.
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.20]{CHAPTER_2/c2_fig_perceptron_example_3.jpeg}
-  \caption{!!!TO BE CHANGED!!!}
+  \includegraphics[scale=0.9]{CHAPTER_2/c2_fig_perceptron_example_3_python.eps}
+  \caption{Set $\mathbf{A}$ and $\mathbf{B}$ with a random separating line and its weight vector}
   \label{fig:perceptron_example_3}
 \end{figure}
 \noindent Since $\textbf{B}_1$ is incorrectly classified, using the property of subtraction of vectors; we move the weight vector ($\textbf{w}$) away from $\textbf{B}_1$ and check the classification again.
@@ -139,8 +139,8 @@ The computation confirms the visual representation and groups $\textbf{A}_1$ and
 \end{align}
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.20]{CHAPTER_2/c2_fig_perceptron_example_4.jpeg}
-  \caption{!!!!TO BE CHANGED!!!!}
+  \includegraphics[scale=0.90]{CHAPTER_2/c2_fig_perceptron_example_4_python.eps}
+  \caption{Set $\mathbf{A}$ and $\mathbf{B}$ after adjusting the separating line and its weight vector}
   \label{fig:perceptron_example_4}
 \end{figure}
 \noindent Based on the new separating line, we can observe visually that the points are correctly classified. The computation of the binary classification using the new separating line $\textbf{w}^{(1)}$ is given by
@@ -174,10 +174,11 @@ The computation confirms the visual representation and groups $\textbf{A}_1$ and
   \end{pmatrix} = \phi(-2) = 0
 \end{align*}
 Thus, the perceptron learned how to classify the two sets of points. The function $f(\textbf{x})$ could be re-used to classify new points added to the sets.
-\vspace{5mm}
-\\
-\noindent\textbf{Perceptron Algorithm}\\
-The perceptron algorithm adjusts the weights and as a result, the hard delimiter as well in order to linearly separate a set of binary labelled input.
+\vspace{15mm}
+
+\noindent\textbf{Perceptron Algorithm}
+
+\noindent The perceptron algorithm adjusts the weights and as a result, the hard delimiter as well in order to linearly separate a set of binary labelled input.
 
 \begin{algorithm}[H]
 \caption{Perceptron Algorithm}\label{alg:perceptron_algorithm}
@@ -871,7 +872,7 @@ where $z_1 = w_{11}x_1 + w_{12}x_2 + b_1$ and $w_{11} = 1$, $w_{12} = -1$ and $b
 where $z_2 = w_{21}x_1 + w_{22}x_2 + b_1$ and $w_{21} = -1$, $w_{22} = 1$ and $b_2 = -0.5$ from separating line in (\ref{eq: weight_f_2}).
 \begin{figure}[ht]
   \centering
-  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_hidden_layer.jpeg}
+  \includegraphics[scale=1.5]{CHAPTER_2/c2_fig_hidden_layer_draw.png}
   \caption{FFN hidden layer}
   \label{fig:hidden_layer_only}
 \end{figure} \\
@@ -975,7 +976,7 @@ where
 $\phi^{*}$ takes an augmented input from the calculation of $\phi(\textbf{w}_1^T \textbf{x})$ to accommodate for the bias.
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.15]{CHAPTER_2/c2_fig_XOR_final.jpeg}
+  \includegraphics[scale=1.25]{CHAPTER_2/c2_fig_XOR_final_draw.png}
   \caption{Feedforward network for XOR problem}
   \label{fig: ffn_XOR_final}
 \end{figure}
@@ -1108,13 +1109,14 @@ The hard-delimiters used in our previous feedforward network are linear. However
 \end{align}
 \newpage
 \section{Backpropagation}
-We have seen how information flows in a feedforward neural network. Backpropagation algorithm is the process of spreading the error at the output layer throughout the other layers in the network. The goal is to understand how does the error changes with respect to the weights and biases. Consider the neural network below with $N$ number of layers (including the input and output layer).\vspace{5mm}
+We have seen how information flows in a feedforward neural network. Backpropagation algorithm is the process of spreading the error at the output layer throughout the other layers in the network. The goal is to understand how does the error changes with respect to the weights and biases. Consider the neural network below with $N$ number of layers (including the input and output layer).\vspace{10mm}
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.36]{CHAPTER_2/c2_bp_nn.jpeg}
-  \caption{!!!TO BE CHANGED!!!}
+  \includegraphics[scale=1.15]{CHAPTER_2/c2_bp_nn_draw.png}
+  \vspace{10mm}
+  \caption{Neural Network with $N$ number of layers}
   \label{fig:bp_nn_complete}
-\end{figure}
+\end{figure}\vspace{10mm}
 \noindent The annotation between two consecutive layers, $l$ and $l+1$, in the network is given by the following set of indexed values.
 \begin{center}
   \begin{tabular}{p{0.03\linewidth} p{0.03\linewidth} p{0.87\linewidth}}
@@ -1126,8 +1128,8 @@ We have seen how information flows in a feedforward neural network. Backpropagat
 \end{center}
 \begin{figure}[ht]
   \centering
-  \includegraphics[scale=0.36]{CHAPTER_2/c2_bb_nn_cons.jpeg}
-  \caption{!!!TO BE CHANGED!!!}
+  \includegraphics[scale=1.05]{CHAPTER_2/c2_bb_nn_cons_draw.png}
+  \caption{Consecutive layers, $l$ and $l+1$, in a neural network}
   \label{fig:bp_nn_complete_cons_layer}
 \end{figure}
 Let the activation function be denoted as $\sigma$ such that
@@ -1286,13 +1288,13 @@ Consider the weights $\mathbf{W}_{hq} \in \mathbb{R}^{d \times h}$ and the bias 
   \label{eq:RNN_OL}
   \mathbf{O}_t = \mathbf{H}_t \mathbf{W}_{hq} + \mathbf{b}_q
 \end{align}
-\begin{figure}[ht]
+\begin{figure}[H]
   \centering
-  \includegraphics[scale=0.4]{CHAPTER_2/c2_fig_RNN.png}
-  \caption{!!!TO BE CHANGED!!!}
+  \includegraphics[scale=0.8]{CHAPTER_2/c2_fig_RNN_draw.png}
+  \caption{An RNN with a hidden state}
   \label{}
 \end{figure}
-As we unfold a recurrent neural network for more time steps; the number of parameters does not increase. The input of the activation function gets recursively very large or very small. Consequently, we are limited by the problem of vanishing or exploding gradients when optimizing recurrent neural network \cite{Bengio1994} \cite{Kolen2001}. A preventive measure would be to truncate the recursive gradient term during backpropagation. RNN also suffer from short-term memory, important information in very long sequence from the beginning are left out.
+\noindent As we unfold a recurrent neural network for more time steps; the number of parameters does not increase. The input of the activation function gets recursively very large or very small. Consequently, we are limited by the problem of vanishing or exploding gradients when optimizing recurrent neural network \cite{Bengio1994} \cite{Kolen2001}. A preventive measure would be to truncate the recursive gradient term during backpropagation. RNN also suffer from short-term memory, important information in very long sequence from the beginning are left out.
 \subsubsection*{Long Short Term Memory(LSTM)}
 Introduced in 1997 by \cite{Hochreiter1997}, the long short-term memory model was introduced to solve the vanishing and exploding problem in the RNN. While the architecture is similar to the RNN, the LSTM replaces the hidden state by a memory cell. The memory cell comprises three main “gates” namely and an input node: the forget gate, the input gate, the output gate  and the input node respectively. The forget gate controls whether we keep the input from the previous hidden state or not.  The input gate determines how much of the input should contribute to the internal cell memory and passed to the input node. At the input node, the memory cell is calculated using the input value and the value from the input gate. Finally, the output gate determines how much of the memory cell of the current time step impacts the next time step in the next memory cell. Consider the input $\mathbf{X}_t \in \mathbb{R}^{n \times d}$, the hidden state of the previous time step be  $\mathbf{H}_t \in \mathbb{R}^{n \times h}$, the input gate be given by $\mathbf{I}_t \in \mathbb{R}^{n \times h}$, the forget gate given by $\mathbf{F}_t \in \mathbb{R}^{n \times h}$, the input node given by $\tilde{\mathbf{C}_t} \in \mathbb{R}^{n \times h}$,  the output gate be $\mathbf{O}_t \in \mathbb{R}^{n \times h}$ and the memory cell state be given by $\mathbf{C}_t \in \mathbb{R}^{n \times h}$ then the computations of the LSTM are given by:
 \begin{align}
@@ -1302,17 +1304,15 @@ Introduced in 1997 by \cite{Hochreiter1997}, the long short-term memory model wa
   \mathbf{O}_t &= \sigma(\mathbf{X}_t \mathbf{W}_{xo} + \mathbf{H}_{t-1}\mathbf{W}_{ho} + \mathbf{b}_o) \\
   \tilde{\mathbf{C}_t} &= \tanh(\mathbf{X}_t \mathbf{W}_{xc} + \mathbf{H}_{t-1}\mathbf{W}_{hc} + \mathbf{b}_c)\\
   \mathbf{C}_t &= \mathbf{F}_t \odot \mathbf{C}_{t-1} + \mathbf{I}_t \odot \tilde{\mathbf{C}_t}
-  \nonumber
-  \intertext{where $ \mathbf{W}_{xi}$, $ \mathbf{W}_{xf}$, $ \mathbf{W}_{xo}$,  $\mathbf{W}_{xc}$ $\in \mathbb{R}^{d \times h}$ and $ \mathbf{W}_{hi}$, $ \mathbf{W}_{hf}$, $ \mathbf{W}_{ho}$,  $\mathbf{W}_{hc}$ $\in \mathbb{R}^{h \times h}$ are weight parameters and $\mathbf{b}_i$, $\mathbf{b}_f$, $\mathbf{b}_o$, $\mathbf{b}_c$ $\in \mathbb{R}^{1 \times h}$ are the bias parameters.}
-  \nonumber
 \end{align}
+where $ \mathbf{W}_{xi}$, $ \mathbf{W}_{xf}$, $ \mathbf{W}_{xo}$,  $\mathbf{W}_{xc}$ $\in \mathbb{R}^{d \times h}$ and $ \mathbf{W}_{hi}$, $ \mathbf{W}_{hf}$, $ \mathbf{W}_{ho}$,  $\mathbf{W}_{hc}$ $\in \mathbb{R}^{h \times h}$ are weight parameters and $\mathbf{b}_i$, $\mathbf{b}_f$, $\mathbf{b}_o$, $\mathbf{b}_c$ $\in \mathbb{R}^{1 \times h}$ are the bias parameters.
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.42]{CHAPTER_2/c2_fig_LSTM.png}
-  \caption{!!!TO BE CHANGED!!!}
+  \includegraphics[scale=0.76]{CHAPTER_2/c2_fig_LSTM_draw.png}
+  \caption{Computing the hidden state in an LSTM model}
   \label{LSTM_LAYER}
 \end{figure}
-LSTM addresses the vanishing and exploding gradient problem of the RNN by controlling the amount of information being carried to the memory and by providing a continuous gradient flow to facilitate backpropagation. Many variants of LSTM have been developed over the years due to their dominance for sequence learning. Some LTSM variants are namely: The Peephole Variant, the Coupled Gate Variation, Gated Recurrent Units (GRU). However, they are quite costly to compute due to their long range dependencies of the sequence.
+\noindent LSTM addresses the vanishing and exploding gradient problem of the RNN by controlling the amount of information being carried to the memory and by providing a continuous gradient flow to facilitate backpropagation. Many variants of LSTM have been developed over the years due to their dominance for sequence learning. Some LTSM variants are namely: The Peephole Variant, the Coupled Gate Variation, Gated Recurrent Units (GRU). However, they are quite costly to compute due to their long range dependencies of the sequence.
 \subsubsection*{Bidirectional RNN(BRNN)}
 In order to overcome the uni-direction learning of RNN and LSTM,\cite{Schurster1997} introduced the bidirectional recurrent neural network. The implementation consists of two unidirectional layers chained together in opposite directions but taking the same inputs. The output is obtained by concatenating the two directional outputs from the hidden layers. The obtain layers is then computed to get the prediction. Consider the input $X_t \in \mathbf{R}^n$ for time step $t$, the forward and backward hidden unidirectional layers for time step $t$ be given by $\overrightarrow{H_t} \in \mathbb{R}^{n \times h}$ and $\overleftarrow{H_t} \in \mathbb{R}^{n \times h}$ respectively and the output layer be given by $\mathbf{O}_t$, then the computations of the BRNN is given by:
 \begin{align}
@@ -1325,8 +1325,8 @@ In order to overcome the uni-direction learning of RNN and LSTM,\cite{Schurster1
 \end{align}
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.40]{CHAPTER_2/c2_fig_BRNN.png}
-  \caption{!!!TO BE CHANGED!!!}
+  \includegraphics[scale=0.90]{CHAPTER_2/c2_fig_BRNN_draw.png}
+  \caption{Architecture of a bidirectional RNN}
   \label{BRNN_LAYER}
 \end{figure}
 \noindent Bidirectional recurrent neural network are very efficient in sequential modelling in cases where context is a priority. Natural language processing, speech recognition, handwriting recognition, part-of-speech tagging; leverages BRNN as context input is required.
