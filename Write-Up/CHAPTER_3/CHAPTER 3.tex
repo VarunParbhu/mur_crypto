@@ -85,7 +85,7 @@ The learning rate is typically denoted by the Greek letter alpha $\alpha$. It he
 \end{align}
 where $\alpha \in (0,1)$
 \subsection*{Stochastic Gradient Descent}
-The Stochastic Gradient Descent dates back to the Robbins-Monro(ADD REF) algorithm from the 1950s and is still an important optimization algorithm. Instead of adjusting the weight to the average loss function, we can approximate the gradient by only one random directional derivative of the error. Thus, the number of computation in the gradient descent method can be significantly reduced by a factor of $n$ (where $n$ is the number of direction). The stochastic gradient method (SGM) is given by 
+The Stochastic Gradient Descent dates back to the Robbins-Monro algorithm from the 1950s and is still an important optimization algorithm \cite{Robbins1951}. Instead of adjusting the weight to the average loss function, we can approximate the gradient by only one random directional derivative of the error. Thus, the number of computation in the gradient descent method can be significantly reduced by a factor of $n$ (where $n$ is the number of direction). The stochastic gradient method (SGM) is given by 
 \begin{align}
     \label{eq:SGM_def}
     w^{t+1} = w^{t} - \alpha_t {(\nabla e)}_i
@@ -144,7 +144,7 @@ The exponentially weighed moving average (EWMA), also known as exponential movin
 \end{align}
 where $c \in \mathbb{R}$ and $\beta \in (0,1)$ is known as the smoothing constant. $\beta$ represents the weightage that is going to be assigned to the past values. The average number of previous reading is approximately given by $n={(1-\beta)}^{-1}$. The higher the value of $\beta$ the greater the number of points we average over.
 \subsubsection*{SGD with Momentum}
-The momentum method was mentioned in Rumelhart, Hinton and Williams' paper on back-propagation learning in 1986 (ADD REF).  From the SGD, it was observed that the weight update can be very noisy. In order to smoothen the search direction in the SGD, an exponentially moving average is implemented on the gradient. The SGC with momentum can be written in the form
+The momentum method was mentioned in Rumelhart, Hinton and Williams' paper on back-propagation learning in 1986 \cite{Rumelhart:1986aa}.  From the SGD, it was observed that the weight update can be very noisy. In order to smoothen the search direction in the SGD, an exponentially moving average is implemented on the gradient. The SGD with momentum can be written in the form
 \begin{align}
     \label{eq: SGF_with_momentum}
     \textbf{w}^{t+1} &= \textbf{w}^{t} - \eta \boldsymbol{\mu}^t
@@ -156,7 +156,7 @@ The momentum method was mentioned in Rumelhart, Hinton and Williams' paper on ba
 \end{align}
 \subsection*{RMSProp}
 %https://www.scirp.org/(S(czeh2tfqyw2orz553k1w0r45))/reference/ReferencesPapers.aspx?ReferenceID=1911091
-Proposed by Geoff Hilton (ADD REF) in lecture 6 of the online course "Neural Network for Machine Learning",  he Root Mean Square Propagation (RMSProp) algorithm alleviates undesirable fluctuations when adjusting the weight during optimization. RMSProp is an adaptive learning rate. The idea is to reduce the step size at very large gradient to avoid fluctuations and increase the step size at smaller gradient to move steadily in the correct direction of the optimal solution; hence an adaptive learning rate at each iteration. The equations for the RMSProp is given by 
+Proposed by Geoffrey Hinton in lecture 6 of the online course "Neural Network for Machine Learning" \cite{Hinton2012}, the Root Mean Square Propagation (RMSProp) algorithm alleviates undesirable fluctuations when adjusting the weight during optimization. RMSProp is an adaptive learning rate. The idea is to reduce the step size at very large gradient to avoid fluctuations and increase the step size at smaller gradient to move steadily in the correct direction of the optimal solution; hence an adaptive learning rate at each iteration. The equations for the RMSProp is given by 
 \begin{align}
     \nonumber
     \label{eq:RMSProp_def}
@@ -166,7 +166,7 @@ Proposed by Geoff Hilton (ADD REF) in lecture 6 of the online course "Neural Net
 where $\epsilon \approx 10^{-6}$ to ensure that we avoid dividing by zero during iterations.
 \subsection*{Adam}
 %https://arxiv.org/abs/1412.6980
-The Adam algorithm (Adaptive Moment Estimation algorithm) is a robust update rule for the weight optimization, it was proposed by Kingma and BA in 2014 (ADD REF). The algorithm combines the benefits of momentum (\refeq{eq: SGF_with_momentum}) and RMSProp (\refeq{eq:RMSProp_def}). Adam is the most popular generalized algorithm performs very well in many cases. It is considered as a state-of-the-art algorithm for deep neural network optimization. The set of equations for the Adam algorithm is given by
+The Adam algorithm (Adaptive Moment Estimation algorithm) is a robust update rule for the weight optimization \cite{Kingma2014}. The algorithm combines the benefits of momentum (\refeq{eq: SGF_with_momentum}) and RMSProp (\refeq{eq:RMSProp_def}). Adam is the most popular generalized algorithm performs very well in many cases. It is considered as a state-of-the-art algorithm for deep neural network optimization. The set of equations for the Adam algorithm is given by
 \begin{align}
     \nonumber
     \mu^{(t)}_i &= \beta_1 {\mu}^{(t-1)}_i + (1-\beta_1)\nabla(e^{(t)})_i &\text{Momentum} \\
@@ -182,7 +182,7 @@ Finally, the update rule is given by
     \label{eq:Adam_def}
     {w}^{(t+1)}_i &= {w}^{(t)}_i - \dfrac{\eta}{\sqrt{S^t_i} + \epsilon}\mu_i
 \end{align}
-The parameters $\beta_1$, $\beta_2$ and $\epsilon$ are knows are the hyperparameters of the Adam algorithm. A common set of values that works well in literature are $\beta_1 = 0.9$, $\beta_2 = 0.9999$ and $\epsilon = 10^{-8}$ (ADD REF).
+The parameters $\beta_1$, $\beta_2$ and $\epsilon$ are knows are the hyperparameters of the Adam algorithm. A common set of values that works well in literature are $\beta_1 = 0.9$, $\beta_2 = 0.9999$ and $\epsilon = 10^{-8}$ \cite{Kingma2014}.
 %https://arxiv.org/pdf/1412.6980.pdf
 \section{Backpropagation using Adam}
 The Adam algorithm for optimization can be introduced in the weight update when training deep neural network. The problem of finding the right set of weights and biases for a deep neural network can be reduced to an optimization problem same as we defined in (\refeq{network_error}). After finding the gradients through the backpropagation algorithm, the set of updates proposed in the Adam algorithm are used to update the weights and biases in the neural network.
