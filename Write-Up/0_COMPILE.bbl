@@ -1,5 +1,11 @@
 \begin{thebibliography}{xx}
 
+\harvarditem[Abraham et~al.]{Abraham, Higdon, Nelson \harvardand\
+  Ibarra}{2018}{Abraham2018}
+Abraham, J., Higdon, D.~W., Nelson, J. \harvardand\ Ibarra, J.
+  \harvardyearleft 2018\harvardyearright , Cryptocurrency price prediction
+  using tweet volumes and sentiment analysis.
+
 \harvarditem{Asur \harvardand\ Huberman}{2010}{Asur2010}
 Asur, S. \harvardand\ Huberman, B.  \harvardyearleft 2010\harvardyearright ,
   `Predicting the future with social media', {\em Proceedings - 2010
@@ -13,6 +19,14 @@ Bar-Haim, R., Dinur, E., Feldman, R., Fresko, M. \harvardand\ Goldstein, G.
   on Empirical Methods in Natural Language Processing', Association for
   Computational Linguistics, Edinburgh, Scotland, UK., pp.~1310--1319.
 \newline\harvardurl{https://aclanthology.org/D11-1121}
+
+\harvarditem[Barbieri et~al.]{Barbieri, Camacho{-}Collados, Neves \harvardand\
+  Anke}{2020}{France2020}
+Barbieri, F., Camacho{-}Collados, J., Neves, L. \harvardand\ Anke, L.~E.
+  \harvardyearleft 2020\harvardyearright , `Tweeteval: Unified benchmark and
+  comparative evaluation for tweet classification', {\em CoRR} {\bf
+  abs/2010.12421}.
+\newline\harvardurl{https://arxiv.org/abs/2010.12421}
 
 \harvarditem[Bengio et~al.]{Bengio, Simard \harvardand\
   Frasconi}{1994}{Bengio1994}
@@ -88,6 +102,11 @@ Mikolov, T., Chen, K., Corrado, G. \harvardand\ Dean, J.  \harvardyearleft
   2013\harvardyearright , `Efficient estimation of word representations in
   vector space'.
 \newline\harvardurl{https://arxiv.org/abs/1301.3781}
+
+\harvarditem{Nakamoto}{2009}{satoshi2009}
+Nakamoto, S.  \harvardyearleft 2009\harvardyearright , `Bitcoin: A peer-to-peer
+  electronic cash system', {\em Cryptography Mailing list at
+  https://metzdowd.com} .
 
 \harvarditem{Robbins \harvardand\ Monro}{1951}{Robbins1951}
 Robbins, H. \harvardand\ Monro, S.  \harvardyearleft 1951\harvardyearright ,

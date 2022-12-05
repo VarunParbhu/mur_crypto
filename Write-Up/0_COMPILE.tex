@@ -16,6 +16,36 @@
 \usepackage{algorithm}
 \usepackage{algpseudocode}
 \usepackage{enumerate}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+
 \setcounter{tocdepth}{3}
 \setcounter{secnumdepth}{3}
 \begin{document}
@@ -69,17 +99,17 @@ December 2022
 \(\eta\) & Reduced Learning Rate \\
 \textbf{I} & Identity Matrix \\
 \(\odot\)& Hadamard Product \\
-\end{tabular}\\
-\noindent \textbf{*Placeholder*} \\ 
-*Placeholder*
+NN & Neural Network \\
+\end{tabular}
+
 \newpage
 %
-%\input{CHAPTER_1/CHAPTER 1.tex}
+\input{CHAPTER_1/CHAPTER 1.tex}
 %\input{CHAPTER_2/CHAPTER 2.tex}
 %\input{CHAPTER_3/CHAPTER 3.tex}
-%\input{CHAPTER_4/CHAPTER 4.tex}
+\input{CHAPTER_4/CHAPTER 4.tex}
 \input{CHAPTER_5/CHAPTER 5.tex}
-%\input{CHAPTER_6/CHAPTER 6.tex}
+\input{CHAPTER_6/CHAPTER 6.tex}
 \bibliography{REFERENCES}
 %\input{PLACEHOLDER_TO_BE_DELETED/TO BE DELETED.tex}
 \end{document}

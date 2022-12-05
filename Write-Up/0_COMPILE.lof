@@ -1,1 +1,9 @@
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Part-of-speech tagging of sentence at \textup {\ref {POS_example_sent}} using spaCy\relax }}{4}{figure.caption.7}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Transformer Layer \cite {Vaswani2017}\relax }}{6}{figure.caption.8}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Example of raw tweet scraped using the tweepy package through Python\relax }}{11}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Distribution of tweet count over each day at the end of every hour over 24 hours\relax }}{12}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Bitcoin closing price over every hour for everyday\relax }}{12}{figure.caption.14}%
+\addvspace {10\p@ }
