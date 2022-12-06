@@ -4,16 +4,13 @@
 \contentsline {section}{Abstract}{v}{chapter*.5}%
 \contentsline {section}{Terms and Definitions}{vi}{chapter*.6}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Deep Learning Networks}{2}{chapter.2}%
-\contentsline {section}{\numberline {2.1}The Perceptron}{3}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Feedforward Network}{19}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Activation Function}{26}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Backpropagation}{28}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Sequential Neural Networks}{34}{section.2.5}%
-\contentsline {chapter}{\numberline {3}Optimization}{39}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Optimization algorithms}{41}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Backpropagation using Adam}{48}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Sentiment Analysis}{50}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Rule-Based Methods}{51}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Word Embedding}{53}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Transformer Model (Attention Mechanism)}{54}{section.4.3}%
+\contentsline {chapter}{\numberline {2}Sentiment Analysis}{2}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Rule-Based Methods}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Word Embedding}{5}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Transformer Model (Attention Mechanism)}{5}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Analysis of Bitcoin Price using Deep Learning Models}{8}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Data Collection}{9}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Feature Engineering}{13}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Modelling Bitcoin Price using LSTM NN}{15}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Modelling Bitcoin Upticks using Feedforward NN}{15}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Conclusion and Future Works}{16}{chapter.4}%

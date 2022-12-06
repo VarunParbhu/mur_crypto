@@ -3,47 +3,48 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: 0_COMPILE.aux
 The style file: agsm.bst
 Database file #1: REFERENCES.bib
+Warning--empty booktitle in Abraham2018
 Warning--empty booktitle in Chiorrini2021
 Warning--empty publisher in Kolen2001
-You've used 12 entries,
+You've used 23 entries,
             2909 wiz_defined-function locations,
-            733 strings with 6968 characters,
-and the built_in function-call counts, 68632 in all, are:
-= -- 11256
-> -- 996
+            809 strings with 9420 characters,
+and the built_in function-call counts, 118437 in all, are:
+= -- 19381
+> -- 1710
 < -- 0
-+ -- 5528
-- -- 308
-* -- 6127
-:= -- 13485
-add.period$ -- 12
-call.type$ -- 12
-change.case$ -- 167
-chr.to.int$ -- 12
-cite$ -- 14
-duplicate$ -- 194
-empty$ -- 411
-format.name$ -- 355
-if$ -- 12346
++ -- 9435
+- -- 525
+* -- 10461
+:= -- 23426
+add.period$ -- 24
+call.type$ -- 23
+change.case$ -- 321
+chr.to.int$ -- 23
+cite$ -- 26
+duplicate$ -- 368
+empty$ -- 759
+format.name$ -- 619
+if$ -- 21314
 int.to.chr$ -- 5
 int.to.str$ -- 0
-missing$ -- 12
-newline$ -- 43
-num.names$ -- 127
-pop$ -- 50
+missing$ -- 20
+newline$ -- 84
+num.names$ -- 242
+pop$ -- 111
 preamble$ -- 1
-purify$ -- 180
+purify$ -- 345
 quote$ -- 0
-skip$ -- 165
+skip$ -- 316
 stack$ -- 0
-substring$ -- 16146
-swap$ -- 37
-text.length$ -- 168
+substring$ -- 27592
+swap$ -- 70
+text.length$ -- 322
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 46
-warning$ -- 2
-while$ -- 265
+type$ -- 90
+warning$ -- 3
+while$ -- 505
 width$ -- 0
-write$ -- 162
-(There were 2 warnings)
+write$ -- 316
+(There were 3 warnings)

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  2 DEC 2022 23:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  5 DEC 2022 22:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -331,32 +331,73 @@ Document Style - pseudocode environments for use with the `algorithmicx' style
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/tools/enumerate.sty
 Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 \@enLab=\toks26
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count304
+\lst@gtempboxa=\box55
+\lst@token=\toks27
+\lst@length=\count305
+\lst@currlwidth=\dimen184
+\lst@column=\count306
+\lst@pos=\count307
+\lst@lostspace=\dimen185
+\lst@width=\dimen186
+\lst@newlines=\count308
+\lst@lineno=\count309
+\lst@maxwidth=\dimen187
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count310
+\lst@skipnumbers=\count311
+\lst@framebox=\box56
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count304
-\l__pdf_internal_box=\box55
-) (./0_COMPILE.aux)
+\l__color_backend_stack_int=\count312
+\l__pdf_internal_box=\box57
+) (./0_COMPILE.aux
+
+LaTeX Warning: Label `tweet_count' multiply defined.
+
+)
 \openout1 = `0_COMPILE.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-Package hyperref Info: Link coloring OFF on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+Package hyperref Info: Link coloring OFF on input line 51.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty
@@ -364,28 +405,28 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/local/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count305
+\c@section@level=\count313
 )
-LaTeX Info: Redefining \ref on input line 21.
-LaTeX Info: Redefining \pageref on input line 21.
-LaTeX Info: Redefining \nameref on input line 21.
+LaTeX Info: Redefining \ref on input line 51.
+LaTeX Info: Redefining \pageref on input line 51.
+LaTeX Info: Redefining \nameref on input line 51.
  (./0_COMPILE.out) (./0_COMPILE.out)
 \@outlinefile=\write3
 \openout3 = `0_COMPILE.out'.
 
  (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count306
-\scratchdimen=\dimen184
-\scratchbox=\box56
-\nofMPsegments=\count307
-\nofMParguments=\count308
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count309
-\MPscratchDim=\dimen185
-\MPnumerator=\count310
-\makeMPintoPDFobject=\count311
-\everyMPtoPDFconversion=\toks28
+\scratchcounter=\count314
+\scratchdimen=\dimen188
+\scratchbox=\box58
+\nofMPsegments=\count315
+\nofMParguments=\count316
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count317
+\MPscratchDim=\dimen189
+\MPnumerator=\count318
+\makeMPintoPDFobject=\count319
+\everyMPtoPDFconversion=\toks29
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -427,7 +468,9 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count320
 [1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./0_COMPILE.toc
@@ -444,7 +487,12 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
  [1
 
-] (./0_COMPILE.lof)
+] (./0_COMPILE.lof
+Overfull \hbox (14.18889pt too wide) in paragraph at lines 4--4
+ [][] [][]\OT1/cmr/m/n/12 Transformer Layer ([]Vaswani, Shazeer, Par-mar, Uszko-r-eit, Jones, Gomez, 
+ []
+
+)
 \tf@lof=\write5
 \openout5 = `0_COMPILE.lof'.
 
@@ -464,301 +512,100 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ] (./CHAPTER_1/CHAPTER 1.tex
 Chapter 1.
-) (./CHAPTER_2/CHAPTER 2.tex
+) (./CHAPTER_4/CHAPTER 4.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \chapter
-            {Deep Learning Networks} [1
+            {Sentiment Analysis} [1
 
 ]
 Chapter 2.
 [2
 
 ]
-<CHAPTER_2/c2_fig_perceptron_2_draw.png, id=195, 445.1832pt x 159.7167pt>
-File: CHAPTER_2/c2_fig_perceptron_2_draw.png Graphic file (type png)
-<use CHAPTER_2/c2_fig_perceptron_2_draw.png>
-Package pdftex.def Info: CHAPTER_2/c2_fig_perceptron_2_draw.png  used on input line 13.
-(pdftex.def)             Requested size: 422.92165pt x 151.73pt.
- [3]
-Package epstopdf Info: Source file: <CHAPTER_2/c2_fig_perceptron_example_2_python.eps>
-(epstopdf)                    date: 2022-12-01 13:23:12
-(epstopdf)                    size: 28852 bytes
-(epstopdf)             Output file: <CHAPTER_2/c2_fig_perceptron_example_2_python-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-01 13:23:44
-(epstopdf)                    size: 12233 bytes
-(epstopdf)             Command: <repstopdf --outfile=CHAPTER_2/c2_fig_perceptron_example_2_python-eps-converted-to.pdf CHAPTER_2/c2_fig_perceptron_example_2_python.eps>
-(epstopdf)             \includegraphics on input line 74.
+Package epstopdf Info: Source file: <CHAPTER_4/POS_tagging.eps>
+(epstopdf)                    date: 2022-12-03 15:39:39
+(epstopdf)                    size: 15604 bytes
+(epstopdf)             Output file: <CHAPTER_4/POS_tagging-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-12-03 15:40:13
+(epstopdf)                    size: 6849 bytes
+(epstopdf)             Command: <repstopdf --outfile=CHAPTER_4/POS_tagging-eps-converted-to.pdf CHAPTER_4/POS_tagging.eps>
+(epstopdf)             \includegraphics on input line 21.
 Package epstopdf Info: Output file is already uptodate.
-<CHAPTER_2/c2_fig_perceptron_example_2_python-eps-converted-to.pdf, id=202, 463.7325pt x 347.2975pt>
-File: CHAPTER_2/c2_fig_perceptron_example_2_python-eps-converted-to.pdf Graphic file (type pdf)
-<use CHAPTER_2/c2_fig_perceptron_example_2_python-eps-converted-to.pdf>
-Package pdftex.def Info: CHAPTER_2/c2_fig_perceptron_example_2_python-eps-converted-to.pdf  used on input line 74.
-(pdftex.def)             Requested size: 347.79851pt x 260.47247pt.
- [4 <./CHAPTER_2/c2_fig_perceptron_2_draw.png>]
-Package epstopdf Info: Source file: <CHAPTER_2/c2_fig_perceptron_example_3_python.eps>
-(epstopdf)                    date: 2022-12-02 16:16:07
-(epstopdf)                    size: 35629 bytes
-(epstopdf)             Output file: <CHAPTER_2/c2_fig_perceptron_example_3_python-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-02 16:16:09
-(epstopdf)                    size: 15180 bytes
-(epstopdf)             Command: <repstopdf --outfile=CHAPTER_2/c2_fig_perceptron_example_3_python-eps-converted-to.pdf CHAPTER_2/c2_fig_perceptron_example_3_python.eps>
-(epstopdf)             \includegraphics on input line 121.
-Package epstopdf Info: Output file is already uptodate.
-<CHAPTER_2/c2_fig_perceptron_example_3_python-eps-converted-to.pdf, id=217, 463.7325pt x 347.2975pt>
-File: CHAPTER_2/c2_fig_perceptron_example_3_python-eps-converted-to.pdf Graphic file (type pdf)
-<use CHAPTER_2/c2_fig_perceptron_example_3_python-eps-converted-to.pdf>
-Package pdftex.def Info: CHAPTER_2/c2_fig_perceptron_example_3_python-eps-converted-to.pdf  used on input line 121.
-(pdftex.def)             Requested size: 417.35538pt x 312.56485pt.
- [5 <./CHAPTER_2/c2_fig_perceptron_example_2_python-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <CHAPTER_2/c2_fig_perceptron_example_4_python.eps>
-(epstopdf)                    date: 2022-12-02 16:49:05
-(epstopdf)                    size: 36951 bytes
-(epstopdf)             Output file: <CHAPTER_2/c2_fig_perceptron_example_4_python-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-02 16:49:27
-(epstopdf)                    size: 15388 bytes
-(epstopdf)             Command: <repstopdf --outfile=CHAPTER_2/c2_fig_perceptron_example_4_python-eps-converted-to.pdf CHAPTER_2/c2_fig_perceptron_example_4_python.eps>
-(epstopdf)             \includegraphics on input line 142.
-Package epstopdf Info: Output file is already uptodate.
-<CHAPTER_2/c2_fig_perceptron_example_4_python-eps-converted-to.pdf, id=250, 463.7325pt x 347.2975pt>
-File: CHAPTER_2/c2_fig_perceptron_example_4_python-eps-converted-to.pdf Graphic file (type pdf)
-<use CHAPTER_2/c2_fig_perceptron_example_4_python-eps-converted-to.pdf>
-Package pdftex.def Info: CHAPTER_2/c2_fig_perceptron_example_4_python-eps-converted-to.pdf  used on input line 142.
-(pdftex.def)             Requested size: 417.35538pt x 312.56485pt.
- [6 <./CHAPTER_2/c2_fig_perceptron_example_3_python-eps-converted-to.pdf>] [7 <./CHAPTER_2/c2_fig_perceptron_example_4_python-eps-converted-to.pdf>]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 184.
- [8] [9] [10] [11]
-Package epstopdf Info: Source file: <CHAPTER_2/c2_fig_AND_function_python.eps>
-(epstopdf)                    date: 2022-12-01 14:07:48
-(epstopdf)                    size: 24199 bytes
-(epstopdf)             Output file: <CHAPTER_2/c2_fig_AND_function_python-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-01 14:07:49
-(epstopdf)                    size: 10503 bytes
-(epstopdf)             Command: <repstopdf --outfile=CHAPTER_2/c2_fig_AND_function_python-eps-converted-to.pdf CHAPTER_2/c2_fig_AND_function_python.eps>
-(epstopdf)             \includegraphics on input line 388.
-Package epstopdf Info: Output file is already uptodate.
-<CHAPTER_2/c2_fig_AND_function_python-eps-converted-to.pdf, id=392, 463.7325pt x 347.2975pt>
-File: CHAPTER_2/c2_fig_AND_function_python-eps-converted-to.pdf Graphic file (type pdf)
-<use CHAPTER_2/c2_fig_AND_function_python-eps-converted-to.pdf>
-Package pdftex.def Info: CHAPTER_2/c2_fig_AND_function_python-eps-converted-to.pdf  used on input line 388.
-(pdftex.def)             Requested size: 347.79851pt x 260.47247pt.
- [12] [13 <./CHAPTER_2/c2_fig_AND_function_python-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <CHAPTER_2/c2_fig_OR_function_python.eps>
-(epstopdf)                    date: 2022-12-01 14:16:55
-(epstopdf)                    size: 23602 bytes
-(epstopdf)             Output file: <CHAPTER_2/c2_fig_OR_function_python-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-01 14:16:57
-(epstopdf)                    size: 10591 bytes
-(epstopdf)             Command: <repstopdf --outfile=CHAPTER_2/c2_fig_OR_function_python-eps-converted-to.pdf CHAPTER_2/c2_fig_OR_function_python.eps>
-(epstopdf)             \includegraphics on input line 488.
-Package epstopdf Info: Output file is already uptodate.
-<CHAPTER_2/c2_fig_OR_function_python-eps-converted-to.pdf, id=434, 463.7325pt x 347.2975pt>
-File: CHAPTER_2/c2_fig_OR_function_python-eps-converted-to.pdf Graphic file (type pdf)
-<use CHAPTER_2/c2_fig_OR_function_python-eps-converted-to.pdf>
-Package pdftex.def Info: CHAPTER_2/c2_fig_OR_function_python-eps-converted-to.pdf  used on input line 488.
-(pdftex.def)             Requested size: 347.79851pt x 260.47247pt.
- [14 <./CHAPTER_2/c2_fig_OR_function_python-eps-converted-to.pdf>] [15]
-Package epstopdf Info: Source file: <CHAPTER_2/c2_rig_XOR_python.eps>
-(epstopdf)                    date: 2022-12-01 14:30:49
-(epstopdf)                    size: 16650 bytes
-(epstopdf)             Output file: <CHAPTER_2/c2_rig_XOR_python-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-01 14:30:50
-(epstopdf)                    size: 6278 bytes
-(epstopdf)             Command: <repstopdf --outfile=CHAPTER_2/c2_rig_XOR_python-eps-converted-to.pdf CHAPTER_2/c2_rig_XOR_python.eps>
-(epstopdf)             \includegraphics on input line 588.
-Package epstopdf Info: Output file is already uptodate.
-<CHAPTER_2/c2_rig_XOR_python-eps-converted-to.pdf, id=471, 463.7325pt x 347.2975pt>
-File: CHAPTER_2/c2_rig_XOR_python-eps-converted-to.pdf Graphic file (type pdf)
-<use CHAPTER_2/c2_rig_XOR_python-eps-converted-to.pdf>
-Package pdftex.def Info: CHAPTER_2/c2_rig_XOR_python-eps-converted-to.pdf  used on input line 588.
-(pdftex.def)             Requested size: 347.79851pt x 260.47247pt.
- [16 <./CHAPTER_2/c2_rig_XOR_python-eps-converted-to.pdf>] [17] [18]
-Package epstopdf Info: Source file: <CHAPTER_2/c2_fig_XOR_soln_python.eps>
-(epstopdf)                    date: 2022-12-01 14:30:44
-(epstopdf)                    size: 19080 bytes
-(epstopdf)             Output file: <CHAPTER_2/c2_fig_XOR_soln_python-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-01 14:30:50
-(epstopdf)                    size: 7153 bytes
-(epstopdf)             Command: <repstopdf --outfile=CHAPTER_2/c2_fig_XOR_soln_python-eps-converted-to.pdf CHAPTER_2/c2_fig_XOR_soln_python.eps>
-(epstopdf)             \includegraphics on input line 753.
-Package epstopdf Info: Output file is already uptodate.
-<CHAPTER_2/c2_fig_XOR_soln_python-eps-converted-to.pdf, id=516, 463.7325pt x 347.2975pt>
-File: CHAPTER_2/c2_fig_XOR_soln_python-eps-converted-to.pdf Graphic file (type pdf)
-<use CHAPTER_2/c2_fig_XOR_soln_python-eps-converted-to.pdf>
-Package pdftex.def Info: CHAPTER_2/c2_fig_XOR_soln_python-eps-converted-to.pdf  used on input line 753.
-(pdftex.def)             Requested size: 347.79851pt x 260.47247pt.
- [19 <./CHAPTER_2/c2_fig_XOR_soln_python-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <CHAPTER_2/c2_fig_f_1_XOR_python.eps>
-(epstopdf)                    date: 2022-12-01 14:43:00
-(epstopdf)                    size: 22046 bytes
-(epstopdf)             Output file: <CHAPTER_2/c2_fig_f_1_XOR_python-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-01 14:43:16
-(epstopdf)                    size: 10329 bytes
-(epstopdf)             Command: <repstopdf --outfile=CHAPTER_2/c2_fig_f_1_XOR_python-eps-converted-to.pdf CHAPTER_2/c2_fig_f_1_XOR_python.eps>
-(epstopdf)             \includegraphics on input line 779.
-Package epstopdf Info: Output file is already uptodate.
-<CHAPTER_2/c2_fig_f_1_XOR_python-eps-converted-to.pdf, id=540, 463.7325pt x 347.2975pt>
-File: CHAPTER_2/c2_fig_f_1_XOR_python-eps-converted-to.pdf Graphic file (type pdf)
-<use CHAPTER_2/c2_fig_f_1_XOR_python-eps-converted-to.pdf>
-Package pdftex.def Info: CHAPTER_2/c2_fig_f_1_XOR_python-eps-converted-to.pdf  used on input line 779.
-(pdftex.def)             Requested size: 347.79851pt x 260.47247pt.
- [20 <./CHAPTER_2/c2_fig_f_1_XOR_python-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <CHAPTER_2/c2_fig_f_2_XOR_python.eps>
-(epstopdf)                    date: 2022-12-01 14:58:18
-(epstopdf)                    size: 21897 bytes
-(epstopdf)             Output file: <CHAPTER_2/c2_fig_f_2_XOR_python-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-01 14:58:32
-(epstopdf)                    size: 10319 bytes
-(epstopdf)             Command: <repstopdf --outfile=CHAPTER_2/c2_fig_f_2_XOR_python-eps-converted-to.pdf CHAPTER_2/c2_fig_f_2_XOR_python.eps>
-(epstopdf)             \includegraphics on input line 820.
-Package epstopdf Info: Output file is already uptodate.
-<CHAPTER_2/c2_fig_f_2_XOR_python-eps-converted-to.pdf, id=571, 463.7325pt x 347.2975pt>
-File: CHAPTER_2/c2_fig_f_2_XOR_python-eps-converted-to.pdf Graphic file (type pdf)
-<use CHAPTER_2/c2_fig_f_2_XOR_python-eps-converted-to.pdf>
-Package pdftex.def Info: CHAPTER_2/c2_fig_f_2_XOR_python-eps-converted-to.pdf  used on input line 820.
-(pdftex.def)             Requested size: 347.79851pt x 260.47247pt.
- [21 <./CHAPTER_2/c2_fig_f_2_XOR_python-eps-converted-to.pdf>]
-<CHAPTER_2/c2_fig_hidden_layer_draw.png, id=605, 213.1965pt x 175.6161pt>
-File: CHAPTER_2/c2_fig_hidden_layer_draw.png Graphic file (type png)
-<use CHAPTER_2/c2_fig_hidden_layer_draw.png>
-Package pdftex.def Info: CHAPTER_2/c2_fig_hidden_layer_draw.png  used on input line 875.
-(pdftex.def)             Requested size: 319.79395pt x 263.42351pt.
- [22]
-Package epstopdf Info: Source file: <CHAPTER_2/c2_fig_XOR_sep_python.eps>
-(epstopdf)                    date: 2022-12-01 15:14:13
-(epstopdf)                    size: 21050 bytes
-(epstopdf)             Output file: <CHAPTER_2/c2_fig_XOR_sep_python-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-01 15:14:24
-(epstopdf)                    size: 10263 bytes
-(epstopdf)             Command: <repstopdf --outfile=CHAPTER_2/c2_fig_XOR_sep_python-eps-converted-to.pdf CHAPTER_2/c2_fig_XOR_sep_python.eps>
-(epstopdf)             \includegraphics on input line 923.
-Package epstopdf Info: Output file is already uptodate.
-<CHAPTER_2/c2_fig_XOR_sep_python-eps-converted-to.pdf, id=611, 463.7325pt x 347.2975pt>
-File: CHAPTER_2/c2_fig_XOR_sep_python-eps-converted-to.pdf Graphic file (type pdf)
-<use CHAPTER_2/c2_fig_XOR_sep_python-eps-converted-to.pdf>
-Package pdftex.def Info: CHAPTER_2/c2_fig_XOR_sep_python-eps-converted-to.pdf  used on input line 923.
-(pdftex.def)             Requested size: 347.79851pt x 260.47247pt.
- [23 <./CHAPTER_2/c2_fig_hidden_layer_draw.png>] [24 <./CHAPTER_2/c2_fig_XOR_sep_python-eps-converted-to.pdf>]
-<CHAPTER_2/c2_fig_XOR_final_draw.png, id=652, 322.3242pt x 175.6161pt>
-File: CHAPTER_2/c2_fig_XOR_final_draw.png Graphic file (type png)
-<use CHAPTER_2/c2_fig_XOR_final_draw.png>
-Package pdftex.def Info: CHAPTER_2/c2_fig_XOR_final_draw.png  used on input line 979.
-(pdftex.def)             Requested size: 402.90425pt x 219.51959pt.
- [25 <./CHAPTER_2/c2_fig_XOR_final_draw.png>] [26] [27]
-<CHAPTER_2/c2_bp_nn_draw.png, id=673, 366.4089pt x 349.0641pt>
-File: CHAPTER_2/c2_bp_nn_draw.png Graphic file (type png)
-<use CHAPTER_2/c2_bp_nn_draw.png>
-Package pdftex.def Info: CHAPTER_2/c2_bp_nn_draw.png  used on input line 1115.
-(pdftex.def)             Requested size: 421.36696pt x 401.4206pt.
- [28 <./CHAPTER_2/c2_bp_nn_draw.png>]
-Overfull \hbox (6.18578pt too wide) in paragraph at lines 1123--1123
-[]$\OML/cmm/m/it/12 b[]$| 
- []
-
-
-Overfull \hbox (9.91214pt too wide) in paragraph at lines 1124--1124
-[]$\OML/cmm/m/it/12 w[]$| 
- []
-
-
-Overfull \hbox (7.18301pt too wide) in paragraph at lines 1125--1125
-[]$\OML/cmm/m/it/12 z[]$| 
- []
-
-
-Overfull \hbox (6.12144pt too wide) in paragraph at lines 1122--1128
- [] 
- []
-
-<CHAPTER_2/c2_bb_nn_cons_draw.png, id=679, 317.988pt x 326.6604pt>
-File: CHAPTER_2/c2_bb_nn_cons_draw.png Graphic file (type png)
-<use CHAPTER_2/c2_bb_nn_cons_draw.png>
-Package pdftex.def Info: CHAPTER_2/c2_bb_nn_cons_draw.png  used on input line 1131.
-(pdftex.def)             Requested size: 333.88754pt x 342.99356pt.
-[29 <./CHAPTER_2/c2_bb_nn_cons_draw.png>] [30] [31] [32] [33] [34]
-<CHAPTER_2/c2_fig_RNN_draw.png, id=751, 532.6299pt x 155.3805pt>
-File: CHAPTER_2/c2_fig_RNN_draw.png Graphic file (type png)
-<use CHAPTER_2/c2_fig_RNN_draw.png>
-Package pdftex.def Info: CHAPTER_2/c2_fig_RNN_draw.png  used on input line 1293.
-(pdftex.def)             Requested size: 426.10449pt x 124.30455pt.
- [35 <./CHAPTER_2/c2_fig_RNN_draw.png>]
-<CHAPTER_2/c2_fig_LSTM_draw.png, id=759, 534.0753pt x 296.307pt>
-File: CHAPTER_2/c2_fig_LSTM_draw.png Graphic file (type png)
-<use CHAPTER_2/c2_fig_LSTM_draw.png>
-Package pdftex.def Info: CHAPTER_2/c2_fig_LSTM_draw.png  used on input line 1311.
-(pdftex.def)             Requested size: 405.8933pt x 225.19113pt.
- [36 <./CHAPTER_2/c2_fig_LSTM_draw.png>]
-<CHAPTER_2/c2_fig_BRNN_draw.png, id=771, 358.4592pt x 203.8014pt>
-File: CHAPTER_2/c2_fig_BRNN_draw.png Graphic file (type png)
-<use CHAPTER_2/c2_fig_BRNN_draw.png>
-Package pdftex.def Info: CHAPTER_2/c2_fig_BRNN_draw.png  used on input line 1328.
-(pdftex.def)             Requested size: 322.61029pt x 183.41954pt.
- [37]) (./CHAPTER_3/CHAPTER 3.tex [38 <./CHAPTER_2/c2_fig_BRNN_draw.png>]
-Chapter 3.
-[39
-
-]
-<CHAPTER_3/c3_fig_min_max_draw.png, id=792, 456.0237pt x 248.6088pt>
-File: CHAPTER_3/c3_fig_min_max_draw.png Graphic file (type png)
-<use CHAPTER_3/c3_fig_min_max_draw.png>
-Package pdftex.def Info: CHAPTER_3/c3_fig_min_max_draw.png  used on input line 30.
-(pdftex.def)             Requested size: 319.2144pt x 174.02495pt.
- [40 <./CHAPTER_3/c3_fig_min_max_draw.png>]
-Package epstopdf Info: Source file: <CHAPTER_2/c2_fig_network_error_python.eps>
-(epstopdf)                    date: 2022-12-02 21:23:46
-(epstopdf)                    size: 36198 bytes
-(epstopdf)             Output file: <CHAPTER_2/c2_fig_network_error_python-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-02 21:24:07
-(epstopdf)                    size: 11664 bytes
-(epstopdf)             Command: <repstopdf --outfile=CHAPTER_2/c2_fig_network_error_python-eps-converted-to.pdf CHAPTER_2/c2_fig_network_error_python.eps>
-(epstopdf)             \includegraphics on input line 65.
-Package epstopdf Info: Output file is already uptodate.
-<CHAPTER_2/c2_fig_network_error_python-eps-converted-to.pdf, id=807, 463.7325pt x 347.2975pt>
-File: CHAPTER_2/c2_fig_network_error_python-eps-converted-to.pdf Graphic file (type pdf)
-<use CHAPTER_2/c2_fig_network_error_python-eps-converted-to.pdf>
-Package pdftex.def Info: CHAPTER_2/c2_fig_network_error_python-eps-converted-to.pdf  used on input line 65.
-(pdftex.def)             Requested size: 347.79851pt x 260.47247pt.
- [41] [42 <./CHAPTER_2/c2_fig_network_error_python-eps-converted-to.pdf>] [43] [44] [45] [46] [47]) (./CHAPTER_4/CHAPTER 4.tex [48] [49]
-Chapter 4.
-[50
-
-] [51] [52]
-<CHAPTER_4/c4_fig_transformer_layer_draw.png, id=918, 235.6002pt x 362.0727pt>
+<CHAPTER_4/POS_tagging-eps-converted-to.pdf, id=142, 495.8525pt x 129.48375pt>
+File: CHAPTER_4/POS_tagging-eps-converted-to.pdf Graphic file (type pdf)
+<use CHAPTER_4/POS_tagging-eps-converted-to.pdf>
+Package pdftex.def Info: CHAPTER_4/POS_tagging-eps-converted-to.pdf  used on input line 21.
+(pdftex.def)             Requested size: 396.68254pt x 103.58711pt.
+ [3] [4 <./CHAPTER_4/POS_tagging-eps-converted-to.pdf>]
+<CHAPTER_4/c4_fig_transformer_layer_draw.png, id=162, 242.8272pt x 369.2997pt>
 File: CHAPTER_4/c4_fig_transformer_layer_draw.png Graphic file (type png)
 <use CHAPTER_4/c4_fig_transformer_layer_draw.png>
-Package pdftex.def Info: CHAPTER_4/c4_fig_transformer_layer_draw.png  used on input line 42.
-(pdftex.def)             Requested size: 141.36119pt x 217.24529pt.
- [53] [54 <./CHAPTER_4/c4_fig_transformer_layer_draw.png>]) (./0_COMPILE.bbl (./0_COMPILE.brf)
+Package pdftex.def Info: CHAPTER_4/c4_fig_transformer_layer_draw.png  used on input line 43.
+(pdftex.def)             Requested size: 267.11073pt x 406.23091pt.
+ [5] [6 <./CHAPTER_4/c4_fig_transformer_layer_draw.png>]) (./CHAPTER_5/CHAPTER 5.tex [7]
+Chapter 3.
+[8
+
+] (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) [9]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 11.
+ [10]
+<CHAPTER_5/raw_tweet_example.png, id=199, 866.23625pt x 261.97874pt>
+File: CHAPTER_5/raw_tweet_example.png Graphic file (type png)
+<use CHAPTER_5/raw_tweet_example.png>
+Package pdftex.def Info: CHAPTER_5/raw_tweet_example.png  used on input line 37.
+(pdftex.def)             Requested size: 415.78868pt x 125.74837pt.
+<CHAPTER_5/tweet_count_python.png, id=200, 578.16pt x 289.08pt>
+File: CHAPTER_5/tweet_count_python.png Graphic file (type png)
+<use CHAPTER_5/tweet_count_python.png>
+Package pdftex.def Info: CHAPTER_5/tweet_count_python.png  used on input line 44.
+(pdftex.def)             Requested size: 404.70924pt x 202.35461pt.
+ [11 <./CHAPTER_5/raw_tweet_example.png>]
+<CHAPTER_5/bitcoin_price_python.png, id=213, 578.16pt x 289.08pt>
+File: CHAPTER_5/bitcoin_price_python.png Graphic file (type png)
+<use CHAPTER_5/bitcoin_price_python.png>
+Package pdftex.def Info: CHAPTER_5/bitcoin_price_python.png  used on input line 51.
+(pdftex.def)             Requested size: 422.05328pt x 211.02664pt.
+ [12 <./CHAPTER_5/tweet_count_python.png> <./CHAPTER_5/bitcoin_price_python.png>] [13] [14]) (./CHAPTER_6/CHAPTER 6.tex [15]
+Chapter 4.
+) (./0_COMPILE.bbl (./0_COMPILE.brf)
 \tf@brf=\write7
 \openout7 = `0_COMPILE.brf'.
 
- [55]
-Underfull \hbox (badness 2529) in paragraph at lines 17--22
+ [16
+
+] [17
+
+]
+Underfull \hbox (badness 2529) in paragraph at lines 53--58
 []| | \OT1/cmr/m/n/12 De-vlin, J., Chang, M., Lee, K. & Toutanova, K. (2018), `BERT: pre-
  []
 
-[56
+[18]) [19] (./0_COMPILE.aux)
 
-]) [57] (./0_COMPILE.aux)
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `0_COMPILE.out' has not changed.
-(rerunfilecheck)             Checksum: 9D75A69141A49C5774D7FF052D52F94B;2764.
+(rerunfilecheck)             Checksum: E6C8D4B6EDEC64F7F1704E5288A4A3DB;2735.
 Package rerunfilecheck Info: File `0_COMPILE.brf' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 13186 strings out of 478268
- 219650 string characters out of 5846347
- 520157 words of memory out of 5000000
- 30913 multiletter control sequences out of 15000+600000
- 481030 words of font info for 70 fonts, out of 8000000 for 9000
+ 15126 strings out of 478268
+ 240550 string characters out of 5846347
+ 856201 words of memory out of 5000000
+ 33005 multiletter control sequences out of 15000+600000
+ 478334 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,33n,91p,1806b,437s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on 0_COMPILE.pdf (64 pages, 6290039 bytes).
+ 87i,10n,91p,1317b,1338s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on 0_COMPILE.pdf (26 pages, 3273333 bytes).
 PDF statistics:
- 1085 PDF objects out of 1200 (max. 8388607)
- 735 compressed objects within 8 object streams
- 252 named destinations out of 1000 (max. 500000)
- 258 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 364 PDF objects out of 1000 (max. 8388607)
+ 299 compressed objects within 3 object streams
+ 98 named destinations out of 1000 (max. 500000)
+ 154 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -16,6 +16,7 @@
 \gdef\HyperFirstAtBeginDocument#1{#1}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{Vaswani2017}
 \@writefile{toc}{\contentsline {section}{List of Figures}{ii}{chapter*.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{List of Tables}{iii}{chapter*.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{Acknowledgement}{iv}{chapter*.4}\protected@file@percent }
@@ -26,163 +27,87 @@
 \@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\citation{McCulloch:1943aa}
-\citation{Rosenblatt:1958aa}
-\citation{Rumelhart:1986aa}
-\citation{LeCun:2015aa}
-\@writefile{toc}{\contentsline {chapter}{\numberline {2}Deep Learning Networks}{2}{chapter.2}\protected@file@percent }
+\citation{Asur2010}
+\citation{smeaton2011}
+\citation{Zhang2011}
+\citation{barhaim2011}
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Sentiment Analysis}{2}{chapter.2}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\citation{McCulloch:1943aa}
-\citation{Rosenblatt:1958aa}
-\@writefile{toc}{\contentsline {section}{\numberline {2.1}The Perceptron}{3}{section.2.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Rosenblatt perceptron\relax }}{4}{figure.caption.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Rule-Based Methods}{3}{section.2.1}\protected@file@percent }
+\newlabel{POS_example_sent}{{2.1}{3}{Rule-Based Methods}{equation.2.1.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Part-of-speech tagging of sentence at \textup  {\ref  {POS_example_sent}} using spaCy\relax }}{4}{figure.caption.7}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{rosenblatt_perceptron}{{2.1}{4}{Rosenblatt perceptron\relax }{figure.caption.7}{}}
-\newlabel{eq:mcp_neuron}{{2.1}{4}{The Perceptron}{equation.2.1.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Set $\mathbf  {A}$ and $\mathbf  {B}$ with a random separating line\relax }}{5}{figure.caption.8}\protected@file@percent }
-\newlabel{fig:perceptron_example_2}{{2.2}{5}{Set $\mathbf {A}$ and $\mathbf {B}$ with a random separating line\relax }{figure.caption.8}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Set $\mathbf  {A}$ and $\mathbf  {B}$ with a random separating line and its weight vector\relax }}{6}{figure.caption.9}\protected@file@percent }
-\newlabel{fig:perceptron_example_3}{{2.3}{6}{Set $\mathbf {A}$ and $\mathbf {B}$ with a random separating line and its weight vector\relax }{figure.caption.9}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Set $\mathbf  {A}$ and $\mathbf  {B}$ after adjusting the separating line and its weight vector\relax }}{7}{figure.caption.10}\protected@file@percent }
-\newlabel{fig:perceptron_example_4}{{2.4}{7}{Set $\mathbf {A}$ and $\mathbf {B}$ after adjusting the separating line and its weight vector\relax }{figure.caption.10}{}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Perceptron Algorithm\relax }}{8}{algorithm.1}\protected@file@percent }
-\newlabel{alg:perceptron_algorithm}{{1}{8}{Perceptron Algorithm\relax }{algorithm.1}{}}
-\newlabel{eq:per_cov_ine_1}{{2.8}{9}{The Perceptron}{equation.2.1.8}{}}
-\newlabel{eq:per_cov_ine_2}{{2.9}{9}{The Perceptron}{equation.2.1.9}{}}
-\newlabel{eq:per_cov_ine_3}{{2.10}{9}{The Perceptron}{equation.2.1.10}{}}
-\newlabel{eq:induction_1}{{2.11}{9}{The Perceptron}{equation.2.1.11}{}}
-\newlabel{eq:induction_2}{{2.12}{9}{The Perceptron}{equation.2.1.12}{}}
-\newlabel{eq:induction_3}{{2.13}{10}{The Perceptron}{equation.2.1.13}{}}
-\newlabel{eq:induction_starts}{{2.14}{10}{The Perceptron}{equation.2.1.14}{}}
-\newlabel{eq:perp_cov_result1}{{2.15}{10}{The Perceptron}{equation.2.1.15}{}}
-\newlabel{eq:induction_proof_part2}{{2.16}{10}{The Perceptron}{equation.2.1.16}{}}
-\newlabel{eq:state1_conditions}{{2.17}{10}{The Perceptron}{equation.2.1.17}{}}
-\newlabel{eq:state_1_proof}{{2.18}{10}{The Perceptron}{equation.2.1.18}{}}
-\newlabel{eq:state2_conditions}{{2.20}{11}{The Perceptron}{equation.2.1.20}{}}
-\newlabel{eq:state_2_proof}{{2.21}{11}{The Perceptron}{equation.2.1.21}{}}
-\newlabel{eq:perp_cov_result2}{{2.23}{11}{The Perceptron}{equation.2.1.23}{}}
-\newlabel{eq:CS_inquality}{{2.24}{11}{The Perceptron}{equation.2.1.24}{}}
-\newlabel{eq:after_cs}{{2.25}{11}{The Perceptron}{equation.2.1.25}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces AND Function with separating line\relax }}{13}{figure.caption.12}\protected@file@percent }
-\newlabel{AND_function_2}{{2.5}{13}{AND Function with separating line\relax }{figure.caption.12}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces OR Function with separating line\relax }}{14}{figure.caption.14}\protected@file@percent }
-\newlabel{OR_function}{{2.6}{14}{OR Function with separating line\relax }{figure.caption.14}{}}
-\newlabel{eq:XOR_function}{{2.35}{16}{XOR Function}{equation.2.1.35}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces XOR function\relax }}{16}{figure.caption.16}\protected@file@percent }
-\newlabel{XOR_function}{{2.7}{16}{XOR function\relax }{figure.caption.16}{}}
-\newlabel{eq:error_XOR_prob}{{2.36}{16}{XOR Function}{equation.2.1.36}{}}
-\newlabel{eq:bias_derivative}{{2.37}{17}{XOR Function}{equation.2.1.37}{}}
-\newlabel{eq:weight_derivative}{{2.38}{17}{XOR Function}{equation.2.1.38}{}}
-\newlabel{eq:first_set_normal_eq}{{2.42}{17}{XOR Function}{equation.2.1.42}{}}
-\newlabel{eq:second_set_normal_eq}{{2.47}{18}{XOR Function}{equation.2.1.47}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces XOR approximate solution\relax }}{19}{figure.caption.17}\protected@file@percent }
-\newlabel{fig: approximate_XOR_solution}{{2.8}{19}{XOR approximate solution\relax }{figure.caption.17}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.2}Feedforward Network}{19}{section.2.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {2.1}{\ignorespaces Truth Table for $f_1^{*}$\relax }}{20}{table.caption.18}\protected@file@percent }
-\newlabel{table:truth_table_f_1}{{2.1}{20}{Truth Table for $f_1^{*}$\relax }{table.caption.18}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces Representation of Truth Table for function $f_1^{*}$\relax }}{20}{figure.caption.19}\protected@file@percent }
-\newlabel{fig:f1_XOR}{{2.9}{20}{Representation of Truth Table for function $f_1^{*}$\relax }{figure.caption.19}{}}
-\newlabel{eq: weight_f_1}{{2.51}{21}{Feedforward Network}{equation.2.2.51}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {2.2}{\ignorespaces Truth Table for $f_2^{*}$\relax }}{21}{table.caption.20}\protected@file@percent }
-\newlabel{table:truth_table_f_2}{{2.2}{21}{Truth Table for $f_2^{*}$\relax }{table.caption.20}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces Representation of Truth Table for function $f_2^{*}$\relax }}{21}{figure.caption.21}\protected@file@percent }
-\newlabel{fig:f2_XOR}{{2.10}{21}{Representation of Truth Table for function $f_2^{*}$\relax }{figure.caption.21}{}}
-\newlabel{eq: weight_f_2}{{2.53}{22}{Feedforward Network}{equation.2.2.53}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {2.3}{\ignorespaces Truth Table for $f^{*}$\relax }}{22}{table.caption.22}\protected@file@percent }
-\newlabel{table:truth_table_f*}{{2.3}{22}{Truth Table for $f^{*}$\relax }{table.caption.22}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.11}{\ignorespaces FFN hidden layer\relax }}{23}{figure.caption.23}\protected@file@percent }
-\newlabel{fig:hidden_layer_only}{{2.11}{23}{FFN hidden layer\relax }{figure.caption.23}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {2.4}{\ignorespaces Truth Table from hidden layer\relax }}{23}{table.caption.24}\protected@file@percent }
-\newlabel{table:truth_table_hidden_layer}{{2.4}{23}{Truth Table from hidden layer\relax }{table.caption.24}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.12}{\ignorespaces Representation of the hidden layer\relax }}{24}{figure.caption.25}\protected@file@percent }
-\newlabel{fig:XOR layer}{{2.12}{24}{Representation of the hidden layer\relax }{figure.caption.25}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.13}{\ignorespaces Feedforward network for XOR problem\relax }}{25}{figure.caption.26}\protected@file@percent }
-\newlabel{fig: ffn_XOR_final}{{2.13}{25}{Feedforward network for XOR problem\relax }{figure.caption.26}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.3}Activation Function}{26}{section.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2.4}Backpropagation}{28}{section.2.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2.14}{\ignorespaces Neural Network with $N$ number of layers\relax }}{28}{figure.caption.27}\protected@file@percent }
-\newlabel{fig:bp_nn_complete}{{2.14}{28}{Neural Network with $N$ number of layers\relax }{figure.caption.27}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.15}{\ignorespaces Consecutive layers, $l$ and $l+1$, in a neural network\relax }}{29}{figure.caption.28}\protected@file@percent }
-\newlabel{fig:bp_nn_complete_cons_layer}{{2.15}{29}{Consecutive layers, $l$ and $l+1$, in a neural network\relax }{figure.caption.28}{}}
-\newlabel{eq:activation_function_at_l+1 layer}{{2.66}{29}{Backpropagation}{equation.2.4.66}{}}
-\newlabel{eq:input of activation_function_at_l+1 layer}{{2.67}{29}{Backpropagation}{equation.2.4.67}{}}
-\newlabel{eq:cost_function_definition}{{2.68}{30}{Backpropagation}{equation.2.4.68}{}}
-\newlabel{eq:BP_EQ_VEC_1}{{2.69}{31}{Backpropagation}{equation.2.4.69}{}}
-\newlabel{eq: change_at_layer_l}{{2.70}{31}{Backpropagation}{equation.2.4.70}{}}
-\newlabel{eq: delta_of_cost_bet_layers}{{2.71}{31}{Backpropagation}{equation.2.4.71}{}}
-\newlabel{eq: z_j partials}{{2.72}{31}{Backpropagation}{equation.2.4.72}{}}
-\newlabel{eq:BP_EQ_VEC_2}{{2.73}{31}{Backpropagation}{equation.2.4.73}{}}
-\newlabel{eq:BP_EQ_VEC_3}{{2.74}{32}{Backpropagation}{equation.2.4.74}{}}
-\newlabel{eq: partial_C_with_weight}{{2.75}{32}{Backpropagation}{equation.2.4.75}{}}
-\newlabel{eq: partial_act_weight}{{2.76}{33}{Backpropagation}{equation.2.4.76}{}}
-\newlabel{eq:BP_EQ_VEC_4}{{2.77}{33}{Backpropagation}{equation.2.4.77}{}}
-\citation{Rumelhart:1986aa}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces Back-Propagation Algorithm\relax }}{34}{algorithm.2}\protected@file@percent }
-\newlabel{alg:back_propagation_algo}{{2}{34}{Back-Propagation Algorithm\relax }{algorithm.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.5}Sequential Neural Networks}{34}{section.2.5}\protected@file@percent }
-\newlabel{eq:RNN_HL}{{2.86}{34}{Recurrent Neural Network(RNN)}{equation.2.5.86}{}}
-\citation{Bengio1994}
-\citation{Kolen2001}
-\citation{Hochreiter1997}
-\newlabel{eq:RNN_OL}{{2.87}{35}{Recurrent Neural Network(RNN)}{equation.2.5.87}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.16}{\ignorespaces An RNN with a hidden state\relax }}{35}{figure.caption.30}\protected@file@percent }
-\newlabel{}{{2.16}{35}{An RNN with a hidden state\relax }{figure.caption.30}{}}
-\newlabel{eq:LSTM_HS}{{2.88}{36}{Long Short Term Memory(LSTM)}{equation.2.5.88}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.17}{\ignorespaces Computing the hidden state in an LSTM model\relax }}{36}{figure.caption.32}\protected@file@percent }
-\newlabel{LSTM_LAYER}{{2.17}{36}{Computing the hidden state in an LSTM model\relax }{figure.caption.32}{}}
-\citation{Schurster1997}
-\newlabel{eq:BRNN_LAYER}{{2.93}{37}{Bidirectional RNN(BRNN)}{equation.2.5.93}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.18}{\ignorespaces Architecture of a bidirectional RNN\relax }}{38}{figure.caption.34}\protected@file@percent }
-\newlabel{BRNN_LAYER}{{2.18}{38}{Architecture of a bidirectional RNN\relax }{figure.caption.34}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}Optimization}{39}{chapter.3}\protected@file@percent }
-\@writefile{lof}{\addvspace {10\p@ }}
-\@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{eq:optimization_problem}{{3.1}{39}{Optimization}{equation.3.0.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Minimum and Maximum points\relax }}{40}{figure.caption.36}\protected@file@percent }
-\newlabel{fig:min_max_illustration}{{3.1}{40}{Minimum and Maximum points\relax }{figure.caption.36}{}}
-\newlabel{eq:grad_f_x}{{3.2}{40}{Determining Minimum/Maximum Point}{equation.3.0.2}{}}
-\newlabel{eq:Hessian_matrix}{{3.3}{40}{Determining Minimum/Maximum Point}{equation.3.0.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.1}Optimization algorithms}{41}{section.3.1}\protected@file@percent }
-\newlabel{network_error}{{3.4}{41}{Optimization algorithms}{equation.3.1.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Network Error over different weight\relax }}{42}{figure.caption.38}\protected@file@percent }
-\newlabel{network_error_graph}{{3.2}{42}{Network Error over different weight\relax }{figure.caption.38}{}}
-\newlabel{derivative_network_error}{{3.5}{42}{Gradient Descent}{equation.3.1.5}{}}
-\newlabel{eq:SGM_def}{{3.8}{44}{Stochastic Gradient Descent}{equation.3.1.8}{}}
-\newlabel{eq: learning_rates}{{3.9}{44}{Stochastic Gradient Descent}{equation.3.1.9}{}}
-\newlabel{mb-sgd}{{3.12}{44}{Mini-Batch Stochastic Gradient Descent}{equation.3.1.12}{}}
-\newlabel{eq:ewma_def}{{3.18}{46}{Exponentially Weighted Moving Average}{equation.3.1.18}{}}
-\newlabel{eq: SGF_with_momentum}{{3.19}{46}{SGD with Momentum}{equation.3.1.19}{}}
-\newlabel{eq:RMSProp_def}{{3.20}{47}{RMSProp}{equation.3.1.20}{}}
-\newlabel{eq:Adam_def}{{3.21}{47}{Adam}{equation.3.1.21}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}Backpropagation using Adam}{48}{section.3.2}\protected@file@percent }
-\@writefile{loa}{\contentsline {algorithm}{\numberline {3}{\ignorespaces Backpropagation using Adam optimization with $n$ total number of inputs for $N$ epochs\relax }}{49}{algorithm.3}\protected@file@percent }
-\newlabel{alg:back_propagation_adam_algo}{{3}{49}{Backpropagation using Adam optimization with $n$ total number of inputs for $N$ epochs\relax }{algorithm.3}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Sentiment Analysis}{50}{chapter.4}\protected@file@percent }
-\@writefile{lof}{\addvspace {10\p@ }}
-\@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Rule-Based Methods}{51}{section.4.1}\protected@file@percent }
+\newlabel{PSO_EXAMPLE}{{2.1}{4}{Part-of-speech tagging of sentence at \refeq {POS_example_sent} using spaCy\relax }{figure.caption.7}{}}
+\citation{Mikolov2013}
 \citation{Vaswani2017}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Word Embedding}{53}{section.4.2}\protected@file@percent }
+\citation{Vaswani2017}
+\citation{Vaswani2017}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Word Embedding}{5}{section.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Transformer Model (Attention Mechanism)}{5}{section.2.3}\protected@file@percent }
+\newlabel{section: transformers}{{2.3}{5}{Transformer Model (Attention Mechanism)}{section.2.3}{}}
 \citation{Jacob2018}
 \citation{Vaswani2017}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Transformer Model (Attention Mechanism)}{54}{section.4.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces !!!TO BE CHANGED!!!-Transformer Layer\relax }}{54}{figure.caption.49}\protected@file@percent }
-\newlabel{TRANSFORMER_LAYER}{{4.1}{54}{!!!TO BE CHANGED!!!-Transformer Layer\relax }{figure.caption.49}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Transformer Layer \cite {Vaswani2017}\relax }}{6}{figure.caption.8}\protected@file@percent }
+\newlabel{TRANSFORMER_LAYER}{{2.2}{6}{Transformer Layer \protect \cite {Vaswani2017}\relax }{figure.caption.8}{}}
 \citation{Chiorrini2021}
 \citation{Yinhan2019}
 \citation{Yinhan2019}
+\citation{satoshi2009}
+\citation{Abraham2018}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Analysis of Bitcoin Price using Deep Learning Models}{8}{chapter.3}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\citation{Abraham2018}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Data Collection}{9}{section.3.1}\protected@file@percent }
+\newlabel{tweet_search}{{3.1}{10}{Tweepy query for bitcoin, \#bitcoin and excluding re\-tweets}{lstlisting.3.1}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3.1}{\ignorespaces Tweepy query for bitcoin, \#bitcoin and excluding re\-tweets}}{10}{lstlisting.3.1}\protected@file@percent }
+\newlabel{tweet_count}{{3.2}{10}{Tweepy query to get tweet count withing each hour between predefined start time and end time}{lstlisting.3.2}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3.2}{\ignorespaces Tweepy query to get tweet count withing each hour between predefined start time and end time}}{10}{lstlisting.3.2}\protected@file@percent }
+\newlabel{pytrend_search}{{3.3}{11}{pytrend query to get google trend index withing each hour between predefined start time and end time}{lstlisting.3.3}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3.3}{\ignorespaces pytrend query to get google trend index withing each hour between predefined start time and end time}}{11}{lstlisting.3.3}\protected@file@percent }
+\newlabel{yfinance_search}{{3.4}{11}{yfinance query to get bitcoin price and traded volume within each hour between predefined start time and end time}{lstlisting.3.4}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3.4}{\ignorespaces yfinance query to get bitcoin price and traded volume within each hour between predefined start time and end time}}{11}{lstlisting.3.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Example of raw tweet scraped using the tweepy package through Python\relax }}{11}{figure.caption.12}\protected@file@percent }
+\newlabel{raw_tweet_example}{{3.1}{11}{Example of raw tweet scraped using the tweepy package through Python\relax }{figure.caption.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Distribution of tweet count over each day at the end of every hour over 24 hours\relax }}{12}{figure.caption.13}\protected@file@percent }
+\newlabel{tweet_count}{{3.2}{12}{Distribution of tweet count over each day at the end of every hour over 24 hours\relax }{figure.caption.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Bitcoin closing price over every hour for everyday\relax }}{12}{figure.caption.14}\protected@file@percent }
+\newlabel{bitcoin_price}{{3.3}{12}{Bitcoin closing price over every hour for everyday\relax }{figure.caption.14}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Feature Engineering}{13}{section.3.2}\protected@file@percent }
+\newlabel{regex_function}{{3.5}{13}{Python function to clean Tweets using RegEx (regular expression)}{lstlisting.3.5}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3.5}{\ignorespaces Python function to clean Tweets using RegEx (regular expression)}}{13}{lstlisting.3.5}\protected@file@percent }
+\citation{France2020}
+\newlabel{preprocess_tweet}{{3.1}{14}{Sentiment Analysis on Tweet Data}{equation.3.2.1}{}}
+\newlabel{roberta_example}{{3.6}{14}{Applying the twitter-roberta-base-sentiment model to the preprocessed tweet in (\ref {preprocess_tweet})}{lstlisting.3.6}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3.6}{\ignorespaces Applying the twitter-roberta-base-sentiment model to the preprocessed tweet in (\ref  {preprocess_tweet})}}{14}{lstlisting.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Modelling Bitcoin Price using LSTM NN}{15}{section.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Modelling Bitcoin Upticks using Feedforward NN}{15}{section.3.4}\protected@file@percent }
 \bibdata{REFERENCES}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Conclusion and Future Works}{16}{chapter.4}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\harvardcite{Abraham2018}{Abraham, Higdon, Nelson \harvardand \^^MIbarra}{Abraham et~al.}{2018}
+\harvardcite{Asur2010}{Asur \harvardand \ Huberman}{Asur \harvardand \ Huberman}{2010}
+\harvardcite{barhaim2011}{Bar-Haim, Dinur, Feldman, Fresko \harvardand \^^MGoldstein}{Bar-Haim et~al.}{2011}
+\harvardcite{France2020}{Barbieri, Camacho{-}Collados, Neves \harvardand \^^MAnke}{Barbieri et~al.}{2020}
 \harvardcite{Bengio1994}{Bengio, Simard \harvardand \^^MFrasconi}{Bengio et~al.}{1994}
+\harvardcite{smeaton2011}{Bermingham \harvardand \ Smeaton}{Bermingham \harvardand \ Smeaton}{2011}
 \harvardcite{Chiorrini2021}{Chiorrini, Diamantini, Mircoli \harvardand \^^MPotena}{Chiorrini et~al.}{2021}
 \harvardcite{Jacob2018}{Devlin, Chang, Lee \harvardand \^^MToutanova}{Devlin et~al.}{2018}
+\harvardcite{Hinton2012}{Hinton \harvardand \ Tieleman}{Hinton \harvardand \ Tieleman}{2012}
 \harvardcite{Hochreiter1997}{Hochreiter \harvardand \ Schmidhuber}{Hochreiter \harvardand \ Schmidhuber}{1997}
+\harvardcite{Kingma2014}{Kingma \harvardand \ Ba}{Kingma \harvardand \ Ba}{2014}
 \harvardcite{Kolen2001}{Kolen \harvardand \ Kremer}{Kolen \harvardand \ Kremer}{2001}
 \harvardcite{LeCun:2015aa}{LeCun, Bengio \harvardand \^^MHinton}{LeCun et~al.}{2015}
 \harvardcite{Yinhan2019}{Liu, Ott, Goyal, Du, Joshi, Chen, Levy, Lewis, Zettlemoyer \harvardand \ Stoyanov}{Liu et~al.}{2019}
 \harvardcite{McCulloch:1943aa}{McCulloch \harvardand \ Pitts}{McCulloch \harvardand \ Pitts}{1943}
+\harvardcite{Mikolov2013}{Mikolov, Chen, Corrado \harvardand \^^MDean}{Mikolov et~al.}{2013}
+\harvardcite{satoshi2009}{Nakamoto}{Nakamoto}{2009}
+\harvardcite{Robbins1951}{Robbins \harvardand \ Monro}{Robbins \harvardand \ Monro}{1951}
 \harvardcite{Rosenblatt:1958aa}{Rosenblatt}{Rosenblatt}{1958}
 \harvardcite{Rumelhart:1986aa}{Rumelhart, Hinton \harvardand \^^MWilliams}{Rumelhart et~al.}{1986}
 \harvardcite{Schurster1997}{Schuster \harvardand \ Paliwal}{Schuster \harvardand \ Paliwal}{1997}
 \harvardcite{Vaswani2017}{Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez, Kaiser \harvardand \ Polosukhin}{Vaswani et~al.}{2017}
-\gdef \@abspage@last{64}
+\harvardcite{Zhang2011}{Zhang, Fuehres \harvardand \ Gloor}{Zhang et~al.}{2011}
+\gdef \@abspage@last{26}

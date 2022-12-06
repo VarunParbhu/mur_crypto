@@ -1,11 +1,47 @@
 \begin{thebibliography}{xx}
 
+\harvarditem[Abraham et~al.]{Abraham, Higdon, Nelson \harvardand\
+  Ibarra}{2018}{Abraham2018}
+Abraham, J., Higdon, D.~W., Nelson, J. \harvardand\ Ibarra, J.
+  \harvardyearleft 2018\harvardyearright , Cryptocurrency price prediction
+  using tweet volumes and sentiment analysis.
+
+\harvarditem{Asur \harvardand\ Huberman}{2010}{Asur2010}
+Asur, S. \harvardand\ Huberman, B.  \harvardyearleft 2010\harvardyearright ,
+  `Predicting the future with social media', {\em Proceedings - 2010
+  IEEE/WIC/ACM International Conference on Web Intelligence, WI 2010} {\bf 1}.
+
+\harvarditem[Bar-Haim et~al.]{Bar-Haim, Dinur, Feldman, Fresko \harvardand\
+  Goldstein}{2011}{barhaim2011}
+Bar-Haim, R., Dinur, E., Feldman, R., Fresko, M. \harvardand\ Goldstein, G.
+  \harvardyearleft 2011\harvardyearright , Identifying and following expert
+  investors in stock microblogs, {\em in} `Proceedings of the 2011 Conference
+  on Empirical Methods in Natural Language Processing', Association for
+  Computational Linguistics, Edinburgh, Scotland, UK., pp.~1310--1319.
+\newline\harvardurl{https://aclanthology.org/D11-1121}
+
+\harvarditem[Barbieri et~al.]{Barbieri, Camacho{-}Collados, Neves \harvardand\
+  Anke}{2020}{France2020}
+Barbieri, F., Camacho{-}Collados, J., Neves, L. \harvardand\ Anke, L.~E.
+  \harvardyearleft 2020\harvardyearright , `Tweeteval: Unified benchmark and
+  comparative evaluation for tweet classification', {\em CoRR} {\bf
+  abs/2010.12421}.
+\newline\harvardurl{https://arxiv.org/abs/2010.12421}
+
 \harvarditem[Bengio et~al.]{Bengio, Simard \harvardand\
   Frasconi}{1994}{Bengio1994}
 Bengio, Y., Simard, P. \harvardand\ Frasconi, P.  \harvardyearleft
   1994\harvardyearright , `Learning long-term dependencies with gradient
   descent is difficult', {\em IEEE Transactions on Neural Networks} {\bf
   5}(2),~157--166.
+
+\harvarditem{Bermingham \harvardand\ Smeaton}{2011}{smeaton2011}
+Bermingham, A. \harvardand\ Smeaton, A.  \harvardyearleft 2011\harvardyearright
+  , On using {T}witter to monitor political sentiment and predict election
+  results, {\em in} `Proceedings of the Workshop on Sentiment Analysis where
+  {AI} meets Psychology ({SAAIP} 2011)', Asian Federation of Natural Language
+  Processing, Chiang Mai, Thailand, pp.~2--10.
+\newline\harvardurl{https://aclanthology.org/W11-3702}
 
 \harvarditem[Chiorrini et~al.]{Chiorrini, Diamantini, Mircoli \harvardand\
   Potena}{2021}{Chiorrini2021}
@@ -20,11 +56,21 @@ Devlin, J., Chang, M., Lee, K. \harvardand\ Toutanova, K.  \harvardyearleft
   transformers for language understanding', {\em CoRR} {\bf abs/1810.04805}.
 \newline\harvardurl{http://arxiv.org/abs/1810.04805}
 
+\harvarditem{Hinton \harvardand\ Tieleman}{2012}{Hinton2012}
+Hinton, G. \harvardand\ Tieleman, T.  \harvardyearleft 2012\harvardyearright ,
+  `Lecture 6.5-rmsprop: Divide the gradient by a running average of its recent
+  magnitude.', COURSERA: Neural Networks for Machine Learning, 4, 26-30.
+
 \harvarditem{Hochreiter \harvardand\ Schmidhuber}{1997}{Hochreiter1997}
 Hochreiter, S. \harvardand\ Schmidhuber, J.  \harvardyearleft
   1997\harvardyearright , `{Long Short-Term Memory}', {\em Neural Computation}
   {\bf 9}(8),~1735--1780.
 \newline\harvardurl{https://doi.org/10.1162/neco.1997.9.8.1735}
+
+\harvarditem{Kingma \harvardand\ Ba}{2014}{Kingma2014}
+Kingma, D.~P. \harvardand\ Ba, J.  \harvardyearleft 2014\harvardyearright ,
+  `Adam: A method for stochastic optimization'.
+\newline\harvardurl{https://arxiv.org/abs/1412.6980}
 
 \harvarditem{Kolen \harvardand\ Kremer}{2001}{Kolen2001}
 Kolen, J.~F. \harvardand\ Kremer, S.~C.  \harvardyearleft 2001\harvardyearright
@@ -50,6 +96,24 @@ McCulloch, W.~S. \harvardand\ Pitts, W.  \harvardyearleft 1943\harvardyearright
   , `A logical calculus of the ideas immanent in nervous activity', {\em The
   bulletin of mathematical biophysics} {\bf 5}(4),~115--133.
 
+\harvarditem[Mikolov et~al.]{Mikolov, Chen, Corrado \harvardand\
+  Dean}{2013}{Mikolov2013}
+Mikolov, T., Chen, K., Corrado, G. \harvardand\ Dean, J.  \harvardyearleft
+  2013\harvardyearright , `Efficient estimation of word representations in
+  vector space'.
+\newline\harvardurl{https://arxiv.org/abs/1301.3781}
+
+\harvarditem{Nakamoto}{2009}{satoshi2009}
+Nakamoto, S.  \harvardyearleft 2009\harvardyearright , `Bitcoin: A peer-to-peer
+  electronic cash system', {\em Cryptography Mailing list at
+  https://metzdowd.com} .
+
+\harvarditem{Robbins \harvardand\ Monro}{1951}{Robbins1951}
+Robbins, H. \harvardand\ Monro, S.  \harvardyearleft 1951\harvardyearright ,
+  `{A Stochastic Approximation Method}', {\em The Annals of Mathematical
+  Statistics} {\bf 22}(3),~400 -- 407.
+\newline\harvardurl{https://doi.org/10.1214/aoms/1177729586}
+
 \harvarditem{Rosenblatt}{1958}{Rosenblatt:1958aa}
 Rosenblatt, F.  \harvardyearleft 1958\harvardyearright , `The perceptron: a
   probabilistic model for information storage and organization in the brain.',
@@ -72,5 +136,13 @@ Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.~N.,
   Kaiser, L. \harvardand\ Polosukhin, I.  \harvardyearleft
   2017\harvardyearright , `Attention is all you need'.
 \newline\harvardurl{https://arxiv.org/abs/1706.03762}
+
+\harvarditem[Zhang et~al.]{Zhang, Fuehres \harvardand\ Gloor}{2011}{Zhang2011}
+Zhang, X., Fuehres, H. \harvardand\ Gloor, P.~A.  \harvardyearleft
+  2011\harvardyearright , `Predicting stock market indicators through twitter
+  ``i hope it is not as bad as i fear''', {\em Procedia - Social and Behavioral
+  Sciences} {\bf 26},~55--62.
+\newblock The 2nd Collaborative Innovation Networks Conference - COINs2010.
+\newline\harvardurl{https://www.sciencedirect.com/science/article/pii/S1877042811023895}
 
 \end{thebibliography}
