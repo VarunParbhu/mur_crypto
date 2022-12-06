@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  5 DEC 2022 22:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  7 DEC 2022 01:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -372,11 +372,7 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count312
 \l__pdf_internal_box=\box57
-) (./0_COMPILE.aux
-
-LaTeX Warning: Label `tweet_count' multiply defined.
-
-)
+) (./0_COMPILE.aux)
 \openout1 = `0_COMPILE.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
@@ -487,12 +483,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
  [1
 
-] (./0_COMPILE.lof
-Overfull \hbox (14.18889pt too wide) in paragraph at lines 4--4
- [][] [][]\OT1/cmr/m/n/12 Transformer Layer ([]Vaswani, Shazeer, Par-mar, Uszko-r-eit, Jones, Gomez, 
- []
-
-)
+] (./0_COMPILE.lof)
 \tf@lof=\write5
 \openout5 = `0_COMPILE.lof'.
 
@@ -512,100 +503,51 @@ Overfull \hbox (14.18889pt too wide) in paragraph at lines 4--4
 
 ] (./CHAPTER_1/CHAPTER 1.tex
 Chapter 1.
-) (./CHAPTER_4/CHAPTER 4.tex
+) (./CHAPTER_5/CHAPTER 5.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \chapter
-            {Sentiment Analysis} [1
+            {Analysis of Bitcoin Price using Deep Learning Models} [1
 
 ]
 Chapter 2.
-[2
+) (./CHAPTER_6/CHAPTER 6.tex [2
 
 ]
-Package epstopdf Info: Source file: <CHAPTER_4/POS_tagging.eps>
-(epstopdf)                    date: 2022-12-03 15:39:39
-(epstopdf)                    size: 15604 bytes
-(epstopdf)             Output file: <CHAPTER_4/POS_tagging-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-12-03 15:40:13
-(epstopdf)                    size: 6849 bytes
-(epstopdf)             Command: <repstopdf --outfile=CHAPTER_4/POS_tagging-eps-converted-to.pdf CHAPTER_4/POS_tagging.eps>
-(epstopdf)             \includegraphics on input line 21.
-Package epstopdf Info: Output file is already uptodate.
-<CHAPTER_4/POS_tagging-eps-converted-to.pdf, id=142, 495.8525pt x 129.48375pt>
-File: CHAPTER_4/POS_tagging-eps-converted-to.pdf Graphic file (type pdf)
-<use CHAPTER_4/POS_tagging-eps-converted-to.pdf>
-Package pdftex.def Info: CHAPTER_4/POS_tagging-eps-converted-to.pdf  used on input line 21.
-(pdftex.def)             Requested size: 396.68254pt x 103.58711pt.
- [3] [4 <./CHAPTER_4/POS_tagging-eps-converted-to.pdf>]
-<CHAPTER_4/c4_fig_transformer_layer_draw.png, id=162, 242.8272pt x 369.2997pt>
-File: CHAPTER_4/c4_fig_transformer_layer_draw.png Graphic file (type png)
-<use CHAPTER_4/c4_fig_transformer_layer_draw.png>
-Package pdftex.def Info: CHAPTER_4/c4_fig_transformer_layer_draw.png  used on input line 43.
-(pdftex.def)             Requested size: 267.11073pt x 406.23091pt.
- [5] [6 <./CHAPTER_4/c4_fig_transformer_layer_draw.png>]) (./CHAPTER_5/CHAPTER 5.tex [7]
 Chapter 3.
-[8
-
-] (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-) [9]
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 11.
- [10]
-<CHAPTER_5/raw_tweet_example.png, id=199, 866.23625pt x 261.97874pt>
-File: CHAPTER_5/raw_tweet_example.png Graphic file (type png)
-<use CHAPTER_5/raw_tweet_example.png>
-Package pdftex.def Info: CHAPTER_5/raw_tweet_example.png  used on input line 37.
-(pdftex.def)             Requested size: 415.78868pt x 125.74837pt.
-<CHAPTER_5/tweet_count_python.png, id=200, 578.16pt x 289.08pt>
-File: CHAPTER_5/tweet_count_python.png Graphic file (type png)
-<use CHAPTER_5/tweet_count_python.png>
-Package pdftex.def Info: CHAPTER_5/tweet_count_python.png  used on input line 44.
-(pdftex.def)             Requested size: 404.70924pt x 202.35461pt.
- [11 <./CHAPTER_5/raw_tweet_example.png>]
-<CHAPTER_5/bitcoin_price_python.png, id=213, 578.16pt x 289.08pt>
-File: CHAPTER_5/bitcoin_price_python.png Graphic file (type png)
-<use CHAPTER_5/bitcoin_price_python.png>
-Package pdftex.def Info: CHAPTER_5/bitcoin_price_python.png  used on input line 51.
-(pdftex.def)             Requested size: 422.05328pt x 211.02664pt.
- [12 <./CHAPTER_5/tweet_count_python.png> <./CHAPTER_5/bitcoin_price_python.png>] [13] [14]) (./CHAPTER_6/CHAPTER 6.tex [15]
-Chapter 4.
 ) (./0_COMPILE.bbl (./0_COMPILE.brf)
 \tf@brf=\write7
 \openout7 = `0_COMPILE.brf'.
 
- [16
+ [3
 
-] [17
+] [4
 
 ]
 Underfull \hbox (badness 2529) in paragraph at lines 53--58
 []| | \OT1/cmr/m/n/12 De-vlin, J., Chang, M., Lee, K. & Toutanova, K. (2018), `BERT: pre-
  []
 
-[18]) [19] (./0_COMPILE.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
+[5]) [6] (./0_COMPILE.aux)
 Package rerunfilecheck Info: File `0_COMPILE.out' has not changed.
-(rerunfilecheck)             Checksum: E6C8D4B6EDEC64F7F1704E5288A4A3DB;2735.
+(rerunfilecheck)             Checksum: E10C9DDC06176CDF432497CDAC0939A9;1217.
 Package rerunfilecheck Info: File `0_COMPILE.brf' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 15126 strings out of 478268
- 240550 string characters out of 5846347
- 856201 words of memory out of 5000000
- 33005 multiletter control sequences out of 15000+600000
- 478334 words of font info for 61 fonts, out of 8000000 for 9000
+ 14489 strings out of 478268
+ 232952 string characters out of 5846347
+ 531414 words of memory out of 5000000
+ 32464 multiletter control sequences out of 15000+600000
+ 475769 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,10n,91p,1317b,1338s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on 0_COMPILE.pdf (26 pages, 3273333 bytes).
+ 87i,7n,91p,1297b,442s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on 0_COMPILE.pdf (13 pages, 99519 bytes).
 PDF statistics:
- 364 PDF objects out of 1000 (max. 8388607)
- 299 compressed objects within 3 object streams
- 98 named destinations out of 1000 (max. 500000)
- 154 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 141 PDF objects out of 1000 (max. 8388607)
+ 112 compressed objects within 2 object streams
+ 23 named destinations out of 1000 (max. 500000)
+ 65 words of extra memory for PDF output out of 10000 (max. 10000000)
 
