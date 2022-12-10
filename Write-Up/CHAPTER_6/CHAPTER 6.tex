@@ -1,1 +1,9 @@
 \chapter{Conclusion and Future Works}
+
+This study investigated how we can leverage deep learning models and sentiment analysis on tweets to predict the value of Bitcoin in the next hour. 
+
+We reviewed the basics and derived the backpropagation algorithm of feed-forward neural networks. An application of the backpropagation algorithm for feed-forward neural networks was derived. Moreover, we investigated the literature and defined different architectures of sequential neural networks used in problems involving sequential data. The literature on optimization algorithms was also reviewed. We looked at the application of the Adam optimizer in the backpropagation algorithm, the current state-of-the-art algorithm for the optimization problem. We also briefly examined sentiment analysis literature using traditional methods and the latest deep learning models involving transformers for natural language processing, roBERTa (Robustly Optimized BERT Pre-training Approach).
+
+Finally, we defined and coded a whole pipeline from scrapping data to predicting the value of Bitcoin in the next hour using the LSTM NN model. Scrapping, cleaning and feature engineering raw data is tedious. The RMSE for the training and testing on the whole dataset were \$303.96 and \$325.96, respectively. We saw a slight decrease in performance when using only the influencers' data which might be due to the naive way we used to identify influencers: by only considering their number of followers. Furthermore, deep learning models are not easily interpretable due to their BlackBox-like architecture. It did involve a significant amount of trial.
+
+As a continuity to this work, it would be interesting to compare our model to traditional statistical models. Additionally, we could investigate the features to be added in the LSTM NN model and/or identify the dominant features to reduce our dataset (potentially decreasing training time).

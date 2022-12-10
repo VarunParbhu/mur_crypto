@@ -1,5 +1,12 @@
 \begin{thebibliography}{xx}
 
+\harvarditem[Aalborg et~al.]{Aalborg, Moln{\'a}r \harvardand\ {de
+  Vries}}{2019}{Halvor2019}
+Aalborg, H.~A., Moln{\'a}r, P. \harvardand\ {de Vries}, J.~E.  \harvardyearleft
+  2019\harvardyearright , `What can explain the price, volatility and trading
+  volume of bitcoin?', {\em Finance Research Letters} {\bf 29},~255--265.
+\newline\harvardurl{https://www.sciencedirect.com/science/article/pii/S1544612318302058}
+
 \harvarditem[Abraham et~al.]{Abraham, Higdon, Nelson \harvardand\
   Ibarra}{2018}{Abraham2018}
 Abraham, J., Higdon, D.~W., Nelson, J. \harvardand\ Ibarra, J.
@@ -10,6 +17,14 @@ Abraham, J., Higdon, D.~W., Nelson, J. \harvardand\ Ibarra, J.
 Asur, S. \harvardand\ Huberman, B.  \harvardyearleft 2010\harvardyearright ,
   `Predicting the future with social media', {\em Proceedings - 2010
   IEEE/WIC/ACM International Conference on Web Intelligence, WI 2010} {\bf 1}.
+
+\harvarditem[Banerjee et~al.]{Banerjee, Akhtaruzzaman, Dionisio, Almeida
+  \harvardand\ Sensoy}{2022}{Banerjee2022}
+Banerjee, A.~K., Akhtaruzzaman, M., Dionisio, A., Almeida, D. \harvardand\
+  Sensoy, A.  \harvardyearleft 2022\harvardyearright , `Nonlinear nexus between
+  cryptocurrency returns and covid-19 news sentiment', {\em Journal of
+  Behavioral and Experimental Finance} {\bf 36},~100747.
+\newline\harvardurl{https://www.sciencedirect.com/science/article/pii/S2214635022000703}
 
 \harvarditem[Bar-Haim et~al.]{Bar-Haim, Dinur, Feldman, Fresko \harvardand\
   Goldstein}{2011}{barhaim2011}
@@ -56,6 +71,12 @@ Devlin, J., Chang, M., Lee, K. \harvardand\ Toutanova, K.  \harvardyearleft
   transformers for language understanding', {\em CoRR} {\bf abs/1810.04805}.
 \newline\harvardurl{http://arxiv.org/abs/1810.04805}
 
+\harvarditem{Dyhrberg}{2016}{Anne2016}
+Dyhrberg, A.~H.  \harvardyearleft 2016\harvardyearright , `Hedging capabilities
+  of bitcoin. is it the virtual gold?', {\em Finance Research Letters} {\bf
+  16},~139--144.
+\newline\harvardurl{https://www.sciencedirect.com/science/article/pii/S1544612315001208}
+
 \harvarditem{Hinton \harvardand\ Tieleman}{2012}{Hinton2012}
 Hinton, G. \harvardand\ Tieleman, T.  \harvardyearleft 2012\harvardyearright ,
   `Lecture 6.5-rmsprop: Divide the gradient by a running average of its recent
@@ -66,6 +87,12 @@ Hochreiter, S. \harvardand\ Schmidhuber, J.  \harvardyearleft
   1997\harvardyearright , `{Long Short-Term Memory}', {\em Neural Computation}
   {\bf 9}(8),~1735--1780.
 \newline\harvardurl{https://doi.org/10.1162/neco.1997.9.8.1735}
+
+\harvarditem{Katsiampa}{2017}{Paraskevi2017}
+Katsiampa, P.  \harvardyearleft 2017\harvardyearright , `Volatility estimation
+  for bitcoin: A comparison of garch models', {\em Economics Letters} {\bf
+  158},~3--6.
+\newline\harvardurl{https://www.sciencedirect.com/science/article/pii/S0165176517302501}
 
 \harvarditem{Kingma \harvardand\ Ba}{2014}{Kingma2014}
 Kingma, D.~P. \harvardand\ Ba, J.  \harvardyearleft 2014\harvardyearright ,
@@ -136,6 +163,12 @@ Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.~N.,
   Kaiser, L. \harvardand\ Polosukhin, I.  \harvardyearleft
   2017\harvardyearright , `Attention is all you need'.
 \newline\harvardurl{https://arxiv.org/abs/1706.03762}
+
+\harvarditem{Zhang \harvardand\ Zhang}{2022}{Zhang2022}
+Zhang, J. \harvardand\ Zhang, C.  \harvardyearleft 2022\harvardyearright , `Do
+  cryptocurrency markets react to issuer sentiments? evidence from twitter',
+  {\em Research in International Business and Finance} {\bf 61},~101656.
+\newline\harvardurl{https://www.sciencedirect.com/science/article/pii/S0275531922000447}
 
 \harvarditem[Zhang et~al.]{Zhang, Fuehres \harvardand\ Gloor}{2011}{Zhang2011}
 Zhang, X., Fuehres, H. \harvardand\ Gloor, P.~A.  \harvardyearleft

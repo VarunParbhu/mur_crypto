@@ -6,45 +6,45 @@ Database file #1: REFERENCES.bib
 Warning--empty booktitle in Abraham2018
 Warning--empty booktitle in Chiorrini2021
 Warning--empty publisher in Kolen2001
-You've used 23 entries,
+You've used 28 entries,
             2909 wiz_defined-function locations,
-            809 strings with 9420 characters,
-and the built_in function-call counts, 118437 in all, are:
-= -- 19381
-> -- 1710
+            850 strings with 10604 characters,
+and the built_in function-call counts, 140470 in all, are:
+= -- 22976
+> -- 1987
 < -- 0
-+ -- 9435
-- -- 525
-* -- 10461
-:= -- 23426
-add.period$ -- 24
-call.type$ -- 23
-change.case$ -- 321
-chr.to.int$ -- 23
-cite$ -- 26
-duplicate$ -- 368
-empty$ -- 759
-format.name$ -- 619
-if$ -- 21314
++ -- 11153
+- -- 609
+* -- 12392
+:= -- 27829
+add.period$ -- 29
+call.type$ -- 28
+change.case$ -- 391
+chr.to.int$ -- 28
+cite$ -- 31
+duplicate$ -- 448
+empty$ -- 928
+format.name$ -- 719
+if$ -- 25266
 int.to.chr$ -- 5
 int.to.str$ -- 0
-missing$ -- 20
-newline$ -- 84
-num.names$ -- 242
-pop$ -- 111
+missing$ -- 25
+newline$ -- 104
+num.names$ -- 294
+pop$ -- 124
 preamble$ -- 1
-purify$ -- 345
+purify$ -- 420
 quote$ -- 0
-skip$ -- 316
+skip$ -- 378
 stack$ -- 0
-substring$ -- 27592
-swap$ -- 70
-text.length$ -- 322
+substring$ -- 32715
+swap$ -- 85
+text.length$ -- 392
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 90
+type$ -- 110
 warning$ -- 3
-while$ -- 505
+while$ -- 615
 width$ -- 0
-write$ -- 316
+write$ -- 385
 (There were 3 warnings)
