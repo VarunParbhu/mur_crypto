@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  7 DEC 2022 01:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.28)  11 DEC 2022 01:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -503,51 +503,47 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ] (./CHAPTER_1/CHAPTER 1.tex
 Chapter 1.
-) (./CHAPTER_5/CHAPTER 5.tex
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1 \chapter
-            {Analysis of Bitcoin Price using Deep Learning Models} [1
+l.6 
+     [1
 
-]
+] [2]) (./CHAPTER_6/CHAPTER 6.tex [3]
 Chapter 2.
-) (./CHAPTER_6/CHAPTER 6.tex [2
+) (./0_COMPILE.bbl (./0_COMPILE.brf [4
 
-]
-Chapter 3.
-) (./0_COMPILE.bbl (./0_COMPILE.brf)
+])
 \tf@brf=\write7
 \openout7 = `0_COMPILE.brf'.
 
- [3
-
-] [4
+ [5] [6
 
 ]
-Underfull \hbox (badness 2529) in paragraph at lines 53--58
+Underfull \hbox (badness 2529) in paragraph at lines 68--73
 []| | \OT1/cmr/m/n/12 De-vlin, J., Chang, M., Lee, K. & Toutanova, K. (2018), `BERT: pre-
  []
 
-[5]) [6] (./0_COMPILE.aux)
+[7] [8]) [9] (./0_COMPILE.aux)
 Package rerunfilecheck Info: File `0_COMPILE.out' has not changed.
-(rerunfilecheck)             Checksum: E10C9DDC06176CDF432497CDAC0939A9;1217.
+(rerunfilecheck)             Checksum: 668159BFB36BAAB1CF0DCD9190377618;893.
 Package rerunfilecheck Info: File `0_COMPILE.brf' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 14489 strings out of 478268
- 232952 string characters out of 5846347
- 531414 words of memory out of 5000000
- 32464 multiletter control sequences out of 15000+600000
- 475769 words of font info for 52 fonts, out of 8000000 for 9000
+ 14507 strings out of 478268
+ 233201 string characters out of 5846347
+ 531741 words of memory out of 5000000
+ 32483 multiletter control sequences out of 15000+600000
+ 476106 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,7n,91p,1297b,442s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on 0_COMPILE.pdf (13 pages, 99519 bytes).
+ 87i,7n,91p,1770b,442s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on 0_COMPILE.pdf (16 pages, 110724 bytes).
 PDF statistics:
- 141 PDF objects out of 1000 (max. 8388607)
- 112 compressed objects within 2 object streams
- 23 named destinations out of 1000 (max. 500000)
- 65 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 155 PDF objects out of 1000 (max. 8388607)
+ 121 compressed objects within 2 object streams
+ 25 named destinations out of 1000 (max. 500000)
+ 57 words of extra memory for PDF output out of 10000 (max. 10000000)
 
