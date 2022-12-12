@@ -1,7 +1,25 @@
-\contentsline {section}{List of Figures}{ii}{chapter*.2}%
-\contentsline {section}{List of Tables}{iii}{chapter*.3}%
-\contentsline {section}{Acknowledgement}{iv}{chapter*.4}%
-\contentsline {section}{Abstract}{v}{chapter*.5}%
-\contentsline {section}{Terms and Definitions}{vi}{chapter*.6}%
+\contentsline {section}{List of Figures}{iv}{chapter*.2}%
+\contentsline {section}{List of Tables}{v}{chapter*.3}%
+\contentsline {section}{Acknowledgement}{vi}{chapter*.4}%
+\contentsline {section}{Abstract}{vii}{chapter*.5}%
+\contentsline {section}{Terms and Definitions}{viii}{chapter*.6}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Conclusion and Future Works}{4}{chapter.2}%
+\contentsline {chapter}{\numberline {2}Deep Learning Networks}{4}{chapter.2}%
+\contentsline {section}{\numberline {2.1}The Perceptron}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Feedforward Network}{21}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Activation Function}{28}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Backpropagation}{30}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Sequential Neural Networks}{36}{section.2.5}%
+\contentsline {chapter}{\numberline {3}Optimization}{41}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Optimization algorithms}{43}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Backpropagation using Adam}{50}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Sentiment Analysis}{52}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Rule-Based Methods}{53}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Word Embedding}{54}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Transformer Model (Attention Mechanism)}{55}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Analysis of Bitcoin Price using Deep Learning Models}{58}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Data Collection}{58}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Feature Engineering}{62}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Modelling Bitcoin Price using LSTM NN}{66}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Results}{67}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Conclusion and Future Works}{72}{chapter.6}%
