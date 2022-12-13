@@ -1,2 +1,40 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Rosenblatt perceptron\relax }}{6}{figure.caption.7}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Set $\mathbf {A}$ and $\mathbf {B}$ with a random separating line\relax }}{7}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Set $\mathbf {A}$ and $\mathbf {B}$ with a random separating line and its weight vector\relax }}{8}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Set $\mathbf {A}$ and $\mathbf {B}$ after adjusting the separating line and its weight vector\relax }}{9}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces AND Function with separating line\relax }}{15}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces OR Function with separating line\relax }}{16}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces XOR function\relax }}{18}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces XOR approximate solution\relax }}{21}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Representation of Truth Table for function $f_1^{*}$\relax }}{22}{figure.caption.19}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Representation of Truth Table for function $f_2^{*}$\relax }}{23}{figure.caption.21}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces FFN hidden layer\relax }}{25}{figure.caption.23}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Representation of the hidden layer\relax }}{26}{figure.caption.25}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Feedforward network for XOR problem\relax }}{27}{figure.caption.26}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Neural Network with $N$ number of layers\relax }}{30}{figure.caption.27}%
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Consecutive layers, $l$ and $l+1$, in a neural network\relax }}{31}{figure.caption.28}%
+\contentsline {figure}{\numberline {2.16}{\ignorespaces An RNN with a hidden state\relax }}{37}{figure.caption.30}%
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Computing the hidden state in an LSTM model\relax }}{38}{figure.caption.32}%
+\contentsline {figure}{\numberline {2.18}{\ignorespaces Architecture of a bidirectional RNN\relax }}{40}{figure.caption.34}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Minimum and Maximum points\relax }}{42}{figure.caption.36}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Network Error over different weight\relax }}{44}{figure.caption.38}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Part-of-speech tagging of sentence at \textup {\ref {POS_example_sent}} using spaCy\relax }}{53}{figure.caption.49}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Transformer Layer \cite {Vaswani2017}\relax }}{56}{figure.caption.50}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Example of raw tweet scraped using the tweepy package through Python\relax }}{61}{figure.caption.54}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Distribution of tweet count over each day at the end of every hour over 24 hours\relax }}{61}{figure.caption.55}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Bitcoin closing price over every hour for everyday\relax }}{62}{figure.caption.56}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Sentiment score distribution using roBERTa model on all tweets\relax }}{64}{figure.caption.58}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Sentiment score distribution of Twitter influencers (grouped using KMeans clustering) using roBERTa model on all tweets\relax }}{65}{figure.caption.60}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Feature engineering pipeline\relax }}{66}{figure.caption.62}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Train-test split\relax }}{67}{figure.caption.63}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces LSTM architecture with 50 hidden states, input sequence of 25 and 6 input features\relax }}{67}{figure.caption.64}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Model training loss (MSE) and actual training loss in USD (RMSE) over 250 epochs of training\relax }}{68}{figure.caption.65}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Model evolution during training for epochs 1, 5, 25 and 250\relax }}{69}{figure.caption.66}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Trained model and rolling window forecast for Bitcoin price for next 24 hours (using whole dataset)\relax }}{70}{figure.caption.67}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Trained model and rolling window forecast for Bitcoin price for next 24 hours (using influencers' dataset)\relax }}{70}{figure.caption.68}%
+\addvspace {10\p@ }

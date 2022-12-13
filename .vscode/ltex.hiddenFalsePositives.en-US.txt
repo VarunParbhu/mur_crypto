@@ -54,3 +54,5 @@
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QFinally, the project concludes by summarising all our results, findings, and potential improvements.\\E$"}
 {"rule":"LC_AFTER_PERIOD","sentence":"^\\QZhang et al.leveraged sentiments on Twitter to help predict the movement of stock market indices such as Dow Jones, S&P500 and NASDAQ \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QThus, sentiment analysis, also known as opinion mining, started to popularise along with the rise of social media when a large amount of digital text data were suddenly available for mining.\\E$"}
+{"rule":"LIGATURES","sentence":"^\\QAsur and Huberman attempted to solve the revenue prediction of box-ofﬁce for movies problem using tweet volume and sentiment \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QMoreover, cryptocurrencies are speculative, which fuels the necessity of understanding their behaviour over time.\\E$"}

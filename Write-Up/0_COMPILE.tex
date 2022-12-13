@@ -1,5 +1,7 @@
 \documentclass[a4paper,12pt,hidelinks]{report}
-\usepackage[pagebackref=true]{hyperref}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}\usepackage[pagebackref=true]{hyperref}
 \usepackage{amsmath}
 \usepackage{harvard}
 \usepackage{mathtools}
@@ -90,7 +92,14 @@ First and foremost, I would like to show my deepest gratitude to my supervisor P
 \noindent Lastly, I would like to thank my colleagues for their constant support.
 \chapter*{Abstract}
 \addcontentsline{toc}{section}{Abstract}
-*Placeholder*
+Cryptocurrencies have been gaining much attention in the past few years due to their steep increase in value. However, they are also more volatile than traditional fiat payment methods backed by a country's government. Moreover, cryptocurrencies are speculative, which fuels the necessity of understanding their behaviour over time. This dissertation studies the principle of deep learning and different sequential neural network architecture. We follow up with a literature review of the state-of-the-art algorithm used to optimise neural networks and sentiment analysis methods. An approach to modelling Bitcoin price over a 24hr period using LSTM NN is proposed. The hourly tweet count, Google search index of the word 'Bitcoin' and sentiment of tweets averaged hourly are input features of the LSTM NN model. During experimentation, the hourly tweet count and the hourly average of tweet sentiment resulted in the lowest training and testing RMSE, \$296.33 and \$189.66, respectively.
+
+
+
+
+
+
+% High frequency data have been mushrooming the financial market in recent years. There is a major need to quantify and predict such type of data in a tolerable lapse of time to minimize risk. In this dissertation, the Fast Fourier Transform is studied and implemented into conditional variance models in order to reduce the computa- tion time to estimate the parameters of such models. A study of the convolution sum is performed to determine the calculation advantage the fast Fourier transform ad- vocates over vectorise summation. The fast Fourier transform is implemented in the estimation of parameters of ARCH, GARCH and FIGARCH models, via their log- likelihood function. The speed-up factor was up to 4.0, 11.0 and 5.8 for the ARCH, GARCH and FIGARCH models respectively. A new approach to the problem which consists of a one-time analysis of the algorithm to improve the speed-up factor is pro- posed. We identify that larger sample sizes doesn’t imply greater computation time and smaller sample sizes doesn’t imply lower computation time. Optimal sample lengths are found via experimentation as no theory predicts the latter. By studying the behaviour of the fast Fourier transform algorithm we demonstrate that the new angle to the problem for a FIGARCH model was up to 4 times faster compared to the direct fast Fourier transform implementation. This is a global improvement for the calculation of convolution sum using fast Fourier transform and not just local to financial models.
 
 \nocite{*}
 \bibliographystyle{agsm}
@@ -111,10 +120,10 @@ NLP & Natural Language Processing \\
 \newpage
 
 \input{CHAPTER_1/CHAPTER 1.tex}
-%\input{CHAPTER_2/CHAPTER 2.tex}
-%\input{CHAPTER_3/CHAPTER 3.tex}
-%\input{CHAPTER_4/CHAPTER 4.tex}
-%\input{CHAPTER_5/CHAPTER 5.tex}
+\input{CHAPTER_2/CHAPTER 2.tex}
+\input{CHAPTER_3/CHAPTER 3.tex}
+\input{CHAPTER_4/CHAPTER 4.tex}
+\input{CHAPTER_5/CHAPTER 5.tex}
 \input{CHAPTER_6/CHAPTER 6.tex}
 \bibliography{REFERENCES}
 %\input{PLACEHOLDER_TO_BE_DELETED/TO BE DELETED.tex}

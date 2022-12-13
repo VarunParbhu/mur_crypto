@@ -1,2 +1,12 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {2.1}{\ignorespaces Truth Table for $f_1^{*}$\relax }}{22}{table.caption.18}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces Truth Table for $f_2^{*}$\relax }}{23}{table.caption.20}%
+\contentsline {table}{\numberline {2.3}{\ignorespaces Truth Table for $f^{*}$\relax }}{24}{table.caption.22}%
+\contentsline {table}{\numberline {2.4}{\ignorespaces Truth Table from hidden layer\relax }}{25}{table.caption.24}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Summary of error results from model using the complete dataset and the influencers' dataset using the same training and predicting scenario ($\alpha = 0.00001$).\relax }}{71}{table.caption.69}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Summary of error results from model using different feature combinations under the same training and predicting scenario ($\alpha = 0.00001$).\relax }}{71}{table.caption.70}%
+\addvspace {10\p@ }

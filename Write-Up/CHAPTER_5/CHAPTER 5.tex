@@ -158,7 +158,7 @@ The training is set to run for 250 epochs which took around 1 hour to complete. 
 \noindent After training for 250 epochs, we used the model to calculate a rolling window forecast on the price for the next 24 hours. We observe that the general profile of the price movement is modelled but sudden dips and rise in price were not replicated during testing.
 \begin{figure}[H]
    \centering
-   \includegraphics[scale=0.55]{CHAPTER_5/result_pred.png}
+   \includegraphics[scale=0.43]{CHAPTER_5/result_pred.png}
    \caption{Trained model and rolling window forecast for Bitcoin price for next 24 hours (using whole dataset)}
    \label{result_pred}
 \end{figure}
@@ -166,7 +166,7 @@ The training is set to run for 250 epochs which took around 1 hour to complete. 
 
 \begin{figure}[H]
    \centering
-   \includegraphics[scale=0.40]{CHAPTER_5/result_pred_inf.png}
+   \includegraphics[scale=0.38]{CHAPTER_5/result_pred_inf.png}
    \caption{Trained model and rolling window forecast for Bitcoin price for next 24 hours (using influencers' dataset)}
    \label{result_pred_inf}
 \end{figure}
@@ -175,19 +175,48 @@ The training is set to run for 250 epochs which took around 1 hour to complete. 
         \begin{tabular}{l |c |c }
         \label{result_summary}
             
-              & Experiment 1 & Experiment 2\\ &Complete Dataset & Influencers' Dataset\\
+              & Exp.1 & Exp.2 \\ &Complete Dataset & Influencers' Dataset\\
             \hline
             Model Training MSE & 0.0146 & 0.0209 \\
             
-            Actual Training RMSE & \$303.96 & \$317.45\\
-            Actual Testing RMSE & \$325.96 & \$335.99\\
+            Actual Training RMSE (\$) & 303.96 & 317.45\\
+            Actual Testing RMSE (\$) & 325.96 & 335.99\\
 
         \end{tabular}
-        \caption{Summary of error results from model using the complete dataset and the influencers' dataset using the same training and prediction scenario.}
+        \caption{Summary of error results from model using the complete dataset and the influencers' dataset using the same training and predicting scenario ($\alpha = 0.00001$).}
+    \end{center}
+\end{table}
+\noindent Since the influencer's dataset does not add value to the model, we dropped the latter. We repeat the experiment using every combination of feature to identify any potential delimiter. Let the features of the model be indexed as such:
+\begin{align*}
+    \text{Tweet Count} & \rightarrow (1) \\
+    \text{Google Trend Index} &\rightarrow (2) \\
+    \text{Sentiment (POS, NEU, NEG)} &\rightarrow (3)
+\end{align*}
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{M{2.5cm} | c |c |c |c |c | c| c}
+        \label{result_summary_all}
+            
+              & Exp.1 & Exp.2 & Exp.3 & Exp.4 & Exp.5 & Exp.6 & Exp.7 \\ & (1)(2)(3) & (1)(2) & (1)(3) & (2)(3) & (1) & (2) & (3)  \\ 
+            \hline
+             & & & & & & & \\
+            Epochs & 250 & 100 & 250 & 250 & 100 & 100 & 100 \\ & & & & & & & \\
+            
+            Training Time (s) & 1829 & 681 & 2038 & 1690 & 653 & 625 & 800 \\ & & & & & & & \\
+
+
+            Model Training MSE & 0.0146 & 0.0034 & 0.0162 & 0.0104 & 0.0077 & 0.0053 & 0.0077\\ & & & & & & & \\
+            
+            Actual Training RMSE (\$) & 303.96 & 380.27 &  296.33 & 322.89 & 395.73 & 358.27 & 395.75 \\ & & & & & & & \\
+            Actual Testing RMSE (\$) & 325.96 & 306.14 & 189.66 & 263.79 & 398.24 & 302.95 & 398.24  \\
+
+        \end{tabular}
+        \caption{Summary of error results from model using different feature combinations under the same training and predicting scenario ($\alpha = 0.00001$).}
     \end{center}
 \end{table}\vspace{5mm}
 
-    
+
+
 %\section{Modelling Bitcoin Upticks using Feedforward NN}
 %\subsection*{Model Architecture and Hyperparameters}
 %No Influencer
