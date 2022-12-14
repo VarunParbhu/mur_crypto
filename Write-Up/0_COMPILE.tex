@@ -54,7 +54,7 @@
 \begin{titlepage}
 \begin{center}
 \begin{huge}
-\textbf{*Insert Title Here*}\\
+\textbf{The Effect of News Sentiment and Google Search Indices on the Performance of a Deep Learning Approach to Modelling Bitcoin Prices}\\
 \end{huge}
 \vspace{10mm}
 \begin{huge}
@@ -92,7 +92,7 @@ First and foremost, I would like to show my deepest gratitude to my supervisor P
 \noindent Lastly, I would like to thank my colleagues for their constant support.
 \chapter*{Abstract}
 \addcontentsline{toc}{section}{Abstract}
-Cryptocurrencies have been gaining much attention in the past few years due to their steep increase in value. However, they are also more volatile than traditional fiat payment methods backed by a country's government. Moreover, cryptocurrencies are speculative, which fuels the necessity of understanding their behaviour over time. This dissertation studies the principle of deep learning and different sequential neural network architecture. We follow up with a literature review of the state-of-the-art algorithm used to optimise neural networks and sentiment analysis methods. An approach to modelling Bitcoin price over a 24hr period using LSTM NN is proposed. The hourly tweet count, Google search index of the word 'Bitcoin' and sentiment of tweets averaged hourly are input features of the LSTM NN model. During experimentation, the hourly tweet count and the hourly average of tweet sentiment resulted in the lowest training and testing RMSE, \$296.33 and \$189.66, respectively.
+Cryptocurrencies have been gaining much attention in the past few years due to their steep increase in value. They are speculative, which fuels the necessity of understanding their behaviour over time. This dissertation studies the principle of deep learning and different sequential neural network architecture. An approach to modelling Bitcoin price over a 24hr period using an LSTM NN is proposed. The Tweepy API is used to get news about Bitcoin from Twitter. We continuously scrape, tweets and the total number of tweets hourly, containing 'bitcoin', 'BTC' or '\#btc' for 42 days. The roBERTa model is then used to get the sentiment score (positive, neutral, negative) from the cleaned tweets. We then aggregate the scores hourly based on the time the tweets were posted online. Finally, we retrieve the Google search index of the word 'bitcoin' hourly for the same time period using the pytrends API. The hourly tweet counts, Google search index, averaged sentiment of tweets, and the value of Bitcoin in the last hour were used as the input features of the LSTM NN model while the Bitcoin value in the next hour was the target variable. During experimentation, the combination of hourly tweet count, the hourly average of tweet sentiment, and the value of Bitcoin in the last hour resulted in the lowest training and testing RMSE, \$296.33 and \$189.66, respectively.
 
 
 
